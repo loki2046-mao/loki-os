@@ -1,4 +1,5 @@
 window.LOKI_OS_SITE_DATA = Object.freeze({
+  publicationStatus: 'unverified',
   updatedAt: '2026-08-25',
   projects: [
     {

@@ -7,9 +7,10 @@
 1. 扫描本机最近项目：`npm run scan`。
 2. 查看 `.loki-os-local/project-candidates.json`。
 3. 只把确认适合公开、已有公开链接的候选写入 `site-data.js`。
-4. 运行 `npm run check`。
-5. 启动本地静态服务器，用真实浏览器验收桌面端和移动端。
-6. 提交代码；只有 Loki 明确确认发布后才推送到 GitHub。
+4. Loki 确认整批内容后，才把 `publicationStatus` 从 `unverified` 改为 `verified`。
+5. 运行 `npm run check`。
+6. 启动本地静态服务器，用真实浏览器验收桌面端和移动端。
+7. 提交代码；只有 Loki 明确确认发布后才推送到 GitHub。
 
 ## 公开边界
 

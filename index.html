@@ -1745,7 +1745,7 @@ setTimeout(()=>{document.getElementById('lo').style.background=L[0];document.get
 function renderRecentProjects(){
   const data=window.LOKI_OS_SITE_DATA;
   const board=document.getElementById('recentProjects');
-  if(!board||!data||!Array.isArray(data.projects))return;
+  if(!board||!data||data.publicationStatus!=='verified'||!Array.isArray(data.projects))return;
   const projects=data.projects.filter(project=>project.visibility==='public').slice(0,9);
   if(!projects.length)return;
   board.textContent='';

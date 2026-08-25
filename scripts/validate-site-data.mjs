@@ -11,6 +11,7 @@ vm.runInNewContext(source, context, { filename: 'site-data.js' });
 const data = context.window.LOKI_OS_SITE_DATA;
 const errors = [];
 if (!data || !Array.isArray(data.projects)) errors.push('site-data.js 必须提供 projects 数组');
+if (!['unverified', 'verified'].includes(data?.publicationStatus)) errors.push('publicationStatus 必须是 unverified/verified');
 if (!/^\d{4}-\d{2}-\d{2}$/.test(data?.updatedAt || '')) errors.push('updatedAt 必须是 YYYY-MM-DD');
 
 const ids = new Set();
@@ -38,4 +39,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`site-data.js 校验通过：${data.projects.length} 个项目，更新于 ${data.updatedAt}`);
+console.log(`site-data.js 校验通过：${data.projects.length} 个项目，状态 ${data.publicationStatus}，更新于 ${data.updatedAt}`);
