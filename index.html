@@ -11,6 +11,7 @@
 <meta property="og:url" content="https://loki-os.hiloki.ai/">
 <meta name="twitter:card" content="summary">
 <link rel="canonical" href="https://loki-os.hiloki.ai/">
+<link rel="icon" type="image/jpeg" href="./loki-ip-live.jpg">
 <title>LOKI OS — 栖迟系统</title>
 <style>
 :root{--accent:#FF8C00;--copper:#D2691E;--white:#F5F5F5;--text:#C8C0B8;--dim:#6B6560;--bg:#12100C;}
@@ -169,15 +170,20 @@ a{color:inherit;}
 .cork-hd{text-align:center;margin-bottom:32px;}
 .cork-act{font-size:10px;letter-spacing:5px;color:var(--accent);margin-bottom:8px;}
 .cork-title{font-family:'Georgia','Noto Serif SC',serif;font-size:clamp(22px,4vw,34px);color:var(--white);letter-spacing:2px;}
+.cork-sub{font-size:10px;color:var(--dim);letter-spacing:2px;margin-top:8px;}
 .cork-board{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;max-width:800px;}
-.cork-card{width:220px;padding:20px;background:linear-gradient(140deg,#3E3428,#342C22);box-shadow:0 4px 20px rgba(0,0,0,0.4);position:relative;cursor:pointer;transition:all 0.3s;text-decoration:none;color:inherit;}
+.cork-card{width:240px;min-height:160px;padding:20px;background:linear-gradient(140deg,#3E3428,#342C22);box-shadow:0 4px 20px rgba(0,0,0,0.4);position:relative;cursor:pointer;transition:all 0.3s;text-decoration:none;color:inherit;display:flex;flex-direction:column;}
 .cork-card:hover{transform:rotate(-1deg) scale(1.03);box-shadow:0 8px 30px rgba(0,0,0,0.5);}
 .cork-card.is-offline{opacity:.58;cursor:default;}
 .cork-card.is-offline:hover{transform:none;box-shadow:0 3px 12px rgba(0,0,0,.3);}
 .cork-card::before{content:'';position:absolute;top:10px;left:50%;transform:translateX(-50%);width:10px;height:10px;background:var(--accent);border-radius:50%;box-shadow:inset 0 2px 4px rgba(0,0,0,0.4);}
 .cork-date{font-size:10px;color:var(--dim);letter-spacing:2px;margin-top:8px;}
 .cork-card-title{font-size:14px;color:var(--white);font-weight:600;margin:8px 0 4px;line-height:1.4;}
+.cork-summary{font-size:11px;color:var(--text);opacity:.6;line-height:1.6;margin-bottom:14px;}
+.cork-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;}
 .cork-tag{font-size:10px;color:var(--accent);letter-spacing:1px;}
+.cork-link{font-family:Georgia,serif;font-size:9px;color:var(--dim);letter-spacing:1px;transition:color .25s;}
+.cork-card:hover .cork-link{color:var(--accent);}
 
 /* ========== 4. BACKSTAGE ========== */
 .backstage{display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;height:100%;}
@@ -399,8 +405,9 @@ a{color:inherit;}
   /* Cork Board */
   .cork{padding-bottom:100px;}
   .cork-board{gap:10px;}
-  .cork-card{width:44vw;padding:14px;}
+  .cork-card{width:calc(50vw - 22px);min-height:170px;padding:14px;}
   .cork-card-title{font-size:12px;}
+  .cork-summary{font-size:10px;line-height:1.5;}
   /* Backstage */
   .backstage{padding-bottom:100px;}
   .bs-inside{padding-bottom:100px;align-items:flex-start;}
@@ -756,7 +763,9 @@ body::after{
 .cork-card:hover{transform:translateY(-7px) rotate(0) scale(1.02);box-shadow:12px 20px 32px rgba(0,0,0,.48);}
 .cork-date{color:rgba(20,15,10,.55);font-weight:900;}
 .cork-card-title{color:var(--ink);font-size:17px;line-height:1.25;font-weight:1000;}
+.cork-summary{color:rgba(20,15,10,.72);font-weight:650;opacity:1;}
 .cork-tag{color:var(--ink);font-weight:900;text-transform:uppercase;}
+.cork-link{color:rgba(20,15,10,.55);font-weight:900;}
 
 /* 4 · BACKSTAGE CORRIDOR */
 .bs-door-wrap{
@@ -1419,8 +1428,8 @@ body::after{
 
 <!-- 3. CORK BOARD -->
 <div class="scene" id="s3"><div class="cork">
-  <div class="cork-hd"><div class="cork-act">ACT III</div><div class="cork-title">近期返场</div></div>
-  <div class="cork-board">
+  <div class="cork-hd"><div class="cork-act">ACT III · NOW BUILDING</div><div class="cork-title">最近在做</div><div class="cork-sub" id="corkUpdated">公开项目 · 手动审核后更新</div></div>
+  <div class="cork-board" id="recentProjects">
     <a class="cork-card" href="https://mp.weixin.qq.com/s/lewHtQby_9G3EKUbMh1Uow" target="_blank"><div class="cork-date">04-17</div><div class="cork-card-title">被一个AI拿捏了半个月</div><div class="cork-tag">深度体验</div></a>
     <a class="cork-card" href="https://mp.weixin.qq.com/s/AXx0RymMdB0CpsehhRwxPA" target="_blank"><div class="cork-date">04-13</div><div class="cork-card-title">我们可能正在回到口耳相传的时代</div><div class="cork-tag">深度思考</div></a>
     <a class="cork-card" href="https://mp.weixin.qq.com/s/rjwHtxiIEDkOOeb5aErXfw" target="_blank"><div class="cork-date">04-09</div><div class="cork-card-title">6700字狠测 Lovart PK 豆包</div><div class="cork-tag">9大案例</div></a>
@@ -1722,6 +1731,7 @@ body::after{
 
 </div>
 
+<script src="./site-data.js"></script>
 <script>
 (function(){
 let cur=0,switching=false;
@@ -1731,6 +1741,30 @@ const coarsePointer=window.matchMedia('(hover: none), (pointer: coarse)').matche
 const L=['radial-gradient(ellipse at 50% 25%,rgba(255,160,100,0.14) 0%,rgba(255,140,0,0.04) 30%,transparent 55%)','radial-gradient(ellipse at 50% 30%,rgba(255,160,130,0.12) 0%,rgba(255,140,0,0.03) 30%,transparent 55%)','radial-gradient(ellipse at 50% 30%,rgba(180,160,210,0.05) 0%,rgba(255,140,0,0.02) 40%,transparent 55%)','radial-gradient(ellipse at 50% 28%,rgba(255,170,110,0.07) 0%,transparent 50%)','radial-gradient(ellipse at 50% 30%,rgba(255,140,0,0.09) 0%,rgba(255,70,30,0.03) 30%,transparent 55%)','radial-gradient(ellipse at 50% 35%,rgba(255,170,90,0.07) 0%,transparent 50%)'];
 
 setTimeout(()=>{document.getElementById('lo').style.background=L[0];document.getElementById('nav').classList.add('on');},300);
+
+function renderRecentProjects(){
+  const data=window.LOKI_OS_SITE_DATA;
+  const board=document.getElementById('recentProjects');
+  if(!board||!data||!Array.isArray(data.projects))return;
+  const projects=data.projects.filter(project=>project.visibility==='public').slice(0,9);
+  if(!projects.length)return;
+  board.textContent='';
+  const addText=(parent,className,text)=>{const el=document.createElement('div');el.className=className;el.textContent=text;parent.appendChild(el);return el;};
+  projects.forEach(project=>{
+    const card=document.createElement('a');
+    card.className='cork-card';card.href=project.href;card.target='_blank';card.rel='noopener';
+    card.setAttribute('aria-label',`${project.title}，打开公开链接`);
+    addText(card,'cork-date',project.date);
+    addText(card,'cork-card-title',project.title);
+    addText(card,'cork-summary',project.summary);
+    const foot=document.createElement('div');foot.className='cork-foot';
+    addText(foot,'cork-tag',project.tag);addText(foot,'cork-link','OPEN ↗');
+    card.appendChild(foot);board.appendChild(card);
+  });
+  const updated=document.getElementById('corkUpdated');
+  if(updated)updated.textContent=`${projects.length} 个公开项目 · 更新于 ${data.updatedAt}`;
+}
+renderRecentProjects();
 
 function switchTo(n){
   if(switching||n===cur||n<0||n>=sceneCount)return;switching=true;

@@ -1,0 +1,10 @@
+{
+  "name": "loki-os",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "scan": "node scripts/scan-local-projects.mjs",
+    "check": "node scripts/validate-site-data.mjs"
+  }
+}
