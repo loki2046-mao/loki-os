@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="个人化界面系统：Cola、Loki Hub 与 Codex 三个长期使用表面的设计档案。">
+  <title>个人化界面系统｜栖迟系统</title><link rel="icon" href="../loki-ip-live.jpg"><link rel="stylesheet" href="./exhibition.css"><link rel="stylesheet" href="./venue.css">
+</head>
+<body class="interface-page venue-page interface-venue">
+<div class="noise"></div><div class="page-progress" data-page-progress></div>
+<header class="topline"><a href="../index.html#works">回到栖迟系统</a><small>PERSONAL INTERFACE ARCHIVE / CASE 01</small></header>
+<main class="venue-shell">
+  <section class="venue-mast">
+    <div><div class="venue-kicker">CASE 01 · BACKSTAGE WARDROBE</div><h1>我把每天都要面对的 AI 工具，改造成<em>愿意长期待下去的个人空间</em>。</h1></div>
+    <p class="venue-thesis"><b>这里不是皮肤陈列馆。</b>它展示我怎样把“不喜欢”拆成体验问题，再一路做到视觉系统、前端实现、真实交互验收和更新后的恢复机制。</p>
+  </section>
+  <nav class="venue-tabs" aria-label="个人化界面系统参观路线">
+    <button class="is-active" data-switch="interface-room" data-value="stage"><b>01</b><span>先进入现场</span></button>
+    <button data-switch="interface-room" data-value="judgment"><b>02</b><span>看我的判断</span></button>
+    <button data-switch="interface-room" data-value="products"><b>03</b><span>打开三间更衣室</span></button>
+    <button data-switch="interface-room" data-value="handoff"><b>04</b><span>这项能力能做什么</span></button>
+  </nav>
+  <section class="venue-stage">
+    <article class="venue-panel wardrobe-floor" data-panel-group="interface-room" data-panel="stage">
+      <figure class="wardrobe-visual"><img src="./assets/exhibition/hub-ui-collage.webp" alt="Loki Hub 城市拼贴真实运行界面"><figcaption class="wardrobe-caption"><span class="venue-label">REAL PRODUCT SURFACE / LOKI HUB</span><b>我不是把海报贴在产品上。</b><p>标题、入口、文章密度、移动端顺序和阅读动作都跟着内容重新编排。</p></figcaption></figure>
+      <aside class="wardrobe-side"><div><span class="venue-label">TONIGHT'S WORK</span><h2>把通用工具，<em>住成自己的房间。</em></h2></div><div class="wardrobe-doors"><button data-open="archive-cola"><i>09</i><b>Cola</b><small>工作情绪</small></button><button data-open="archive-hub"><i>12</i><b>Loki Hub</b><small>公开表达</small></button><button data-open="archive-codex"><i>V4</i><b>Codex</b><small>协作后台</small></button></div><p class="venue-note"><b>点击三个入口进入完整房间。</b><br>里面不是同一张截图，而是真实界面、真实文章和组件规则。</p></aside>
+    </article>
+    <article class="venue-panel judgment-room" data-panel-group="interface-room" data-panel="judgment" hidden>
+      <aside class="judgment-marquee"><blockquote>“好看”不是终点。<br>愿意用、一直能用、更新后还能恢复，才算完成。</blockquote><small>MY ROLE<br>体验策略 / 视觉系统 / 前端实现 / 交互 QA / 主题恢复 / 长期维护</small></aside>
+      <div class="judgment-cards"><article><small>01 / PROBLEM</small><h3>我先发现：真正让人疲惫的是体验秩序，而不只是颜色。</h3><p>信息密度、视觉重心和交互习惯没有照顾长期工作的状态。</p></article><article><small>02 / JUDGMENT</small><h3>个人化必须进入组件规则，不能牺牲功能。</h3><p>菜单、弹窗、输入区和文件选择器都要清楚、能点、可恢复。</p></article><article><small>03 / DELIVERY</small><h3>我从方向做到真实路径验收，不停在效果图。</h3><p>参考研究、组件映射、前端注入、交互修复和版本恢复是一条链。</p></article></div>
+    </article>
+    <article class="venue-panel product-rack" data-panel-group="interface-room" data-panel="products" hidden>
+      <section class="product-drawer"><img src="./assets/loki-hub-style-board.png" alt="Cola 多套界面视觉档案"><div><small>ROOM A / RUNTIME MOODS</small><h3>Cola · 工作情绪</h3><p>九套表面对应不同照度、任务密度和工作状态。</p><button data-open="archive-cola">推门看完整档案 ↗</button></div></section>
+      <section class="product-drawer"><img src="./assets/exhibition/hub-article-room.webp" alt="Loki Hub 真实文章封面"><div><small>ROOM B / PUBLIC VOICE</small><h3>Loki Hub · 公开表达</h3><p>页面为内容改变节奏，真实文章继续进入阅读现场。</p><button data-open="archive-hub">推门看真实页面 ↗</button></div></section>
+      <section class="product-drawer"><img src="./assets/exhibition/codex-liulian-cutout.webp" alt="Codex 刘恋拼贴主题人物资产"><div><small>ROOM C / COLLABORATION</small><h3>Codex · 协作后台</h3><p>人物气质被翻译成任务卡、菜单、弹窗与输入区规则。</p><button data-open="archive-codex">推门看组件现场 ↗</button></div></section>
+    </article>
+    <article class="venue-panel handoff-room" data-panel-group="interface-room" data-panel="handoff" hidden>
+      <div><span class="venue-label">WHAT I CAN BRING TO A PRODUCT</span><h2>如果一个产品已经“能用”，却还没有自己的体验秩序，我能把模糊的不满意，做到<em>可运行、可验收、可维护</em>。</h2><div class="venue-roles"><span>体验诊断</span><span>视觉方向</span><span>设计系统</span><span>前端落地</span><span>真实 UI 验收</span><span>更新恢复</span></div></div>
+      <aside class="handoff-sheet"><h3>我交付的不是一张效果图</h3><p>我适合参与 AI 工具个人化、产品体验重构、视觉系统落地和长期界面维护。方向、实现与真实使用会在同一套判断里闭环。</p><a href="../index.html#works">回到栖迟系统，继续看其他能力 →</a></aside>
+    </article>
+  </section>
+</main>
+
+<dialog class="archive-dialog cola-dialog" id="archive-cola">
+  <div class="dialog-shell"><header class="dialog-bar"><span>ARCHIVE A / COLA RUNTIME SURFACES</span><button data-close>关闭档案 ×</button></header><div class="dialog-scroll">
+    <section class="dialog-intro"><h2>先看完整视觉系统，<br>再进入每一套真实界面。</h2><p>这不是把九张标题卡压在一起。左侧切换的每一项都是项目里的真实原型或真机注入画面；画面保持原始比例，内容层不承担公开展示。</p></section>
+    <section class="cola-proof-gallery" data-gallery>
+      <nav class="cola-proof-tabs" aria-label="Cola 真实界面选择">
+        <button class="is-active" data-gallery-private="true" data-gallery-src="./assets/real/cola/inject-shot-1.png" data-gallery-alt="Cola 真机注入界面，内容已在展示层脱敏" data-gallery-label="先看它真的跑起来" data-gallery-note="真实应用里的侧栏、对话区、输入区和皮肤切换器同时工作；对话内容仅在展示层模糊。"><b>真机注入</b><small>APP CAPTURE</small></button>
+        <button data-gallery-private="true" data-gallery-src="./assets/real/cola/inject-shot-sky.png" data-gallery-alt="Cola 天空主题真机界面，内容已在展示层脱敏" data-gallery-label="天空主题 · 真机" data-gallery-note="同一产品结构换成宽画幅、低压的天空工作场；对话内容仅在展示层模糊。"><b>天空真机</b><small>APP CAPTURE</small></button>
+        <button data-gallery-src="./assets/real/cola/skin-lightbox.png" data-gallery-alt="Cola 光盒空间真实原型" data-gallery-label="光盒空间" data-gallery-note="低照度与高聚焦，用发光边界组织任务。"><b>光盒空间</b><small>PROTOTYPE</small></button>
+        <button data-gallery-src="./assets/real/cola/skin-urban.png" data-gallery-alt="Cola 城市拼贴真实原型" data-gallery-label="城市拼贴" data-gallery-note="多层纸片、错位标题和快速入口，适合高密度切换。"><b>城市拼贴</b><small>PROTOTYPE</small></button>
+        <button data-gallery-src="./assets/real/cola/skin-pixel.png" data-gallery-alt="Cola 像素街机真实原型" data-gallery-label="像素街机" data-gallery-note="状态反馈被做成游戏信号，但输入和阅读仍保持清晰。"><b>像素街机</b><small>PROTOTYPE</small></button>
+        <button data-gallery-src="./assets/real/cola/skin-doodle.png" data-gallery-alt="Cola 手绘工作室真实原型" data-gallery-label="手绘工作室" data-gallery-note="允许草稿感存在，让未完成的工作不显得像错误。"><b>手绘工作室</b><small>PROTOTYPE</small></button>
+      </nav>
+      <figure class="cola-proof-stage"><div class="is-private" data-gallery-frame><img data-gallery-image src="./assets/real/cola/inject-shot-1.png" alt="Cola 真机注入界面，内容已在展示层脱敏"></div><figcaption><b data-gallery-label>先看它真的跑起来</b><span data-gallery-note>真实应用里的侧栏、对话区、输入区和皮肤切换器同时工作；对话内容仅在展示层模糊。</span></figcaption></figure>
+    </section>
+  </div></div>
+</dialog>
+
+<dialog class="archive-dialog hub-dialog" id="archive-hub">
+  <div class="dialog-shell"><header class="dialog-bar"><span>ARCHIVE B / LOKI HUB REAL PAGES</span><button data-close>关闭档案 ×</button></header><div class="dialog-scroll">
+    <section class="dialog-intro"><h2>我让内容决定版式，<br>而不是让内容迁就模板。</h2><p>下面可以切换四个真实运行界面，再继续翻四篇真实文章正文。它展示我如何同时处理内容策略和产品设计：首屏重心、卡片密度、图文关系与移动端秩序都跟随阅读任务改变。</p></section>
+    <section class="hub-gallery" data-gallery>
+      <div class="gallery-tabs">
+        <button class="is-active" data-gallery-src="./assets/exhibition/hub-ui-collage.webp" data-gallery-alt="Loki Hub 城市拼贴桌面界面" data-gallery-label="城市拼贴 / Desktop" data-gallery-note="大标题让出一半空间给内容调度台，斜切块承担导航。"><b>城市拼贴</b><small>DESKTOP / REAL QA</small></button>
+        <button data-gallery-src="./assets/exhibition/hub-ui-lightbox.webp" data-gallery-alt="Loki Hub 光盒空间桌面界面" data-gallery-label="光盒空间 / Desktop" data-gallery-note="暗场减少外部噪音，内容卡以发光边界建立层级。"><b>光盒空间</b><small>DESKTOP / REAL QA</small></button>
+        <button data-gallery-src="./assets/exhibition/hub-ui-poster.webp" data-gallery-alt="Loki Hub 海报瀑布流桌面界面" data-gallery-label="海报瀑布流 / Desktop" data-gallery-note="首屏像展墙，阅读入口以不同画幅连续展开。"><b>海报瀑布流</b><small>DESKTOP / REAL QA</small></button>
+        <button data-gallery-src="./assets/exhibition/hub-ui-doodle-mobile.webp" data-gallery-alt="Loki Hub 手绘工作室移动端界面" data-gallery-label="手绘工作室 / Mobile" data-gallery-note="移动端不是桌面缩窄，而是重排标题、工具和卡片顺序。"><b>手绘工作室</b><small>MOBILE / REAL QA</small></button>
+      </div>
+      <figure class="gallery-stage"><img data-gallery-image src="./assets/exhibition/hub-ui-collage.webp" alt="Loki Hub 城市拼贴桌面界面"><figcaption class="gallery-caption"><b data-gallery-label>城市拼贴 / Desktop</b><p data-gallery-note>大标题让出一半空间给内容调度台，斜切块承担导航。</p></figcaption></figure>
+    </section>
+    <section class="article-wall" aria-label="Loki Hub 真实文章阅读入口">
+      <button class="is-active" data-switch="hub-article" data-value="space"><img src="./assets/exhibition/hub-article-room.webp" alt="我为什么一定要把 AI 界面改成自己的样子文章封面"><div><h3>我为什么一定要把 AI 界面改成自己的样子</h3><p>点开真实正文切片 ↘</p></div></button>
+      <button data-switch="hub-article" data-value="friends"><img src="./assets/exhibition/hub-article-ai.webp" alt="我把很多没跟朋友说的话告诉了 AI 文章封面"><div><h3>我把很多没跟朋友说的话，告诉了 AI</h3><p>点开真实正文切片 ↘</p></div></button>
+      <button data-switch="hub-article" data-value="verify"><img src="./assets/exhibition/hub-real-verify-ui-body.webp" alt="验证 UI 不能只看数据库文章正文"><div><h3>验证 UI，不能只看数据库</h3><p>真实技术文章与代码段 ↘</p></div></button>
+      <button data-switch="hub-article" data-value="dark"><img src="./assets/exhibition/hub-real-dark-mode-body.webp" alt="深色模式不是加前缀文章正文"><div><h3>深色模式不是加一个前缀</h3><p>真实设计系统文章 ↘</p></div></button>
+    </section>
+    <section class="article-reader is-active" data-panel-group="hub-article" data-panel="space"><figure><img src="./assets/exhibition/hub-real-ai-space-body.webp" alt="我为什么一定要把 AI 界面改成自己的样子真实线上正文"><figcaption><b>REAL ARTICLE BODY / 2026-08-25 CAPTURE</b><span>真实线上正文，不是用标题重做的示意图；文章继续展示九种界面如何对应不同内容状态。</span></figcaption></figure></section>
+    <section class="article-reader" data-panel-group="hub-article" data-panel="friends" hidden><figure><img src="./assets/exhibition/hub-real-ai-friends-body.webp" alt="我把很多没跟朋友说的话告诉了 AI 真实线上正文"><figcaption><b>REAL ARTICLE BODY / 2026-08-25 CAPTURE</b><span>情感随笔的节奏与设计方法文章不同，正文使用短段、引语与更大的呼吸。</span></figcaption></figure></section>
+    <section class="article-reader" data-panel-group="hub-article" data-panel="verify" hidden><figure><img src="./assets/exhibition/hub-real-verify-ui-body.webp" alt="验证 UI 不能只看数据库真实线上正文与代码段"><figcaption><b>REAL ARTICLE BODY / CODE INCLUDED</b><span>技术文章保留代码块、检查步骤和运行语境，证明内容层不是统一占位文本。</span></figcaption></figure></section>
+    <section class="article-reader" data-panel-group="hub-article" data-panel="dark" hidden><figure><img src="./assets/exhibition/hub-real-dark-mode-body.webp" alt="深色模式不是加前缀真实线上正文与代码段"><figcaption><b>REAL ARTICLE BODY / DESIGN SYSTEM</b><span>主题、设计 token 与代码共同进入正文；页面节奏服务于论证，而不是只服务于封面。</span></figcaption></figure></section>
+  </div></div>
+</dialog>
+
+<dialog class="archive-dialog codex-dialog" id="archive-codex">
+  <div class="dialog-shell"><header class="dialog-bar"><span>ARCHIVE C / CODEX COLLAGE V4</span><button data-close>关闭档案 ×</button></header><div class="dialog-scroll">
+    <section class="dialog-intro"><h2>不是放一张刘恋照片，<br>而是把她的舞台秩序翻译进整个协作界面。</h2><p>点击右侧四个状态，左边的大舞台会切换任务卡、菜单、对话框和输入区。人物拼贴只是视觉锚点；真正完成个人化的是组件层级、交互反馈、可读性与更新后的恢复机制。</p></section>
+    <section class="codex-live-stage" data-codex-stage>
+      <div class="codex-preview">
+        <img class="codex-preview-person" src="./assets/codex-liulian-collage.png" alt="刘恋拼贴主题人物视觉资产">
+        <div class="codex-board" data-codex-board data-mode="cards">
+          <article style="--card:#ff3b93;--shadow:#35d7dc;--r:-2deg"><small>01 / TODAY</small><h3>正在做的任务</h3><p>粉色主舞台，进入即看见当前动作。</p></article>
+          <article style="--card:#36d6de;--shadow:#ff3b93;--r:1.5deg"><small>02 / REVIEW</small><h3>等待确认</h3><p>颜色和纸张位置共同表达状态。</p></article>
+          <article style="--card:#d9f53c;--shadow:#ff7a22;--r:.5deg"><small>03 / ARCHIVE</small><h3>已经完成</h3><p>信息层级仍然清楚，不靠灰掉全部内容。</p></article>
+          <article style="--card:#ff7a22;--shadow:#d9f53c;--r:-1.3deg"><small>04 / NEXT</small><h3>下一次继续</h3><p>任务不是同质黑框，而是各自占据舞台。</p></article>
+        </div>
+        <section class="codex-mode-preview codex-menu-preview"><small>MENU / ACTIONS</small><button>打开项目</button><button>切换工作区</button><button>查看变更</button><button>归档任务</button></section>
+        <section class="codex-mode-preview codex-dialog-preview"><small>CONFIRMATION / FRONT LAYER</small><h3>要把这次修改留在舞台上吗？</h3><p>背景退后，但仍能辨认；确认动作保持完整尺寸与清晰层级。</p><div><button>先返回检查</button><button>确认并继续</button></div></section>
+        <section class="codex-mode-preview codex-composer-preview"><small>COMPOSER / ACTIVE</small><p>把下一步交给我……</p><div><button>＋</button><span>当前项目 · 本地</span><button>发送</button></div></section>
+      </div>
+      <nav class="codex-stage-tabs" aria-label="Codex 主题组件切换">
+        <button class="is-active" data-codex-mode="cards"><small>01 / TASK BOARD</small><b>任务卡舞台</b><span>四种状态，各自有颜色、编号、位置和抬升反馈。</span></button>
+        <button data-codex-mode="menu"><small>02 / MENU</small><b>菜单与选择器</b><span>纸张可以有破口，文字对比和命中区不能破。</span></button>
+        <button data-codex-mode="dialog"><small>03 / DIALOG</small><b>抬起的对话框</b><span>模态层有明确前后景，不再缩成难以操作的小黑框。</span></button>
+        <button data-codex-mode="composer"><small>04 / COMPOSER</small><b>装订式输入区</b><span>高频入口保持干净，聚焦状态由三色错位边表达。</span></button>
+      </nav>
+    </section>
+  </div></div>
+</dialog>
+<script src="./exhibition.js"></script><script>(()=>{const stage=document.querySelector('[data-codex-stage]');if(!stage)return;const board=stage.querySelector('[data-codex-board]');stage.querySelectorAll('[data-codex-mode]').forEach(btn=>btn.addEventListener('click',()=>{stage.querySelectorAll('[data-codex-mode]').forEach(x=>x.classList.toggle('is-active',x===btn));board.dataset.mode=btn.dataset.codexMode;}));})();</script>
+</body></html>
