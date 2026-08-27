@@ -1,0 +1,241 @@
+/* Mobile stage direction — phone layouts are composed, never desktop pages shrunk down. */
+@media (max-width: 768px) {
+  :root {
+    --mobile-sans: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    --mobile-display: "Avenir Next Condensed", "DIN Condensed", "PingFang SC", sans-serif;
+  }
+
+  html { overflow-x: clip; }
+  body { font-family: var(--mobile-sans); -webkit-text-size-adjust: 100%; }
+  button, a, input { font-family: inherit; }
+
+  /* Main six-act stage */
+  .scene { padding-inline: 10px; }
+  .nav {
+    bottom: max(10px, env(safe-area-inset-bottom));
+    width: calc(100vw - 20px);
+    height: 48px;
+    padding: 4px;
+    border-color: rgba(255, 106, 0, .55);
+    background: rgba(6, 5, 4, .94);
+    backdrop-filter: blur(16px);
+  }
+  .n-dot { height: 38px; }
+  .n-dot::after { font: 800 11px/1 var(--mobile-display); letter-spacing: .08em; }
+
+  #s0 .headliner { min-height: calc(100svh - 70px); justify-content: center; }
+  #s0 .hl-name-cn,
+  #s0 .hl-role,
+  #s0 .hl-feat-label,
+  #s0 .hl-bio { font-family: var(--mobile-sans); }
+  #s0 .hl-name-cn { font-size: clamp(28px, 8vw, 34px); font-weight: 900; letter-spacing: .02em; }
+  #s0 .hl-name-en { font-family: var(--mobile-display); font-style: normal; font-weight: 900; letter-spacing: -.05em; }
+  #s0 .hl-role { max-width: 24em; font-size: 13px; line-height: 1.55; font-weight: 650; }
+  #s0 .hl-mobile-more { min-height: 40px; font-size: 12px; }
+  #s0 .hl-bottom { display: block; width: min(306px, 100%); margin: 2px auto 0; }
+  #s0 .hl-stats-row { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 5px; }
+  #s0 .hl-stat { min-width: 0; padding: 8px 5px; }
+  #s0 .hl-stat-val { font: 900 20px/1 var(--mobile-display); }
+  #s0 .hl-stat-label { margin-top: 5px; font-size: 9px; }
+  #s0 .hl-bio, #s0 .hl-tags-row { display: none; }
+
+  /* Set list becomes a full-height ticket, not a miniature poster. */
+  #s1 { padding: 12px 10px 72px; align-items: stretch; }
+  #s1 .setlist {
+    min-height: calc(100svh - 94px);
+    margin: 0;
+    padding: 30px 16px 22px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    background: linear-gradient(105deg, rgba(255,255,255,.28), transparent 24%), #eee3cf;
+    box-shadow: 9px 10px 0 rgba(255,106,0,.3);
+  }
+  #s1 .sl-header { padding: 0 2px 16px; border-bottom: 4px solid #17110d; }
+  #s1 .sl-act { font: 900 10px/1 var(--mobile-display); letter-spacing: .38em; }
+  #s1 .sl-title { margin-top: 8px; font: 900 38px/.95 var(--mobile-sans); letter-spacing: -.05em; }
+  #s1 .sl-wm { display: none; }
+  #s1 .sl-list { display: grid; align-content: stretch; }
+  #s1 .sl-item {
+    min-height: 82px;
+    padding: 12px 2px;
+    grid-template-columns: 34px minmax(0,1fr) auto;
+    gap: 9px;
+  }
+  #s1 .sl-num { font: 900 21px/1 var(--mobile-display); }
+  #s1 .sl-name { font: 850 15px/1.25 var(--mobile-sans); }
+  #s1 .sl-desc { margin-top: 5px; font: 500 11px/1.4 var(--mobile-sans); }
+  #s1 .sl-badge { justify-self: end; font-size: 9px; }
+  #s1 .sl-ticket { display: none; }
+
+  /* Equipment door and rack */
+  #s2 { padding: 10px 8px 72px; }
+  #s2 .gear-door-wrap {
+    min-height: calc(100svh - 92px);
+    height: auto;
+    padding: 28px 20px;
+    place-content: end start;
+    text-align: left;
+    border: 6px solid #3c352d;
+    background:
+      linear-gradient(0deg, rgba(0,0,0,.05), rgba(0,0,0,.72)),
+      repeating-linear-gradient(90deg,#211913 0 48px,#2a1f17 49px 52px);
+  }
+  #s2 .gear-door-wrap::before { left: 16px; right: auto; top: 18px; font-size: 9px; }
+  #s2 .gear-door-label { font: 900 10px/1 var(--mobile-display); letter-spacing: .3em; }
+  #s2 .gear-door-title { margin: 8px 0 12px; font: 900 42px/.95 var(--mobile-sans); letter-spacing: -.04em; }
+  #s2 .gear-door-icon { width: 82px; height: 82px; margin: 8px 0 18px; }
+  #s2 .gear-door-hint { min-height: 44px; display: inline-flex; align-items: center; padding: 0 14px; border: 1px solid var(--acid); color: var(--acid); font-size: 12px; font-weight: 900; }
+  #s2 .gear-inside { padding: 58px 10px 88px; border-width: 4px; }
+  #s2 .gear-control-head strong { font: 900 27px/1.15 var(--mobile-sans); letter-spacing: -.02em; }
+  #s2 .gear-control-head span { font-size: 13px; }
+  #s2 .gear-case { min-height: 0; padding: 12px; }
+  #s2 .gear-case-grid { grid-template-columns: 1fr; grid-template-rows: none; gap: 8px; }
+  #s2 .gear-skill {
+    min-height: 88px;
+    height: auto;
+    display: grid;
+    grid-template-columns: minmax(0,1fr) auto;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: stretch;
+    gap: 12px;
+    padding: 14px 13px 14px 18px;
+    text-align: left;
+  }
+  #s2 .gear-skill::after { top: 8px; right: 8px; left: auto; }
+  #s2 .gear-skill-icon { display: none !important; }
+  #s2 .gear-skill-name { font: 800 14px/1.35 var(--mobile-sans); letter-spacing: 0; }
+  #s2 .gear-skill-lv { font: 900 22px/1 var(--mobile-display); }
+  .gear-inspector { inset: 6px; grid-template-columns: 1fr; padding: 60px 14px 28px; gap: 18px; }
+  .gear-inspector figure { min-height: 240px; }
+  .gear-inspector-copy h2 { font: 900 31px/1.08 var(--mobile-sans); }
+  .gear-inspector-copy > p { font-size: 14px; }
+
+  /* Encore board */
+  #s3 .cork-title { font: 900 38px/1 var(--mobile-sans); letter-spacing: -.04em; }
+  #s3 .cork-sub, #s3 .cork-definition { font-family: var(--mobile-sans); font-size: 12px; }
+  #s3 .cork-board { grid-template-columns: 1fr; }
+  #s3 .cork-card, #s3 .cork-card:nth-child(1), #s3 .cork-card:nth-child(5) { grid-column: auto; min-height: 172px; }
+  #s3 .cork-card-title { font-size: 18px; line-height: 1.25; }
+  #s3 .cork-summary { font-size: 12px; line-height: 1.65; }
+
+  /* Backstage entry is an intentional phone-sized loading door. */
+  #s4 { padding: 10px 8px 72px; }
+  #s4 .bs-door-wrap { min-height: calc(100svh - 92px); }
+  #s4 .bs-threshold-wall { min-height: calc(100svh - 150px); padding: 22px 12px 12px; }
+  #s4 .bs-threshold-board { position: relative; inset: auto; width: 168px; z-index: 2; margin-bottom: -105px; padding: 13px; }
+  #s4 .bs-threshold-board strong { font-family: var(--mobile-sans); font-size: 20px; }
+  #s4 .bs-service-door { width: 100%; height: calc(100svh - 202px); min-height: 520px; margin: 0; padding-top: 90px; }
+  #s4 .bs-service-door > span { font: 900 42px/.9 var(--mobile-display); letter-spacing: -.04em; }
+  #s4 .bs-service-door > small { font-size: 8px; letter-spacing: .24em; }
+  #s4 .bs-door-window { margin: 44px 0 25px; }
+  #s4 .bs-threshold-floor { height: 46px; }
+  #s4 .bs-corridor-head strong,
+  #s4 .bs-crew-console strong { font-family: var(--mobile-sans); }
+  #s4 .bs-room-nameplate { font-family: var(--mobile-sans); font-size: 12px; }
+  .skill-showcase > header h3,
+  .skill-output-ticket strong,
+  .skill-detail-grid article > h3 { font-family: var(--mobile-sans); }
+  .skill-showcase > header h3 { font-size: 28px; line-height: 1.12; }
+
+  /* Private wing uses the whole viewport without forcing a 980px canvas. */
+  #s5 { padding: 10px 8px 72px; }
+  #s5 .sd-full { min-height: calc(100svh - 92px); height: auto; }
+  #s5 .sd-front { position: relative; inset: auto; min-height: calc(100svh - 92px); padding: 46px 12px 64px; }
+  #s5 .sd-alley-sign { min-height: 142px; padding: 18px; }
+  #s5 .sd-alley-sign strong { font: 900 34px/.88 var(--mobile-display); }
+  #s5 .sd-alley-sign span { font: 650 13px/1.55 var(--mobile-sans); }
+  #s5 .sd-private-scene { min-height: 410px; grid-template-columns: 76px minmax(210px, 1fr); }
+  #s5 .sd-single-door { height: 395px; }
+  #s5 .sd-checkpoint { grid-template-columns: 68px minmax(0,1fr); }
+
+  /* Shared case pages */
+  .artifact-intro h1,
+  .daily-opening h1,
+  .artifact-pane h2,
+  .perspective-workbench header h2,
+  .person-thesis h3,
+  .artifact-file h3,
+  .perspective-principles b,
+  .daily-insight-card blockquote,
+  .daily-trail b { font-family: var(--mobile-sans); }
+  .artifact-intro h1 { font-size: clamp(29px, 8.2vw, 36px); line-height: 1.16; letter-spacing: -.045em; }
+  .artifact-intro h1 br { display: none; }
+  .artifact-intro aside { font-size: 14px; line-height: 1.75; }
+  .artifact-shell { padding-inline: 12px; }
+  .perspective-principles article { min-height: 0; padding: 20px; }
+  .perspective-principles b { margin-top: 22px; font-size: 18px; }
+  .artifact-rail, .perspective-people, .daily-days,
+  .health-browser nav, .venue-tabs, .cola-proof-tabs, .codex-stage-tabs {
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-inline: contain;
+  }
+  .artifact-rail::-webkit-scrollbar, .perspective-people::-webkit-scrollbar,
+  .daily-days::-webkit-scrollbar, .health-browser nav::-webkit-scrollbar,
+  .venue-tabs::-webkit-scrollbar, .cola-proof-tabs::-webkit-scrollbar,
+  .codex-stage-tabs::-webkit-scrollbar { display: none; }
+  .artifact-rail button, .perspective-people button, .daily-days button,
+  .health-browser nav button, .venue-tabs button, .cola-proof-tabs button,
+  .codex-stage-tabs button { scroll-snap-align: start; }
+
+  .daily-shell { padding: 24px 12px 60px; }
+  .daily-opening h1 { font-size: clamp(31px, 8.5vw, 38px); line-height: 1.14; letter-spacing: -.04em; }
+  .daily-opening h1 br { display: none; }
+  .daily-opening p { font-size: 14px; line-height: 1.8; }
+  .daily-pass { width: calc(100% - 16px); min-height: 210px; margin-inline: 0 16px; }
+  .daily-days { width: 100%; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 7px; overflow: visible; }
+  .daily-days button { width: auto; min-width: 0; min-height: 74px; margin: 0; }
+  .daily-card { min-width: 0; }
+
+  /* Venue / interface and health */
+  .venue-shell { padding: 64px 12px 24px; }
+  .venue-mast h1,
+  .wardrobe-side h2,
+  .wardrobe-caption b,
+  .health-proof-head h1,
+  .health-proof-notes h2 { font-family: var(--mobile-sans); }
+  .venue-mast h1 { font-size: 27px; line-height: 1.2; font-weight: 850; }
+  .venue-thesis { font-size: 13px; line-height: 1.7; }
+  .venue-tabs { width: 100%; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); overflow: visible; }
+  .venue-tabs button { width: auto; min-width: 0; min-height: 54px; font-size: 10px; border-bottom: 1px solid var(--venue-line); }
+  .wardrobe-floor { gap: 14px; }
+  .wardrobe-visual { min-height: 0; display: flex; flex-direction: column; }
+  .wardrobe-visual img { height: 270px; flex: 0 0 270px; object-fit: cover; object-position: top; }
+  .wardrobe-visual::after { display: none; }
+  .wardrobe-caption { position: static; max-width: none; padding: 15px 14px 17px; background: #15110d; }
+  .wardrobe-caption b { font-size: 18px; }
+  .wardrobe-caption p { font-size: 12px; }
+  .wardrobe-side h2 { font-size: 26px; }
+  .wardrobe-doors { grid-template-columns: 1fr; }
+  .wardrobe-doors button { display: grid; grid-template-columns: 34px 1fr auto; min-height: 58px; }
+  .wardrobe-doors small { display: block; }
+
+  .health-proof-shell { padding: 76px 12px 60px; }
+  .health-proof-head { gap: 22px; }
+  .health-proof-head h1 { font-size: clamp(29px, 8.3vw, 37px); line-height: 1.14; font-weight: 850; }
+  .health-proof-head h1 br { display: none; }
+  .health-proof-head aside p { font-size: 14px; }
+  .health-browser > header { padding-inline: 10px; gap: 8px; }
+  .health-browser > header span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .health-browser nav { width: 100%; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 7px; overflow: visible; }
+  .health-browser nav button { width: auto; min-width: 0; min-height: 76px; margin: 0; }
+  .health-browser nav button:last-child { grid-column: 1 / -1; }
+  .health-browser figure { padding: 10px; }
+  .health-shot-frame { min-height: 330px; }
+
+  /* Project-story pages */
+  .story-title, .story-manifesto, .story-rail h2 { font-family: var(--mobile-sans); }
+  .story-title { font-size: clamp(34px, 9vw, 42px); line-height: 1.12; letter-spacing: -.05em; font-weight: 900; }
+  .story-lead { font-size: 15px; line-height: 1.75; }
+  .story-manifesto { font-size: 14px; line-height: 1.75; }
+  .story-actions { display: grid; grid-template-columns: 1fr 1fr; }
+  .story-action { min-width: 0; padding-inline: 10px; text-align: center; }
+  .proof-tabs { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+
+@media (max-width: 390px) {
+  #s0 .hl-portrait { width: 52vw; }
+  #s0 .hl-contact-strip { grid-template-columns: 1fr 1fr; }
+  .story-actions { grid-template-columns: 1fr; }
+}
