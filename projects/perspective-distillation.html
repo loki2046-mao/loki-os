@@ -1,32 +1,32 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="人物视角蒸馏：从公开材料中保存不同人的工作判断，并用隔离评测验证能否迁移。"><title>人物视角蒸馏 · 判断差异实验室｜栖迟系统</title><link rel="icon" href="../loki-ip-live.jpg"><link rel="stylesheet" href="./artifact-case.css"><link rel="stylesheet" href="./mobile-polish.css"></head>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="人物视角蒸馏：Loki 如何从公开材料构建可评测的人物判断模型，用证据分级、训练与留出隔离、硬失败和拒答边界检验判断迁移。"><title>人物视角蒸馏｜从公开材料构建可评测的人物判断模型｜Loki</title><link rel="canonical" href="https://loki-os.hiloki.ai/projects/perspective-distillation.html"><meta property="og:type" content="article"><meta property="og:title" content="人物视角蒸馏｜可评测的人物判断模型"><meta property="og:description" content="从公开材料里找到一个人的工作判断，再用隔离评测检查它能否走进新问题。"><meta property="og:image" content="https://loki-os.hiloki.ai/projects/assets/real/perspective/liulian-evidence-sheet-01.png"><meta property="og:url" content="https://loki-os.hiloki.ai/projects/perspective-distillation.html"><link rel="icon" href="../loki-ip-live.jpg"><link rel="stylesheet" href="./artifact-case.css"><link rel="stylesheet" href="./mobile-polish.css"><link rel="stylesheet" href="../brand-system.css"><script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"人物视角蒸馏：从公开材料构建可评测的人物判断模型","url":"https://loki-os.hiloki.ai/projects/perspective-distillation.html","inLanguage":"zh-CN","dateModified":"2026-08-29","creator":{"@type":"Person","name":"Loki","url":"https://loki-os.hiloki.ai/about.html"},"description":"从公开材料提取工作判断，并用证据分级、隔离留出题和拒答边界检查能否迁移。","keywords":["人物判断","AI 评测","AI Skill","文科生用 AI 做项目","证据分级"]}</script></head>
 <body class="perspective-page perspective-rebuilt">
-<header class="artifact-top"><a href="../index.html#works">← 回到返场作品单</a><small>CASE 03 / JUDGMENT DIFFERENCE LAB</small></header>
+<header class="artifact-top"><a href="../index.html#works">← 回到返场作品单</a><small>案例 03 / 人物判断实验</small></header>
 <main class="artifact-shell">
-  <section class="artifact-intro perspective-intro"><div><div class="artifact-kicker">4 PEOPLE / PUBLIC EVIDENCE / ISOLATED EVAL</div><h1>我想保存的不是一个人的口头禅，<br>而是他在工作里<em>怎样做判断</em>。</h1></div><aside><b>这个项目为什么存在：</b>很多人物模拟只追求“说起来像”。我把公开材料拆成证据、自述、行为、作品与推断，再看一套判断能不能在新问题里继续成立。</aside></section>
+  <section class="artifact-intro perspective-intro"><div><div class="artifact-kicker">4 个人 / 公开材料 / 隔离评测</div><h1>我喜欢看的，是一个人遇到麻烦时先看什么，<br>最后决定<em>留下什么</em>。</h1></div><aside><b>我为什么做这个：</b>一开始我也以为，人物 Skill 把语气学像就够了。后来越做越觉得不对：口头禅很好抄，真正难的是看清一个人在具体工作里怎么选、怎么改、什么时候停。</aside></section>
 
   <section class="perspective-principles" aria-label="项目意义">
-    <article><small>01 / KEEP DIFFERENCE</small><b>不把四个人蒸馏成同一种正确答案</b><p>同一问题里，他们可以从作品、场景、人物、结构或倾听进入，也可以停在不同结论。</p></article>
-    <article><small>02 / TEST TRANSFER</small><b>把模型放进它没见过的新问题</b><p>训练材料与留出题隔离；通过不是因为复述材料，而是因为判断动作还能迁移。</p></article>
-    <article><small>03 / PRESERVE UNKNOWN</small><b>不知道必须被保留下来</b><p>不冒充真人、不补私人动机、不把角色台词当本人，也不给尚未评测的人编一个漂亮分数。</p></article>
+    <article><small>01 / 留住差别</small><b>四个人，得保留四种不一样的看法</b><p>碰到同一个问题，他们可以先看作品、场景、人物、结构或倾听，也可以停在不同结论。</p></article>
+    <article><small>02 / 拿新题试一试</small><b>给它几道没见过的题</b><p>训练材料和留出题分开。我想看判断动作还能不能用，复述原材料不算通过。</p></article>
+    <article><small>03 / 留住不知道</small><b>不知道的地方，就让它说不知道</b><p>不冒充真人，不补私人动机，不把角色台词当本人，也不给尚未评测的人编一个漂亮分数。</p></article>
   </section>
 
   <section class="perspective-lab">
-    <nav class="perspective-people" aria-label="人物视角选择"><small>WHY THESE FOUR?</small><button class="is-active" data-person="liulian"><b>01</b><span>刘恋<i>交付与中心命题</i></span></button><button data-person="liuyang"><b>02</b><span>刘旸<i>荒谬结构与长期在场</i></span></button><button data-person="luyu"><b>03</b><span>鲁豫<i>职业判断与提问边界</i></span></button><button data-person="papi"><b>04</b><span>Papi酱<i>场景、角色与制作链</i></span></button></nav>
+    <nav class="perspective-people" aria-label="人物视角选择"><small>为什么是这四个人？</small><button class="is-active" data-person="liulian"><b>01</b><span>刘恋<i>交付与中心命题</i></span></button><button data-person="liuyang"><b>02</b><span>刘旸<i>荒谬结构与长期在场</i></span></button><button data-person="luyu"><b>03</b><span>鲁豫<i>职业判断与提问边界</i></span></button><button data-person="papi"><b>04</b><span>Papi酱<i>场景、角色与制作链</i></span></button></nav>
     <article class="perspective-workbench">
-      <header><div><small>SELECTED WORKING LENS</small><h2><span data-person-name>刘恋</span><em data-person-version>v0.2</em></h2></div><span data-person-state>待 v0.3 合成与回归</span></header>
+      <header><div><small>当前打开的人物视角</small><h2><span data-person-name>刘恋</span><em data-person-version>v0.2</em></h2></div><span data-person-state>待 v0.3 合成与回归</span></header>
       <section class="person-thesis"><small>为什么选她进入这组实验</small><h3 data-person-lens>把复杂压力压成一个中心命题，再变成能交付的表达。</h3><p data-person-reason>她同时穿过广告、音乐、舞台和文字。这个样本能测试：职业方法迁移到不同媒介以后，判断是否仍然是同一套，又会在哪里失效。</p></section>
       <div class="person-actions"><article><small>她先看什么</small><b data-person-entry>作品要给谁看、入口在哪里、最后要交付什么</b></article><article><small>她会做什么</small><b data-person-action>先找中心句，再把压力翻译成提案、排练或版本</b></article><article><small>她拒绝什么</small><b data-person-refusal>不拿创作意图要求观众“必须看懂”</b></article></div>
-      <aside class="person-boundary"><b>模型边界</b><p data-person-boundary>这是公开表达与工作动作的组织方式，不是性格本质；广告职业创作、歌词署名和私人经历必须分层。</p></aside>
+      <aside class="person-boundary"><b>模型边界</b><p data-person-boundary>这里整理的是公开表达和工作动作。它不负责解释性格本质；广告职业创作、歌词署名和私人经历必须分层。</p></aside>
       <section class="person-deep-dive">
         <nav aria-label="继续了解这次蒸馏"><button class="is-active" data-person-layer="why">为什么是 TA</button><button data-person-layer="media">我从哪里理解 TA</button><button data-person-layer="output">最后留下了什么</button></nav>
-        <article><small data-person-layer-kicker>WHY I CARE</small><h3 data-person-layer-title>我喜欢的不是“成功模板”，而是她把复杂事讲清楚的能力。</h3><p data-person-layer-copy>这些人不是被供在高处的伟人。他们只是我愿意反复看、反复听的人：因为我喜欢他们某一种表达、感觉或判断，所以想认真知道那种东西究竟怎么发生。</p><ul data-person-layer-items><li>喜欢她在不同媒介里仍然保留同一套交付意识</li><li>想学的是把模糊压力变成清楚中心句的方法</li><li>不复制声音、外貌或私人性格</li></ul></article>
+        <article><small data-person-layer-kicker>我为什么会一直看她</small><h3 data-person-layer-title>我喜欢她把复杂事讲清楚的能力。</h3><p data-person-layer-copy>这些人都是我愿意反复看、反复听的人。我喜欢他们某一种表达、感觉或判断，所以想认真弄明白：那种东西到底是在什么情况下发生的。</p><ul data-person-layer-items><li>喜欢她在不同媒介里仍然保留同一套交付意识</li><li>想学的是把模糊压力变成清楚中心句的方法</li><li>不复制声音、外貌或私人性格</li></ul></article>
       </section>
     </article>
     <aside class="perspective-evidence">
       <div class="evidence-visual" data-person-visual>
         <figure data-evidence-photo><img src="./assets/real/perspective/liulian-evidence-sheet-01.png" alt="刘恋公开节目材料真实帧采样表"><figcaption><span data-evidence-caption>刘恋 / 近期公开节目材料帧采样</span><a data-evidence-credit hidden target="_blank" rel="noopener">公开材料来源 ↗</a></figcaption></figure>
-        <div class="evidence-document" data-evidence-document hidden><small data-evidence-kicker>REAL PROJECT ARTIFACT</small><b data-evidence-title>公开材料证据档案</b><p data-evidence-summary>每个判断都需要回到来源、材料层和证据等级。</p></div>
+        <div class="evidence-document" data-evidence-document hidden><small data-evidence-kicker>项目里的真实文件</small><b data-evidence-title>公开材料证据档案</b><p data-evidence-summary>每个判断都需要回到来源、材料层和证据等级。</p></div>
       </div>
       <div class="evidence-status"><small>当前验证状态</small><b data-person-score>35 / 36</b><span data-person-score-label>内部盲评通过；并非外部验证</span></div>
       <div class="evidence-stack"><small>每个人都实际拥有</small><ul data-person-files><li>可执行的人物视角 Skill</li><li>公开材料与证据分级档案</li><li>训练集之外的留出题</li><li>逐项失分与边界报告</li></ul></div>
@@ -34,13 +34,32 @@
   </section>
 
   <section class="cross-talk-lab" data-cross-talk>
-    <header><div><small>CROSS-TALK / HIGHER-ORDER TEST</small><h2>真正有意思的不是四份档案，<br>而是它们放在一起以后<em>没有变成同一个人</em>。</h2></div><p>每个子会话只加载自己的 Skill，彼此看不到对方模型。主会话只传递话轮，观察它们会不会在新问题里保留不同的判断入口。</p></header>
+    <header><div><small>把四个人放到同一道题里</small><h2>四份档案放在一起以后，<br>还能不能<em>听出四个人</em>。</h2></div><p>我让四个子会话各自回答。每个会话只加载自己的 Skill，也看不到其他人的模型。主会话只负责传话，我想看看新问题会不会把四种判断磨成同一种答案。</p></header>
     <nav><button class="is-active" data-talk="work"><b>01</b><span>喜欢的事变成工作</span></button><button data-talk="data"><b>02</b><span>喜欢但数据很差，还做吗</span></button></nav>
     <div class="talk-stage">
-      <article><small data-talk-a-name>鲁豫 · 主持</small><h3 data-talk-a-title>从一个具体时刻追问代价</h3><p data-talk-a-copy>不先给结论，而是把“八个观众的夜晚”“第一次把失败讲成段子”单独拎出来，追问当时的人有没有真的翻篇。</p></article>
+      <article><small data-talk-a-name>鲁豫 · 主持</small><h3 data-talk-a-title>从一个具体时刻追问代价</h3><p data-talk-a-copy>她先把【八个观众的夜晚】【第一次把失败讲成段子】单独拎出来，追问当时的人有没有真的翻篇，结论放到后面。</p></article>
       <i>≠</i>
       <article><small data-talk-b-name>刘旸 × 刘恋 · 嘉宾</small><h3 data-talk-b-title>同样谈“账”，却保留两套算法</h3><p data-talk-b-copy>刘旸把低谷改记为创作成本，刘恋把爱好与工作改成平等关系。它们自然汇流，但没有被整理成唯一答案。</p></article>
     </div>
-    <footer>这些对谈是隔离条件下的模型演绎，不是真人言论。它们的用途是检验差异能否留下，而不是制造可传播的“名人金句”。</footer>
+    <footer>这些对谈来自隔离条件下的模型演绎，不能当作真人言论。它们只用来检查差异有没有留下，也不会被包装成可传播的名人金句。</footer>
   </section>
-</main><script src="./artifact-case.js"></script></body></html>
+</main>
+<section class="case-dossier" style="--case-accent:#d7f43c" aria-label="人物视角蒸馏完整证据档案">
+  <header class="dossier-heading"><div><small>公开案例 / 证据与留出题 / 更新于 2026-08-29</small><h2>我把一个人怎么做决定，<br>一条条从材料里<em>捞出来</em>。</h2></div><p><strong>如果只用一句话说：</strong>我想从公开材料里看清一个人在具体任务里怎么选、怎么改、什么时候拒绝。每条判断都要留下来源，训练材料和新题分开；页面里的分数，只代表这套内部测试。</p></header>
+  <div class="judgment-turn"><article><small>我一开始以为</small><h3>材料足够多，语气学得像，就能做出人物 Skill。</h3></article><i>→</i><article><small>我后来才发现</small><h3>口头禅很好学。真正需要留下的，是他在什么任务里先看什么、怎么改、为什么停下。</h3></article></div>
+  <section class="cue-timeline"><header><span>我把材料变成新题，大概走了四步</span><span>事实、推断与评测分开写</span></header>
+    <article class="cue-line"><small>01 / 找材料</small><div><h3>先确认这句话能不能回到来源</h3><p>事实、自述、观察行为、作品、他者评价和我的推断分别记录。轮到推断时，还要留下置信度和别的可能解释。</p></div><span>留下：sources-and-evidence 账本</span></article>
+    <article class="cue-line"><small>02 / 写规则</small><div><h3>把人格标签先放到一边</h3><p>我记录任务、角色、阶段、入口信号、修改动作、停手条件和未知领域，尽量看一个人在具体情境里怎么做。</p></div><span>留下：各人物独立 SKILL.md 与 research/</span></article>
+    <article class="cue-line"><small>03 / 出新题</small><div><h3>训练材料和留出题分开放</h3><p>评测题不会提前塞进被测 Skill；四个人物也彼此独立加载，免得最后都答成同一种声音。</p></div><span>留下：evals/ 与跨人物对谈记录</span></article>
+    <article class="cue-line"><small>04 / 留边界</small><div><h3>答错和“不知道”都要留下</h3><p>不冒充真人、不补私人动机、不把角色台词当本人，也不给尚未评测的人补漂亮分数。</p></div><span>当前：研究型工作模型，内部评测</span></article>
+  </section>
+  <section class="evidence-wall"><header><div><span class="dossier-kicker">四个人，四个入口</span><h2>他们碰到问题时，<br>第一眼看的地方并不一样。</h2></div><p>页面只使用公开材料的脱敏整理与项目内部证据。人物本人没有参与、认可或授权本项目；模型演绎也不代表真人言论。</p></header><div class="evidence-grid">
+    <figure class="evidence-card"><img src="./assets/real/perspective/liulian-evidence-sheet-01.png" alt="刘恋公开节目材料的帧采样证据表"><figcaption><b>刘恋 · 公开材料采样</b><span>我从广告、音乐、舞台与文字里找【中心命题—交付】的工作动作，金句只算材料的一小部分。</span><small>PUBLIC SOURCE / LIULIAN V0.2</small></figcaption></figure>
+    <figure class="evidence-card"><img src="./assets/real/perspective/liuyang-stage.jpg" alt="刘旸公开舞台材料，用于研究荒谬结构与长期在场"><figcaption><b>刘旸 · 荒谬结构与长期在场</b><span>样本用于观察如何把失利、低谷和职业账本重新组织为创作成本。</span><small>PUBLIC MATERIAL / LIUYANG V0.4</small></figcaption></figure>
+    <figure class="evidence-card"><img src="./assets/real/perspective/luyu-slow-conversation.jpg" alt="鲁豫公开访谈材料，用于研究职业提问和倾听边界"><figcaption><b>鲁豫 · 提问与倾听边界</b><span>仍在采集与修正口径，页面不为未完成状态补写统一答案。</span><small>COLLECTING / BOUNDARY PRESERVED</small></figcaption></figure>
+    <figure class="evidence-card"><img src="./assets/real/perspective/papi-welcome.png" alt="Papi酱人物研究工作区欢迎页"><figcaption><b>Papi酱 · 场景、角色与制作链</b><span>第四个人物已经建档，盲测还没做，所以这里不写通过。</span><small>V0.1 / NOT YET BLIND-TESTED</small></figcaption></figure>
+  </div></section>
+  <section class="status-board"><article><small>我已经做到的</small><h3>材料和题目各自有位置</h3><ul><li>人物材料、Skill 与评测目录独立保存</li><li>证据、自述、观察和推断分级</li><li>训练与留出隔离</li><li>记录内容分、格式分与硬失败</li></ul></article><article><small>目前跑出来的分数</small><h3>已评测，但都有范围</h3><ul><li>35/36 是刘恋 v0.1 内部盲评</li><li>36/42 对应刘旸 v0.4 新鲜留出</li><li>32/36 对应鲁豫 v0.1 修正口径</li><li>这些分数只代表项目内部测试</li></ul></article><article><small>我不会拿它来声称的事</small><h3>这些边界还在</h3><ul><li>不代表人物本人认可或参与</li><li>不证明私人动机或稳定人格</li><li>Papi酱当前未盲测</li><li>内部评测不能当作第三方产品准确率</li></ul></article></section>
+  <footer class="dossier-footer"><h2>我只是想看看，平时读人、看材料、抓细节的能力，能不能真的做成一套可以检查的东西。</h2><div class="dossier-links"><a href="../works.html">返回作品索引 →</a><a href="./inkpanda.html">下一案：AI 长篇写作</a><a href="../about.html">认识 Loki</a></div></footer>
+</section>
+<script src="./artifact-case.js"></script></body></html>

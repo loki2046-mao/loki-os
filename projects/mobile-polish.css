@@ -46,13 +46,14 @@
     margin: 0;
     padding: 30px 16px 22px;
     display: grid;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto auto 1fr;
     background: linear-gradient(105deg, rgba(255,255,255,.28), transparent 24%), #eee3cf;
     box-shadow: 9px 10px 0 rgba(255,106,0,.3);
   }
   #s1 .sl-header { padding: 0 2px 16px; border-bottom: 4px solid #17110d; }
   #s1 .sl-act { font: 900 10px/1 var(--mobile-display); letter-spacing: .38em; }
   #s1 .sl-title { margin-top: 8px; font: 900 38px/.95 var(--mobile-sans); letter-spacing: -.05em; }
+  #s1 .sl-definition { margin: 12px 2px 8px; font: 500 11px/1.55 var(--mobile-sans); color: #665b50; }
   #s1 .sl-wm { display: none; }
   #s1 .sl-list { display: grid; align-content: stretch; }
   #s1 .sl-item {

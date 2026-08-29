@@ -3,16 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="Loki OS（栖迟系统）：赛博小熊猫 Loki 的作品、写作、AI 实验与人生系统。">
+<meta name="description" content="Loki｜栖迟系统：一个文科背景的 AI 产品与个人系统实践者，把真实问题做成能运行、能维护、能复盘的产品、长篇写作系统和 AI 工作流。">
 <meta name="theme-color" content="#12100C">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Loki OS — 栖迟系统">
-<meta property="og:description" content="AI 博主、写作者、教育工作者，也是一个持续做东西的人。">
+<meta property="og:title" content="Loki｜栖迟系统：AI 产品、长篇写作与个人工作流">
+<meta property="og:description" content="我用 AI 把真实问题做成产品、写作系统和工作流。查看三个代表项目与真实证据。">
 <meta property="og:url" content="https://loki-os.hiloki.ai/">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://loki-os.hiloki.ai/loki-ip-live.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://loki-os.hiloki.ai/">
 <link rel="icon" type="image/jpeg" href="./loki-ip-live.jpg">
-<title>LOKI OS — 栖迟系统</title>
+<title>Loki｜AI 产品、AI 长篇写作与个人工作流｜栖迟系统</title>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://loki-os.hiloki.ai/#loki","name":"Loki","alternateName":"赛博小熊猫 Loki","url":"https://loki-os.hiloki.ai/","image":"https://loki-os.hiloki.ai/loki-ip-live.jpg","sameAs":["https://github.com/loki2046-mao","https://hiloki.ai"],"knowsAbout":["AI 产品设计","AI 长篇写作","AI 工作流","个人 AI 系统","人物判断与 AI 评测"]},{"@type":"WebSite","@id":"https://loki-os.hiloki.ai/#website","url":"https://loki-os.hiloki.ai/","name":"Loki OS｜栖迟系统","inLanguage":"zh-CN","about":{"@id":"https://loki-os.hiloki.ai/#loki"}}]}
+</script>
 <style>
 :root{--accent:#FF8C00;--copper:#D2691E;--white:#F5F5F5;--text:#C8C0B8;--dim:#6B6560;--bg:#12100C;}
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -640,8 +644,9 @@ body::after{
   box-shadow:0 2px 5px rgba(0,0,0,.2);
 }
 .setlist::before{left:40px;transform:rotate(-7deg);}
-.setlist::after{right:48px;transform:rotate(6deg);background:rgba(60,203,255,.5);}
+.setlist::after{right:48px;transform:rotate(6deg);background:rgba(214,164,93,.62);}
 .sl-header{text-align:left;margin:0 0 20px;border-bottom:5px solid var(--ink);padding-bottom:10px;}
+.sl-definition{max-width:650px;margin:-7px 0 15px;color:#5f554b;font-family:"STKaiti","Kaiti SC",serif;font-size:12px;line-height:1.65;}
 .sl-act{color:var(--copper);font-weight:900;letter-spacing:6px;}
 .sl-title{
   color:var(--ink);font-family:"Arial Narrow","Avenir Next Condensed",Impact,sans-serif;
@@ -1173,10 +1178,12 @@ body::after{
   .hl-bio{font-size:10px;}
 
   .setlist{
-    width:100%;padding:44px 20px 36px;transform:none;clip-path:none;margin-top:18px;overflow:hidden;
+    display:block;width:100%;padding:44px 20px 36px;transform:none;clip-path:none;margin-top:18px;overflow:hidden;
   }
   .setlist::before,.setlist::after{width:76px;height:24px;}
-  .sl-title{font-size:48px;}
+  .sl-title{font-size:38px;line-height:1;}
+  .sl-definition{font-size:11px;margin-bottom:12px;}
+  .sl-list{margin-top:8px;}
   .sl-item{padding:10px 4px;gap:8px;}
   .sl-item:nth-child(even){transform:none;}
   .sl-num{font-size:22px;min-width:32px;}
@@ -1647,9 +1654,17 @@ body::after{
 }
 </style>
 <link rel="stylesheet" href="./projects/mobile-polish.css">
+<link rel="stylesheet" href="./brand-system.css">
 <link rel="preload" as="image" href="loki-ip-live.jpg">
 </head>
 <body>
+<nav class="brand-nav" aria-label="栖迟系统公开导航">
+  <a href="./index.html">LOKI / 栖迟系统</a>
+  <a href="./works.html">代表项目</a>
+  <a href="./about.html">认识 Loki</a>
+  <a href="./projects/inkpanda.html">AI 长篇写作</a>
+  <a href="./projects/perspective-distillation.html">人物判断与 AI 评测</a>
+</nav>
 <div class="light" id="lo"></div>
 <div class="arch-dec"></div>
 <div class="gs" id="gs" aria-hidden="true"></div>
@@ -1688,10 +1703,9 @@ body::after{
     <div class="hl-header">
       <div class="hl-marquee hl-reveal" style="transition-delay:0.06s">TONIGHT</div>
       <a class="hl-name-link hl-reveal" href="https://hiloki.ai" target="_blank" rel="noopener" style="transition-delay:0.10s">
-        <span class="hl-name-cn">赛博小熊猫</span>
-        <span class="hl-name-en">LOKI</span>
+        <h1 class="hl-name-heading"><span class="hl-name-cn">赛博小熊猫</span><span class="hl-name-en">LOKI</span></h1>
       </a>
-      <div class="hl-role hl-reveal" style="transition-delay:0.16s">把模糊想法做成 AI 产品、内容系统与工作流的人</div>
+      <div class="hl-role hl-reveal" style="transition-delay:0.16s">我用 AI 把真实问题做成产品、写作系统和工作流。</div>
       <div class="hl-contact-strip hl-reveal" style="transition-delay:0.18s">
         <a class="hl-contact" href="https://github.com/loki2046-mao" target="_blank" rel="noopener"><span>01</span>GITHUB</a>
         <button class="hl-contact" type="button" onclick="event.stopPropagation();toggleWechatCard()"><span>02</span>公众号</button>
@@ -1699,53 +1713,52 @@ body::after{
         <a class="hl-contact" href="https://hiloki.ai" target="_blank" rel="noopener"><span>04</span>HILOKI.AI</a>
       </div>
     </div>
-    <!-- 身份标签 -->
+    <!-- 三条对外主线：陌生访客无需猜职业标签 -->
     <div class="hl-identity hl-reveal" style="transition-delay:0.22s">
-      <span class="hl-id-tag edu">教育工作者</span>
-      <span class="hl-id-tag ai">AI 博主</span>
-      <span class="hl-id-tag coder">Vibe Coder</span>
-      <span class="hl-id-tag writer">写作者</span>
-      <span class="hl-id-tag tester">产品测评</span>
+      <a class="hl-id-tag writer" href="./projects/inkpanda.html">AI 写小说 / 长篇写作</a>
+      <a class="hl-id-tag ai" href="./projects/interface-system.html">文科生用 AI 做项目</a>
+      <a class="hl-id-tag coder" href="./works.html#workflow">AI 工作流 / 个人系统</a>
     </div>
     <button class="hl-mobile-more" type="button" aria-expanded="false">查看完整介绍 ↓</button>
     <!-- AI 类型 -->
     <div class="hl-features">
       <div class="hl-feat hl-reveal" style="transition-delay:0.28s">
         <span class="hl-feat-num">01</span>
-        <span class="hl-feat-label">AI 产品测评 &amp; 模型横评</span>
-        <span class="hl-feat-desc">100+ 产品 · 35 篇</span>
+        <span class="hl-feat-label">AI 长篇写作系统</span>
+        <span class="hl-feat-desc">人物 · 世界观 · 伏笔 · 上下文一致性</span>
       </div>
       <div class="hl-feat hl-reveal" style="transition-delay:0.34s">
         <span class="hl-feat-num">02</span>
-        <span class="hl-feat-label">AI 图像生成 &amp; 视觉设计</span>
-        <span class="hl-feat-desc">提示词工程 · 33 篇</span>
+        <span class="hl-feat-label">AI 产品与界面系统</span>
+        <span class="hl-feat-desc">从体验诊断到前端实现与真实 UI 验收</span>
       </div>
       <div class="hl-feat hl-reveal" style="transition-delay:0.40s">
         <span class="hl-feat-num">03</span>
-        <span class="hl-feat-label">AI 工作流 &amp; 自动化</span>
-        <span class="hl-feat-desc">效率方法 · 内容中台 · 工作流打造</span>
+        <span class="hl-feat-label">AI 工作流 &amp; 个人系统</span>
+        <span class="hl-feat-desc">知识 · 任务 · 记录 · 复盘 · 长期记忆</span>
       </div>
       <div class="hl-feat hl-reveal" style="transition-delay:0.46s">
         <span class="hl-feat-num">04</span>
-        <span class="hl-feat-label">vibe coding &amp; 产品实验</span>
-        <span class="hl-feat-desc">15+ 公开作品 · 自建与改造 Skills 持续迭代</span>
+        <span class="hl-feat-label">人物判断与 AI 评测</span>
+        <span class="hl-feat-desc">公开证据 · 情境路由 · 隔离留出测试</span>
       </div>
       <div class="hl-feat hl-reveal" style="transition-delay:0.52s">
         <span class="hl-feat-num">05</span>
-        <span class="hl-feat-label">教育 × AI 实践</span>
-        <span class="hl-feat-desc">K12 机构视频中台负责人</span>
+        <span class="hl-feat-label">内容、教育与产品实践</span>
+        <span class="hl-feat-desc">把文科判断编译成能运行的方法</span>
       </div>
     </div>
     <!-- 底部 -->
     <div class="hl-bottom">
       <div class="hl-stats-row hl-reveal" style="transition-delay:0.60s">
-        <div class="hl-stat"><span class="hl-stat-val">190</span><span class="hl-stat-label">篇内容</span></div>
-        <div class="hl-stat"><span class="hl-stat-val">15+</span><span class="hl-stat-label">项作品</span></div>
-        <div class="hl-stat"><span class="hl-stat-val">6500+</span><span class="hl-stat-label">全网读者</span></div>
+        <div class="hl-stat" title="本站公开内容结构，更新于 2026-08-29"><span class="hl-stat-val">3</span><span class="hl-stat-label">条长期主线</span></div>
+        <div class="hl-stat" title="site-data.js 中已确认可公开的案例；每个入口另标核验状态，更新于 2026-08-29"><span class="hl-stat-val">7</span><span class="hl-stat-label">个公开案例</span></div>
+        <div class="hl-stat" title="Cola 1.2.8 真机验证的可切换皮肤"><span class="hl-stat-val">9</span><span class="hl-stat-label">套 Cola 皮肤</span></div>
       </div>
       <div class="hl-bio hl-reveal" style="transition-delay:0.64s">
-        我在产品、内容、设计和工作流之间做翻译：先找到真正的问题，再把方法做到<strong>能运行、能维护、能复盘</strong>。公众号<strong>【赛博小熊猫Loki】</strong>主理人 · K12 教育视频中台经理
+        我文科出身，现在用 AI 做产品，也给自己的阅读、写作和工作搭系统。生成出东西以后，我还会继续追问：它<strong>能运行吗、能维护吗、过一阵还能复盘吗</strong>？答案要落在真实产品和方法里。
       </div>
+      <div class="brand-actions hl-reveal" style="transition-delay:0.66s"><a href="./works.html">看三个代表项目 →</a><a href="./about.html">认识 Loki</a></div>
       <div class="hl-tags-row hl-reveal" style="transition-delay:0.68s">
         <span class="hl-tag">ISTJ</span><span class="hl-tag">金牛座</span><span class="hl-tag">冰美式续命</span><span class="hl-tag">壁球菜鸟</span><span class="hl-tag">写同人文</span><span class="hl-tag">线下演出爱好者</span>
       </div>
@@ -1756,31 +1769,32 @@ body::after{
 <!-- 1. SETLIST -->
 <div class="scene" id="s1"><div class="setlist">
   <div class="sl-wm">SETLIST</div>
-  <div class="sl-header"><div class="sl-act">ACT I</div><div class="sl-title">今晚曲目</div></div>
+  <div class="sl-header"><div class="sl-act">ACT I · OPEN LINKS</div><div class="sl-title">今晚曲目</div></div>
+  <p class="sl-definition">这里只放已确认可公开的内容入口；尚未完成外部复验的产品先进入站内案例，不把历史地址写成当前上线。项目为什么做、怎么返工、证据在哪里，留到返场作品单展开。</p>
   <div class="sl-list" id="tracks">
     <div class="sl-item" data-url="https://hiloki.ai" onclick="tearGo(this)">
-      <span class="sl-num">01</span><div class="sl-info"><div class="sl-name">赛博小熊猫Loki</div><div class="sl-desc">个人主页 · hiloki.ai</div></div>
-      <span class="sl-badge">LIVE</span>
+      <span class="sl-num">01</span><div class="sl-info"><div class="sl-name">赛博小熊猫 Loki</div><div class="sl-desc">公开内容主页 · hiloki.ai</div></div>
+      <span class="sl-badge">PUBLIC</span>
       <div class="sl-ticket" onclick="event.stopPropagation();this.classList.toggle('torn');fxTear()"><div class="tk-left">ADMIT<br>ONE</div><div class="tk-right">01</div></div>
     </div>
-    <div class="sl-item" data-url="https://inkxiaoxiongmao.hiloki.ai" onclick="tearGo(this)">
-      <span class="sl-num">02</span><div class="sl-info"><div class="sl-name">小熊猫写作</div><div class="sl-desc">长篇写作平台</div></div>
-      <span class="sl-badge">LIVE</span>
+    <div class="sl-item" data-url="./projects/inkpanda.html" onclick="tearGo(this)">
+      <span class="sl-num">02</span><div class="sl-info"><div class="sl-name">小熊猫写作</div><div class="sl-desc">AI 长篇写作案例 · 外部入口待复核</div></div>
+      <span class="sl-badge">PUBLIC CASE</span>
       <div class="sl-ticket" onclick="event.stopPropagation();this.classList.toggle('torn');fxTear()"><div class="tk-left">ADMIT<br>ONE</div><div class="tk-right">02</div></div>
     </div>
-    <div class="sl-item" data-url="https://lian.hiloki.ai" onclick="tearGo(this)">
-      <span class="sl-num">03</span><div class="sl-info"><div class="sl-name">恋之上上签</div><div class="sl-desc">刘恋歌词答案书 · 44首147句</div></div>
-      <span class="sl-badge">LIVE</span>
+    <div class="sl-item" data-url="./projects/lian.html" onclick="tearGo(this)">
+      <span class="sl-num">03</span><div class="sl-info"><div class="sl-name">恋之上上签</div><div class="sl-desc">歌词答案书案例 · 外部入口待复核</div></div>
+      <span class="sl-badge">PUBLIC CASE</span>
       <div class="sl-ticket" onclick="event.stopPropagation();this.classList.toggle('torn');fxTear()"><div class="tk-left">ADMIT<br>ONE</div><div class="tk-right">03</div></div>
     </div>
-    <div class="sl-item" data-url="https://github.com/loki2046-mao/loki-ebook-converter/releases/tag/v1.1.2" onclick="tearGo(this)">
-      <span class="sl-num">04</span><div class="sl-info"><div class="sl-name">Loki 电子书转换器</div><div class="sl-desc">macOS 1.1.2 · Windows 1.1.1</div></div>
-      <span class="sl-badge">DOWNLOAD</span>
+    <div class="sl-item" data-url="./projects/ebook-converter.html" onclick="tearGo(this)">
+      <span class="sl-num">04</span><div class="sl-info"><div class="sl-name">Loki 电子书转换器</div><div class="sl-desc">跨平台桌面工具案例 · Release 待当前复核</div></div>
+      <span class="sl-badge">PUBLIC CASE</span>
       <div class="sl-ticket" onclick="event.stopPropagation();this.classList.toggle('torn');fxTear()"><div class="tk-left">ADMIT<br>ONE</div><div class="tk-right">04</div></div>
     </div>
     <div class="sl-item" data-url="./projects/loki-health.html" onclick="tearGo(this)">
-      <span class="sl-num">05</span><div class="sl-info"><div class="sl-name">Loki's health</div><div class="sl-desc">我的身体节律 · HealthKit 只读健康 App</div></div>
-      <span class="sl-badge">CASE + LINK</span>
+      <span class="sl-num">05</span><div class="sl-info"><div class="sl-name">Loki's Health</div><div class="sl-desc">脱敏公开案例 · 本地健康 App 的真实界面</div></div>
+      <span class="sl-badge">PUBLIC CASE</span>
       <div class="sl-ticket" onclick="event.stopPropagation();this.classList.toggle('torn');fxTear()"><div class="tk-left">ADMIT<br>ONE</div><div class="tk-right">05</div></div>
     </div>
   </div>
@@ -1797,7 +1811,7 @@ body::after{
   <div class="gear-inside" id="gearInside">
     <button class="gear-exit" type="button" onclick="closeGear()" aria-label="退出乐器设备间">← 退回设备间门外</button>
     <div class="gear-control-head">
-      <div><small>ACT II / TOUR EQUIPMENT DEPOT</small><strong>巡演器材仓</strong><span>不是能力打分表，是我在内容、视觉与技术之间真实调用的工作装备。</span></div>
+      <div><small>ACT II / 巡演器材仓</small><strong>巡演器材仓</strong><span>这里放的是我在内容、视觉与技术之间真实调用过的工作装备，数字只记录版本和现场。</span></div>
       <div class="gear-live"><i></i> 08 PATCHED · 点击模块检修</div>
     </div>
     <div class="gear-rack-floor">
@@ -1836,7 +1850,7 @@ body::after{
 <!-- 3. CORK BOARD -->
 <div class="scene" id="s3"><div class="cork">
   <div class="cork-hd"><div class="cork-act">ACT III · ENCORE WORKS / 返场</div><div class="cork-title"><span>返场</span>作品单</div><div class="cork-sub" id="corkUpdated">已经完成、仍能打开、值得重新回到舞台的作品</div></div>
-  <p class="cork-definition"><b>这一幕的归类：</b>不是能力清单，也不是最近动态；它只收录我亲自做完并确认可以对外展示的作品。点一张返场票，进入它自己的现场。</p>
+  <p class="cork-definition"><b>这一幕只收录：</b>我亲自做完，并且确认可以对外展示的作品。能力清单和最近动态放在别处；点一张返场票，就能进入它自己的现场。</p>
   <div class="cork-board" id="recentProjects">
     <div class="cork-card is-pending" aria-live="polite"><div class="cork-date">CURATING</div><div class="cork-card-title">正在装载最新作品单</div><div class="cork-summary">项目数据通过审核后由页面自动生成。</div><div class="cork-tag">LOKI OS</div></div>
   </div>
@@ -1860,7 +1874,7 @@ body::after{
       <div class="bs-corridor-head">
         <small>ACT IV / CREW MAP</small>
         <strong>演出后台</strong>
-        <p>四扇门不是四个随机栏目，而是组成我的四个侧面：日常状态、现场记忆、人格衣橱和生产方法。</p>
+        <p>四扇门分别通向日常状态、现场记忆、人格衣橱和生产方法。走完一圈，大概就能看见我平时怎样生活、怎样记住现场，又怎样把方法做成工具。</p>
         <button type="button" onclick="closeBackstage()">← 退回后台门外</button>
       </div>
       <div class="bs-status-rig" aria-hidden="true"><i></i><i></i><i></i><i></i><span>ALL ROOMS / STANDBY</span></div>
@@ -1872,7 +1886,7 @@ body::after{
       <div class="bs-flightcase"><span>FRAGILE</span><b>LOKI<br>TOUR</b></div>
       <div class="bs-cable"></div>
       <div class="bs-crew-console" aria-label="后台调度台">
-        <div><small>CREW DISPATCH</small><strong>今晚不是目录，<br>是四条正在工作的侧线。</strong></div>
+        <div><small>后台调度</small><strong>今晚有四条侧线，<br>都还在继续工作。</strong></div>
         <button type="button" onclick="openBSRoom(document.querySelector('[data-room=&quot;01&quot;]'),'dress')"><i>01</i><b>状态核对</b><span>灯亮 · 可进入</span></button>
         <button type="button" onclick="openBSRoom(document.querySelector('[data-room=&quot;02&quot;]'),'box')"><i>02</i><b>现场记忆</b><span>票根 · 已归档</span></button>
         <button type="button" onclick="openBSRoom(document.querySelector('[data-room=&quot;03&quot;]'),'wardrobe')"><i>03</i><b>人格衣橱</b><span>造型 · 轮换中</span></button>
@@ -1971,7 +1985,7 @@ body::after{
             <div class="bs-box-body">
               <div class="bs-box-era">2026</div>
               <div class="bs-box-lineup">蔡依林 PLEASURE · 谢霆锋</div>
-              <div class="bs-box-note">鸟巢 · 七层楼装置 · 这不是舞美这是魔术</div>
+              <div class="bs-box-note">鸟巢 · 七层楼装置 · 这套舞美简直像魔术</div>
             </div>
           </div>
         </div>
@@ -1979,24 +1993,24 @@ body::after{
           <button class="bs-memory-close" type="button" onclick="closeBSMemory()">← 回到包厢名单</button>
           <article class="bs-memory-record" data-memory="supergirl">
             <div class="bs-memory-kicker">BOX A / SUMMER 2005 / PUBLIC MEMORY</div>
-            <div class="bs-memory-hero"><div><h3>那一年，喜欢会走上街头。</h3><p>李宇春、周笔畅和 2005 年的超级女声，留在这里的不只是冠亚军名单。电视直播、手机短信、街头拉票和城市里真实出现的人，把一次选秀变成了许多人共同参与的现场。</p></div><div class="bs-memory-poster"><span>2005.08.25—08.26</span><strong>想唱就唱<br>街头拉票</strong><small>记忆关键词：李宇春 · 周笔畅 · 万人空巷<br>不是一张怀旧海报，而是一整代人的参与方式。</small></div></div>
+            <div class="bs-memory-hero"><div><h3>那一年，喜欢会走上街头。</h3><p>李宇春、周笔畅和 2005 年的超级女声，给我留下了冠亚军名单，也留下电视直播、手机短信、街头拉票和城市里真实出现的人。一次选秀，成了许多人共同参与的现场。</p></div><div class="bs-memory-poster"><span>2005.08.25—08.26</span><strong>想唱就唱<br>街头拉票</strong><small>记忆关键词：李宇春 · 周笔畅 · 万人空巷<br>一张怀旧海报装不下那一代人的参与方式。</small></div></div>
             <div class="bs-memory-notes"><div class="bs-memory-note"><i>01 / THE STREET</i><h4>决赛前一天</h4><p>杭州、长沙、昆明等地的歌迷走上街头，为喜欢的选手解释、拉票，甚至帮路人完成短信投票。</p></div><div class="bs-memory-note"><i>02 / THE NIGHT</i><h4>八百多万张选择</h4><p>8 月 26 日总决赛，李宇春获得 3,528,308 票，周笔畅获得 3,270,840 票。数字背后，是电视时代少见的全民参与。</p></div><div class="bs-memory-note"><i>03 / WHY IT STAYS</i><h4>记住的是现场感</h4><p>这一格把“喜欢”保存为一种行动：人们会制作衣服、举起画板、站到街头，让自己的选择被看见。</p></div></div>
             <p class="bs-memory-source">公开资料参考：<a href="https://news.sohu.com/20050826/n226793349.shtml" target="_blank" rel="noopener">新华社 / 搜狐 2005 街头拉票图集 ↗</a> · <a href="https://yule.sohu.com/20050827/n226799477.shtml" target="_blank" rel="noopener">总决赛结果 ↗</a></p>
           </article>
           <article class="bs-memory-record" data-memory="sisters">
             <div class="bs-memory-kicker">BOX B / THREE ENTRY POINTS</div>
-            <div class="bs-memory-hero"><div><h3>不是追一档节目，<br>是被三种气质击中。</h3><p>陈昊宇、刘恋、于文文并不被压成一张“浪姐名单”。这里先保留已经确认的三个入口：陈昊宇的初舞台、刘恋的《佳人》、于文文与浪三、KTV 相连的现场记忆。</p></div><div class="bs-memory-poster"><span>乘风 / PERSONAL ENTRY MAP</span><strong>初舞台<br>佳人<br>KTV</strong><small>三个入口，三条以后还能继续展开的个人线索。</small></div></div>
-            <div class="bs-memory-notes"><div class="bs-memory-note"><i>01 / 陈昊宇</i><h4>从初舞台入坑</h4><p>留下的是第一次被击中的时刻；后续会继续补她具体打动我的表达、状态与作品。</p></div><div class="bs-memory-note"><i>02 / 刘恋</i><h4>《佳人》不是终点</h4><p>从舞台延伸到访谈、表达、广告与判断方式，后来又成为人物视角蒸馏和 Codex 主题的长期线索。</p></div><div class="bs-memory-note"><i>03 / 于文文</i><h4>现场与日常相连</h4><p>浪三、歌曲与 KTV 记忆被放在同一个入口；未确认的私人原因不会在公开页里替我补写。</p></div></div>
+            <div class="bs-memory-hero"><div><h3>追这档节目时，<br>我先后被三种气质击中。</h3><p>陈昊宇、刘恋、于文文各自有一条线。这里先保留已经确认的三个入口：陈昊宇的初舞台、刘恋的《佳人》、于文文与浪三、KTV 相连的现场记忆。</p></div><div class="bs-memory-poster"><span>乘风 / 三个人的入口</span><strong>初舞台<br>佳人<br>KTV</strong><small>三个入口，三条以后还能继续展开的个人线索。</small></div></div>
+            <div class="bs-memory-notes"><div class="bs-memory-note"><i>01 / 陈昊宇</i><h4>从初舞台入坑</h4><p>留下的是第一次被击中的时刻；后续会继续补她具体打动我的表达、状态与作品。</p></div><div class="bs-memory-note"><i>02 / 刘恋</i><h4>《佳人》只是一个入口</h4><p>从舞台延伸到访谈、表达、广告与判断方式，后来又成为人物视角蒸馏和 Codex 主题的长期线索。</p></div><div class="bs-memory-note"><i>03 / 于文文</i><h4>现场与日常相连</h4><p>浪三、歌曲与 KTV 记忆被放在同一个入口；未确认的私人原因不会在公开页里替我补写。</p></div></div>
           </article>
           <article class="bs-memory-record" data-memory="live">
             <div class="bs-memory-kicker">BOX C / LIVE REGISTER</div>
-            <div class="bs-memory-hero"><div><h3>我记歌，也记万人一起唱的那一秒。</h3><p>五月天、张学友、杨千嬅、莫文蔚、林忆莲。这个包厢不是歌手百科，而是我的现场登记册：谁真的在场、哪一次合唱留了下来、后来又为什么值得重看。</p></div><div class="bs-memory-poster"><span>LIVE / ATTENDANCE ARCHIVE</span><strong>万人场馆<br>全勤记录</strong><small>每个名字都将继续拥有自己的票根、现场与“为什么”。</small></div></div>
-            <div class="bs-memory-notes"><div class="bs-memory-note"><i>01 / NOT A RANKING</i><h4>同一列，不是同一种喜欢</h4><p>名字并排只是入口。真正的下一层应由具体演出、歌曲、同行者与现场感组成。</p></div><div class="bs-memory-note"><i>02 / WHAT TO KEEP</i><h4>票根之外的东西</h4><p>场馆、日期、那晚的歌、万人合唱和回程记忆，才是这一格后续要持续维护的内容。</p></div><div class="bs-memory-note"><i>03 / PUBLIC BOUNDARY</i><h4>公开层不冒充回忆</h4><p>没有拿到我原话的部分只列确认过的事实；私人同行者和未公开细节不会被 AI 自行补齐。</p></div></div>
+            <div class="bs-memory-hero"><div><h3>我记歌，也记万人一起唱的那一秒。</h3><p>五月天、张学友、杨千嬅、莫文蔚、林忆莲。这个包厢记的是我的现场：谁真的在场、哪一次合唱留了下来、后来又为什么值得重看。</p></div><div class="bs-memory-poster"><span>现场登记</span><strong>万人场馆<br>全勤记录</strong><small>每个名字都将继续拥有自己的票根、现场与“为什么”。</small></div></div>
+            <div class="bs-memory-notes"><div class="bs-memory-note"><i>01 / 各有各的喜欢</i><h4>名字在同一列，喜欢各有来处</h4><p>名字并排只是入口。真正的下一层应由具体演出、歌曲、同行者与现场感组成。</p></div><div class="bs-memory-note"><i>02 / 继续留下什么</i><h4>票根之外的东西</h4><p>场馆、日期、那晚的歌、万人合唱和回程记忆，才是这一格后续要持续维护的内容。</p></div><div class="bs-memory-note"><i>03 / 公开边界</i><h4>公开层不冒充回忆</h4><p>没有拿到我原话的部分只列确认过的事实；私人同行者和未公开细节不会被 AI 自行补齐。</p></div></div>
           </article>
           <article class="bs-memory-record" data-memory="pleasure">
             <div class="bs-memory-kicker">BOX D / PLEASURE / STAGE STUDY</div>
-            <div class="bs-memory-hero"><div><h3>这不是舞美，<br>这是把场馆变成另一个世界。</h3><p>蔡依林 PLEASURE 与谢霆锋被放在 2026 这格；其中 PLEASURE 已经不只是一次观演记忆，我还围绕它做了完整专题：舞台装置、服装、神话意象与移动端呈现被重新拆开研究。</p></div><div class="bs-memory-poster has-image"><img src="./projects/assets/real/memories/pleasure-goddess.jpg" alt="蔡依林 PLEASURE 巡演七层楼高愉悦之女舞台装置"><span>PLEASURE / THE GODDESS</span><strong>七层楼<br>愉悦之女</strong><small>从“震撼”继续追到它如何被设计出来。</small></div></div>
-            <div class="bs-memory-notes"><div class="bs-memory-note"><i>01 / SCALE</i><h4>巨型装置不是背景</h4><p>巨蟒、飞马、真相之书与七层楼高的“愉悦之女”，共同承担叙事，而不是轮流出现的炫技道具。</p></div><div class="bs-memory-note"><i>02 / RESEARCH</i><h4>从喜欢进入分析</h4><p>我把现场图、服装图和视觉来源整理成专题，让一次“卧槽”变成可被重看的舞台设计档案。</p></div><div class="bs-memory-note"><i>03 / NEXT LAYER</i><h4>它也会成为作品</h4><p>这段记忆同时连向一个独立的 PLEASURE 巡演专题；公开边界与是否加入返场作品单仍保持可调整。</p></div></div>
+            <div class="bs-memory-hero"><div><h3>这套舞美，<br>把整座场馆变成了另一个世界。</h3><p>蔡依林 PLEASURE 与谢霆锋被放在 2026 这格；其中 PLEASURE 已经从一次观演记忆继续长成完整专题：舞台装置、服装、神话意象与移动端呈现被重新拆开研究。</p></div><div class="bs-memory-poster has-image"><img src="./projects/assets/real/memories/pleasure-goddess.jpg" alt="蔡依林 PLEASURE 巡演七层楼高愉悦之女舞台装置"><span>PLEASURE / 愉悦之女</span><strong>七层楼<br>愉悦之女</strong><small>从“震撼”继续追到它如何被设计出来。</small></div></div>
+            <div class="bs-memory-notes"><div class="bs-memory-note"><i>01 / 体量</i><h4>巨型装置也在讲故事</h4><p>巨蟒、飞马、真相之书与七层楼高的“愉悦之女”共同承担叙事，各自都在推进这个世界。</p></div><div class="bs-memory-note"><i>02 / 继续研究</i><h4>从喜欢进入分析</h4><p>我把现场图、服装图和视觉来源整理成专题，让一次“卧槽”变成可被重看的舞台设计档案。</p></div><div class="bs-memory-note"><i>03 / 下一层</i><h4>它也会成为作品</h4><p>这段记忆同时连向一个独立的 PLEASURE 巡演专题；公开边界与是否加入返场作品单仍保持可调整。</p></div></div>
           </article>
         </section>
       </div>
@@ -2024,9 +2038,9 @@ body::after{
       <div class="bs-view-content" style="max-width:960px;gap:20px;justify-content:flex-start;padding-top:10px;">
         <div class="skill-showcase-kicker">PUBLIC WORKSHOP · 8 VERIFIED MACHINES · CLICK TO OPEN</div>
         <section class="skill-showcase">
-          <header><div><small>不是安装目录，也不是功能名单</small><h3>我把反复做成的方法，<br>装进八台可以继续运行的机器。</h3></div><p>这里只展出已经核对过“为什么做、产出了什么、最难守住什么”的 Skill。点击任意一台，进入下一层工作记录。</p></header>
+          <header><div><small>八台已经核对过的工作机器</small><h3>我把反复做成的方法，<br>装进八台可以继续运行的机器。</h3></div><p>每一台都核对过“为什么做、产出了什么、最难守住什么”。点击任意一台，就能进入下一层工作记录。</p></header>
           <div class="skill-machine-grid">
-            <button class="skill-machine" data-skill-showcase="book"><i>01 / READ</i><b>洞见型拆书</b><span>把一本书拆透，不是把它缩短</span><em>打开机器 →</em></button>
+            <button class="skill-machine" data-skill-showcase="book"><i>01 / 阅读</i><b>洞见型拆书</b><span>把一本书拆到能重新改变理解</span><em>打开机器 →</em></button>
             <button class="skill-machine" data-skill-showcase="judgment"><i>02 / JUDGE</i><b>工作判断蒸馏</b><span>保存选择、修改与拒绝背后的判断</span><em>打开机器 →</em></button>
             <button class="skill-machine" data-skill-showcase="social"><i>03 / PUBLISH</i><b>Loki 社交卡片</b><span>把文章变成能直接发布的视觉论证</span><em>打开机器 →</em></button>
             <button class="skill-machine" data-skill-showcase="theme"><i>04 / SPACE</i><b>Codex 主题皮肤</b><span>从一张背景图走到完整组件系统</span><em>打开机器 →</em></button>
@@ -2154,7 +2168,7 @@ body::after{
         <button class="skill-machine-close" type="button">← 回到八台机器</button>
         <div class="skill-detail-grid">
           <aside class="skill-output-ticket"><small data-skill-detail-code>01 / READ</small><strong data-skill-detail-output>书核<br>认知冲突<br>一个思想实验</strong><span data-skill-detail-proof>REAL OUTPUT / DAILY RUNNING</span></aside>
-          <article><small class="skill-detail-label" data-skill-detail-category>READING SYSTEM</small><h3 data-skill-detail-title>洞见型拆书</h3><p class="skill-detail-lead" data-skill-detail-lead>不是摘要器，是把一本书拆成能改变理解方式的认知机器。</p><div class="skill-detail-notes"><section><i>WHY / 为什么做</i><p data-skill-detail-why></p></section><section><i>OUTPUT / 最后留下什么</i><p data-skill-detail-result></p></section><section><i>HARD PART / 最难守住什么</i><p data-skill-detail-hard></p></section></div><a class="skill-detail-link" data-skill-detail-link href="./projects/daily-insight.html">看它已经跑出了什么 →</a></article>
+          <article><small class="skill-detail-label" data-skill-detail-category>阅读系统</small><h3 data-skill-detail-title>洞见型拆书</h3><p class="skill-detail-lead" data-skill-detail-lead>我想把一本书拆到能改变理解方式，也能在之后的决定里重新调用。</p><div class="skill-detail-notes"><section><i>为什么做</i><p data-skill-detail-why></p></section><section><i>最后留下什么</i><p data-skill-detail-result></p></section><section><i>最难守住什么</i><p data-skill-detail-hard></p></section></div><a class="skill-detail-link" data-skill-detail-link href="./projects/daily-insight.html">看它已经跑出了什么 →</a></article>
         </div>
       </section>
     </div>
@@ -2343,14 +2357,14 @@ function toggleMobileIntro(button){const scene=document.getElementById('s0');if(
 window.toggleMobileIntro=toggleMobileIntro;
 document.querySelector('.hl-mobile-more')?.addEventListener('click',event=>toggleMobileIntro(event.currentTarget));
 const skillShowcaseData=Object.freeze({
-  book:{code:'01 / READ',category:'READING SYSTEM',title:'洞见型拆书',lead:'不是摘要器，是把一本书拆成能改变理解方式的认知机器。',output:'书核\n认知冲突\n一个思想实验',proof:'REAL OUTPUT / 730 DAILY RUN',why:'“读完”很容易在第二天消失。我需要留下的不是章节顺序，而是一本书最不可替代的认知贡献，以及它为什么和今天的我有关。',result:'每次输出书核、反常识冲突、解释机制、适用边界、可迁移工具与一个低成本思想实验；每日线再把其中一个洞见变成可回看的卡。',hard:'材料不足时不能装作读完原书；作者主张、事实、AI 分析和行动建议必须分层，感染力强的案例也不能冒充证据。',link:'./projects/daily-insight.html',action:'看它已经跑出了什么 →'},
-  judgment:{code:'02 / JUDGE',category:'EVIDENCE & HOLDOUT',title:'工作判断蒸馏',lead:'我想保存的不是一个人的口头禅，而是他怎样选择、修改和拒绝。',output:'证据账本\n情境路由\n隔离留出题',proof:'4 PEOPLE / PUBLIC EVIDENCE',why:'很多“像某人”的模型只会模仿语气。我更想知道：这个人在什么任务、角色和阶段里会看什么、怎么改、为什么停下。',result:'把明确表达、可观察行为、结果信号与推断分开，编译成可追溯的 Skill，再放进训练材料之外的新问题中盲测。',hard:'不能因为一次修改就发明稳定人格；语言像不等于判断像，冲突材料也不能被平均成一个万能答案。',link:'./projects/perspective-distillation.html',action:'进入四个人物的真实工作区 →'},
-  social:{code:'03 / PUBLISH',category:'VISUAL ARGUMENT',title:'Loki 社交卡片',lead:'不是把文章贴进模板，而是让每张图只承担一个能够被看懂的论点。',output:'3:4 图文组\n21:9 + 1:1 封面对\n真实 PNG',proof:'HTML → PLAYWRIGHT → QA',why:'长文章直接截图既难读也没有传播入口。我需要一套能保留 Loki 视觉语言、又能针对不同平台重新组织论证的生产方法。',result:'小红书封面与内容页、公众号宽封面与方形分享图、知识卡和产品说明卡；所有页面以真实证据图、截图或指标支撑主张。',hard:'最难的不是配色，而是决定一眼必须看懂什么、哪张截图真正有证据价值，以及哪些细节应该留在正文而不是塞进卡片。',link:'',action:''},
-  theme:{code:'04 / SPACE',category:'PERSONAL INTERFACE',title:'Codex 主题皮肤',lead:'从一张人物图出发，最后改的是任务卡、菜单、对话框、输入区和更新恢复。',output:'组件级主题\n透明宠物隔离\n更新后可恢复',proof:'REAL APP / RESTART QA',why:'高频使用的 AI 工具不该永远像租来的办公室。我想把人物气质与自己的工作习惯翻译成真正可操作的界面秩序。',result:'完整主题项目、注入规则、组件装饰、透明宠物渲染隔离、版本标记、原始备份、更新检测与卸载路径。',hard:'既要有强视觉，又不能破坏文件选择器、菜单、弹窗、点击命中和签名；更新后还必须从干净备份重新适配，而不是层层覆盖。',link:'./projects/interface-system.html?room=codex',action:'看真实组件如何被重做 →'},
+  book:{code:'01 / READ',category:'阅读系统',title:'洞见型拆书',lead:'我把一本书拆到能改变理解方式，也能在之后的决定里重新调用。',output:'书核\n认知冲突\n一个思想实验',proof:'真实产出 / 730 天每日线',why:'“读完”很容易在第二天消失。我更想留下这本书最不可替代的认知贡献，以及它为什么和今天的我有关。',result:'每次输出书核、反常识冲突、解释机制、适用边界、可迁移工具与一个低成本思想实验；每日线再把其中一个洞见变成可回看的卡。',hard:'材料不足时不能装作读完原书；作者主张、事实、AI 分析和行动建议必须分层，感染力强的案例也不能冒充证据。',link:'./projects/daily-insight.html',action:'看它已经跑出了什么 →'},
+  judgment:{code:'02 / JUDGE',category:'证据与留出题',title:'工作判断蒸馏',lead:'我想保存一个人怎样选择、修改和拒绝，也想知道这些判断到了新问题里会不会走样。',output:'证据账本\n情境路由\n隔离留出题',proof:'4 个人物 / 公开证据',why:'很多“像某人”的模型只会模仿语气。我更想知道：这个人在什么任务、角色和阶段里会看什么、怎么改、为什么停下。',result:'把明确表达、可观察行为、结果信号与推断分开，编译成可追溯的 Skill，再放进训练材料之外的新问题中盲测。',hard:'不能因为一次修改就发明稳定人格；语言像不等于判断像，冲突材料也不能被平均成一个万能答案。',link:'./projects/perspective-distillation.html',action:'进入四个人物的真实工作区 →'},
+  social:{code:'03 / PUBLISH',category:'视觉论证',title:'Loki 社交卡片',lead:'一篇文章进到卡片里，每张图只承担一个能够被看懂的论点。',output:'3:4 图文组\n21:9 + 1:1 封面对\n真实 PNG',proof:'HTML → Playwright → 人工检查',why:'长文章直接截图既难读也没有传播入口。我需要一套能保留 Loki 视觉语言、又能针对不同平台重新组织论证的生产方法。',result:'小红书封面与内容页、公众号宽封面与方形分享图、知识卡和产品说明卡；所有页面以真实证据图、截图或指标支撑主张。',hard:'最难的是决定一眼必须看懂什么、哪张截图真正有证据价值，以及哪些细节应该留在正文里。配色排在这些判断之后。',link:'',action:''},
+  theme:{code:'04 / SPACE',category:'个人界面',title:'Codex 主题皮肤',lead:'从一张人物图出发，最后改的是任务卡、菜单、对话框、输入区和更新恢复。',output:'组件级主题\n透明宠物隔离\n更新后可恢复',proof:'真实 App / 重启验收',why:'高频使用的 AI 工具不该永远像租来的办公室。我想把人物气质与自己的工作习惯翻译成真正可操作的界面秩序。',result:'完整主题项目、注入规则、组件装饰、透明宠物渲染隔离、版本标记、原始备份、更新检测与卸载路径。',hard:'强视觉不能破坏文件选择器、菜单、弹窗、点击命中和签名；更新后还要从干净备份重新适配，避免层层覆盖。',link:'./projects/interface-system.html?room=codex',action:'看真实组件如何被重做 →'},
   poetry:{code:'05 / TEACH',category:'COURSE TO PRODUCTION',title:'古诗动画生产线',lead:'先让知识经得起教研，再把故事翻译成能够生成和拼接的十五秒单元。',output:'完整教研母稿\n3—5 格故事板\n连续性接口',proof:'CONTENT LOCK BEFORE VIDEO',why:'古诗课不能是“作者介绍—字词解释—齐读一遍”，AI 视频也不能为了好生成偷偷改掉知识结论。',result:'先生成有怪问题、错误直觉、诗句证据和意义转弯的完整剧情；审核通过后，再拆成 4—15 秒事件单元、故事板、图像与视频提示词。',hard:'教学结论、诗意和必要证据链必须锁住；动作要可生成，跨段人物与场景要连续，但生产方便不能凌驾于教研正确。',link:'',action:''},
-  life:{code:'06 / REVIEW',category:'LIFE PATTERN SYSTEM',title:'栖迟人生系统',lead:'不是要求我每天填表，而是让日记、任务和对话自动长成可以回看的模式。',output:'日 / 周 / 月 / 年复盘\n四维模式库\n案例与标签索引',proof:'DAILY SIGNAL → LONG MEMORY',why:'真实生活的线索散在日记、任务、书摘与对话里。只看当天的情绪会忘记反复发生的触发、惯性和有效对策。',result:'每日短复盘、周月年聚合，以及情绪、行为、思维和人格底层四个模式库；重要事件进入案例库，持续修正而不是一次定型。',hard:'从克制表达里识别信号，却不能把推断写成事实；私人数据只在本地优先的边界内流转，公开站点只展示方法。',link:'',action:''},
-  notes:{code:'07 / REMEMBER',category:'PERSONAL READING MEMORY',title:'阅读笔记整理',lead:'从我的划线和批注出发，回答这本书究竟改变了什么，而不是再写一遍摘要。',output:'3—5 个主题\n反对与疑问\n行动与复习点',proof:'HIGHLIGHTS + MY OWN NOTES',why:'划线越多，越容易变成无人再看的仓库。我需要优先保留当时为什么停下来、哪里反对、以后要在哪个决定里重新调用。',result:'把大量划线聚成少数主题，区分证据与推断，最后留下要改变、要测试、一个月后要重读以及暂时可以忽略的部分。',hard:'不能用流畅总结覆盖我的原始批注；材料稀疏时必须承认范围，还要保留手工区，避免自动整理抹掉后来补写的判断。',link:'./projects/daily-insight.html',action:'看阅读如何继续进入每日系统 →'},
-  night:{code:'08 / WRITE',category:'TWO-PLATFORM WRITING',title:'深夜清醒 Writer',lead:'一份 Markdown 同时保留 Obsidian 的阅读感和公众号复制后的颜色与层级。',output:'情感文章\n图片位置标记\n双平台排版',proof:'OBSIDIAN ↔ WECHAT',why:'深夜情感写作需要气息，但每次从笔记搬到公众号重新排版会打断这种气息，也会制造大量机械重复。',result:'从选题生成完整文章，统一全角标点、橙色转折、紫色金句、深蓝小标题与图片位置；复制到公众号后仍保留基础样式。',hard:'风格不能只剩“金句感”；格式必须跨平台稳定，同时正文仍要像人在深夜说话，而不是一组颜色标签的演示。',link:'',action:''}
+  life:{code:'06 / REVIEW',category:'生活模式系统',title:'栖迟人生系统',lead:'日记、任务和对话会自动长成可以回看的模式，日常记录不用再多填一套表。',output:'日 / 周 / 月 / 年复盘\n四维模式库\n案例与标签索引',proof:'每日信号 → 长期记忆',why:'真实生活的线索散在日记、任务、书摘与对话里。只看当天的情绪会忘记反复发生的触发、惯性和有效对策。',result:'每日短复盘、周月年聚合，以及情绪、行为、思维和人格底层四个模式库；重要事件进入案例库，模式会随着新记录继续修正。',hard:'从克制表达里识别信号，却不能把推断写成事实；私人数据只在本地优先的边界内流转，公开站点只展示方法。',link:'',action:''},
+  notes:{code:'07 / REMEMBER',category:'个人阅读记忆',title:'阅读笔记整理',lead:'我从自己的划线和批注出发，继续追问这本书究竟改变了什么。',output:'3—5 个主题\n反对与疑问\n行动与复习点',proof:'划线 + 我的原始批注',why:'划线越多，越容易变成无人再看的仓库。我需要优先保留当时为什么停下来、哪里反对、以后要在哪个决定里重新调用。',result:'把大量划线聚成少数主题，区分证据与推断，最后留下要改变、要测试、一个月后要重读以及暂时可以忽略的部分。',hard:'不能用流畅总结覆盖我的原始批注；材料稀疏时必须承认范围，还要保留手工区，避免自动整理抹掉后来补写的判断。',link:'./projects/daily-insight.html',action:'看阅读如何继续进入每日系统 →'},
+  night:{code:'08 / WRITE',category:'双平台写作',title:'深夜清醒 Writer',lead:'一份 Markdown 同时保留 Obsidian 的阅读感和公众号复制后的颜色与层级。',output:'情感文章\n图片位置标记\n双平台排版',proof:'Obsidian ↔ 公众号',why:'深夜情感写作需要气息，但每次从笔记搬到公众号重新排版会打断这种气息，也会制造大量机械重复。',result:'从选题生成完整文章，统一全角标点、橙色转折、紫色金句、深蓝小标题与图片位置；复制到公众号后仍保留基础样式。',hard:'风格不能只剩“金句感”；格式必须跨平台稳定，正文也要继续像人在深夜说话。一组颜色标签撑不起整篇文章。',link:'',action:''}
 });
 function openSkillMachine(id){const data=skillShowcaseData[id],detail=document.getElementById('skillMachineDetail');if(!data||!detail)return;detail.querySelector('[data-skill-detail-code]').textContent=data.code;detail.querySelector('[data-skill-detail-category]').textContent=data.category;detail.querySelector('[data-skill-detail-title]').textContent=data.title;detail.querySelector('[data-skill-detail-lead]').textContent=data.lead;detail.querySelector('[data-skill-detail-output]').textContent=data.output;detail.querySelector('[data-skill-detail-proof]').textContent=data.proof;detail.querySelector('[data-skill-detail-why]').textContent=data.why;detail.querySelector('[data-skill-detail-result]').textContent=data.result;detail.querySelector('[data-skill-detail-hard]').textContent=data.hard;const link=detail.querySelector('[data-skill-detail-link]');link.hidden=!data.link;if(data.link){link.href=data.link;link.textContent=data.action;}detail.closest('.bs-room-view')?.classList.add('skill-open');detail.classList.add('is-open');detail.setAttribute('aria-hidden','false');detail.scrollTop=0;detail.querySelector('.skill-machine-close').focus();fxDoor();}
 function closeSkillMachine(){const detail=document.getElementById('skillMachineDetail');if(!detail)return;detail.closest('.bs-room-view')?.classList.remove('skill-open');detail.classList.remove('is-open');detail.setAttribute('aria-hidden','true');fxDoor();}

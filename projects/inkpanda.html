@@ -3,27 +3,32 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="InkPanda 长篇写作平台：让人物、世界观、伏笔与远期记忆真正参与下一章。">
-  <title>InkPanda · 栖迟系统</title>
+  <meta name="description" content="InkPanda：Loki 为 AI 长篇写作处理人物、世界观、伏笔、时间线、记忆，以及生成器与检查器上下文一致性的真实产品案例。">
+  <title>InkPanda｜AI 长篇写作的记忆与一致性系统｜Loki</title>
+  <link rel="canonical" href="https://loki-os.hiloki.ai/projects/inkpanda.html">
+  <meta property="og:type" content="article"><meta property="og:title" content="InkPanda｜AI 长篇写作的记忆与一致性系统"><meta property="og:description" content="我如何为 AI 长篇写作处理人物、世界观、伏笔、时间线和生成器与检查器的上下文一致性。"><meta property="og:image" content="https://loki-os.hiloki.ai/projects/assets/real/inkpanda/editor.png"><meta property="og:url" content="https://loki-os.hiloki.ai/projects/inkpanda.html">
+  <link rel="icon" href="../loki-ip-live.jpg">
   <link rel="stylesheet" href="./project-story.css">
   <link rel="stylesheet" href="./mobile-polish.css">
+  <link rel="stylesheet" href="../brand-system.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"InkPanda","applicationCategory":"WritingApplication","operatingSystem":"Web","url":"https://loki-os.hiloki.ai/projects/inkpanda.html","inLanguage":"zh-CN","dateModified":"2026-08-29","creator":{"@type":"Person","name":"Loki","url":"https://loki-os.hiloki.ai/about.html"},"description":"为 AI 长篇写作处理人物、世界观、伏笔、时间线、记忆与上下文一致性的写作工作台。","keywords":["AI 写小说","AI 长篇写作","上下文记忆","一致性检查"]}</script>
 </head>
 <body>
   <main class="story-page theme-inkpanda">
     <header class="story-topbar">
       <a class="story-back" href="../index.html#works">← 回到返场作品单</a>
       <span class="story-code">CASE 07 / LONG-FORM WRITING</span>
-      <a class="story-jump" href="https://inkxiaoxiongmao.hiloki.ai/" target="_blank" rel="noreferrer">进入产品 ↗</a>
+      <a class="story-jump" href="https://inkxiaoxiongmao.hiloki.ai/" target="_blank" rel="noreferrer">产品入口（已复核）↗</a>
     </header>
 
     <div class="story-shell">
       <section class="story-hero">
         <div>
           <div class="story-kicker">InkPanda / long-form writing workspace</div>
-          <h1 class="story-title">长篇写作，不该只剩一个<em>聊天框。</em></h1>
-          <p class="story-lead">写到第 80 章时，真正压垮人的不是“没有下一句”，而是人物状态、世界观、伏笔、时间线和已经写过的一切同时在增长。</p>
-          <div class="story-manifesto">我做的是一个作者仍然掌控作品、AI 负责记忆与执行的长篇工作台。它不适合一键生成故事，适合认真想把一部作品写完的人。</div>
-          <div class="story-actions"><a class="story-action primary" href="#proof">看真实界面</a><a class="story-action" href="https://inkxiaoxiongmao.hiloki.ai/" target="_blank" rel="noreferrer">打开 InkPanda ↗</a></div>
+          <h1 class="story-title">写到第 80 章，AI 还记得<em>前面发生过什么吗？</em></h1>
+          <p class="story-lead">人物受过的伤忘了，早先埋的伏笔也没带回来。问题就来了：下一句也许写得很顺，整部小说却在悄悄走丢。</p>
+          <div class="story-manifesto">我想做一个长篇工作台：作者继续写，AI 帮忙记住人物、世界观、伏笔和时间线。它更像会查资料、会提醒的写作搭档，一键生成整部小说不在它的目标里。</div>
+          <div class="story-actions"><a class="story-action primary" href="#proof">看真实界面</a><a class="story-action" href="https://inkxiaoxiongmao.hiloki.ai/" target="_blank" rel="noreferrer">产品入口（已复核）↗</a></div>
         </div>
         <figure class="story-proof" id="proof">
           <div class="proof-frame" data-proof-frame><img data-proof-image src="./assets/real/inkpanda/home.png" alt="InkPanda 真实首页"></div>
@@ -38,11 +43,11 @@
       </section>
 
       <section class="story-section">
-        <div class="story-section-head"><div class="story-label">01 / THE REAL PROBLEM</div><h2>不是模型不会写，<br>而是它们看见了<em>不同的故事。</em></h2></div>
+        <div class="story-section-head"><div class="story-label">01 / THE REAL PROBLEM</div><h2>写到后面，生成器和检查器<br>看见了<em>两部不同的小说。</em></h2></div>
         <div class="story-grid">
-          <article class="story-card"><span class="story-card-num">01</span><h3>写之前：结构会失控</h3><p>小说、卷、章节、场景四层组织，让人物与情节不是散落在聊天记录里的临时提示。</p></article>
-          <article class="story-card"><span class="story-card-num">02</span><h3>写的时候：上下文会消失</h3><p>当前章节、人物档案、世界观、前情摘要与远处相关情节，需要按预算被带回当下，而不是把所有材料一股脑塞进去。</p></article>
-          <article class="story-card"><span class="story-card-num">03</span><h3>写完以后：检查会误报</h3><p>我在全量审查里定位到一个关键问题：<strong>生成器与检查器读取了两套不同上下文</strong>。这不是“换个更强模型”能解决的。</p></article>
+          <article class="story-card"><span class="story-card-num">01</span><h3>写之前：东西没地方放</h3><p>我把一部长篇拆成小说、卷、章节、场景四层，让人物和情节都有固定位置，不用散在聊天记录里。</p></article>
+          <article class="story-card"><span class="story-card-num">02</span><h3>写的时候：该带回来的没带回来</h3><p>当前章节、人物档案、世界观、前情摘要和远处相关情节，要按预算带回当下。材料全部塞进去，反而更容易乱。</p></article>
+          <article class="story-card"><span class="story-card-num">03</span><h3>写完以后：检查器把对的也判错了</h3><p>我在全量审查里定位到一个关键问题：<strong>生成器和检查器读取了两套不同上下文</strong>。换更强的模型也补不上这份信息差。</p></article>
         </div>
       </section>
 
@@ -57,21 +62,39 @@
       </section>
 
       <section class="story-section">
-        <div class="story-section-head"><div class="story-label">03 / DESIGN JUDGMENT</div><h2>AI 是协作者，<br>不是把作者从作品里<em>删掉。</em></h2></div>
+        <div class="story-section-head"><div class="story-label">03 / CURRENT BUILD STATE</div><h2>AI 是协作者，<br>完成状态也不能由它<em>替我编。</em></h2></div>
         <div class="story-stats">
-          <div class="story-stat"><strong>4</strong><span>小说 / 卷 / 章节 / 场景</span></div>
-          <div class="story-stat"><strong>4</strong><span>一致性检查维度</span></div>
-          <div class="story-stat"><strong>50</strong><span>可保留全书快照</span></div>
-          <div class="story-stat"><strong>365</strong><span>写作日历可见进展</span></div>
+          <div class="story-stat"><strong>C1</strong><span>检查器补齐 7 个上下文源 · 已修复部署</span></div>
+          <div class="story-stat"><strong>C2</strong><span>15 处 memory 查询增加 stale 过滤 · 已修复部署</span></div>
+          <div class="story-stat"><strong>C3</strong><span>5 处记忆刷新后重建卷纲 · 已修复部署</span></div>
+          <div class="story-stat"><strong>?</strong><span>C4 / C5 与统一预算仍按最新代码复核</span></div>
         </div>
       </section>
 
       <footer class="story-final">
-        <div><div class="story-label">TAKEAWAY</div><h2>我能把一个模糊的“AI 写作”需求，拆成创作者真正能长期使用的系统。</h2><p>这里先展示真实产品、核心判断和工程难点；真正的工作台放在下一层。</p></div>
-        <div class="story-final-actions"><a class="story-action primary" href="https://inkxiaoxiongmao.hiloki.ai/" target="_blank" rel="noreferrer">进入真实产品 ↗</a></div>
+        <div><div class="story-label">TAKEAWAY</div><h2>我想做的事情其实很具体：让 AI 参与长篇写作，但别让它替作者把作品写丢了。</h2><p>这里放的是产品界面、我遇到的上下文问题和已经有记录支持的修复；公开入口已复核可访问，登录后交互仍待复核。</p></div>
+        <div class="story-final-actions"><a class="story-action primary" href="https://inkxiaoxiongmao.hiloki.ai/" target="_blank" rel="noreferrer">产品入口（已复核）↗</a></div>
       </footer>
     </div>
   </main>
+  <section class="case-dossier" style="--case-accent:#d69a55" aria-label="InkPanda AI 长篇写作完整证据档案">
+    <header class="dossier-heading"><div><small>PUBLIC CASE FILE / AI LONG-FORM WRITING / UPDATED 2026-08-28</small><h2>AI 写小说最麻烦的地方，<br>是写到后面还得留在<em>同一部小说里</em>。</h2></div><p><strong>如果只用一句话说：</strong>InkPanda 是 Loki 为 AI 长篇写作设计的结构化工作台。一次全量代码审查发现，生成器与一致性检查器读取了不同上下文，导致正确内容也可能被误判；项目随后围绕上下文源、过期记忆与卷纲重建完成 C1、C2、C3 修复。</p></header>
+    <div class="judgment-turn"><article><small>I FIRST THOUGHT / 最初判断</small><h3>我一开始以为，设定给得更多、上下文拉得更长，模型就会写得更稳。</h3></article><i>→</i><article><small>I LATER FOUND / 关键转向</small><h3>结果发现，生成器和检查器先得看到同一部小说，带回来的记忆还得是新鲜的。更强模型补不了缺失的上下文。</h3></article></div>
+    <section class="cue-timeline"><header><span>ENGINEERING LOG / CONTEXT CONTRACT</span><span>历史审查不冒充当前全部完成</span></header>
+      <article class="cue-line"><small>01 / 拆解</small><div><h3>把长篇从聊天框拆成小说—卷—章节—场景</h3><p>人物、世界观、伏笔、情节线、时间线与章节记忆成为可以被检索、修改和检查的对象。</p></div><span>证据：真实首页、纲要与编辑器</span></article>
+      <article class="cue-line"><small>02 / 发现</small><div><h3>生成器与检查器看见了不同上下文</h3><p>生成器使用 foundation、人物状态、伏笔、情节线、时间线、卷纲与语义召回；检查器缺少其中一部分。</p></div><span>证据：全量代码审查 diagnostic report</span></article>
+      <article class="cue-line"><small>03 / 修复</small><div><h3>C1、C2、C3 已记录为修复部署</h3><p>补齐 7 个检查器上下文源；15 处 memories 查询增加 stale 过滤；5 处刷新记忆后增加卷纲重建。</p></div><span>状态：有代码审查与实施记录支持</span></article>
+      <article class="cue-line"><small>04 / 未完</small><div><h3>C4、C5 与统一预算仍需按最新代码复核</h3><p>历史计划表里写过的事项不能自动算作完成；模型路由、正文截断、跨章扫描和反馈回灌仍要继续核对。</p></div><span>状态：已发布产品，工程边界持续复核</span></article>
+    </section>
+    <section class="evidence-wall"><header><div><span class="dossier-kicker">REAL PRODUCT / FOUR SURFACES</span><h2>四张真实界面，<br>对应作者掌控长篇的四个现场。</h2></div><p>截图来自真实产品界面。它们分别展示作品入口、四层结构、正文与上下文同屏，以及产品怎样组织创作空间。</p></header><div class="evidence-grid">
+      <figure class="evidence-card"><img src="./assets/real/inkpanda/home.png" alt="InkPanda 真实作品首页，展示小说项目与写作进度"><figcaption><b>作品首页 · 长篇入口</b><span>作品、进度和继续写作入口待在同一个长期空间，一部小说不用散成很多段聊天记录。</span><small>L0 REAL PRODUCT SURFACE</small></figcaption></figure>
+      <figure class="evidence-card"><img src="./assets/real/inkpanda/outline.png" alt="InkPanda 真实纲要页，展示小说、卷、章节和场景结构"><figcaption><b>纲要 · 四层结构</b><span>小说、卷、章节与场景给人物和情节固定位置，不用只靠临时 Prompt 记着。</span><small>L1 CORE FLOW / STRUCTURE</small></figcaption></figure>
+      <figure class="evidence-card is-wide"><img src="./assets/real/inkpanda/editor.png" alt="InkPanda 真实长篇编辑器，展示正文、上下文和写作工具"><figcaption><b>编辑器 · 正文与上下文同屏</b><span>作者仍在作品中心，AI 负责调用相关记忆和执行写作动作。一键生成整部小说不在这里。</span><small>L1 CORE FLOW / REAL PRODUCT</small></figcaption></figure>
+      <figure class="evidence-card is-narrow"><img src="./assets/real/inkpanda/discover.png" alt="InkPanda 真实发现页，展示作品与创作空间"><figcaption><b>发现页 · 产品边界</b><span>公开作品和私人创作空间分层。这张图能说明产品表面存在，规模化采用仍没有证据。</span><small>L0 PRODUCT SURFACE</small></figcaption></figure>
+    </div></section>
+    <section class="status-board"><article><small>ALREADY PROVED</small><h3>已经做到</h3><ul><li>小说、卷、章节、场景四层组织</li><li>真实首页、纲要、编辑器和发现页</li><li>C1、C2、C3 有修复与部署记录</li><li>人物、伏笔、时间线等进入产品结构</li></ul></article><article><small>WORKING, NOT FINISHED</small><h3>能用但仍不完整</h3><ul><li>长篇记忆和上下文预算持续迭代</li><li>检查器上下文需要跟随生成路径维护</li><li>公开产品链接需持续回读真实功能</li></ul></article><article><small>NOT CLAIMED</small><h3>还没有证明</h3><ul><li>没有公开用户规模与长期留存数据</li><li>代码审查问题数量不能算产品成绩</li><li>历史计划不能自动算作当前已完成</li><li>不宣称 AI 能独立写完一部长篇</li></ul></article></section>
+    <footer class="dossier-footer"><h2>我把【AI 会忘】这句话继续往下追，直到它变成可以检查、可以修的上下文问题。</h2><div class="dossier-links"><a href="https://inkxiaoxiongmao.hiloki.ai/" target="_blank" rel="noopener">产品入口（已复核）↗</a><a href="../works.html">返回作品索引</a><a href="../about.html">认识 Loki</a></div></footer>
+  </section>
   <script src="./project-story.js"></script>
 </body>
 </html>

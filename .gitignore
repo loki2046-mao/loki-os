@@ -1,1 +1,4 @@
 .loki-os-local/
+.playwright-cli/
+output/
+.DS_Store
