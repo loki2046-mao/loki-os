@@ -128,7 +128,7 @@ window.LOKI_OS_SITE_DATA = Object.freeze({
       imageAlt: '恋之上上签真实抽签结果页',
       imageWidth: 2000, imageHeight: 1407, imageFit: 'cover',
       proof: '历史抽签结果和 16 套卡片，留下了这件作品真实做出来时的样子。',
-      status: '公开作品 · 可以打开体验',
+      status: '公开作品 · 入口可访问，抽签交互待复核',
       publicLink: Object.freeze({ href: 'https://lian.hiloki.ai/', label: '打开恋之上上签', status: 'verified', checkedAt: '2026-08-29' }),
       verification: Object.freeze({ status: 'pending', checkedAt: '2026-08-29', scope: 'local-browser', note: '站内案例与历史截图已核验，公开入口 HTML 与核心资源已复核，抽签交互待复核' }),
     },

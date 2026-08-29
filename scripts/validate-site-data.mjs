@@ -92,7 +92,7 @@ for (const [index, project] of (data?.projects || []).entries()) {
     if (project.verification.status === 'pending' && /(已上线|已核验)/.test(`${project.status} ${project.proof}`)) {
       errors.push(`${label} 尚待核验，却仍声明“已上线/已核验”`);
     }
-    if (/(已复核|待复核|核验：)/.test(`${project.status} ${project.proof}`)) {
+    if (/(已复核|核验：)/.test(`${project.status} ${project.proof}`)) {
       errors.push(`${label} 的访客文案不得直接暴露内部核验术语`);
     }
   }

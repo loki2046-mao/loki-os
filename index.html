@@ -1327,7 +1327,7 @@ body::after{
   #s2 .gear-case-label{padding:5px 5px 10px;margin-bottom:0}
   #s2 .gear-case-grid{grid-template-columns:repeat(2,1fr);height:auto}
   #s2 .gear-skill{min-height:120px}
-  #s3{padding:52px 8px 88px;overflow-y:auto}#s3 .cork{display:block;padding:15px}#s3 .cork-hd{padding:8px 6px 14px}#s3 .cork-title{font-size:43px}.cork-definition{max-width:none;margin:12px 0 14px}#s3 .cork-board{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));padding:9px;gap:8px}#s3 .cork-card{min-height:150px;padding:21px 12px 13px}#s3 .cork-card:nth-child(1),#s3 .cork-card:nth-child(5){grid-column:span 2}
+  #s3{padding:52px 8px calc(144px + env(safe-area-inset-bottom));overflow-y:auto}#s3 .cork{display:block;padding:15px}#s3 .cork-hd{padding:8px 6px 14px}#s3 .cork-title{font-size:43px}.cork-definition{max-width:none;margin:12px 0 14px}#s3 .cork-board{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));padding:9px;gap:8px}#s3 .cork-card{min-height:150px;padding:21px 12px 13px}#s3 .cork-card:nth-child(1),#s3 .cork-card:nth-child(5){grid-column:span 2}
   #s4{padding:48px 7px 84px;overflow-y:auto}#s4 .backstage,#s4 .bs-inside{height:auto;min-height:100%}#s4 .bs-corridor{height:auto;min-height:1380px;padding:390px 10px 40px;display:block}.bs-corridor-head{left:16px;right:16px;top:112px;display:block;text-align:left}.bs-corridor-head strong{display:block;margin:6px 0;font-size:28px}.bs-corridor-head p{font-size:9px;padding-right:0}.bs-corridor-head button{position:absolute;right:0;top:-38px}.bs-status-rig{left:16px;right:auto;top:83px}#s4 .bs-call-sheet{left:16px;top:255px;width:190px;padding:10px 12px}#s4 .bs-flightcase,.bs-cable{display:none}.bs-crew-console{grid-template-columns:1fr 1fr;margin-bottom:24px}.bs-crew-console>div{grid-column:1/-1}.bs-crew-console button{min-height:78px}#s4 .bs-rooms{grid-template-columns:repeat(2,1fr);gap:28px 10px;padding:0;align-items:end}#s4 .bs-room{width:100%;padding:18px 6px 0}#s4 .bs-room-door{height:230px}.bs-corridor-guide{grid-template-columns:repeat(2,1fr);gap:5px;padding:18px 0 0}.bs-view-back{top:8px;margin:-57px 0 18px}.bs-room-view{padding-left:12px;padding-right:12px}
 }
 
@@ -1783,7 +1783,7 @@ body::after{
       <div class="sl-ticket" onclick="event.stopPropagation();this.classList.toggle('torn');fxTear()"><div class="tk-left">ADMIT<br>ONE</div><div class="tk-right">02</div></div>
     </div>
     <div class="sl-item" data-url="./projects/lian.html" onclick="tearGo(this)">
-      <span class="sl-num">03</span><div class="sl-info"><div class="sl-name">恋之上上签</div><div class="sl-desc">歌词答案书 · 可以打开体验</div></div>
+      <span class="sl-num">03</span><div class="sl-info"><div class="sl-name">恋之上上签</div><div class="sl-desc">歌词答案书 · 入口可访问，抽签交互待复核</div></div>
       <span class="sl-badge">PUBLIC CASE</span>
       <div class="sl-ticket" onclick="event.stopPropagation();this.classList.toggle('torn');fxTear()"><div class="tk-left">ADMIT<br>ONE</div><div class="tk-right">03</div></div>
     </div>
