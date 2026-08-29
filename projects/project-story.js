@@ -34,4 +34,16 @@
       next.focus();
     });
   });
+
+  const tour = document.querySelector('[data-proof-tour]');
+  if (tour) {
+    tour.addEventListener('click', () => {
+      const previewTab = tabs.find((tab) => tab.dataset.proofTitle === tour.dataset.proofTargetTitle) || tabs[0];
+      select(previewTab);
+      window.setTimeout(() => {
+        frame.closest('.story-proof')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        previewTab.focus({ preventScroll: true });
+      }, 140);
+    });
+  }
 })();

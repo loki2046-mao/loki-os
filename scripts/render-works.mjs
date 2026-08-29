@@ -13,7 +13,6 @@ if (!data || !Array.isArray(data.projects)) throw new Error('site-data.js 未提
 const esc = (value) => String(value)
   .replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')
   .replaceAll('"', '&quot;').replaceAll("'", '&#39;');
-const scopeLabels = { 'local-browser': '本地浏览器', 'external-browser': '公开入口', 'release-page': '发布页' };
 
 function systemEvidence(project) {
   if (!project.systemEvidence?.length) return '';
@@ -24,10 +23,9 @@ function systemEvidence(project) {
 function card(project) {
   const anchor = project.anchor ? ` id="${esc(project.anchor)}"` : '';
   const verification = project.verification || {};
-  const scope = scopeLabels[verification.scope] || verification.scope || '未记录';
   const pending = verification.status === 'pending' ? ' is-pending' : '';
   const imageClass = project.imageFit === 'contain' ? ' class="is-contain"' : '';
-  return `      <a class="work-ticket"${anchor} data-project-id="${esc(project.id)}" data-status="${esc(project.status)}" style="--ticket:${esc(project.accent)}" href="${esc(project.href)}"><i>${String(project.order).padStart(2, '0')}</i><div><h2>${esc(project.title)}</h2><small>${esc(project.eyebrow)}</small></div><figure class="work-thumb"><img${imageClass} src="${esc(project.image)}" alt="${esc(project.imageAlt)}" width="${project.imageWidth}" height="${project.imageHeight}" loading="lazy"><figcaption>${esc(project.proof)}</figcaption></figure><div class="work-copy"><p>${esc(project.summary)}</p>${systemEvidence(project)}</div><div class="work-status${pending}"><span>${esc(project.status)}</span><small>核验：${esc(scope)} · ${esc(verification.checkedAt)}</small></div></a>`;
+  return `      <a class="work-ticket"${anchor} data-project-id="${esc(project.id)}" data-status="${esc(project.status)}" style="--ticket:${esc(project.accent)}" href="${esc(project.href)}"><i>${String(project.order).padStart(2, '0')}</i><div><h2>${esc(project.title)}</h2><small>${esc(project.eyebrow)}</small></div><figure class="work-thumb"><img${imageClass} src="${esc(project.image)}" alt="${esc(project.imageAlt)}" width="${project.imageWidth}" height="${project.imageHeight}" loading="lazy"><figcaption>${esc(project.proof)}</figcaption></figure><div class="work-copy"><p>${esc(project.summary)}</p>${systemEvidence(project)}</div><div class="work-status${pending}"><span>${esc(project.status)}</span><small>进入项目故事 →</small></div></a>`;
 }
 
 const publicProjectIds = (siteData) => new Set(siteData.projects

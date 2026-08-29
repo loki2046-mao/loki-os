@@ -86,11 +86,14 @@ for (const [index, project] of (data?.projects || []).entries()) {
     }
     if (!allowedVerificationStatuses.has(project.verification.status)) errors.push(`${label}.verification.status 无效：${project.verification.status}`);
     if (!/^\d{4}-\d{2}-\d{2}$/.test(project.verification.checkedAt || '')) errors.push(`${label}.verification.checkedAt 必须是 YYYY-MM-DD`);
-    if (project.verification.status === 'pending' && !/(待|补充|复核)/.test(project.status)) {
-      errors.push(`${label}.status 与 pending 核验状态矛盾：${project.status}`);
+    if (project.verification.status === 'pending' && !/(待|补充|复核)/.test(project.verification.note)) {
+      errors.push(`${label}.verification.note 必须记录尚待完成的核验边界`);
     }
     if (project.verification.status === 'pending' && /(已上线|已核验)/.test(`${project.status} ${project.proof}`)) {
       errors.push(`${label} 尚待核验，却仍声明“已上线/已核验”`);
+    }
+    if (/(已复核|待复核|核验：)/.test(`${project.status} ${project.proof}`)) {
+      errors.push(`${label} 的访客文案不得直接暴露内部核验术语`);
     }
   }
   if (project.publicLink) {
@@ -100,11 +103,12 @@ for (const [index, project] of (data?.projects || []).entries()) {
     if (!['verified', 'pending'].includes(project.publicLink.status)) errors.push(`${label}.publicLink.status 只能是 verified/pending`);
     if (!/^https:\/\//.test(project.publicLink.href || '')) errors.push(`${label}.publicLink.href 必须使用 https`);
     if (!/^\d{4}-\d{2}-\d{2}$/.test(project.publicLink.checkedAt || '')) errors.push(`${label}.publicLink.checkedAt 必须是 YYYY-MM-DD`);
-    if (project.publicLink.status === 'pending' && !/(待|复核|复验)/.test(project.publicLink.label)) errors.push(`${label}.publicLink.label 必须明确待复核状态`);
+    if (project.publicLink.status === 'pending' && !/(暂未|尚未|等待|不可用)/.test(project.publicLink.label)) errors.push(`${label}.publicLink.label 必须用访客语言说明尚不可用`);
+    if (/(已复核|待复核|核验)/.test(project.publicLink.label)) errors.push(`${label}.publicLink.label 不得使用内部核验术语`);
     const casePath = path.resolve(repoRoot, project.href.replace(/^\.\//, ''));
     const casePage = existsSync(casePath) ? readFileSync(casePath, 'utf8') : '';
     if (!casePage.includes(project.publicLink.href)) errors.push(`${label} 案例页缺少登记的 publicLink.href`);
-    if (!casePage.includes(project.publicLink.label)) errors.push(`${label} 案例页缺少登记的待复核入口标签：${project.publicLink.label}`);
+    if (!casePage.includes(project.publicLink.label)) errors.push(`${label} 案例页缺少登记的公开入口标签：${project.publicLink.label}`);
   }
   if (project.group === 'workflow') {
     if (!project.systemKind) errors.push(`${label}.systemKind 缺失，无法说明属于哪类系统`);
