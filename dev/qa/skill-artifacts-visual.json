@@ -1,0 +1,8 @@
+[
+  {"id":"film-poster","file":"assets/skills/film-poster.jpg","caption":"真实成品 / 假期结束 V1 保存图","status":"ok","source":"program-book/assets/process/holiday-v1.png（原样复制转 jpg）"},
+  {"id":"image-kit","file":"assets/skills/image-kit.jpg","caption":"真实成品 / 本机生成并保存的插画","status":"ok","source":"/Users/kude/Downloads/Loki_其他生成图片_排除20张海报实验/23_a_wide_whimsical_pastel_storybook_like_illustra.png（原样复制）"},
+  {"id":"slides","file":"assets/skills/slides.jpg","caption":"真实成品 / 前端幻灯片《奥德赛时期》","status":"ok","source":"/Users/kude/cola/outputs/03-资源/代码/用「奥德赛时期×AI」文章测试-PPT-+-小红书-Skills/ppt-odyssey.html（无头渲染）"},
+  {"id":"codex-theme","file":"assets/skills/codex-theme.png","caption":"真实成品 / Cola 外观套组截图","status":"ok","source":"/Users/kude/.cola/skills/loki-theme-kit/previews/cola/（原样复制）"},
+  {"id":"skill-builder","file":"assets/skills/skill-builder.png","caption":"公开仓库 / cola-skills","status":"ok","source":"https://github.com/loki2046-mao/cola-skills（公开页无头渲染）"},
+  {"id":"prompt-spec","status":"missing","reason":"没有找到已保存、可公开的真实需求文档前后对比产物"}
+]

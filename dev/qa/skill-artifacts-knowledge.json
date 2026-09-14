@@ -1,0 +1,8 @@
+[
+  {"id":"ai-radar","file":"assets/skills/ai-radar.png","caption":"相关产品 / AI 新闻雷达本地实例","status":"ok","source":"/Users/kude/Downloads/代码/🦞新转移/ai-news-radar/index.html（本地 http 服务后无头渲染）"},
+  {"id":"book","file":"assets/skills/book.png","caption":"真实文稿 / 每日拆书 Day 23","status":"ok","source":"/Users/kude/code/book-daily/cards/2026-09-14-Day23-看不见的女性.md（文稿无头渲染）"},
+  {"id":"notes","file":"assets/skills/notes.png","caption":"真实文稿 / 阅读笔记整理","status":"ok","source":"Obsidian 库「活出生命的意义 - 整理.md」（文稿无头渲染）"},
+  {"id":"collage-poem","file":"assets/skills/collage-poem.png","caption":"真实成品 / 每日拼贴诗 2026-07-12","status":"ok","source":"program-book/assets/collages/2026-07-12.png（原样复制）"},
+  {"id":"hatch-pet","file":"assets/skills/hatch-pet.webp","caption":"真实素材 / Coconut 宠物图集","status":"ok","source":"program-book/assets/process/coconut.webp（原样复制）"},
+  {"id":"debate","status":"missing","reason":"暂无已保存、且不含私人议题与第三方言论的真实拆解产物"}
+]

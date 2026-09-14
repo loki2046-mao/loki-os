@@ -1,0 +1,182 @@
+{
+  "film-poster": {
+    "sources": [
+      "/Users/kude/cola/outputs/01-长期项目/AI人才盘点成果/展示包/02-设计类AI-Skill资产包/01-CineType电影字报/CineType-电影字报生成器-SKILL.md",
+      "/Users/kude/cola/outputs/03-资源/图片/🎨 图片/2026-05-05_电影字报海报/五一假日结束_v1.png",
+      "/Users/kude/cola/outputs/03-资源/图片/🎨 图片/2026-05-05_电影字报海报/五一假日结束_v4.png"
+    ],
+    "basis": "依据本地材料整理的第一人称制作说明，非逐字引语"
+  },
+  "loki-writing": {
+    "sources": [
+      "/Users/kude/cola/outputs/02-项目快照/项目/Legacy Outputs/💡 Skill/写作Skill升级/测试段落_对比说明.md"
+    ],
+    "basis": "依据本地材料整理的第一人称制作说明，非逐字引语"
+  },
+  "cover-system": {
+    "sources": [
+      "/Users/kude/cola/outputs/02-项目快照/项目/Legacy Outputs/💡 Skill/公众号封面设计Skill/蒸馏文章封面测试.md"
+    ],
+    "basis": "依据本地材料整理的第一人称制作说明，非逐字引语"
+  },
+  "headline": {
+    "sources": [
+      "/Users/kude/cola/outputs/02-项目快照/项目/Legacy Outputs/💡 Skill/公众号封面设计Skill/蒸馏文章封面测试.md"
+    ],
+    "basis": "依据本地材料整理的第一人称制作说明，非逐字引语"
+  },
+  "weixin-layout": {
+    "sources": [
+      "/Users/kude/cola/outputs/02-项目快照/项目/Legacy Outputs/项目/公众号排版编辑器重建/重建评估报告.md"
+    ],
+    "basis": "依据本地材料整理的第一人称制作说明，非逐字引语"
+  },
+  "loki-social": {
+    "sources": [
+      "/Users/kude/cola/outputs/01-长期项目/AI人才盘点成果/展示包/02-设计类AI-Skill资产包/03-Loki-Social社交图文/SKILL.md"
+    ],
+    "basis": "依据本地材料整理的第一人称制作说明，非逐字引语"
+  },
+  "slides": {
+    "sources": [
+      "/Users/kude/cola/outputs/01-长期项目/AI人才盘点成果/展示包/02-设计类AI-Skill资产包/02-Loki-Deck演示文稿/SKILL.md"
+    ],
+    "basis": "依据本地材料整理的第一人称制作说明，非逐字引语"
+  },
+  "interface-system": {
+    "sources": [
+      "/Users/kude/cola/outputs/01-长期项目/Cola个人皮肤/06-真机注入v4验证报告.md",
+      "/Users/kude/cola/outputs/01-长期项目/Cola个人皮肤/prototypes/skin-story.png",
+      "/Users/kude/cola/outputs/01-长期项目/Cola个人皮肤/prototypes/skin-pixel.png"
+    ],
+    "basis": "依据本地材料整理的第一人称制作说明，非逐字引语"
+  },
+  "loki-ebook-converter": {
+    "sources": [
+      "/Users/kude/cola/outputs/01-长期项目/AI人才盘点成果/展示包/04-电子书批量转换工具/README.md"
+    ],
+    "basis": "依据本地材料整理的第一人称制作说明，非逐字引语"
+  },
+  "ebook-workflow": {
+    "sources": [
+      "/Users/kude/cola/outputs/01-长期项目/AI人才盘点成果/展示包/04-电子书批量转换工具/README.md"
+    ],
+    "basis": "依据本地材料整理的第一人称制作说明，非逐字引语"
+  },
+  "lian": {
+    "sources": [
+      "/Users/kude/cola/outputs/01-长期项目/恋之上上签/03-项目全貌/项目全貌-最新版.md"
+    ],
+    "basis": "依据本地材料整理的第一人称制作说明，非逐字引语"
+  },
+  "lian-curation": {
+    "sources": [
+      "/Users/kude/cola/outputs/01-长期项目/恋之上上签/03-项目全貌/项目全貌-最新版.md"
+    ],
+    "basis": "依据本地材料整理的第一人称制作说明，非逐字引语"
+  },
+  "inkpanda": {
+    "sources": [
+      "/Users/kude/cola/outputs/01-长期项目/NovelFlow与InkPanda/02-InkPanda审查/02-SillyTavern借鉴研究/implementation-priority.md"
+    ],
+    "basis": "依据本地材料整理的第一人称制作说明，非逐字引语"
+  },
+  "judgment": {
+    "sources": [
+      "/Users/kude/cola/outputs/01-长期项目/AI人才盘点成果/展示包/03-知识与过程蒸馏/01-工作判断蒸馏器/SKILL.md"
+    ],
+    "basis": "依据本地方法资料整理的第一人称说明；不将文档存在视为实测成功"
+  },
+  "skill-builder": {
+    "sources": [
+      "/Users/kude/cola/outputs/01-长期项目/AI人才盘点成果/展示包/03-知识与过程蒸馏/01-工作判断蒸馏器/SKILL.md"
+    ],
+    "basis": "依据本地方法资料整理的第一人称说明；不将文档存在视为实测成功"
+  },
+  "notes": {
+    "sources": [
+      "/Users/kude/.codex/skills/organizing-reading-notes/SKILL.md"
+    ],
+    "basis": "依据本地方法资料整理的第一人称说明；不将文档存在视为实测成功"
+  },
+  "self-mirror": {
+    "sources": [
+      "/Users/kude/cola/outputs/03-资源/备份/skills/self-mirror/SKILL.md"
+    ],
+    "basis": "依据本地方法资料整理的第一人称说明；不将文档存在视为实测成功"
+  },
+  "ai-radar": {
+    "sources": [
+      "/Users/kude/cola/outputs/03-资源/备份/skills/ai-news-radar/SKILL.md"
+    ],
+    "basis": "依据本地方法资料整理的第一人称说明；不将文档存在视为实测成功"
+  },
+  "image-kit": {
+    "sources": [
+      "/Users/kude/cola/outputs/03-资源/备份/skills/nb-image-prompt/SKILL.md"
+    ],
+    "basis": "依据本地方法资料整理的第一人称说明；不将文档存在视为实测成功"
+  },
+  "prompt-spec": {
+    "sources": [
+      "/Users/kude/.codex/skills/prompt-optimizer/SKILL.md"
+    ],
+    "basis": "依据本地方法资料整理的第一人称说明；不将文档存在视为实测成功"
+  },
+  "hatch-pet": {
+    "sources": [
+      "/Users/kude/.codex/skills/hatch-pet/SKILL.md",
+      "/Users/kude/.codex/pets/coconut/pet.json",
+      "/Users/kude/.codex/pets/coconut/spritesheet.webp"
+    ],
+    "basis": "依据本地方法资料整理的第一人称说明；不将文档存在视为实测成功"
+  },
+  "weixin-outline": {
+    "sources": [
+      "/Users/kude/.codex/skills/weixin-topic-outline/SKILL.md"
+    ],
+    "basis": "根据已读取的本地文件或公开仓库整理；第一人称编辑说明，不是逐字引语"
+  },
+  "deep-night": {
+    "sources": [
+      "/Users/kude/.codex/skills/deep-night-writer/SKILL.md"
+    ],
+    "basis": "根据已读取的本地文件或公开仓库整理；第一人称编辑说明，不是逐字引语"
+  },
+  "feishu-weixin": {
+    "sources": [
+      "/Users/kude/cola/outputs/03-资源/备份/skills/loki-wechat-pipeline/scripts/README.md"
+    ],
+    "basis": "根据已读取的本地文件或公开仓库整理；第一人称编辑说明，不是逐字引语"
+  },
+  "visual-directions": {
+    "sources": [
+      "/Users/kude/.codex/skills/craft-multiform-visual-systems/SKILL.md"
+    ],
+    "basis": "根据已读取的本地文件或公开仓库整理；第一人称编辑说明，不是逐字引语"
+  },
+  "codex-theme": {
+    "sources": [
+      "/Users/kude/.codex/skills/build-codex-theme-skin/SKILL.md"
+    ],
+    "basis": "根据已读取的本地文件或公开仓库整理；第一人称编辑说明，不是逐字引语"
+  },
+  "cyber-red-panda": {
+    "sources": [
+      "/Users/kude/cola/outputs/03-资源/备份/skills/loki-design-system/SKILL.md"
+    ],
+    "basis": "根据已读取的本地文件或公开仓库整理；第一人称编辑说明，不是逐字引语"
+  },
+  "debate": {
+    "sources": [
+      "https://github.com/loki2046-mao/debate-thinking-distiller"
+    ],
+    "basis": "根据已读取的本地文件或公开仓库整理；第一人称编辑说明，不是逐字引语"
+  },
+  "loki-health": {
+    "sources": [
+      "/Users/kude/cola/02-代码工作区/历史快照/2026-08/project-20260813-072436-74ffd4e4/README.md"
+    ],
+    "basis": "根据已读取的本地文件或公开仓库整理；第一人称编辑说明，不是逐字引语"
+  }
+}

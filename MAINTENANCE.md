@@ -1,5 +1,7 @@
 # Loki OS 日常维护
 
+> 2026-09-14 起站点根目录换成「个人场刊」，本文描述的是**旧版作品页**（`works.html` / `about.html` / `projects/*.html`）的维护口径。这些页面仍在库中供旧链接访问，但已不在根路径入口里。新版场刊的维护见 `README.md` 与 `dev/notes/`。
+
 线上项目卡片不再直接散写在页面里，统一维护在 `site-data.js`。`works.html` 中标记为 `GENERATED:*` 的作品卡片、主线入口和 JSON-LD 由脚本生成，不要手工修改。
 
 ## 日常流程

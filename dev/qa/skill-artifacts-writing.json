@@ -1,0 +1,51 @@
+[
+  {
+    "id": "weixin-layout",
+    "file": "assets/skills/weixin-layout.png",
+    "caption": "真实成品 / 公众号文章排版预览",
+    "status": "ok",
+    "source": "/Users/kude/cola/outputs/03-资源/代码/排版Skill第三期：Loki配色体系接入-+-组件库扩充-组件重新设计/article-jolin-mocha.html"
+  },
+  {
+    "id": "feishu-weixin",
+    "file": "assets/skills/feishu-weixin.png",
+    "caption": "真实成品 / 飞书文档转公众号排版",
+    "status": "ok",
+    "source": "/Users/kude/cola/outputs/03-资源/文档/恋之上上签公众号文章-→-飞书文档排版+截图/screenshot-home.png"
+  },
+  {
+    "id": "cover-system",
+    "file": "assets/skills/cover-system.jpg",
+    "caption": "真实成品 / 公众号推文封面",
+    "status": "ok",
+    "source": "/Users/kude/cola/outputs/03-资源/图片/🎨 图片/Cola推文封面/listenhub-20260414-003520-kp6vxr.png"
+  },
+  {
+    "id": "loki-writing",
+    "file": "assets/skills/loki-writing.png",
+    "caption": "真实成品 / AI Career Compass 求职报告卡",
+    "status": "ok",
+    "source": "/Users/kude/cola/outputs/01-长期项目/AI-Career-Compass/01-公众号发布与开源/screenshots/demo-card-1.png"
+  },
+  {
+    "id": "weixin-outline",
+    "file": "assets/skills/weixin-outline.png",
+    "caption": "真实产品 / 内容工作站 选题池",
+    "status": "ok",
+    "source": "/Users/kude/cola/outputs/02-项目快照/项目/公众号内容工作站-MVP/content-station (本地 next start，路由 /topics 实机截图)"
+  },
+  {
+    "id": "headline",
+    "file": "assets/skills/headline.png",
+    "caption": "真实产品 / 内容工作站 标题生成·历史标题方案",
+    "status": "ok",
+    "source": "/Users/kude/cola/outputs/02-项目快照/项目/公众号内容工作站-MVP/content-station (本地 next start，路由 /titles 实机截图)"
+  },
+  {
+    "id": "deep-night",
+    "file": "assets/skills/deep-night.jpg",
+    "caption": "真实成品 / 深夜清醒系列手绘插图",
+    "status": "ok",
+    "source": "/Users/kude/Desktop/深夜清醒/深夜清醒/compressed_插图1_手绘插画.png（原样复制转 jpg）"
+  }
+]

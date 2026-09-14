@@ -1,0 +1,23 @@
+(() => {
+const $=s=>document.querySelector(s);
+$('.cover-copy>.label').innerHTML='<b>个人场刊</b><span>LOKI · 随身这一册</span>';
+$('.cover-copy').insertAdjacentHTML('beforeend','<div class="live-stamp"><i aria-hidden="true"></i><span>CONCERT / LIVEHOUSE / THEATRE</span></div>');
+$('.cover-spine').innerHTML='<nav aria-label="找到 Loki"><a href="https://github.com/loki2046-mao" target="_blank" rel="noopener">GitHub ↗</a><button data-wechat>公众号 ＋</button></nav><a href="#about">从认识我开始 →</a>';
+$('#open-book').innerHTML='入场，翻开场刊 <b aria-hidden="true">↗</b>';
+$('.contents h2').innerHTML='本场<span>目 录</span>';
+$('.contents>.label').textContent='LOKI / SETLIST';
+$('.contents>p').hidden=true;
+const chapters=[['about','认识 Loki','关于我'],['works','作品节目单','产品 / 工具'],['skills','制作手册','26 个 Skill'],['daily','中场休息','咖啡 / 茶']];
+chapters.forEach(([id,title,note],i)=>{$('#'+id+'-chapter').innerHTML=`<span>${String(i+1).padStart(2,'0')}</span><b>${title}</b><small>${note} ↗</small>`});
+$('.directory-note').textContent='';
+$('.folio>span').textContent='散场不散好奇心';
+const portrait=$('.cover .portrait');
+const face=document.createElement('button');face.className='portrait-flip';face.setAttribute('aria-label','翻看 Loki 公众号二维码');face.setAttribute('aria-pressed','false');
+face.innerHTML='<span class="portrait-front"><img src="assets/lettering/loki.jpg" alt="赛博小熊猫 Loki"></span><span class="portrait-back"><img src="assets/loki-wechat-official.jpg" alt="赛博小熊猫 Loki 公众号二维码"><b>在公众号接着聊</b></span>';
+portrait.querySelector('img').replaceWith(face);portrait.querySelector(':scope>span').textContent='赛博小熊猫 / 翻面找我';
+face.onclick=()=>{const on=face.getAttribute('aria-pressed')!=='true';face.setAttribute('aria-pressed',String(on));face.classList.toggle('is-flipped',on)};
+portrait.insertAdjacentHTML('beforeend','<button class="portrait-save" data-wechat>放大 / 保存二维码 ↗</button>');
+$('#cover').insertAdjacentHTML('beforeend','<button class="light-cue" aria-label="点亮一次舞台灯光，无声音">试一下灯光 ↗</button><span id="live-feedback" role="status"></span>');
+let timer;$('.light-cue').onclick=()=>{clearTimeout(timer);$('#cover').classList.remove('flash');void $('#cover').offsetWidth;$('#cover').classList.add('flash');$('#live-feedback').textContent='灯光就位。没有声音，放心翻。';timer=setTimeout(()=>$('#cover').classList.remove('flash'),900)};
+window.addEventListener('hashchange',()=>{const page=$('.right-page');page.classList.remove('turn-in');requestAnimationFrame(()=>page.classList.add('turn-in'))});
+})();

@@ -1,0 +1,23 @@
+/* Curated real local outputs. Public-facing fields are intentionally separated from source manifests. */
+(()=>{const c=window.lokiCorpus;if(!c)return;const reading=!!document.querySelector('#app'),pre=reading?'../':'',e=s=>String(s).replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));
+function headline(k,title,copy){return `<div class="corpus-heading"><span>${k}</span><h3>${title}</h3><p>${copy}</p></div>`}
+function draw(){const id=location.hash.split('/')[2],panel=document.querySelector('.directory-insert'),isReading=id==='book'||id==='daily-insight';if(!panel||panel.querySelector('.real-corpus'))return;let html='';
+if(id==='perspective-distillation')html=headline('PUBLIC PERSPECTIVES / 人物研究','不同的人，不同的判断方式。','目前本地建档 13 个人物项目，这里选出 6 位。展示的是从公开材料中提炼的研究框架，不是本人言论或人格复刻。')+`<div class="people-programme" role="group" aria-label="选择人物研究">${c.people.map((p,i)=>`<button data-person="${i}" aria-pressed="${i===0}"><span>0${i+1}</span><b>${e(p.name)}</b><small>${e(p.label)}</small></button>`).join('')}</div><section class="person-research" aria-live="polite"></section>`;
+if(isReading)html=headline('READING ARCHIVE / 已有拆书文稿','书读过，留下什么？',`已核对并收录 ${c.books.length} 篇独立文稿，横跨文学、思辨与创作。先翻书目，再看看每篇留下的洞见与目录。`)+`<div class="book-library"><div class="book-list" role="group" aria-label="选择拆书文稿">${c.books.map((b,i)=>`<button data-book="${i}" aria-pressed="${i===0}"><small>${String(i+1).padStart(2,'0')}</small><b>${e(b.title)}</b><span>↗</span></button>`).join('')}</div><article class="book-reading" aria-live="polite"></article></div><p class="corpus-boundary">这些是已经保存的导读整理，未逐页对照原书；这里展示文稿成果，拆书 Skill 尚未正式发布到 GitHub。</p>`;
+if(id==='collage-poem')html=headline('DAILY COLLAGE / 保存下来的日子','一些话，变成了图。','从实际保存的拼贴诗成品里，挑出六张。霓虹、旧报纸、撕纸和波普，留住不同日子的语气。')+`<div class="real-collage-gallery">${c.collages.map((x,i)=>`<figure><button class="collage-open" data-collage="${i}" aria-label="放大：${e(x.title)}"><img src="${pre+x.image}" alt="${e(x.title)}，${e(x.style)}拼贴诗成品"><span>展开原图 ↗</span></button><figcaption><small>${x.date} / ${x.style}</small><b>${e(x.title)}</b></figcaption></figure>`).join('')}</div>`;
+if(!html)return;
+if(isReading){
+ panel.querySelector('h2').textContent='730 天每日洞见 · 拆书与阅读';
+ panel.querySelector('.detail-summary').textContent='从一本书出发，留下洞见、边界和问题。洞见型拆书是这套每日阅读系统的方法，书目和文稿都在这里。730 天是长期计划，不是已完成天数。';
+ panel.querySelectorAll(':scope > .detail-preview, :scope > .note, :scope > details, :scope > .out').forEach(x=>x.remove());
+}
+const section=document.createElement('section');section.className='real-corpus corpus-'+id;section.innerHTML=html;
+const anchor=panel.querySelector('.detail-summary');if(anchor)anchor.after(section);else panel.prepend(section);
+if(isReading||id==='collage-poem')panel.querySelector('.making-notes')?.remove();
+if(isReading||id==='collage-poem')panel.querySelectorAll('.no-sample').forEach(x=>x.remove());
+if(id==='perspective-distillation'){
+const show=i=>{const p=c.people[i];section.querySelectorAll('[data-person]').forEach(b=>b.setAttribute('aria-pressed',Number(b.dataset.person)===i));section.querySelector('.person-research').innerHTML=`<div class="person-heading"><span>研究摘录 / ${e(p.label)}</span><h4>${e(p.name)}</h4><small>公开材料 · 研究框架</small></div><div class="person-methods">${p.methods.map((m,n)=>`<article><small>0${n+1} / 判断动作</small><h5>${e(m.title)}</h5><p>${e(m.text)}</p></article>`).join('')}</div><p class="corpus-boundary">以上为研究模型的提炼，不作为真人引语，也不替其在未知问题上表态。</p>`};section.querySelectorAll('[data-person]').forEach(b=>b.onclick=()=>show(Number(b.dataset.person)));show(0)}
+if(isReading){const show=i=>{const b=c.books[i];try{sessionStorage.setItem('loki-reading-book',b.title)}catch{};section.querySelectorAll('[data-book]').forEach(x=>x.setAttribute('aria-pressed',Number(x.dataset.book)===i));section.querySelector('.book-reading').innerHTML=`<span class="book-date">READING NOTE / ${b.date}</span><h4>《${e(b.title)}》</h4><div class="book-insight"><small>文稿里留下的核心洞见</small><p>${e(b.insight)}</p></div><h5>这篇怎么展开</h5><ol>${b.contents.map(x=>`<li>${e(x)}</li>`).join('')}</ol><p class="corpus-boundary">${e(b.level)}</p>`};section.querySelectorAll('[data-book]').forEach(b=>b.onclick=()=>show(Number(b.dataset.book)));let saved;try{saved=sessionStorage.getItem('loki-reading-book')}catch{};show(Math.max(0,c.books.findIndex(b=>b.title===saved)))}
+section.querySelectorAll('[data-collage]').forEach(b=>b.onclick=()=>{const x=c.collages[Number(b.dataset.collage)],modal=document.querySelector('#lightbox');modal.querySelector('img').src=pre+x.image;modal.querySelector('img').alt=x.title+' · '+x.date;modal.showModal()});
+}
+addEventListener('hashchange',draw);draw();})();

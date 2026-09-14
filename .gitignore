@@ -2,3 +2,6 @@
 .playwright-cli/
 output/
 .DS_Store
+dev/.local/
+__pycache__/
+dev/qa/results/
