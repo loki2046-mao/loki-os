@@ -14,12 +14,18 @@ function mount(){const anchor=document.querySelector('#cover .cover-exits');if(!
  anchor.before(node);if(latest)paint(latest);
 }
 function paint(data){latest=data;document.querySelectorAll('[data-visit]').forEach(x=>x.textContent=new Intl.NumberFormat('zh-CN').format(data[x.dataset.visit]));const scope=document.querySelector('.visit-scope');if(scope)scope.textContent=data.scope==='local'?'本地预览统计':'访问统计';}
-async function send(count){const headers=count?{'X-Loki-Visit':'1'}:{};if(!LOCAL){const id=visitor();if(id)headers['X-Loki-Visitor']=id}
+function send(count){const headers=count?{'X-Loki-Visit':'1'}:{};if(!LOCAL){const id=visitor();if(id)headers['X-Loki-Visitor']=id}
  return fetch(endpoint,{method:count?'POST':'GET',credentials:'include',cache:'no-store',headers});}
-async function request(count){try{let r=await send(count);
- if(!r.ok&&!LOCAL&&!degraded&&endpoint===PRIMARY){degraded=true;endpoint=FALLBACK;r=await send(count)}
- if(!r.ok)throw Error();const d=await r.json();if(!['todayUV','todayPV','totalUV','totalPV'].every(k=>Number.isSafeInteger(d[k])&&d[k]>=0))throw Error();paint(d)}
- catch{const scope=document.querySelector('.visit-scope');if(scope&&!latest)scope.textContent='统计暂不可用';}}
+/* 网络层失败（DNS/离线）与 HTTP 失败都要能触发退回，所以统一在这里兜住。 */
+async function attempt(count){try{return await send(count)}catch{return null}}
+async function request(count){try{
+ let r=await attempt(count);
+ if((!r||!r.ok)&&!LOCAL&&!degraded&&endpoint===PRIMARY){degraded=true;endpoint=FALLBACK;r=await attempt(count)}
+ if(!r||!r.ok)throw Error();
+ const d=await r.json();
+ if(!['todayUV','todayPV','totalUV','totalPV'].every(k=>Number.isSafeInteger(d[k])&&d[k]>=0))throw Error();
+ paint(d);
+}catch{const scope=document.querySelector('.visit-scope');if(scope&&!latest)scope.textContent='统计暂不可用';}}
 function navigate(){mount();const route=location.pathname+location.search+location.hash;if(route===last)return;last=route;pending=pending.then(()=>request(true));}
 addEventListener('hashchange',navigate);navigate();
 // Reading totals never generates another pageview; avoid counting tab switches.
