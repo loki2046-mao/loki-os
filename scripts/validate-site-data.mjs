@@ -6,6 +6,8 @@ import { fileURLToPath } from 'node:url';
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const source = readFileSync(path.join(repoRoot, 'site-data.js'), 'utf8');
 const worksSource = readFileSync(path.join(repoRoot, 'works.html'), 'utf8');
+const skillsSource = readFileSync(path.join(repoRoot, 'skills.html'), 'utf8');
+const indexSource = readFileSync(path.join(repoRoot, 'index.html'), 'utf8');
 const context = { window: {} };
 vm.runInNewContext(source, context, { filename: 'site-data.js' });
 const caseSource = readFileSync(path.join(repoRoot, 'projects', 'case-data.js'), 'utf8');
@@ -31,6 +33,13 @@ const generatedRegion = (name) => {
 };
 if (!data || !Array.isArray(data.projects)) errors.push('site-data.js 必须提供 projects 数组');
 if (!Array.isArray(data?.gearModules) || data.gearModules.length < 8) errors.push('site-data.js 必须提供至少 8 个 gearModules');
+if (!Array.isArray(data?.skillCategories) || data.skillCategories.length < 4) errors.push('site-data.js 必须提供至少 4 个 skillCategories');
+if (!Array.isArray(data?.skills) || data.skills.length < 8) errors.push('site-data.js 必须提供至少 8 个 skills');
+if (!data?.skillFlows || typeof data.skillFlows !== 'object') errors.push('site-data.js 必须提供 skillFlows');
+if (!data?.skillVisuals || typeof data.skillVisuals !== 'object') errors.push('site-data.js 必须提供 skillVisuals');
+if (!data?.skillProfiles || typeof data.skillProfiles !== 'object') errors.push('site-data.js 必须提供 skillProfiles');
+if (!data?.skillGitHub || typeof data.skillGitHub !== 'object') errors.push('site-data.js 必须提供 skillGitHub');
+if (!skillsSource.includes('<script src="./skills-visuals.js?v=20260831-2" defer></script>')) errors.push('skills.html 必须加载本轮版本的 skills-visuals.js');
 if (!Array.isArray(data?.pillars) || data.pillars.length !== 3) errors.push('site-data.js 必须提供 3 条长期主线');
 if (!Array.isArray(data?.featuredProjectIds) || data.featuredProjectIds.length !== 3) errors.push('featuredProjectIds 必须提供 3 个旗舰项目');
 if (!Array.isArray(data?.proofStrip) || data.proofStrip.length !== 3) errors.push('proofStrip 必须提供 3 条旗舰证据');
@@ -39,6 +48,10 @@ if (!/^\d{4}-\d{2}-\d{2}$/.test(data?.updatedAt || '')) errors.push('updatedAt �
 
 const ids = new Set();
 const gearIds = new Set();
+const skillIds = new Set();
+const skillCategoryIds = new Set();
+const skillProfiles = data?.skillProfiles || {};
+const showcasedSkills = (data?.skills || []).filter((item) => item.visibility === 'public' && skillProfiles[item.id]?.showcase);
 for (const [index, module] of (data?.gearModules || []).entries()) {
   const label = `gearModules[${index}]`;
   for (const field of ['id', 'code', 'title', 'readout', 'proof', 'href', 'action', 'image']) {
@@ -48,6 +61,90 @@ for (const [index, module] of (data?.gearModules || []).entries()) {
   if (gearIds.has(module.id)) errors.push(`${label}.id 重复：${module.id}`);
   gearIds.add(module.id);
 }
+for (const [index, category] of (data?.skillCategories || []).entries()) {
+  const label = `skillCategories[${index}]`;
+  for (const field of ['id', 'title', 'note']) if (!category[field] || typeof category[field] !== 'string') errors.push(`${label}.${field} 缺失`);
+  if (!Number.isInteger(category.order) || category.order < 1) errors.push(`${label}.order 必须是正整数`);
+  if (skillCategoryIds.has(category.id)) errors.push(`${label}.id 重复：${category.id}`);
+  skillCategoryIds.add(category.id);
+}
+for (const [index, item] of (data?.skills || []).entries()) {
+  const label = `skills[${index}]`;
+  for (const field of ['id', 'category', 'title', 'summary', 'form', 'visibility']) if (!item[field] || typeof item[field] !== 'string') errors.push(`${label}.${field} 缺失`);
+  if (!Number.isInteger(item.order) || item.order < 1) errors.push(`${label}.order 必须是正整数`);
+  if (!skillCategoryIds.has(item.category)) errors.push(`${label}.category 未登记：${item.category}`);
+  if (!['正式 Skill', '长期使用', '作品中沉淀'].includes(item.form)) errors.push(`${label}.form 无效：${item.form}`);
+  if (!['public', 'private'].includes(item.visibility)) errors.push(`${label}.visibility 只能是 public/private`);
+  if (!Array.isArray(item.tags) || item.tags.length < 2) errors.push(`${label}.tags 至少需要 2 项`);
+  if (skillIds.has(item.id)) errors.push(`${label}.id 重复：${item.id}`);
+  skillIds.add(item.id);
+  if (item.href && !/^\.\/(?:projects\/[a-z0-9-]+\.html(?:\?.*)?|about\.html)$/.test(item.href)) errors.push(`${label}.href 必须指向站内公开页面`);
+  if (item.href && (!item.action || typeof item.action !== 'string')) errors.push(`${label}.action 缺失`);
+  const profile = skillProfiles[item.id];
+  const showcase = item.visibility === 'public' && profile?.showcase === true;
+  if (showcase) {
+    for (const field of ['maturity', 'ownership', 'origin', 'trigger', 'judgment', 'realResult', 'limitations', 'evidenceStatus']) {
+      if (!profile[field] || typeof profile[field] !== 'string') errors.push(`${label}.skillProfile.${field} 缺失`);
+    }
+    if (!profile.visual || typeof profile.visual !== 'object') errors.push(`${label}.skillProfile.visual 缺失`);
+    if (profile.visual?.image && !existsSync(path.resolve(repoRoot, profile.visual.image))) errors.push(`${label}.skillProfile.visual.image 文件不存在：${profile.visual.image}`);
+    const github = data?.skillGitHub?.[item.id];
+    if (!github || typeof github !== 'object') {
+      errors.push(`${label}.skillGitHub 缺失`);
+    } else {
+      for (const field of ['href', 'label', 'kind', 'note']) {
+        if (!github[field] || typeof github[field] !== 'string') errors.push(`${label}.skillGitHub.${field} 缺失`);
+      }
+      if (!/^https:\/\/github\.com\/loki2046-mao(?:\/|$)/.test(github.href || '')) errors.push(`${label}.skillGitHub.href 必须指向 Loki 的公开 GitHub`);
+      if (!['source', 'related', 'profile'].includes(github.kind)) errors.push(`${label}.skillGitHub.kind 只能是 source/related/profile`);
+      if (github.href && !skillsSource.includes(`href="${htmlEscaped(github.href)}"`)) errors.push(`skills.html 缺少 ${item.id} 的 GitHub 快速入口`);
+    }
+  }
+  const flow = data?.skillFlows?.[item.id];
+  if (!Array.isArray(flow) || flow.length !== 3 || flow.some((step) => typeof step !== 'string' || !step.trim())) {
+    errors.push(`${label} 必须提供恰好 3 步非空 skillFlows`);
+  }
+  const visual = data?.skillVisuals?.[item.id];
+  if (!visual || typeof visual !== 'object') {
+    errors.push(`${label} 缺少 skillVisuals`);
+  } else {
+    const visualKind = visual.kind || 'evidence';
+    if (!['evidence', 'process'].includes(visualKind)) errors.push(`${label}.skillVisuals.kind 只能是 evidence/process`);
+    if (!visual.caption || typeof visual.caption !== 'string') errors.push(`${label}.skillVisuals.caption 缺失`);
+    if (visualKind === 'process') {
+      if (!['writing', 'visual', 'research', 'building', 'personal'].includes(visual.motif)) errors.push(`${label}.skillVisuals.motif 无效`);
+      if (visual.image) errors.push(`${label}.skillVisuals 过程视觉不能继续绑定图片`);
+    } else {
+      for (const field of ['image', 'imageAlt', 'imageFit']) {
+        if (!visual[field] || typeof visual[field] !== 'string') errors.push(`${label}.skillVisuals.${field} 缺失`);
+      }
+      if (!Number.isInteger(visual.imageWidth) || visual.imageWidth < 1) errors.push(`${label}.skillVisuals.imageWidth 必须是正整数`);
+      if (!Number.isInteger(visual.imageHeight) || visual.imageHeight < 1) errors.push(`${label}.skillVisuals.imageHeight 必须是正整数`);
+      if (!['cover', 'contain'].includes(visual.imageFit)) errors.push(`${label}.skillVisuals.imageFit 只能是 cover/contain`);
+      if (visual.image && !existsSync(path.resolve(repoRoot, visual.image))) errors.push(`${label}.skillVisuals.image 文件不存在：${visual.image}`);
+    }
+  }
+  const marker = `data-skill-id="${item.id}"`;
+  const markerCount = skillsSource.split(marker).length - 1;
+  const detailMarker = `id="skill-view-${item.id}"`;
+  const detailCount = skillsSource.split(detailMarker).length - 1;
+  const expectedCount = showcase ? 1 : 0;
+  if (markerCount !== expectedCount) errors.push(`skills.html 中 ${item.id} 应出现 ${expectedCount} 次，当前 ${markerCount} 次`);
+  if (detailCount !== expectedCount) errors.push(`skills.html 中 ${item.id} 的详情展示应出现 ${expectedCount} 次，当前 ${detailCount} 次`);
+  if (showcase && !skillsSource.includes(`href="#skill-view-${item.id}"`)) errors.push(`skills.html 缺少 ${item.id} 的详情入口`);
+  if (showcase && !skillsSource.includes(item.title)) errors.push(`skills.html 缺少 Skill：${item.title}`);
+}
+if (showcasedSkills.length !== 8) errors.push(`公开 Skill 工坊必须恰好展示 8 项已核验方法，当前 ${showcasedSkills.length} 项`);
+for (const flowId of Object.keys(data?.skillFlows || {})) {
+  if (!skillIds.has(flowId)) errors.push(`skillFlows 登记了不存在的 Skill：${flowId}`);
+}
+for (const visualId of Object.keys(data?.skillVisuals || {})) {
+  if (!skillIds.has(visualId)) errors.push(`skillVisuals 登记了不存在的 Skill：${visualId}`);
+}
+for (const githubId of Object.keys(data?.skillGitHub || {})) {
+  if (!skillIds.has(githubId)) errors.push(`skillGitHub 登记了不存在的 Skill：${githubId}`);
+}
+if ([source, worksSource, skillsSource, indexSource].some((text) => text.includes('古诗动画生产线'))) errors.push('公开站点数据与页面不得包含“古诗动画生产线”');
 for (const [index, project] of (data?.projects || []).entries()) {
   const label = `projects[${index}]`;
   for (const field of ['id', 'date', 'title', 'summary', 'tag', 'href', 'action', 'linkStatus', 'visibility', 'group', 'accent', 'eyebrow', 'image', 'imageAlt', 'proof', 'status']) {
@@ -278,4 +375,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`站点数据校验通过：${data.projects.length} 个项目、${data.gearModules.length} 个器材模块、${people.length} 个人物案例、${mixedPillarScenarioCount} 个混合 pillar 场景，更新于 ${data.updatedAt}`);
+console.log(`站点数据校验通过：${data.projects.length} 个项目、${data.skills.length} 个 Skill、${data.skillCategories.length} 个领域、${data.gearModules.length} 个器材模块、${people.length} 个人物案例、${mixedPillarScenarioCount} 个混合 pillar 场景，更新于 ${data.updatedAt}`);

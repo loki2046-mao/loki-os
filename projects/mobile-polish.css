@@ -1,3 +1,10 @@
+/* Public project route: every case returns to the index and points to the next useful layer. */
+.project-journey{width:min(1180px,100%);margin:46px auto 72px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;border:1px solid rgba(238,229,213,.18);background:rgba(238,229,213,.18)}
+.project-journey>a,.project-journey>span{min-height:82px;padding:14px 16px;display:grid;align-content:center;gap:7px;background:#0e0b08;color:#eee5d5;text-decoration:none}
+.project-journey>span{color:#8d8378}.project-journey>a:hover,.project-journey>a:focus-visible{position:relative;z-index:1;background:#21170f;outline:2px solid #ff6508;outline-offset:-2px}.project-journey>a.is-next{background:#d7f43c;color:#0b0906}.project-journey>a:last-child{background:#ff6508;color:#0b0906}
+.project-journey small{font:900 8px/1 ui-monospace,monospace;letter-spacing:.12em;opacity:.68}.project-journey strong{font-size:12px;line-height:1.35}
+.dossier-footer .project-journey{margin:0;width:100%}
+
 /* Mobile stage direction — phone layouts are composed, never desktop pages shrunk down. */
 @media (max-width: 768px) {
   :root {
@@ -8,6 +15,8 @@
   html { overflow-x: clip; }
   body { font-family: var(--mobile-sans); -webkit-text-size-adjust: 100%; }
   button, a, input { font-family: inherit; }
+  .project-journey{margin:30px auto calc(42px + env(safe-area-inset-bottom));grid-template-columns:repeat(2,minmax(0,1fr))}
+  .project-journey>a,.project-journey>span{min-height:72px;padding:12px}.project-journey strong{font-size:11px}
 
   /* Main six-act stage */
   .scene { padding-inline: 10px; }

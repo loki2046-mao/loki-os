@@ -6,6 +6,7 @@
   "scripts": {
     "scan": "node scripts/scan-local-projects.mjs",
     "render:works": "node scripts/render-works.mjs",
-    "check": "node scripts/render-works.mjs --check && node scripts/render-works.mjs --check-private-visibility && node scripts/validate-site-data.mjs"
+    "render:skills": "node scripts/render-skills.mjs",
+    "check": "node scripts/render-works.mjs --check && node scripts/render-works.mjs --check-private-visibility && node scripts/render-skills.mjs --check && node scripts/validate-site-data.mjs"
   }
 }

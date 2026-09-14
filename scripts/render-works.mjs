@@ -56,10 +56,22 @@ const proofStrip = (siteData) => {
   return `      <a href="${esc(item.href)}" data-proof-project="${esc(item.projectId)}"><figure><img${imageClass} src="${esc(item.image)}" alt="${esc(item.imageAlt)}" width="${item.imageWidth}" height="${item.imageHeight}"><figcaption><b>${esc(item.title)}</b><span>${esc(item.caption)}</span></figcaption></figure></a>`;
   }).join('\n');
 };
+const normalizeProjectHref = (href) => String(href || '').split('?')[0].split('#')[0];
+const makingDeck = (siteData) => {
+  const ownerByHref = new Map(siteData.projects.map((project) => [normalizeProjectHref(project.href), project]));
+  return (siteData.gearModules || []).map((module, index) => ({
+    module,
+    owner: ownerByHref.get(normalizeProjectHref(module.href)),
+    index,
+  })).filter(({ owner }) => owner?.visibility === 'public').map(({ module, owner, index }) => {
+    const tags = (module.tags || []).map((tag) => `<span>${esc(tag)}</span>`).join('');
+    return `        <a class="making-card" data-gear-project="${esc(owner.id)}" href="${esc(module.href)}"><i>${String(index + 1).padStart(2, '0')}</i><div><small>落在「${esc(owner.title)}」里</small><h3>${esc(module.title)}</h3><p>${esc(module.readout)}</p></div><aside><b>留下的现场</b><span>${esc(module.proof)}</span></aside><footer><div>${tags}</div><strong>${esc(module.action)} →</strong></footer></a>`;
+  }).join('\n');
+};
 const jsonLdObject = (siteData) => {
   const hasPart = siteData.projects.filter((project) => project.visibility === 'public').sort((a, b) => a.order - b.order)
     .map((project) => ({ '@type': 'CreativeWork', name: project.title, url: new URL(project.href, 'https://loki-os.hiloki.ai/').href, description: project.summary }));
-  return { '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Loki 的代表项目', url: 'https://loki-os.hiloki.ai/works.html', inLanguage: 'zh-CN', dateModified: siteData.updatedAt, about: { '@type': 'Person', name: 'Loki' }, hasPart };
+  return { '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Loki 的作品库', url: 'https://loki-os.hiloki.ai/works.html', inLanguage: 'zh-CN', dateModified: siteData.updatedAt, about: { '@type': 'Person', name: 'Loki' }, hasPart };
 };
 const jsonLd = (siteData) => `  <script type="application/ld+json">${JSON.stringify(jsonLdObject(siteData))}</script>`;
 
@@ -74,13 +86,13 @@ function replaceRegion(source, name, content) {
 function buildRegions(siteData) {
   const publicIds = publicProjectIds(siteData);
   const publicCount = publicIds.size;
-  const publicFeaturedCount = siteData.featuredProjectIds.filter((projectId) => publicIds.has(projectId)).length;
   return {
     WORKS_JSON_LD: jsonLd(siteData),
-    WORKS_SETLIST: `        <small>PUBLIC SETLIST / ${publicCount} PUBLIC CASES / ${publicFeaturedCount} FLAGSHIP PROJECTS / UPDATED ${esc(siteData.updatedAt)}</small>`,
+    WORKS_SETLIST: `        <small>作品索引 / ${publicCount} 个公开项目 / 更新于 ${esc(siteData.updatedAt)}</small>`,
     WORKS_ROUTES: routes(siteData),
     WORKS_PROOF_STRIP: proofStrip(siteData),
     WORKS_FLAGSHIP: cards(siteData, 'flagship'),
+    WORKS_MAKING: makingDeck(siteData),
     WORKS_WORKFLOW: cards(siteData, 'workflow'),
     WORKS_PRODUCTIZATION: cards(siteData, 'productization'),
     WORKS_PERSONAL_PRACTICE: cards(siteData, 'personal-practice'),
@@ -105,6 +117,7 @@ function simulatePrivate(projectId) {
   const leaked = [];
   if (cardRegions.includes(`data-project-id="${projectId}"`)) leaked.push('项目卡片');
   if (simulatedRegions.WORKS_PROOF_STRIP.includes(`data-proof-project="${projectId}"`)) leaked.push('证据条');
+  if (simulatedRegions.WORKS_MAKING.includes(`data-gear-project="${projectId}"`)) leaked.push('制作台');
   if (jsonLdObject(simulatedData).hasPart.some((part) => part.name === target.title)) leaked.push('JSON-LD');
   for (const pillar of data.pillars.filter((item) => item.projectIds?.includes(projectId))) {
     if (!pillarHasPublicAnchor(simulatedData, pillar) && simulatedRegions.WORKS_ROUTES.includes(`href="${pillar.href}"`)) leaked.push(`主线入口 ${pillar.href}`);

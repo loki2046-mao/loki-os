@@ -1,12 +1,15 @@
 # Loki OS 日常维护
 
-线上项目卡片不再直接散写在页面里，统一维护在 `site-data.js`。`works.html` 中标记为 `GENERATED:*` 的作品卡片、主线入口和 JSON-LD 由脚本生成，不要手工修改。
+线上项目与 Skill 不再直接散写在页面里，统一维护在 `site-data.js`。`works.html` 只收公开作品；`skills.html` 按领域收可复用能力，两者不能混成同一套产品卡。
 
 ## 日常流程
 
 1. 扫描本机最近项目：`npm run scan`。
 2. 查看 `.loki-os-local/project-candidates.json`。
 3. 只把确认适合公开、已有可访问站内案例页的候选写入 `site-data.js`；外部产品入口按实际核验状态单独登记。
+   - 新产品或完整案例写入 `projects`。
+   - 新 Skill 写入 `skills`，所属领域写入 `skillCategories`；用 `form` 区分“正式 Skill / 长期使用 / 作品中沉淀”。
+   - 本职工作中的私有流程，不因为已经做成 Skill 就自动进入公开索引。
 4. Loki 确认整批内容后，才把 `publicationStatus` 从 `unverified` 改为 `verified`。
 5. 运行 `npm run render:works`，把项目数据同步到静态作品页。
 6. 运行 `npm run check`。
@@ -25,8 +28,9 @@
 
 ## 文件职责
 
-- `site-data.js`：允许发布到公开网站的项目清单，也是作品卡片、三条主线、证据条、核验状态与外部入口口径的唯一维护源。
+- `site-data.js`：公开项目、Skill 分类与 Skill 条目的唯一维护源，也是作品卡片、三条主线、证据条、核验状态与外部入口口径的来源。
 - `scripts/render-works.mjs`：从 `site-data.js` 生成 `works.html` 中的项目卡片、主线入口和结构化数据；`--check` 只校验、不写文件。
+- `scripts/render-skills.mjs`：从 `site-data.js` 生成 `skills.html` 的分类目录、条目与结构化数据；`--check` 只校验、不写文件。
 - `scripts/scan-local-projects.mjs`：扫描 Cola/Codex 最近操作过的本地项目，生成私有候选。
 - `scripts/validate-site-data.mjs`：检查日期、重复 ID、站内案例页、外部入口状态、公开可见性和必填字段。
 - `.loki-os-local/`：本机候选与审计结果，不进入 Git。

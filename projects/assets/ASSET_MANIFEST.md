@@ -20,6 +20,8 @@
 | `exhibition/codex-liulian-cutout.*` | `/Users/kude/Documents/长项目/codex-collage-liulian-theme/assets/liulian-collage.png` | Existing user-owned theme asset | Actual Codex V4 static-IP production asset |
 | `codex-liulian-collage.png` | Existing Codex theme asset from the previous case implementation | Existing user-owned theme asset | Legacy compatibility; not used by the new exhibition page |
 | `loki-hub-style-board.png` | Existing Loki Hub QA board from the previous case implementation | User-owned project QA capture | High-level Cola/interface archive specimen on the main table |
+| public-memory/supergirl-street-2005.jpg | Xinhua photo hosted in the Sohu 2005 street-voting gallery: https://news.sohu.com/20050826/n226793349.shtml | Third-party historical press image; displayed with source attribution, not user-owned project evidence | 2005 Super Girl public-memory box |
+| public-memory/concert-crowd-unsplash.jpg | Unsplash CDN photo id photo-1501386761578-eac5c94b800a | Unsplash public photo; source link retained, used only as a concert-crowd scene rather than a personal attendance photo | Live-concert public-memory box |
 
 ## Reference-only material
 
