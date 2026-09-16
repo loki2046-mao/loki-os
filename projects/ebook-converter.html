@@ -77,6 +77,19 @@
         </div>
       </section>
 
+      <section class="story-section">
+        <div class="story-section-head">
+          <div class="story-label">04 / VERSION LOG</div>
+          <h2>从 v1.0.0 到 v1.1.2，<br>同一个仓库里只用了一天。</h2>
+        </div>
+        <div class="story-grid">
+          <article class="story-card"><span class="story-card-num">01:31</span><h3>v1.0.0 · 先让 macOS 能用</h3><p>2026-08-11 凌晨发出第一版：Electron 壳加 Calibre 转换引擎，拖入、批量、进度、完成后打开所在位置，一条链跑通。</p></article>
+          <article class="story-card"><span class="story-card-num">11:01</span><h3>v1.1.0 · Windows 补齐</h3><p>上午发布 Windows x64 支持：安装器自带官方 Calibre MSI 作前置，检测到已装就跳过；日常转换只调用 ebook-convert，不弹界面也不闪命令行窗口。</p></article>
+          <article class="story-card"><span class="story-card-num">17:50</span><h3>当天连修两平台拖拽</h3><p>发版后真实安装立刻暴露拖拽导入问题：先修 Windows，再修 macOS 并重新发布，最后统一了安装包命名，收在 v1.1.2。</p></article>
+          <article class="story-card"><span class="story-card-num">600MB</span><h3>Calibre 集成的取舍</h3><p>macOS DMG 内置后台专用 Calibre 运行时（含 Python、Qt、插件和字体），换来「不装 Calibre、不见它的界面」；体积是代价，GPLv3 归属在第三方声明里单独注明。</p></article>
+        </div>
+      </section>
+
       <footer class="story-final">
         <div><div class="story-label">返场 / 我最后留下的判断</div><h2>有些工具功能都在，问题是普通人根本不想先学半天。</h2><p>我保留 Calibre 的转换能力，只让用户看见拖入文件、选格式、看进度和打开结果。macOS 与 Windows 版本都已经做成可以安装的桌面工具。</p></div>
         <div class="story-final-actions"><a class="story-action primary" href="https://github.com/loki2046-mao/loki-ebook-converter/releases/tag/v1.1.2" target="_blank" rel="noreferrer">前往下载页 ↗</a></div>

@@ -19,14 +19,14 @@
 <main class="health-proof-shell">
   <section class="health-proof-head">
     <div><span>LOKI'S HEALTH · LOCAL PRODUCT / REDACTED CASE</span><h1>身体数据明明都在，<br><em>我还是说不清今天发生了什么。</em></h1></div>
-    <aside><p>运动和睡眠在 Apple 健康里，饮水、饮食、用药和身体目标又散在别处。我把它们做进一个低负担的个人记录系统。下面都是真实产品画面，公开前已经去掉私人健康内容。</p><a href="https://lokihealthy.hiloki.ai/" target="_blank" rel="noopener">打开 Loki's Health ↗</a></aside>
+    <aside><p>运动和睡眠在 Apple 健康里，饮水、饮食、用药和身体目标又散在别处。我把它们做进一个低负担的个人记录系统。下面是真实产品的公开脱敏画面：私人健康内容全部移除，部分页面只保留布局结构。</p><a href="https://lokihealthy.hiloki.ai/" target="_blank" rel="noopener">打开 Loki's Health ↗</a></aside>
   </section>
 
   <section class="health-browser" data-health-gallery>
     <header><div class="browser-lights"><i></i><i></i><i></i></div><span>真实产品画面 / 私人内容已脱敏</span><a href="https://lokihealthy.hiloki.ai/" target="_blank" rel="noopener">打开产品</a></header>
     <div class="health-browser-body">
       <nav aria-label="真实页面截图选择">
-        <button class="is-active" data-health-shot="./assets/real/health/today-desktop-redacted.png" data-health-alt="Loki's Health 今天页面真实桌面截图，内容已脱敏" data-health-title="今天 · Desktop" data-health-note="同步数据与手动记录分开，先回答今天要照顾什么。"><b>01</b><span>今天<small>DESKTOP</small></span></button>
+        <button class="is-active" data-health-shot="./assets/real/health/today-desktop-redacted.png" data-health-alt="Loki's Health 今天页面真实桌面截图，私人内容已脱敏，仅保留布局结构" data-health-title="今天 · Desktop" data-health-note="同步数据与手动记录分开，先回答今天要照顾什么；本图脱敏后仅保留布局。"><b>01</b><span>今天<small>DESKTOP</small></span></button>
         <button data-health-shot="./assets/real/health/water-desktop-redacted.png" data-health-alt="Loki's Health 饮水中心真实桌面截图，内容已脱敏" data-health-title="饮水中心 · Desktop" data-health-note="容量、饮品类型、热量估算与日内时间线在同一条记录链上。"><b>02</b><span>饮水中心<small>DESKTOP</small></span></button>
         <button data-health-shot="./assets/real/health/today-mobile-redacted.png" data-health-alt="Loki's Health 今天页面真实手机截图，内容已脱敏" data-health-title="今天 · Mobile" data-health-note="手机端重新组织导航和记录动作，直接缩窄桌面页会很难用。"><b>03</b><span>手机布局<small>MOBILE</small></span></button>
       </nav>
@@ -37,10 +37,10 @@
   <section class="health-making-of">
     <header><small>WHY I MADE IT / REAL ITERATION</small><h2>数据本来就有。<br>问题是它们<em>散在不同地方，也没有替我回答今天。</em></h2><p>运动和睡眠在 Apple 健康里，饮食、饮水、用药和经期靠手动记录。每个应用只留下一小块，我真正想看的是：今天身体发生了什么、还缺什么、刚才那句话有没有被正确记住。</p></header>
     <div class="health-iteration">
-      <article><b>01</b><small>从“都有数据”开始</small><h3>运动同步了，身体记录还缺很多块。</h3><p>睡眠总时长、入睡与起床、核心/深睡/快速眼动、睡眠期心率属于不同层级；饮食和饮水又不在 HealthKit 里。把数字搬到一起只是第一步。</p></article>
+      <article><b>01</b><small>从“都有数据”开始</small><h3>运动同步了，身体记录还缺很多块。</h3><p>睡眠总时长、入睡与起床、核心/深睡/快速眼动、睡眠期心率属于不同层级；饮食和饮水又不在 HealthKit 里。把数字搬到一起只是第一步：iOS 侧我另写了一个只读的 HealthKit 桥，网页本体则是本地优先，记录先落在自己的设备上。</p></article>
       <article><b>02</b><small>从真实失败里改交互</small><h3>“150ml 纯牛奶”曾经被记成 150ml 白水。</h3><p>所以饮水改成先选饮品，再选毫升数，时间、容量和类型都能修改；语音记录也要拆出一句话里的多个时间、饮品和用药动作。</p></article>
       <article><b>03</b><small>从看板改成任务入口</small><h3>首页不该先让人理解一个分数。</h3><p>语音、饮食、饮水、用药成为清楚的四类记录；今天页先告诉我当前缺什么、下一步能做什么，完整指标与同步状态再往下放。</p></article>
-      <article><b>04</b><small>从能写入到能相信</small><h3>写进去以后，它还得留得住。</h3><p>授权、设备同步、多来源睡眠去重、本地与云端合并、历史记录和隐私边界都要一起成立。我做它，是想让身体资料以后还能回看，别再多一套新的遗忘。</p></article>
+      <article><b>04</b><small>从能写入到能相信</small><h3>写进去以后，它还得留得住。</h3><p>授权、设备同步、多来源睡眠去重、本地与云端合并、历史记录和隐私边界都要一起成立。健康数据经只读桥进来，手动记录留在本地，合并策略宁可保守也不重复记。我做它，是想让身体资料以后还能回看，别再多一套新的遗忘。</p></article>
     </div>
   </section>
 

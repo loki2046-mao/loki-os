@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="AI 求职行动教练：在职盘点三维评分（可替代性、人类必要性、资产性）与四类判决，求职者拆 JD 拿 7 天行动计划——真实输出报告公开。">
+  <title>AI 求职行动教练｜岗位 AI 暴露度与 7 天行动计划｜Loki</title>
+  <link rel="canonical" href="https://loki-os.hiloki.ai/projects/ai-career-compass.html">
+  <meta property="og:type" content="article"><meta property="og:title" content="AI 求职行动教练｜岗位 AI 暴露度与 7 天行动计划"><meta property="og:description" content="在职盘可替代性、人类必要性、资产性三维评分，求职拆 JD 给 7 天行动计划；站上展示两份真实报告的真实节选。"><meta property="og:image" content="https://loki-os.hiloki.ai/projects/assets/real/ai-career-compass/eval-scoring-table.png"><meta property="og:url" content="https://loki-os.hiloki.ai/projects/ai-career-compass.html">
+  <link rel="icon" href="../loki-ip-live.jpg"><link rel="stylesheet" href="../brand-system.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"AI 求职行动教练：岗位 AI 暴露度分析与求职行动计划","url":"https://loki-os.hiloki.ai/projects/ai-career-compass.html","inLanguage":"zh-CN","dateModified":"2026-09-14","creator":{"@type":"Person","name":"Loki","url":"https://loki-os.hiloki.ai/about.html"},"description":"评估一份工作在 AI 时代的暴露度：在岗者做可替代性、人类必要性、资产性三维评分与四类判决，求职者拆 JD 拿可投方向、简历改写和 7 天行动计划。","keywords":["AI 暴露度","求职","在职盘点","JD 拆解","行动计划"]}</script>
+  <style>
+  /* ===== CASE 10 · 站内纸面档案页：brand-system 家组件（judgment-turn / cue-timeline /
+     evidence-wall / status-board / dossier-footer）搭骨架，页面只做纸色化与布局微调，
+     与 loki-assistant.html 同一套纸面语言。正文文字全部原样；职业蓝 #4f8dff 只做
+     顶线、kicker、边线、chip 小面积 accent；无墨色整幕、无斜切色带、无旋转叠压、
+     无幽灵序号、无超大拼贴字。 ===== */
+  html{background:#f8f1e2}
+  body.cc-page{
+    margin:0;overflow-x:clip;
+    background:
+      radial-gradient(circle at 88% 2%,rgba(79,141,255,.05),transparent 30rem),
+      #f8f1e2;
+    color:#241d13;
+    font-family:"PingFang SC","Noto Sans CJK SC",system-ui,sans-serif;
+    line-height:1.7;
+  }
+  .cc-main{
+    --cc-ink:#241d13;
+    --cc-body:#574d3f;
+    --cc-muted:#7b7263;
+    --cc-line:rgba(36,29,19,.18);
+    --cc-panel:#fff9ed;
+    --cc-accent:#4f8dff;
+    --cc-accent-deep:#2c5ec6;
+    --case-accent:var(--cc-accent);
+    color:var(--cc-ink);
+  }
+  .cc-shell{width:min(1240px,calc(100% - 48px));margin:0 auto}
+  .cc-page h1,.cc-page h2,.cc-page h3{font-family:"Songti SC","STSong",serif}
+  .cc-kicker{
+    display:inline-flex;align-items:center;gap:10px;
+    color:var(--cc-accent-deep);
+    font:900 10px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;
+    letter-spacing:.18em;
+  }
+  .cc-kicker::before{content:"";flex:0 0 auto;width:12px;height:12px;background:var(--cc-accent)}
+
+  /* ---------- 页首条 ---------- */
+  .artifact-top{
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+    min-height:56px;height:auto;padding:12px clamp(16px,4vw,40px);
+    border-bottom:1px solid var(--cc-line);background:#fbf5e8;position:static;
+  }
+  .cc-page .artifact-top a{color:var(--cc-ink);text-decoration:none;font-size:13px;font-weight:800;border-bottom:0;padding-bottom:0}
+  .cc-page .artifact-top a:hover{color:var(--cc-accent-deep)}
+  .cc-page .artifact-top small{padding:0;border:0;color:var(--cc-muted);font:800 9px/1.4 ui-monospace,monospace;letter-spacing:.18em}
+
+  /* ---------- 档案头：站内 story-hero/dossier 的双栏语言 ---------- */
+  .cc-act{position:relative}
+  .cc-act1{padding:0;border-top:0;background:none}
+  .cc-hero{
+    display:grid;grid-template-columns:minmax(0,1fr) minmax(380px,1.08fr);gap:clamp(32px,4.5vw,72px);
+    align-items:center;padding:clamp(36px,6vh,64px) 0 clamp(44px,7vh,76px);
+    border-top:8px solid var(--cc-accent);border-bottom:1px solid var(--cc-line);
+  }
+  .cc-hero-copy{position:static;z-index:auto;padding-bottom:0}
+  .cc-hero-copy>small{margin-bottom:4px}
+  .cc-hero h2{
+    max-width:14em;margin:18px 0 30px;
+    font-size:clamp(34px,3.9vw,58px);font-weight:700;line-height:1.18;letter-spacing:-.02em;
+    color:var(--cc-ink);width:auto;text-shadow:none;
+  }
+  .cc-hero h2 em{font-style:normal;color:var(--cc-accent-deep)}
+  .cc-hero-note{
+    max-width:34em;margin:0;padding:14px 0 14px 20px;
+    background:none;border-left:4px solid var(--cc-accent);box-shadow:none;
+    color:var(--cc-body);font-size:15px;line-height:1.95;
+  }
+  .cc-hero-note strong{color:var(--cc-ink)}
+  .cc-hero-shot{
+    grid-column:2;grid-row:1;margin:0;padding:0;transform:none;
+    border:1px solid var(--cc-line);background:var(--cc-panel);
+    box-shadow:10px 12px 0 rgba(36,29,19,.12);
+  }
+  .cc-hero-shot img{display:block;width:100%;height:auto;max-height:520px;object-fit:cover;object-position:left top;border-bottom:1px solid var(--cc-line)}
+  .cc-hero-shot figcaption{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 14px;padding:12px 15px;color:var(--cc-muted);font:800 9px/1.5 ui-monospace,monospace;letter-spacing:.12em}
+  .cc-hero-shot figcaption b{color:var(--cc-ink)}
+  .cc-stamp{
+    grid-column:2;grid-row:2;justify-self:start;
+    position:static;display:flex;align-items:center;gap:8px;
+    padding:0;border:0;outline:0;background:none;transform:none;
+    margin:calc(-1*clamp(24px,5vh,56px)) 0 0;color:inherit;text-align:left;
+  }
+  .cc-stamp b{padding:6px 10px;background:var(--cc-ink);color:var(--cc-accent);font:900 12px/1 Georgia,serif;letter-spacing:.08em}
+  .cc-stamp small{padding:6px 10px;border:1px dashed var(--cc-line);color:var(--cc-muted);font:900 8px/1 ui-monospace,monospace;letter-spacing:.28em}
+
+  /* ---------- 幕间行 · 三维：超大拼贴字收成标签行 ---------- */
+  .cc-band{
+    display:flex;flex-wrap:wrap;align-items:center;gap:10px;
+    width:min(1240px,calc(100% - 48px));margin:0 auto;
+    padding:26px 0;border-bottom:1px solid var(--cc-line);
+    overflow:visible;
+  }
+  .cc-band small{position:static;top:auto;left:auto;color:var(--cc-muted);font:800 9px/1.4 ui-monospace,monospace;letter-spacing:.2em;margin-right:auto}
+  .cc-band-hero{font-family:"Songti SC",serif;font-weight:700;font-size:20px;line-height:1;color:var(--cc-ink);transform:none;text-shadow:none}
+  .cc-band-dim{background:none;color:inherit;margin-top:0;transform:none}
+  .cc-band-dim .cc-w{font-family:"PingFang SC","Noto Sans CJK SC",system-ui,sans-serif;font-weight:700;font-size:12px;line-height:1;padding:8px 12px;border:1px solid var(--cc-line);background:var(--cc-panel);color:var(--cc-ink)}
+  .cc-band-dim .cc-w2{transform:none;color:var(--cc-accent-deep)}
+  .cc-band-dim .cc-w3{transform:none}
+
+  /* ---------- 幕 02 · 转向：judgment-turn 家组件，去旋转 ---------- */
+  .cc-act2{background:none;color:inherit;padding:clamp(44px,7vh,72px) 0 clamp(52px,8vh,88px);border-top:0}
+  .cc-act2 .judgment-turn{margin:0;grid-template-columns:1fr 76px 1fr;gap:16px}
+  .cc-act2 .judgment-turn article{transform:none;min-height:0;padding:26px;background:#14110e;color:#f3eadf;border-color:#2a241e;display:block}
+  .cc-act2 .judgment-turn article:last-child{transform:none;border-color:var(--cc-accent);box-shadow:8px 9px 0 rgba(79,141,255,.22)}
+  .cc-act2 .judgment-turn article small{color:#9db9ff}
+  .cc-act2 .judgment-turn h3{margin:14px 0 0;font-size:clamp(19px,1.9vw,25px);line-height:1.55;font-weight:700}
+  .cc-act2 .judgment-turn i{background:var(--cc-accent);color:#0b0d14;box-shadow:none}
+
+  /* ---------- 关键转向引文：左线语言，去斜排 ---------- */
+  .cc-pullquote{position:static;z-index:auto;margin:clamp(40px,7vh,68px) 0 0;padding:0;border:0;background:none;transform:none}
+  .cc-pullquote::before{content:none}
+  .cc-pullquote small{display:block;margin-bottom:14px;color:var(--cc-accent-deep);font:900 10px/1 ui-monospace,monospace;letter-spacing:.22em}
+  .cc-pullquote blockquote{max-width:1000px;margin:0;padding-left:24px;border-left:5px solid var(--cc-accent);font-size:clamp(22px,2.6vw,36px);font-weight:700;line-height:1.6;color:var(--cc-ink)}
+  .cc-pullquote blockquote::after{content:none}
+
+  /* ---------- 幕 03 · 研发过程：cue-timeline 家组件，纸面化 ---------- */
+  .cc-act3{background:none;padding:clamp(52px,8vh,88px) 0}
+  .cc-eyebrow{display:flex;align-items:center;gap:18px;margin:0 0 clamp(30px,5vh,48px)}
+  .cc-eyebrow small{flex:0 0 auto;color:var(--cc-accent-deep);font:900 11px/1 ui-monospace,monospace;letter-spacing:.24em}
+  .cc-eyebrow i{flex:1;height:1px;background:linear-gradient(90deg,rgba(79,141,255,.6),transparent 72%);opacity:1}
+  .cc-page .cue-timeline{border:0;background:none;margin:0}
+  .cc-page .cue-timeline>header{display:flex;justify-content:space-between;gap:14px;padding:0 2px 18px;border:0;border-bottom:1px solid var(--cc-line);background:none;color:var(--cc-muted);font:900 9px/1.5 ui-monospace,monospace;letter-spacing:.15em}
+  .cc-page .cue-line{
+    position:static;grid-template-columns:120px minmax(0,1fr) minmax(200px,.42fr);gap:clamp(18px,3vw,44px);
+    align-items:start;margin:0;padding:clamp(24px,3.6vh,38px) 0;
+    border:0;border-bottom:1px solid var(--cc-line);background:none;transform:none;
+  }
+  .cc-page .cue-line:last-child{border-bottom:0}
+  .cc-page .cue-line::before,.cc-page .cue-line::after{content:none}
+  .cc-page .cue-line:nth-child(odd){transform:none;margin-right:0}
+  .cc-page .cue-line:nth-child(even){transform:none;margin-left:0}
+  .cc-page .cue-line>small{align-self:start;padding:0;background:none;border:0;color:var(--cc-accent-deep);font:900 10px/1.6 ui-monospace,monospace;letter-spacing:.06em;white-space:nowrap;transform:none}
+  .cc-page .cue-line>div{min-width:0}
+  .cc-page .cue-line h3{margin:0 0 9px;font-size:clamp(19px,1.9vw,25px);font-weight:700;color:var(--cc-ink)}
+  .cc-page .cue-line p{color:var(--cc-body);font-size:14px;line-height:1.9}
+  .cc-page .cue-line>span{align-self:start;padding:12px 0 0 14px;border-left:3px solid var(--cc-accent);background:none;color:var(--cc-muted);font-size:11px;line-height:1.75}
+
+  /* ---------- 幕 04 · 证据：纸面图框 + Georgia 克制评分卡 ---------- */
+  .cc-act4{background:none;color:inherit}
+  .cc-act4::before{content:none}
+  .cc-act4 .evidence-wall{margin:0}
+  .cc-act4 .evidence-wall>header{position:static;z-index:auto;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(280px,1fr);gap:clamp(18px,3vw,48px);align-items:end;margin-bottom:clamp(30px,5vh,48px)}
+  .cc-act4 .dossier-kicker{color:var(--cc-accent-deep)}
+  .cc-act4 .evidence-wall h2{font-size:clamp(26px,2.8vw,40px);font-weight:700;line-height:1.3;color:var(--cc-ink)}
+  .cc-act4 .evidence-wall>header p{color:var(--cc-body);font-size:14px;line-height:1.9}
+  .cc-scoring{display:grid;grid-template-columns:minmax(0,8fr) minmax(250px,4fr);gap:clamp(22px,3vw,44px);align-items:start}
+  .cc-act4 .cc-score-shot{position:static;z-index:auto;grid-column:1;margin:0;border:1px solid var(--cc-line);background:var(--cc-panel);box-shadow:10px 12px 0 rgba(36,29,19,.12);transform:none}
+  .cc-act4 .cc-score-shot img{display:block;width:100%;height:auto;max-height:640px;object-fit:cover;object-position:top;border-bottom:1px solid var(--cc-line)}
+  .cc-act4 .cc-score-shot figcaption{padding:13px 15px;display:grid;gap:7px}
+  .cc-act4 .cc-score-shot figcaption b{color:var(--cc-ink);font-size:13px}
+  .cc-act4 .cc-score-shot figcaption span{color:var(--cc-body);font-size:11px;line-height:1.75}
+  .cc-act4 .cc-score-shot figcaption small{color:var(--cc-muted);font:800 8px/1.3 ui-monospace,monospace;letter-spacing:.1em}
+  .cc-score-cards{position:static;z-index:auto;grid-column:2;display:grid;gap:14px;margin:0}
+  .cc-score-cards article{position:static;display:grid;gap:7px;padding:20px;background:var(--cc-panel);color:var(--cc-ink);border:1px solid var(--cc-line);box-shadow:8px 9px 0 rgba(36,29,19,.07);transform:none}
+  .cc-score-cards small{font:900 9px/1.4 ui-monospace,monospace;letter-spacing:.14em;color:var(--cc-muted)}
+  .cc-score-cards b{font:900 clamp(34px,3.4vw,52px)/1 Georgia,serif;letter-spacing:-.01em;color:var(--cc-ink)}
+  .cc-score-cards span{font-size:11px;line-height:1.6;color:var(--cc-body);opacity:1}
+  .cc-score-cards article.is-zone{background:var(--cc-panel);color:var(--cc-ink);border-color:var(--cc-accent);box-shadow:8px 9px 0 rgba(79,141,255,.18);transform:none}
+  .cc-score-cards article.is-zone small{color:var(--cc-accent-deep)}
+  .cc-score-cards article.is-zone b{font-family:"Songti SC",serif;font-size:clamp(20px,2vw,30px);letter-spacing:.04em}
+  .cc-evidence-pair{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(18px,3vw,40px);margin-top:clamp(40px,7vh,72px)}
+  .cc-evidence-pair .evidence-card{grid-column:auto;position:relative}
+  .cc-evidence-pair .evidence-card::before{content:none}
+  .cc-act4 .evidence-card{border:1px solid var(--cc-line);background:var(--cc-panel);box-shadow:10px 12px 0 rgba(36,29,19,.12);transform:none}
+  .cc-evidence-pair .evidence-card:first-child{transform:none}
+  .cc-evidence-pair .evidence-card:last-child{transform:none;margin-left:0;z-index:auto}
+  .cc-act4 .evidence-card img{height:auto;max-height:520px;object-fit:cover;object-position:top}
+  .cc-act4 .evidence-card figcaption b{color:var(--cc-ink);font-size:13px}
+  .cc-act4 .evidence-card figcaption span{color:var(--cc-body)}
+  .cc-act4 .evidence-card figcaption small{color:var(--cc-muted)}
+
+  /* ---------- 幕间行 · 四档判决：蓝底超大字带收成标签行 ---------- */
+  .cc-band-verdict{background:none;color:inherit;row-gap:10px;padding:clamp(36px,6vh,64px) 0;margin-top:0;transform:none}
+  .cc-band-verdict span{font-family:"Songti SC",serif;font-weight:700;font-size:15px;line-height:1;padding:10px 16px;border:1px solid var(--cc-line);border-top:3px solid var(--cc-accent);background:var(--cc-panel);color:var(--cc-ink);transform:none}
+  .cc-band-verdict span:nth-child(even){color:var(--cc-ink);transform:none}
+  .cc-band-verdict span:nth-child(odd){transform:none}
+
+  /* ---------- 幕 05 · 状态与边界：status-board 家组件，纸面化 ---------- */
+  .cc-act5{background:none;padding:clamp(52px,8vh,88px) 0 clamp(40px,6vh,64px)}
+  .cc-page .status-board{grid-template-columns:repeat(3,1fr);gap:1px;margin:0;border:1px solid var(--cc-line);background:var(--cc-line);box-shadow:8px 9px 0 rgba(36,29,19,.07)}
+  .cc-page .status-board article{position:static;min-height:0;padding:26px;background:var(--cc-panel);color:var(--cc-ink);border:0;border-top:6px solid var(--cc-accent);overflow:visible;transform:none}
+  .cc-page .status-board article::before{content:none}
+  .cc-page .status-board article:nth-child(1){border-top:6px solid var(--cc-accent);grid-row:auto}
+  .cc-page .status-board article:nth-child(2){border-top:6px solid #d7a34c;transform:none}
+  .cc-page .status-board article:nth-child(3){border-top:6px solid #a83410}
+  .cc-page .status-board small{color:var(--cc-accent-deep)}
+  .cc-page .status-board article:nth-child(2) small{color:#8a6420}
+  .cc-page .status-board article:nth-child(3) small{color:#a83410}
+  .cc-page .status-board h3{margin:20px 0 12px;font-size:21px;font-weight:700}
+  .cc-page .status-board ul{margin:0;padding-left:18px;color:var(--cc-body);font-size:13px;line-height:1.9}
+  .cc-page .dossier-footer{margin:clamp(44px,8vh,80px) 0 0}
+  .cc-page .dossier-footer h2{font-size:clamp(21px,2.2vw,29px);line-height:1.5;font-weight:700}
+
+  /* ---------- 响应式 ---------- */
+  @media(max-width:960px){
+    .cc-shell,.cc-band{width:calc(100% - 32px)}
+    .cc-hero{grid-template-columns:1fr;gap:28px;padding-top:30px;padding-bottom:36px}
+    .cc-hero-shot{grid-column:1;grid-row:auto}
+    .cc-stamp{grid-column:1;grid-row:auto;margin-top:-4px}
+    .cc-act2 .judgment-turn{grid-template-columns:1fr;gap:12px}
+    .cc-act2 .judgment-turn i{justify-self:center}
+    .cc-page .cue-line{grid-template-columns:minmax(0,1fr);gap:12px}
+    .cc-page .cue-line>small{white-space:normal}
+    .cc-page .cue-line>span{grid-column:auto}
+    .cc-scoring{grid-template-columns:1fr}
+    .cc-score-cards{grid-column:1}
+    .cc-evidence-pair{grid-template-columns:1fr;gap:22px}
+    .cc-act4 .evidence-wall>header{grid-template-columns:1fr}
+    .cc-page .status-board{grid-template-columns:1fr}
+  }
+  @media(max-width:600px){
+    .artifact-top{flex-wrap:wrap;gap:8px}
+    .cc-hero h2{font-size:32px}
+    .cc-hero-shot{box-shadow:7px 8px 0 rgba(36,29,19,.12)}
+    .cc-score-cards b{font-size:36px}
+    .cc-page .dossier-footer{grid-template-columns:1fr}
+    .cc-page .dossier-links a{flex:1;text-align:center}
+  }
+  </style>
+</head>
+<body class="cc-page">
+<header class="artifact-top"><a href="../index.html#works">← 回到返场作品单</a><small>CASE 10 / CAREER COMPASS · OPEN SOURCE</small></header>
+<main class="cc-main">
+
+  <!-- 幕 01 · 封面 -->
+  <section class="cc-act cc-act1" aria-label="AI 求职行动教练完整证据档案">
+    <div class="cc-shell">
+      <header class="cc-hero">
+        <div class="cc-hero-copy"><small>公开案例 / 开源 Skill / 更新于 2026-09-14</small><h2>「我的工作会不会被 AI 吃掉」<br>这个问题光吓人没有用，<em>得给出下一步。</em></h2><p class="cc-hero-note"><strong>如果只用一句话说：</strong>在岗的人，盘他上周实际做了什么，做可替代性、人类必要性、资产性三维评分，判断该动、该挪、该加固还是该冷静；求职的人，拆 JD 给可投方向、简历改写和 7 天行动计划。它不贩卖焦虑，只回答「下一步做什么」。</p></div>
+        <figure class="cc-hero-shot"><img src="./assets/real/ai-career-compass/eval-scoring-hero.png" alt="真实报告评分表特写：用户研究实习生岗位日常任务的可替代性与人类必要性逐项评分"><figcaption><b>EVIDENCE 01 · 三维评分 · 真实报告节选特写</b><span>REAL OUTPUT / RE-RENDERED 2026-07-03</span></figcaption></figure>
+        <div class="cc-stamp"><b>CASE 10</b><small>OPEN SOURCE</small></div>
+      </header>
+    </div>
+  </section>
+
+  <!-- 幕间 · 超大字「三维」 -->
+  <div class="cc-band cc-band-dim"><small>EVIDENCE 01 · 三维评分</small><span class="cc-band-hero">三维</span><span class="cc-w cc-w1">可替代性</span><span class="cc-w cc-w2">人类必要性</span><span class="cc-w cc-w3">资产性</span></div>
+
+  <!-- 幕 02 · 转向 -->
+  <section class="cc-act cc-act2" aria-label="关键转向">
+    <div class="cc-shell">
+      <div class="judgment-turn"><article><small>I FIRST THOUGHT / 最初判断</small><h3>拿一份 JD 来，就能判断一个岗位的 AI 风险。</h3></article><i>→</i><article><small>I LATER FOUND / 关键转向</small><h3>JD 是写给外人看的。岗位被掏空不是从工作变少开始的，是从你还在忙、但忙的都不是核心的事开始的——所以在职版先看行为，再看岗位。</h3></article></div>
+      <aside class="cc-pullquote" aria-label="关键判断"><small>THE TURN / 关键转向</small><blockquote>JD 是写给外人看的。岗位被掏空不是从工作变少开始的，是从你还在忙、但忙的都不是核心的事开始的——所以在职版先看行为，再看岗位。</blockquote></aside>
+    </div>
+  </section>
+
+  <!-- 幕 03 · 研发过程 -->
+  <section class="cc-act cc-act3" aria-label="研发过程">
+    <div class="cc-shell">
+      <div class="cc-eyebrow"><small>CALL SHEET / 研发过程</small><i></i></div>
+      <section class="cue-timeline" aria-label="研发过程时间线"><header><span>CALL SHEET / FROM V1 TO V2</span><span>时间与证据分开记录</span></header>
+        <article class="cue-line"><small>01 / 2026-07-02</small><div><h3>v1 先做求职线，开源发布</h3><p>公开仓库 loki2046-mao/ai-career-compass 的首个 commit 写着「AI Career Compass v1 — Cola 打底 + Codex &amp; Fiber 5 优化」。v1 两条输入模式：只给岗位名走概念拆解（模式 A），给具体 JD 走逐条对标（模式 B）；学生、应届和转行的人再叠加行动教练线（模式 S），因为转行者和学生面对的是同一个问题——目标岗位上没有现成经历可写。</p></div><span>证据：公开仓库首条 commit，2026-07-02</span></article>
+        <article class="cue-line"><small>02 / 2026-07-03</small><div><h3>用两个真实背景跑出完整报告</h3><p>第二天拿「广告学大三找实习」和「社会学找实习」各跑了一遍全流程，留下两份完整的 Markdown 报告。报告里连数据来源的局限都如实标注：zhipin.com 页面抓取被反爬阻断，任务清单来自多平台招聘摘要、知乎职场讨论和行业文章交叉验证。本页展示的三张截图，都出自这两份真实报告。</p></div><span>证据：report-广告学.md、report-社会学.md，分析时间 2026-07-03</span></article>
+        <article class="cue-line"><small>03 / 2026-07 起</small><div><h3>进公开主表，长期使用中继续改</h3><p>Skill 收进公开的 cola-skills 仓库自写主表，本机也一直装着在用。SKILL.md 到 2026-09-11 还有迭代痕迹：评分有 rubric 文件管口径，报告有模板管结构，在岗 playbook 和学生 playbook 分开存放，进入对应模式才读取对应清单。</p></div><span>证据：cola-skills 主表收录；本地 SKILL.md 持续迭代</span></article>
+        <article class="cue-line"><small>04 / 2026-09-10</small><div><h3>v2 补上在职盘点：第三维度和四类判决</h3><p>v1 只回答「危险吗」，v2 的 commit 补上了「该往哪挪、手上有什么能带走的」：新增在职盘点模式 P，评分从两维升到三维（可替代性、人类必要性、资产性），输出改成四类判决——该动、该挪、该加固、该冷静，附该动的信号、老板视角和可迁移资产清单。</p></div><span>证据：公开仓库 v2 commit，2026-09-10</span></article>
+      </section>
+    </div>
+  </section>
+
+  <!-- 幕 04 · 证据 -->
+  <section class="cc-act cc-act4" aria-label="真实报告证据">
+    <div class="cc-shell">
+      <section class="evidence-wall"><header><div><span class="dossier-kicker">REAL ARTIFACTS / 每张图只说明一件事</span><h2>评分怎么打、<br>招聘方怎么读、下一步做什么。</h2></div><p>下面三张图全部来自 2026-07-03 两份真实报告的输出：一张是节选的重排版渲染，两张是原始长图截图。报告里的案例背景已做匿名化，评分与文字未改动。</p></header>
+        <div class="cc-scoring">
+          <figure class="evidence-card is-wide cc-score-shot"><img src="./assets/real/ai-career-compass/eval-scoring-table.png" alt="用户研究实习生岗位六项日常任务的可替代性与人类必要性评分表，均值为 2.83 与 3.67，区域判定为混合区偏安全"><figcaption><b>三维评分 · 真实报告节选</b><span>用户研究实习生的六项日常任务逐项打分：访谈和汇报的可替代性最低，数据整理最高，均值 2.83 对 3.67，判定「混合区偏安全」。报告原文是 Markdown 长文，本图为节选的重排版渲染。</span><small>EVIDENCE 02 · REAL OUTPUT / RE-RENDERED 2026-07-03</small></figcaption></figure>
+          <aside class="cc-score-cards" aria-label="评分构成速读">
+            <article><small>岗位 / 用户研究实习生</small><b>2.83</b><span>可替代性 · 均值</span></article>
+            <article><small>六项日常任务逐项打分</small><b>3.67</b><span>人类必要性 · 均值</span></article>
+            <article class="is-zone"><small>区域判定</small><b>混合区偏安全</b><span>判定「混合区偏安全」</span></article>
+          </aside>
+        </div>
+        <div class="cc-evidence-pair">
+          <figure class="evidence-card"><img src="./assets/real/ai-career-compass/recruiter-lens.png" alt="「招聘方怎么读你的简历」表格：把学生写法逐条翻译成招聘方能信的岗位语言"><figcaption><b>招聘方视角 · 真实输出截图</b><span>「人人都写，等于没写」——这一节不写「你可以做什么」，写「招聘方看到这段经历会不会信」，并给出怎么改才可信。</span><small>EVIDENCE 03 · REAL CAPTURE / 2026-07-03</small></figcaption></figure>
+          <figure class="evidence-card"><img src="./assets/real/ai-career-compass/seven-day-action-plan.png" alt="「7 天行动 + 真心话」表格：从 Day 1 岗位需求分析到 Day 7 复盘投递效果，附三句实话"><figcaption><b>7 天行动计划 · 真实输出截图</b><span>Day 1 拆岗位高频技能词，Day 3-4 做一份能当作品集的拆解报告，Day 6 按内推优先投出去，Day 7 复盘回复率。行动表下面跟着「三句实话」，不给虚假安全感。</span><small>EVIDENCE 04 · REAL CAPTURE / 2026-07-03</small></figcaption></figure>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- 幕间 · 四档判决超大字 -->
+  <div class="cc-band cc-band-verdict"><span>该动</span><span>该挪</span><span>该加固</span><span>该冷静</span></div>
+
+  <!-- 幕 05 · 状态与边界 -->
+  <section class="cc-act cc-act5" aria-label="项目结果与边界">
+    <div class="cc-shell">
+      <div class="cc-eyebrow"><small>STATUS BOARD / 项目结果与边界</small><i></i></div>
+      <section class="status-board" aria-label="项目结果与边界"><article data-no="01"><small>ALREADY PROVED</small><h3>已经做到</h3><ul><li>公开仓库 v1 到 v2 完整迭代（2026-07-02 建立，2026-09-10 更新），收录于 cola-skills 公开主表</li><li>两份真实完整报告落地：广告学、社会学两条求职线，含数据来源与样本局限的如实标注</li><li>三维评分（可替代性、人类必要性、资产性）加四类判决的框架在 SKILL.md、rubric 和模板文件里成型</li><li>输出可执行：可投方向表、简历逐条改写、7 天行动计划、今天先做的一件事</li></ul></article><article data-no="02"><small>WORKING, NOT FINISHED</small><h3>能用但仍需维护</h3><ul><li>招聘站反爬是常态，数据来源以多平台搜索摘要交叉验证为主，每次报告都要重新核对样本</li><li>它靠 AI 会话执行而不是独立产品界面，输出质量依赖 rubric 文件和模板的持续维护</li><li>在职盘点（模式 P）上线时间还短，真实在职报告的积累比求职线薄</li></ul></article><article data-no="03"><small>NOT CLAIMED</small><h3>没有证明</h3><ul><li>两份报告是真实样本，不是统计结论；没有做过大规模用户验证，也不宣称能预测谁会被裁</li><li>「AI 暴露度」是按 rubric 给出的主观评分，不是行业统计数据，报告里都按判断呈现</li><li>不贩卖焦虑是写进核心原则的规矩：只回答哪些事 AI 能干、哪些事非你不可、简历怎么体现</li></ul></article></section>
+
+      <footer class="dossier-footer"><h2>岗位风险谁都会说。这份报告要做的是把「我该怎么办」拆成七天里每天能做完的一件事。</h2><div class="dossier-links"><a href="../works.html">返回作品索引 →</a><a href="./edu-content-line.html">上一案：教育内容生产线</a><a href="./loki-assistant.html">下一案：Loki Assistant</a><a href="https://github.com/loki2046-mao/ai-career-compass" target="_blank" rel="noopener">查看公开仓库 ↗</a></div></footer>
+    </div>
+  </section>
+</main>
+</body>
+</html>

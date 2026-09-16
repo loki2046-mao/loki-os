@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="教育内容生产线：把一套成功的课件提示词拆成学科骨架迁移复用，延伸出英语课件生成器与古诗词教研母稿、15 秒 AI 视频分镜。">
+  <title>教育内容生产线｜课件提示词迁移与教研母稿｜Loki</title>
+  <link rel="canonical" href="https://loki-os.hiloki.ai/projects/edu-content-line.html">
+  <meta property="og:type" content="article"><meta property="og:title" content="教育内容生产线｜课件提示词迁移与教研母稿"><meta property="og:description" content="从语文骨架到七套学科骨架，再到英语课件生成器和古诗词教研母稿→15 秒视频分镜的一条生产线。"><meta property="og:image" content="https://loki-os.hiloki.ai/projects/assets/real/edu-content-line/yongge.png"><meta property="og:url" content="https://loki-os.hiloki.ai/projects/edu-content-line.html">
+  <link rel="icon" href="../loki-ip-live.jpg"><link rel="stylesheet" href="../brand-system.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"教育内容生产线：课件提示词迁移与教研母稿","url":"https://loki-os.hiloki.ai/projects/edu-content-line.html","inLanguage":"zh-CN","dateModified":"2026-09-14","creator":{"@type":"Person","name":"Loki","url":"https://loki-os.hiloki.ai/about.html"},"description":"把成功课件提示词拆成可迁移的学科骨架，批量生成课件，并延伸出教研母稿与 AI 视频分镜能力。","keywords":["教育内容","提示词系统","课件生成","教研母稿","AI 视频分镜"]}</script>
+  <style>
+  /* ===== CASE 教育内容生产线 · 站内纸面档案页：brand-system 家组件（dossier-heading / judgment-turn /
+     cue-timeline / evidence-wall / status-board / dossier-footer）搭骨架，页面只做纸色化与布局微调。
+     正文文字全部原样；粉笔黄 #f4ae3d 只做顶线、kicker、边线、chip 等小面积 accent；无整幕反色、无色带斜切、无旋转拼贴。 ===== */
+  html{background:#f8f1e2}
+  body.edu-page{
+    margin:0;overflow-x:clip;
+    background:
+      radial-gradient(circle at 88% 2%,rgba(244,174,61,.10),transparent 30rem),
+      #f8f1e2;
+    color:#241d13;
+    font-family:"PingFang SC","Noto Sans CJK SC",system-ui,sans-serif;
+    line-height:1.7;
+  }
+  .edu-page{
+    --ea-ink:#241d13;
+    --ea-body:#574d3f;
+    --ea-muted:#7b7263;
+    --ea-line:rgba(36,29,19,.18);
+    --ea-panel:#fff9ed;
+    --ea:#f4ae3d;
+    --ea-deep:#a3651a;
+    --case-accent:var(--ea);
+  }
+  .edu-page h2,.edu-page h3{font-family:"Songti SC","STSong",serif}
+  .edu-page .artifact-shell{width:auto;margin:0;padding:0}
+  .edu-page .case-dossier{width:min(1240px,calc(100% - 48px));margin:0 auto;color:var(--ea-ink)}
+
+  /* ---------- 页首条 ---------- */
+  .edu-page .artifact-top{
+    position:static;height:auto;min-height:56px;padding:12px clamp(16px,4vw,40px);
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+    border-bottom:1px solid var(--ea-line);background:#fbf5e8;
+  }
+  .edu-page .artifact-top a{color:var(--ea-ink);text-decoration:none;font-size:13px;font-weight:800}
+  .edu-page .artifact-top a:hover{color:#ff6508}
+  .edu-page .artifact-top small{color:var(--ea-muted);font:800 9px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.18em}
+
+  /* ---------- 幕脚手架：纸面连续文档流，只留分隔线与留白 ---------- */
+  .ea-act{position:static;margin:0;padding:0}
+  .ea-act--i{padding-bottom:clamp(44px,7vh,72px)}
+  .ea-act--ii{position:relative;padding:clamp(48px,8vh,84px) 0}
+  .ea-act--paper{position:relative;border-top:1px solid var(--ea-line);padding:clamp(52px,8vh,88px) 0 clamp(56px,9vh,96px)}
+  .ea-act--iv{position:relative;border-top:1px solid var(--ea-line);padding:clamp(52px,8vh,88px) 0 0}
+  .ea-wrap{width:auto;padding:0}
+  .ea-actnum{position:absolute;z-index:1;top:22px;right:0;margin:0;font:900 10px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.24em;color:var(--ea-muted)}
+
+  /* ---------- 档案头：样板 hero 双栏语言 ---------- */
+  .edu-page .dossier-heading{display:block;padding:clamp(36px,6vh,64px) 0 clamp(44px,7vh,76px);border-top:8px solid var(--ea);border-bottom:1px solid var(--ea-line)}
+  .edu-ticketbar{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px;border:0;background:none;font:900 10px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.18em}
+  .edu-ticketbar span{display:flex;align-items:center;padding:6px 10px;border:1px dashed var(--ea-line);color:var(--ea-muted);background:none;white-space:nowrap}
+  .edu-ticketbar span:first-child{background:var(--ea-ink);border:1px solid var(--ea-ink);color:var(--ea)}
+  .edu-ticketbar span:last-child{margin-left:auto;color:var(--ea-deep)}
+  .edu-vertical{position:absolute;top:150px;right:0;writing-mode:vertical-rl;color:rgba(163,101,26,.55);font:800 11px/2 ui-monospace,SFMono-Regular,monospace;letter-spacing:.55em}
+  .edu-hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(380px,1.08fr);gap:clamp(32px,4.5vw,72px);align-items:center;padding:0}
+  .edu-hero-copy{min-width:0}
+  .edu-hero-copy>small{display:inline-flex;align-items:center;gap:10px;color:var(--ea-deep);font:900 10px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.18em}
+  .edu-hero-copy>small::before{content:"";flex:0 0 auto;width:12px;height:12px;background:var(--ea)}
+  .edu-hero-copy h2{max-width:14em;margin:18px 0 30px;font-size:clamp(34px,3.9vw,58px);font-weight:700;line-height:1.18;letter-spacing:-.02em;color:var(--ea-ink)}
+  .edu-hero-copy h2 em{font-style:normal;color:#1a1206;background:var(--ea);padding:0 .12em}
+  .edu-page .dossier-heading p{max-width:34em;margin:0;padding:14px 0 14px 20px;border-left:4px solid var(--ea);color:var(--ea-body);font-size:15px;line-height:1.95}
+  .edu-page .dossier-heading p strong{color:var(--ea-ink)}
+
+  /* ---------- 证据窗框：样板的深框 + 硬偏移阴影 ---------- */
+  .edu-hero-shot{margin:0;position:relative;border:1px solid #2a2620;background:#14110b;padding:0;box-shadow:10px 12px 0 rgba(36,29,19,.12);transform:none}
+  .edu-hero-shot img{display:block;width:100%;height:auto;background:#171208}
+  .edu-hero-shot figcaption{padding:13px 15px;display:flex;justify-content:space-between;gap:10px;color:#9a8d78;font:800 9px/1.5 ui-monospace,SFMono-Regular,monospace;letter-spacing:.14em}
+  .edu-lights{position:static;display:flex;align-items:center;gap:6px;height:auto;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,.09);background:#16120c}
+  .edu-lights i{width:8px;height:8px;border-radius:50%;background:#ff705b}
+  .edu-lights i:nth-child(2){background:#ffd36b}
+  .edu-lights i:nth-child(3){background:var(--ea)}
+  .edu-lights b{margin-left:8px;color:#9a8d78;font:800 9px/1 ui-monospace,SFMono-Regular,monospace;letter-spacing:.1em}
+  .edu-stamp{position:absolute;z-index:2;top:-12px;right:16px;width:auto;height:auto;border:0;border-radius:0;display:block;padding:6px 10px;background:var(--ea-ink);color:var(--ea);font:900 11px/1.6 ui-monospace,SFMono-Regular,monospace;letter-spacing:.12em;transform:none;text-align:left}
+
+  /* ---------- 判断双栏（judgment-turn 家组件，去旋转） ---------- */
+  .edu-page .judgment-turn{margin:clamp(44px,7vh,72px) 0 0;grid-template-columns:1fr 76px 1fr;gap:16px}
+  .edu-page .judgment-turn article{transform:none;min-height:0;padding:26px;background:#14110e;color:#f3eadf;border-color:#2a241e}
+  .edu-page .judgment-turn article:last-child{transform:none;border-color:var(--ea);box-shadow:8px 9px 0 rgba(244,174,61,.22)}
+  .edu-page .judgment-turn small{color:var(--ea)}
+  .edu-page .judgment-turn h3{margin:14px 0 0;font-size:clamp(19px,1.9vw,25px);line-height:1.55;font-weight:700}
+  .edu-page .judgment-turn i{background:var(--ea);color:#1a1206;box-shadow:none}
+
+  /* ---------- 幕间过场：纸面窄条 + Georgia 数字，不再是整宽色带 ---------- */
+  .ea-band{position:static;margin:0;overflow:visible;background:var(--ea-panel);color:var(--ea-ink);padding:26px 0;border-top:1px solid var(--ea-line);border-bottom:1px solid var(--ea-line)}
+  .ea-band .ea-wrap{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px 36px}
+  .ea-band b{font:900 clamp(34px,3.4vw,52px)/1 Georgia,serif;letter-spacing:-.01em}
+  .ea-band span{font:900 10px/1.9 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.2em;color:var(--ea-muted)}
+  .ea-band::after{content:none}
+
+  /* ---------- 关键转向引文：样板 manifesto 的左线语言，去斜排 ---------- */
+  .edu-pullquote{position:static;z-index:auto;width:auto;max-width:1000px;margin:0 0 clamp(40px,6vh,64px);padding:0 0 0 24px;background:none;border:0;border-left:5px solid var(--ea);box-shadow:none;transform:none}
+  .edu-pullquote p{margin:0;font-family:"Songti SC","STSong",serif;font-size:clamp(22px,2.6vw,36px);line-height:1.6;font-weight:700;color:var(--ea-ink)}
+  .edu-pullquote p::before,.edu-pullquote p::after{content:none}
+  .edu-pullquote cite{display:block;margin-top:14px;color:var(--ea-deep);font:900 10px/1 ui-monospace,SFMono-Regular,monospace;letter-spacing:.22em;font-style:normal}
+
+  /* ---------- 大号眉题 ---------- */
+  .edu-eyebrow{display:flex;align-items:center;gap:18px;margin:0 0 clamp(30px,5vh,48px);color:var(--ea-deep);font:900 11px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.24em}
+  .edu-eyebrow::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(244,174,61,.6),transparent 72%)}
+
+  /* ---------- 研发过程（cue-timeline 家组件，纸面化） ---------- */
+  .edu-page .cue-timeline{margin:0;border:0;background:none}
+  .edu-page .cue-timeline>header{padding:0 2px 18px;border-bottom:1px solid var(--ea-line);color:var(--ea-muted);font:900 9px/1.5 ui-monospace,SFMono-Regular,monospace;letter-spacing:.15em}
+  .edu-page .cue-line{
+    grid-template-columns:120px minmax(0,1fr) minmax(200px,.42fr);gap:clamp(18px,3vw,44px);
+    margin:0;padding:clamp(24px,3.6vh,38px) 0;border-bottom:1px solid var(--ea-line);
+    background:none;transform:none;align-items:start;
+  }
+  .edu-page .cue-line:last-child{border-bottom:0}
+  .edu-page .cue-line>small{position:static;transform:none;padding:0;background:none;box-shadow:none;color:var(--ea-deep);font:900 10px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.06em;white-space:nowrap}
+  .edu-page .cue-line h3{margin:0 0 9px;font-size:clamp(19px,1.9vw,25px);font-weight:700;color:var(--ea-ink)}
+  .edu-page .cue-line p{color:var(--ea-body);font-size:14px;line-height:1.9}
+  .edu-page .cue-line>span{display:block;margin:0;padding:12px 0 0 14px;border-top:0;border-left:3px solid var(--ea);color:var(--ea-muted);font-size:11px;line-height:1.75;letter-spacing:0}
+
+  /* ---------- 证据幕：纸面 + Georgia 数字 + 深框证据窗 ---------- */
+  .ea-bignum{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px 28px;margin:0 0 clamp(30px,5vh,48px)}
+  .ea-bignum b{font:900 clamp(40px,4.5vw,64px)/1 Georgia,serif;letter-spacing:-.01em;color:var(--ea-ink)}
+  .ea-bignum span{font:900 10px/1.9 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.2em;color:var(--ea-muted)}
+  .ea-act--paper .evidence-wall{margin:0}
+  .ea-act--paper .evidence-wall>header{grid-template-columns:minmax(0,1.3fr) minmax(280px,1fr);gap:clamp(18px,3vw,48px);margin-bottom:clamp(30px,5vh,48px)}
+  .ea-act--paper .dossier-kicker{color:var(--ea-deep)}
+  .ea-act--paper .evidence-wall h2{margin:12px 0 0;font-size:clamp(26px,2.8vw,40px);font-weight:700;line-height:1.3;color:var(--ea-ink)}
+  .ea-act--paper .evidence-wall>header p{color:var(--ea-body);font-size:14px;line-height:1.9}
+  .ea-act--paper .evidence-grid{gap:22px}
+  .edu-page .evidence-card{border:1px solid #2a2620;outline:0;background:#14110b;box-shadow:10px 12px 0 rgba(36,29,19,.12);transform:none}
+  .edu-page .evidence-card img{height:clamp(280px,32vw,520px);object-fit:cover;object-position:top}
+  .edu-page .evidence-card figcaption{position:static;border-top:1px solid rgba(255,255,255,.09);padding:13px 15px}
+  .edu-evno{display:block;margin-bottom:7px;color:var(--ea);font:800 8px/1 ui-monospace,SFMono-Regular,monospace;letter-spacing:.24em;font-style:normal}
+  .edu-page .evidence-card figcaption b{color:var(--ea);font-size:13px}
+  .edu-page .evidence-card figcaption span{color:#b6ada0;font-size:11px;line-height:1.75}
+  .edu-page .evidence-card figcaption small{color:#6d655b;font:800 8px/1.3 ui-monospace,SFMono-Regular,monospace;letter-spacing:.1em}
+  .ea-evnote{grid-column:9/13;align-self:end;margin:0;padding:16px 18px;border:1px dashed var(--ea-line);color:var(--ea-muted);font:900 9px/1.9 ui-monospace,SFMono-Regular,monospace;letter-spacing:.18em;transform:none}
+
+  /* ---------- 状态与边界（status-board 家组件，纸面化） ---------- */
+  .ea-act--iv .status-board{grid-template-columns:repeat(3,1fr);gap:1px;margin:0;border:1px solid var(--ea-line);background:var(--ea-line);box-shadow:8px 9px 0 rgba(36,29,19,.07)}
+  .ea-act--iv .status-board article{transform:none;min-height:0;padding:26px;background:var(--ea-panel);color:var(--ea-ink);border:0;border-top:6px solid var(--ea)}
+  .ea-act--iv .status-board article:nth-child(2){border-top:6px solid #d7a34c}
+  .ea-act--iv .status-board article:nth-child(3){border-top:6px solid #e2708f}
+  .ea-act--iv .status-board small{color:var(--ea-deep)}
+  .ea-act--iv .status-board article:nth-child(2) small{color:#8a6420}
+  .ea-act--iv .status-board article:nth-child(3) small{color:#a83410}
+  .ea-act--iv .status-board h3{margin:20px 0 12px;font-size:21px;font-weight:700}
+  .ea-act--iv .status-board ul{margin:0;padding-left:18px;color:var(--ea-body);font-size:13px;line-height:1.9}
+
+  /* ---------- 收尾（dossier-footer 家组件，保留站内深色收束块） ---------- */
+  .edu-page .dossier-footer{margin:clamp(52px,9vh,96px) 0 clamp(40px,6vh,64px);box-shadow:none}
+  .edu-page .dossier-footer h2{font-size:clamp(21px,2.2vw,29px);line-height:1.5;font-weight:700}
+
+  /* ---------- 响应式 ---------- */
+  @media(max-width:1050px){
+    .edu-hero-grid{grid-template-columns:1fr;gap:28px}
+    .edu-vertical{display:none}
+  }
+  @media(max-width:820px){
+    .edu-page .case-dossier{width:calc(100% - 32px)}
+    .ea-act--i{padding-bottom:36px}
+    .ea-act--ii,.ea-act--paper{padding:44px 0}
+    .edu-pullquote{margin-bottom:36px}
+    .edu-page .judgment-turn{grid-template-columns:1fr;gap:12px;margin-top:36px}
+    .edu-page .judgment-turn i{justify-self:center;transform:none}
+    .edu-page .cue-line{grid-template-columns:minmax(0,1fr);gap:12px}
+    .edu-page .cue-line>small{white-space:normal}
+    .edu-page .cue-line>span{grid-column:auto}
+    .ea-act--paper .evidence-card.is-wide,.ea-act--paper .evidence-card.is-narrow,.ea-act--paper .evidence-card:not(.is-wide):not(.is-narrow){grid-column:1/-1;transform:none}
+    .edu-page .evidence-card img{height:auto;max-height:520px}
+    .ea-evnote{grid-column:1/-1}
+    .ea-act--iv .status-board{grid-template-columns:1fr;gap:16px}
+  }
+  @media(max-width:600px){
+    .edu-page .artifact-top{flex-wrap:wrap;gap:8px}
+    .edu-ticketbar{letter-spacing:.1em}
+    .edu-ticketbar span{padding:9px 10px;font-size:9px}
+    .edu-page .dossier-footer{grid-template-columns:1fr}
+    .edu-page .dossier-links a{flex:1;text-align:center}
+  }
+  </style>
+</head>
+<body class="edu-page">
+<header class="artifact-top"><a href="../index.html#works">← 回到返场作品单</a><small>CASE 09 / EDUCATION LINE</small></header>
+<main class="artifact-shell">
+
+  <section class="case-dossier" style="--case-accent:#f4ae3d" aria-label="教育内容生产线完整证据档案">
+
+    <!-- ACT I · 开演：起因 -->
+    <div class="ea-act ea-act--i"><div class="ea-wrap">
+    <header class="dossier-heading"><div class="edu-ticketbar" aria-hidden="true"><span>EDU CONTENT LINE</span><span>PROMPT MIGRATOR</span><span>SEVEN SKELETONS</span><span>更新于 2026-09-14</span></div><span class="edu-vertical" aria-hidden="true">同一条生产线 · 三个本体</span><div class="edu-hero-grid"><div class="edu-hero-copy"><small>公开案例 / 教研提示词系统 / 更新于 2026-09-14</small><h2>数学课件第三页冒出<br><em>【作者生平】</em>的那天，<br>我明白了骨架不能硬套。</h2><p><strong>如果只用一句话说：</strong>第一版课件提示词只懂语文，数学一套就露馅。后来我把每门课的讲法单独拆成骨架，做成公开的迁移系统，再往下游长出英语课件生成器和古诗词教研母稿、15 秒 AI 视频分镜——同一条生产线，三个本体。</p></div><figure class="edu-hero-shot"><span class="edu-lights" aria-hidden="true"><i></i><i></i><i></i><b>LIVE · edu-ppt-prompt-migrator</b></span><span class="edu-stamp" aria-hidden="true">CASE<br>EDUCATION<br>LINE</span><img src="./assets/real/edu-content-line/yongge-hero.png" alt="《咏鹅》教研完整母稿 V4 特写：单集课程卡、原诗与知识支点表格"><figcaption><span>REAL SCRIPT / 特写</span><span>EVIDENCE 00 · HERO</span></figcaption></figure></div></header>
+
+    <div class="judgment-turn"><article><small>I FIRST THOUGHT / 最初判断</small><h3>一套好模板换换主题，就能批量出课件。</h3></article><i>→</i><article><small>I LATER FOUND / 关键转向</small><h3>能迁移的不是模板，是骨架。语文的节奏是诗人、背景、赏析，数学是情境、推导、例题——先承认它们不同，才谈得上复用。</h3></article></div>
+    </div></div>
+
+    <!-- 幕间色带 1 -->
+    <div class="ea-band" aria-hidden="true"><div class="ea-wrap"><b>×7</b><span>SUBJECT SKELETONS<br>ONE TEMPLATE → SEVEN SKELETONS<br>PROMPT MIGRATOR</span></div></div>
+
+    <!-- ACT II · 转向：研发时间线 -->
+    <div class="ea-act ea-act--ii"><div class="ea-wrap">
+    <b class="ea-actnum" aria-hidden="true">01</b>
+    <blockquote class="edu-pullquote"><p>问题不在提示词写得不好，在于语文的页面节奏被当成了所有学科的节奏。</p><cite>— CUE 01 / 失败先来：跨学科硬套，当堂翻车 · 研发时间线</cite></blockquote>
+
+    <div class="edu-eyebrow" aria-hidden="true">CHAPTER 01 / THE FAILURE</div>
+    <section class="cue-timeline" aria-label="研发过程时间线"><header><span>CALL SHEET / FROM ONE TEMPLATE TO A PIPELINE</span><span>时间与证据分开记录</span></header>
+      <article class="cue-line"><small>01 / 2026-04</small><div><h3>失败先来：跨学科硬套，当堂翻车</h3><p>第一版只有语文骨架。套到数学，第三页标题写着【作者生平】——分数没有作者生平；英语版冒出【古文讲解】，体育课直接给你【课文朗读】。问题不在提示词写得不好，在于语文的页面节奏被当成了所有学科的节奏。这段失败没有藏起来，它写在公开仓库 README 的第一屏。</p></div><span>证据：edu-ppt-prompt-migrator README「它解决什么问题」</span></article>
+      <article class="cue-line"><small>02 / 2026-04-13</small><div><h3>第二版：给每个学科单独拆骨架</h3><p>仓库 loki2046-mao/edu-ppt-prompt-migrator 当天建立，README 署名赛博小熊猫 Loki，MIT 许可。六类页面类型（封面、图文并排、全图叙事、文字聚焦、互动引导、总结升华）组合出七套学科骨架：古诗词、课文、数学、英语、科普、历史人物、兴趣技能；主题家族十类，批量脚本一次可跑 30 到 500 个主题，v1 到 v2 的迁移过程单独写在 MIGRATION 文档里。</p></div><span>证据：公开仓库（2026-09-12 仍在更新）+ packs/ 分科包</span></article>
+      <article class="cue-line"><small>03 / 2026 年中</small><div><h3>英语这条分支单独长成生成器</h3><p>english-courseware-generator 收进公开的 cola-skills 合集：输入主题（IP 主题或原创主题），27 种教学组件覆盖词汇、对话、语法、练习、阅读、游戏、评估，输出直接可喂给图像模型的课件提示词，一张图就是一页课件。</p></div><span>证据：cola-skills 公开仓库 english-courseware-generator 目录</span></article>
+      <article class="cue-line"><small>04 / 2026-07-25</small><div><h3>再往下游：教研母稿到 15 秒视频分镜</h3><p>本机 Codex 生产线落了两个配套 Skill：write-poetry-course-mother-script 把一首古诗写成 7—9 岁儿童可送教研审核的完整动画课程母稿；convert-poetry-script-to-ai-storyboards 只接受已审核母稿，转成 ChatGPT Image 故事板和 Seedance 多镜头的 15 秒视频生产稿。审核门槛写死在 Skill 里：稿子没标「已教研审核」就不开工。</p></div><span>证据：两个 Codex SKILL.md（2026-07-25）+ 校验脚本</span></article>
+      <article class="cue-line"><small>05 / 现在</small><div><h3>真实产出：从《静夜思》课件到《咏鹅》母稿</h3><p>2026 年 4 月的批量产物里留着真实的课件提示词包（语文《静夜思》、数学《分数的初步认识》等十余科）；古诗词线上有《咏鹅》教研完整母稿 V4，五分钟时长版本，审核状态老实标注「待教研审核」。</p></div><span>证据：本机生成文稿，见下方证据墙</span></article>
+    </section>
+    </div></div>
+
+    <!-- ACT III · 证据：整幕换纸色 -->
+    <div class="ea-act ea-act--paper"><div class="ea-wrap">
+    <b class="ea-actnum" aria-hidden="true">02</b>
+    <div class="ea-bignum" aria-hidden="true"><b>27</b><span>TEACHING COMPONENTS<br>VOCAB · DIALOG · GRAMMAR · GAME · EVAL</span></div>
+    <div class="edu-eyebrow" aria-hidden="true">CHAPTER 02 / THE PIPELINE</div>
+    <section class="evidence-wall"><header><div><span class="dossier-kicker">REAL ARTIFACTS / 每张图只说明一件事</span><h2>骨架真的能换学科，<br>母稿真的能写到送审。</h2></div><p>三张图都来自真实生成产物，内容是公开安全的教研材料，用中性文档视图渲染。</p></header><div class="evidence-grid">
+      <figure class="evidence-card is-wide"><img src="./assets/real/edu-content-line/yongge.png" alt="《咏鹅》教研完整母稿 V4 文稿渲染，显示课程卡、原诗与知识支点表格"><figcaption><i class="edu-evno">EVIDENCE 01</i><b>《咏鹅》教研母稿 V4 · 真实文稿</b><span>五分钟 AI 友好版：单集课程卡、诗核、儿童问题、诗境任务、知识支点对照表都在；审核状态如实写「待教研审核」，不假装已经过审。</span><small>REAL SCRIPT / V4 · RENDERED 2026-09-14</small></figcaption></figure>
+      <figure class="evidence-card is-narrow"><img src="./assets/real/edu-content-line/jingsi.png" alt="《静夜思》课件提示词包渲染，显示品类、页数、风格与教学目标等元信息"><figcaption><i class="edu-evno">EVIDENCE 02</i><b>《静夜思》课件提示词包 · 真实生成输出</b><span>语文骨架下的逐页提示词：页数、比例、清晰度、教学目标先定死，再进入逐页画面规则。2026 年 4 月批量产物。</span><small>REAL OUTPUT / 2026-04</small></figcaption></figure>
+      <figure class="evidence-card"><img src="./assets/real/edu-content-line/math.png" alt="《分数的初步认识》数学课件提示词包渲染，显示数学骨架的情境导入结构"><figcaption><i class="edu-evno">EVIDENCE 03</i><b>《分数的初步认识》· 数学骨架输出</b><span>同一套系统换到数学：情境导入、概念定义、公式推导的节奏，没有再冒出作者生平。</span><small>REAL OUTPUT / 2026-04</small></figcaption></figure>
+      <aside class="ea-evnote" aria-hidden="true">REAL OUTPUT<br>——<br>NEUTRAL DOC VIEW<br>SAFE FOR PUBLIC<br>BATCH / 2026-04</aside>
+    </div></section>
+    </div></div>
+
+    <!-- ACT IV · 尾声：证明与边界 -->
+    <div class="ea-act ea-act--iv"><div class="ea-wrap">
+    <b class="ea-actnum" aria-hidden="true">03</b>
+    <div class="edu-eyebrow" aria-hidden="true">CHAPTER 03 / PROOF &amp; LIMITS</div>
+    <section class="status-board" aria-label="项目结果与边界"><article><small>ALREADY PROVED</small><h3>已经做到</h3><ul><li>公开仓库 edu-ppt-prompt-migrator（MIT，README 署名，2026-04-13 起）</li><li>七套学科骨架 + 六类页面类型 + 批量脚本（30—500 主题）</li><li>english-courseware-generator 27 种教学组件随公开合集发布</li><li>真实生成的课件提示词包与《咏鹅》教研母稿 V4</li></ul></article><article><small>WORKING, NOT FINISHED</small><h3>能用但仍需维护</h3><ul><li>提示词出图仍要人工拿去生成工具，一步出片不存在</li><li>母稿有教研审核门槛，《咏鹅》仍标「待教研审核」</li><li>新学科、新主题家族加进来时，骨架要单独拆，不能自动长</li></ul></article><article><small>NOT CLAIMED</small><h3>没有证明</h3><ul><li>没有成片动画或上线课程数据，母稿和分镜不等于成片</li><li>批量生成 30—500 主题指提示词批量，不指成品质量批量达标</li><li>不宣称生成的课件可直接顶替教师备课判断</li></ul></article></section>
+
+    <footer class="dossier-footer"><h2>失败的那页【作者生平】留在公开 README 里。它比任何功能列表都更能说明这套系统为什么长成这样。</h2><div class="dossier-links"><a href="../works.html">返回作品索引 →</a><a href="./qichi-life-os.html">上一案：栖迟人生系统</a><a href="../about.html">认识 Loki</a></div></footer>
+    </div></div>
+  </section>
+</main>
+</body>
+</html>

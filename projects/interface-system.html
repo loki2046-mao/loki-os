@@ -48,17 +48,19 @@
   <div class="judgment-turn"><article><small>I FIRST THOUGHT / 最初判断</small><h3>我一开始只想把通用工具换成喜欢的颜色和人物视觉。</h3></article><i>→</i><article><small>I LATER FOUND / 关键转向</small><h3>结果发现，菜单、弹窗、明暗模式和回退机制都得一起处理，少一层就不耐用。</h3></article></div>
   <section class="cue-timeline" aria-label="项目时间线"><header><span>CALL SHEET / FROM DISLIKE TO RUNTIME</span><span>状态与证据分开记录</span></header>
     <article class="cue-line"><small>01 / 边界</small><div><h3>先决定什么不碰</h3><p>聊天记录、用户数据和原来的工作能力都要留在原处；我只改变人真正看见和操作的那一层。</p></div><span>留下：清楚的改造边界</span></article>
-    <article class="cue-line"><small>02 / 原型</small><div><h3>先做三种代表方向，再扩展到九套</h3><p>光盒、城市拼贴、天空电影使用同一组内容。我只换风格系统，这样才能看清结构到底改了什么。</p></div><span>证据：九风格映射与真实原型</span></article>
-    <article class="cue-line"><small>03 / 失败</small><div><h3>浅色皮肤让关键文字不可读</h3><p>只改变量不够：部分 Tailwind 工具类仍硬编码颜色，必须同时为明暗模式补可读性兜底。</p></div><span>证据：真机注入验证报告</span></article>
-    <article class="cue-line"><small>04 / 留下来</small><div><h3>关闭再打开，更新以后，它还得是原来的样子</h3><p>我把重新启动、版本更新和后台恢复都放进真实使用路径里检查。一次好看的截图不算完成，下次回来还能继续用才算。</p></div><span>留下：更新后的真机使用记录</span></article>
+    <article class="cue-line"><small>02 / 原型</small><div><h3>先做三种代表方向，再扩展到九套</h3><p>光盒、城市拼贴、天空电影使用同一组内容。我只换风格系统，这样才能看清结构到底改了什么。每套先出一张选择板，再逐套真机过：桌面布局、移动端顺序和切换动作分开验收，最后汇成整套 QA 截图。</p></div><span>证据：九风格映射与真实原型</span></article>
+    <article class="cue-line"><small>03 / 失败</small><div><h3>浅色皮肤让关键文字不可读</h3><p>只改变量不够：部分 Tailwind 工具类仍硬编码颜色，浅色皮肤必须同步切换明暗类，否则硬编码的深色文字直接看不清。标题栏拖拽区吞点击、中间容器覆盖样式、Retina 截图坐标偏移，这些坑最后都沉淀成一份真机 DOM 坑位清单；每套视觉按对比度下限逐处目检，不达标就修到达标。</p></div><span>证据：真机注入验证报告</span></article>
+    <article class="cue-line"><small>04 / 留下来</small><div><h3>关闭再打开，更新以后，它还得是原来的样子</h3><p>实现上我不改应用安装包，全部走运行时注入：启动器带调试端口拉起应用，守护进程接管从 Dock 或聚焦搜索打开的原版实例，40 秒内转成皮肤版；选择写进本地存储，重启自动恢复。Cola 更新到 1.2.8 之后，我从干净基线把注入层重新适配了一遍。</p></div><span>留下：更新后的真机使用记录</span></article>
   </section>
   <section class="evidence-wall"><header><div><span class="dossier-kicker">REAL SURFACES / 每张图只说明一件事</span><h2>先看它真的跑起来，<br>再看风格改到了哪一层。</h2></div><p>真实工作内容在展示层脱敏。拼贴负责带路，真机工作区、结构原型和移动端阅读现场各自说明能看见的那一部分。</p></header><div class="evidence-grid">
     <figure class="evidence-card is-wide"><img src="./assets/real/cola/inject-shot-1.png" alt="Cola 1.2.8 真机运行的个人化界面，展示层已脱敏"><figcaption><b>Cola 1.2.8 · 真机运行</b><span>侧栏、对话区、输入区和切换器同时出现在真实 Electron 应用里，这张图记录的是运行状态。</span><small>L0 RESULT / REDACTED / VERIFIED 2026-08</small></figcaption></figure>
     <figure class="evidence-card is-narrow"><img src="./assets/real/cola/skin-lightbox.png" alt="Cola 光盒空间界面原型，展示低照度组件结构"><figcaption><b>光盒空间 · 结构原型</b><span>主题色之外，发光边界、低照度和聚焦层级也进入了组件。</span><small>L2 COMPONENT STRUCTURE</small></figcaption></figure>
     <figure class="evidence-card"><img src="./assets/exhibition/hub-ui-doodle-mobile.webp" alt="Loki Hub 手绘工作室移动端真实验收界面"><figcaption><b>Loki Hub · 移动端重排</b><span>手机端重新排过标题、入口和卡片顺序，直接缩窄桌面版不够用。</span><small>L4 REAL BROWSER QA</small></figcaption></figure>
     <figure class="evidence-card"><img src="./assets/exhibition/codex-liulian-cutout.webp" alt="Codex 刘恋拼贴主题的组件与人物视觉"><figcaption><b>Codex · 组件级主题</b><span>人物做视觉锚点；任务卡、菜单、弹窗、输入区和透明宠物层各有自己的规则。</span><small>L1 PRODUCT SURFACE / V4</small></figcaption></figure>
+    <figure class="evidence-card"><img src="./assets/real/hub/story-scroll-desktop.png" alt="Loki Hub 叙事滚动主题真实桌面 QA 截图"><figcaption><b>Loki Hub · 叙事滚动主题</b><span>逐套真机验收的桌面截图之一：长内容页的滚动节奏和阅读宽度单独调过。</span><small>L4 REAL BROWSER QA</small></figcaption></figure>
+    <figure class="evidence-card"><img src="./assets/real/hub/pixel-arcade-desktop.png" alt="Loki Hub 像素街机主题真实桌面 QA 截图"><figcaption><b>Loki Hub · 像素街机主题</b><span>同一批真实内容在强风格下的可读性检查：装饰再重，正文与按钮对比度不许掉出下限。</span><small>L4 REAL BROWSER QA</small></figcaption></figure>
   </div></section>
-  <section class="status-board" aria-label="项目结果与边界"><article><small>ALREADY PROVED</small><h3>已经做到</h3><ul><li>九套可切换 Cola 皮肤</li><li>本地记忆选择与默认回退</li><li>Cola 1.2.8 真机验证</li><li>Loki Hub 桌面与移动端真实页面</li></ul></article><article><small>WORKING, NOT FINISHED</small><h3>能用但仍需维护</h3><ul><li>应用更新后要从干净基线重新适配</li><li>强视觉仍需持续检查菜单与弹窗可读性</li><li>不同产品的接入方式不能机械复用</li></ul></article><article><small>NOT CLAIMED</small><h3>没有证明</h3><ul><li>没有把九套皮肤等同于用户采用</li><li>没有声称一套视觉适合所有任务</li><li>不把原型截图冒充全部真机结果</li></ul></article></section>
+  <section class="status-board" aria-label="项目结果与边界"><article><small>ALREADY PROVED</small><h3>已经做到</h3><ul><li>九套可切换 Cola 皮肤</li><li>本地记忆选择与默认回退</li><li>Cola 1.2.8 真机验证</li><li>Loki Hub 桌面与移动端真实页面</li><li>注入与恢复机制沉淀成套件，35 套主题开源（MIT）</li></ul></article><article><small>WORKING, NOT FINISHED</small><h3>能用但仍需维护</h3><ul><li>应用更新后要从干净基线重新适配</li><li>强视觉仍需持续检查菜单与弹窗可读性</li><li>不同产品的接入方式不能机械复用</li></ul></article><article><small>NOT CLAIMED</small><h3>没有证明</h3><ul><li>没有把九套皮肤等同于用户采用</li><li>没有声称一套视觉适合所有任务</li><li>不把原型截图冒充全部真机结果</li></ul></article></section>
   <footer class="dossier-footer"><h2>我把【不好看】一路拆下去，最后改到了组件、真机交互和更新后的恢复。</h2><div class="dossier-links"><a href="../works.html">返回作品索引 →</a><a href="./perspective-distillation.html">下一案：人物判断</a><a href="../about.html">认识 Loki</a></div></footer>
 </section>
 
@@ -106,7 +108,7 @@
 
 <dialog class="archive-dialog codex-dialog" id="archive-codex">
   <div class="dialog-shell"><header class="dialog-bar"><span>ARCHIVE C / CODEX COLLAGE V4</span><button data-close>关闭档案 ×</button></header><div class="dialog-scroll">
-    <section class="dialog-intro"><h2>一张照片先定气质，<br>舞台秩序还要继续翻进整个协作界面。</h2><p>点击右侧四个状态，左边的大舞台会切换任务卡、菜单、对话框和输入区。人物拼贴负责做视觉锚点；组件层级、交互反馈、可读性和更新恢复才让它真的能用。</p></section>
+    <section class="dialog-intro"><h2>一张照片先定气质，<br>舞台秩序还要继续翻进整个协作界面。</h2><p>点击右侧四个状态，左边的大舞台会切换任务卡、菜单、对话框和输入区。人物拼贴负责做视觉锚点；组件层级、交互反馈、可读性和更新恢复才让它真的能用。</p><p class="note" style="margin-top:.6em"><b>边界说明：</b>这个舞台是按主题规则重建的组件原型演示，不是 Codex 真机截图。主题资产与规则已在本机就位，真机回归仍在进行中。</p></section>
     <section class="codex-live-stage" data-codex-stage>
       <div class="codex-preview">
         <img class="codex-preview-person" src="./assets/codex-liulian-collage.png" alt="刘恋拼贴主题人物视觉资产">

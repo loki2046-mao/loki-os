@@ -102,7 +102,7 @@ window.bookData = {
     {
       "id": "daily-insight",
       "date": "08-25",
-      "title": "730 天每日洞见系统",
+      "title": "每日洞见系统",
       "summary": "我读完书常常记不住当时为什么被击中，于是每天留下一次冲突、一个边界和一个以后还想回答的问题。",
       "tag": "阅读系统",
       "href": "./projects/daily-insight.html",
@@ -257,6 +257,144 @@ window.bookData = {
         "checkedAt": "2026-08-29",
         "scope": "local-browser",
         "note": "站内案例与历史截图已核验，公开入口 HTML 与核心资源已复核，抽签交互待复核"
+      }
+    },
+    {
+      "id": "qichi-life-os",
+      "date": "07-05",
+      "title": "栖迟人生系统",
+      "summary": "这个站的站名来自它。cron 每天凌晨自动复盘，从日记和任务记录里识别情绪、行为、思维、人格四层反复出现的模式，写入我的 Obsidian 库。",
+      "tag": "个人复盘系统",
+      "href": "./projects/qichi-life-os.html",
+      "action": "看系统怎么自动跑起来",
+      "linkStatus": "internal",
+      "visibility": "public",
+      "group": "workflow",
+      "order": 8,
+      "accent": "#9bdde9",
+      "eyebrow": "CRON 复盘 × 模式识别 / 站名「栖迟」的同名本体",
+      "image": "projects/assets/real/qichi-life-os/cron-config.png",
+      "imageAlt": "栖迟人生系统本机 cron 任务配置与运行记录渲染图",
+      "imageWidth": 1200,
+      "imageHeight": 1308,
+      "imageFit": "cover",
+      "proof": "本机 cron 已留有日复盘 50 次、周复盘 7 次运行记录，复盘写入 Obsidian 栖迟系统库（173 篇文档，结构公开、正文不公开）。",
+      "status": "长期自动运行中 · 复盘正文属私人记录",
+      "verification": {
+        "status": "verified",
+        "checkedAt": "2026-09-14",
+        "scope": "local-cron",
+        "note": "cron 任务配置、运行记录目录与 Obsidian 输出结构已核验；复盘正文内容不做公开核验"
+      }
+    },
+    {
+      "id": "edu-content-line",
+      "date": "04-13",
+      "title": "教育内容生产线",
+      "summary": "数学课件里冒出【作者生平】那天我才知道，骨架不能跨学科硬套。后来把课件提示词拆成七套学科骨架，再延伸出古诗词教研母稿和 15 秒视频分镜。",
+      "tag": "教研提示词系统",
+      "href": "./projects/edu-content-line.html",
+      "action": "看一条生产线怎么长出来",
+      "linkStatus": "internal",
+      "visibility": "public",
+      "group": "workflow",
+      "order": 9,
+      "accent": "#d7f43c",
+      "eyebrow": "PPT DNA 迁移 × 教研母稿 / 拆一次骨架，多学科复用",
+      "image": "projects/assets/real/edu-content-line/yongge.png",
+      "imageAlt": "《咏鹅》教研完整母稿 V4 真实文稿渲染",
+      "imageWidth": 1100,
+      "imageHeight": 1500,
+      "imageFit": "cover",
+      "proof": "公开仓库 edu-ppt-prompt-migrator（MIT）与本机真实生成的课件提示词包、教研母稿；含 English courseware generator 27 种教学组件。",
+      "status": "公开仓库 · 教研线持续推进",
+      "publicLink": {
+        "href": "https://github.com/loki2046-mao/edu-ppt-prompt-migrator",
+        "label": "查看公开仓库",
+        "status": "verified",
+        "checkedAt": "2026-09-14"
+      },
+      "verification": {
+        "status": "verified",
+        "checkedAt": "2026-09-14",
+        "scope": "local-repo",
+        "note": "公开仓库署名与 MIT 许可、本机生成课件包与教研母稿文稿已核验；未宣称有成片动画"
+      }
+    },
+    {
+      "id": "ai-career-compass",
+      "date": "07-02",
+      "title": "AI 求职行动教练",
+      "summary": "在岗的人盘上周实际做了什么，做可替代性、人类必要性、资产性三维评分；求职的人拆 JD 拿简历改写和 7 天行动计划。",
+      "tag": "CAREER COMPASS",
+      "href": "./projects/ai-career-compass.html",
+      "action": "看真实报告怎么给下一步",
+      "linkStatus": "internal",
+      "visibility": "public",
+      "group": "workflow",
+      "order": 10,
+      "accent": "#7f9df7",
+      "eyebrow": "三维评分 × 四类判决 / 不贩卖焦虑，只回答下一步",
+      "image": "projects/assets/real/ai-career-compass/eval-scoring-table.png",
+      "imageAlt": "AI 求职行动教练真实报告的岗位任务评分表节选",
+      "imageWidth": 1600,
+      "imageHeight": 1125,
+      "imageFit": "cover",
+      "proof": "公开仓库 v1→v2 完整迭代（2026-07-02 至 09-10），两份真实完整报告（广告学、社会学）与三张真实输出截图。",
+      "status": "开源 Skill · 真实报告已收录",
+      "publicLink": {
+        "href": "https://github.com/loki2046-mao/ai-career-compass",
+        "label": "查看公开仓库",
+        "status": "verified",
+        "checkedAt": "2026-09-14"
+      },
+      "verification": {
+        "status": "verified",
+        "checkedAt": "2026-09-14",
+        "scope": "local-repo",
+        "note": "公开仓库时间线、两份真实报告文稿与三张输出截图已核验；报告为真实样本，不构成统计结论"
+      }
+    },
+    {
+      "id": "loki-assistant",
+      "date": "06-17",
+      "title": "Loki Assistant",
+      "summary": "一个真正属于自己的 AI 助手：四类记忆自动提炼与检索、Obsidian 2237 篇本地笔记索引、可解释的工具调用循环、多模型可插拔。",
+      "tag": "个人 AI 助手",
+      "href": "./projects/loki-assistant.html",
+      "action": "看私有产品的脱敏界面",
+      "linkStatus": "internal",
+      "visibility": "public",
+      "group": "productization",
+      "order": 11,
+      "accent": "#8fd0c9",
+      "eyebrow": "本地优先 × 记忆库 / 透明、可控、记住你、能干活",
+      "image": "projects/assets/real/loki-assistant/workspace-welcome.png",
+      "imageAlt": "Loki Assistant 本地运行的对话工作台空状态截图",
+      "imageWidth": 1600,
+      "imageHeight": 1000,
+      "imageFit": "cover",
+      "proof": "本机真实运行：2026-05-23 至 09-13 共 273 条 commit，99 条记忆、318 个会话、2237 篇 Obsidian 笔记索引；公开页只展示脱敏界面。",
+      "status": "私有产品 · 公开页只展示脱敏界面",
+      "systemEvidence": [
+        {
+          "label": "记住你",
+          "value": "事实、模式、历史、碎片四类记忆自动提炼，对话前按相关性检索"
+        },
+        {
+          "label": "能干活",
+          "value": "工具调用循环留痕可回看，产物先到磁盘验证过才算完成"
+        },
+        {
+          "label": "公开边界",
+          "value": "代码不开源，记忆与笔记正文属私人数据，公开页只展示脱敏界面"
+        }
+      ],
+      "verification": {
+        "status": "verified",
+        "checkedAt": "2026-09-14",
+        "scope": "local-run",
+        "note": "本地运行界面与 commit 时间线已核验，截图为无私人内容页面；记忆与笔记正文不做公开核验"
       }
     }
   ],
@@ -491,34 +629,7 @@ window.bookData = {
       "form": "长期使用",
       "visibility": "public"
     },
-    {
-      "id": "self-mirror",
-      "category": "knowledge",
-      "order": 5,
-      "title": "自我镜像",
-      "summary": "从日记、对话和选择里回看反复出现的模式，同时把事实和推断分开。",
-      "tags": [
-        "复盘",
-        "模式",
-        "边界"
-      ],
-      "form": "长期使用",
-      "visibility": "public"
-    },
-    {
-      "id": "ai-radar",
-      "category": "knowledge",
-      "order": 6,
-      "title": "AI 新闻雷达",
-      "summary": "持续收集真正会影响工作方式的 AI 变化，再把资讯变成判断和下一步行动。",
-      "tags": [
-        "资讯",
-        "筛选",
-        "行动"
-      ],
-      "form": "长期使用",
-      "visibility": "public"
-    },
+
     {
       "id": "codex-theme",
       "category": "building",
@@ -535,20 +646,7 @@ window.bookData = {
       "action": "看真实界面",
       "visibility": "public"
     },
-    {
-      "id": "hatch-pet",
-      "category": "building",
-      "order": 2,
-      "title": "Hatch Pet",
-      "summary": "从角色图出发，生成、检查并打包能够在 Codex 里真实运行的动画宠物。",
-      "tags": [
-        "角色",
-        "动画图集",
-        "打包"
-      ],
-      "form": "正式 Skill",
-      "visibility": "public"
-    },
+
     {
       "id": "skill-builder",
       "category": "building",
@@ -563,20 +661,7 @@ window.bookData = {
       "form": "长期使用",
       "visibility": "public"
     },
-    {
-      "id": "prompt-spec",
-      "category": "building",
-      "order": 4,
-      "title": "需求与提示词结构化",
-      "summary": "把一句模糊需求补成条件、边界、验收和例子都清楚的可执行说明。",
-      "tags": [
-        "需求",
-        "提示词",
-        "验收"
-      ],
-      "form": "正式 Skill",
-      "visibility": "public"
-    },
+
     {
       "id": "ebook-workflow",
       "category": "building",
@@ -643,14 +728,14 @@ window.bookData = {
   "profiles": {
     "loki-writing": {
       "showcase": true,
-      "maturity": "早期原型",
+      "maturity": "早期原型 → 7 月底升级版",
       "ownership": "Loki 制作",
-      "origin": "我最初想让它先读我过去的文章，再把一堆聊天式的碎想法整理成稿。",
-      "trigger": "脑子里有很多材料，但还没有文章结构时。",
-      "judgment": "高频词不是风格，固定开头和固定结尾也不是我。",
-      "realResult": "PDF 文本提取、短语统计、段落长度、标题与段落模板、Markdown 输出。",
-      "limitations": "写作部分仍大量依赖固定模板；我不会说它已经“学会了我的语气”。",
-      "evidenceStatus": "公开安全样例仍在准备，不借用已发布文章冒充输出。",
+      "origin": "我最初想让它先读我过去的文章，再把一堆聊天式的碎想法整理成稿。2026 年 2 月的第一版靠 pdftotext 读 ./pdfs 里的历史文章 PDF，做短语统计和段落模板；7 月底那轮升级把规则清单换成了从已发文章提取的范例包。",
+      "trigger": "脑子里有很多材料，但还没有文章结构时；或者一篇写完但读起来“不是我”的稿子需要重写时。",
+      "judgment": "高频词不是风格，固定开头和固定结尾也不是我。黑名单禁“愣”不禁“懵”的判断标准只有一个：这个词我自己用过没有。“没有违反规则”和“像我”是两回事。",
+      "realResult": "PDF 文本提取、短语统计、段落长度、标题与段落模板、Markdown 输出；7 月底新版换成范例包加 AI 情绪词黑名单的组合，并用新旧两版各写同一道题做过对比测试。",
+      "limitations": "写作部分仍大量依赖固定模板；我不说它已经“学会了我的语气”。2026-07-16 的改稿记录还证明 AI 会把风格理解成口头禅加括号的集合，这类偏差要靠持续喂真实改稿来纠。",
+      "evidenceStatus": "新旧测试段落的对比记录已作为真实材料收录；不借用已发布文章冒充输出。",
       "visual": {
         "kind": "process",
         "motif": "writing",
@@ -659,14 +744,14 @@ window.bookData = {
     },
     "weixin-outline": {
       "showcase": true,
-      "maturity": "轻量 Skill",
+      "maturity": "轻量 Skill + 产品化尝试",
       "ownership": "Loki 制作",
-      "origin": "我不想一有主题就硬写正文，先把它展开成真正不同的可能。",
+      "origin": "我不想一有主题就硬写正文，先把它展开成真正不同的可能。2026 年 2 月它是一个纯文本 Skill，5 月长成内容工作站里的选题池和切口分析器，同月底的审计又把膨胀出来的问题一条条记了下来。",
       "trigger": "只有主题、素材或一团想法，还不知道真正要写哪一篇时。",
-      "judgment": "不能为了点击率堆夸张词，也不能让十个标题只是同一句话换词。",
-      "realResult": "10 个选题，以及一份三段式或五段式的口语化大纲。",
-      "limitations": "规则清楚，但还没有长成独立工具。",
-      "evidenceStatus": "公开样例将按“主题 → 十个选题 → 选中一题 → 大纲”呈现。",
+      "judgment": "不能为了点击率堆夸张词，也不能让十个选题只是同一句话换词；功能多到溢出时，优先级是把选题→切口→标题→骨架这条主链路真的串起来，不是再加模块。",
+      "realResult": "10 个选题（每个 18—28 字）、三段式或五段式口语化大纲；产品化后有一次 6 个方向的切口分析和四级标题输出（主标题、副标题、封面大字、朋友圈导语）。",
+      "limitations": "规则清楚，但还没有长成独立工具；工作站版本按 2026-05-05 的审计仍有状态不流转、三套素材体系重复等断点，本轮未重新验证修复状态。",
+      "evidenceStatus": "公开样例按“主题 → 十个选题 → 选中一题 → 大纲”呈现；设计文档与审计报告已保存，素材重组建议属于写了没做的功能，不宣称已实现。",
       "visual": {
         "kind": "process",
         "motif": "writing",
@@ -677,11 +762,11 @@ window.bookData = {
       "showcase": true,
       "maturity": "Beta / 长期使用",
       "ownership": "Loki 制作",
-      "origin": "我不想每写完一篇情感文章，就再从 Obsidian 搬到公众号重新排一遍。",
+      "origin": "我不想每写完一篇情感文章，就再从 Obsidian 搬到公众号重新排一遍。2026 年 2 月 24 日用 HTML 内联颜色标签做出双平台方案，后来 V2 又把版式里的英文残留字样全部清掉。",
       "trigger": "从一个深夜情绪选题写成完整文章，并准备进入公众号时。",
-      "judgment": "颜色标签不等于情绪；所谓去 AI 味也不能只剩短段落与金句。",
-      "realResult": "1200—1500 字文章、标签、全角标点、图片位置、配图提示词和双平台格式。",
-      "limitations": "仍是 Beta；配图生成、广告位置和发布没有完全自动化。",
+      "judgment": "颜色标签不等于情绪；所谓去 AI 味也不能只剩短段落与金句。V2 版式最重要的改动不是加样式，是让页面上不再出现“quote”“highlight”这类说明字样，只留内容。",
+      "realResult": "1200—1500 字文章、四色标签体系（橙重点、紫金句、深蓝小标题、灰图片位）、全角标点硬规则、五个栏目标签、图片位置标记、配图提示词和双平台格式。",
+      "limitations": "仍是 Beta；配图生成、广告位置和发布没有完全自动化。Callout 版式是 Obsidian 侧的 V2 方案，公众号侧的粘贴兼容性本轮未重新核验。",
       "evidenceStatus": "正文和笔记默认不公开；经同意后才展示脱敏的双平台对照。",
       "visual": {
         "kind": "process",
@@ -697,7 +782,7 @@ window.bookData = {
       "trigger": "公众号封面对、小红书图文、产品解释卡和知识卡。",
       "judgment": "证据图必须可看，中文信息层级先于配色和装饰。",
       "realResult": "21:9、1:1、3:4 输出，12 类布局、HTML 模板、渲染与 QA。",
-      "limitations": "参考了通用生产逻辑，再以 Loki Design System 改造；不把它写成凭空原创。",
+      "limitations": "早期受归藏与张咋啦两位的社交卡片 Skill 影响，后来按 Loki Design System 整体重写，版式 X01—X07 为自有命名；不把它写成凭空原创。",
       "evidenceStatus": "展示真实 21:9、1:1 与小红书输出。",
       "visual": {
         "image": "assets/skills-social-card-pair.png",
@@ -715,9 +800,9 @@ window.bookData = {
       "origin": "同一份内容换颜色不算新风格；我想让不同方向真的改变阅读与使用方式。",
       "trigger": "网站、卡片、海报或演示需要多个真正不同的视觉方向时。",
       "judgment": "不能复制参考图的标志性资产，也不能拿同一模板换色凑数量。",
-      "realResult": "设计语言分析、3—9 个方向、跨媒介适配、选择板和桌面 / 移动端验收。",
-      "limitations": "每次选择仍需要人工判断，不能用“方向数量”冒充有效设计。",
-      "evidenceStatus": "此处收录一张 Loki Hub 视觉设计稿，不是多方向真机对照。",
+      "realResult": "设计语言八轴分析、3—9 个方向（至少改四个结构维度）、跨媒介适配、选择板和桌面 / 移动端验收。",
+      "limitations": "新方向必须改动六个结构维度中至少四个，只换颜色不算；每次选择仍需要人工判断，不能用“方向数量”冒充有效设计。目前还没有一组成组交付的多方向成品档案。",
+      "evidenceStatus": "方法成型于 2026-08-01 的本机 Codex 会话，未发现第三方上游；此处收录一张 Loki Hub 视觉设计稿，不是多方向真机对照。",
       "visual": {
         "image": "assets/exhibition-hub-ui-collage.webp",
         "imageAlt": "Loki Hub 城市编辑台视觉设计稿",
@@ -731,10 +816,10 @@ window.bookData = {
       "showcase": true,
       "maturity": "长期使用",
       "ownership": "Loki 制作",
-      "origin": "我不想再得到一份“这本书讲了什么”的漂亮总结。",
+      "origin": "我不想再得到一份“这本书讲了什么”的漂亮总结。2026 年 4 月把它写成 Skill 时，第一条规则就是优先处理带批注的划线。",
       "trigger": "Apple Books 或 Obsidian 已积累大量划线，想整理成以后会再次调用的笔记时。",
-      "judgment": "不能用流畅总结覆盖原始批注；材料少时必须承认范围。",
-      "realResult": "划线提取、3—5 个主题、旧看法修正、行动项、复习点和未想透的问题。",
+      "judgment": "不能用流畅总结覆盖原始批注；材料少时必须承认范围，区分证据和推断；重新整理时绝不允许覆盖 MANUAL SECTION 里已经写下的手写内容。",
+      "realResult": "Apple Books 划线结构化提取脚本、3—5 个主题聚类、旧看法修正、行动项、复习点、未想透的问题，以及《书名 - 整理》伴侣笔记约定。",
       "limitations": "实际笔记默认属于私人材料，不以公开页面换取展示。",
       "evidenceStatus": "没有公开授权时只展示规则与脱敏示意，不展示私人书摘和批注。",
       "visual": {
@@ -747,11 +832,11 @@ window.bookData = {
       "showcase": true,
       "maturity": "完整生产方法",
       "ownership": "Loki 制作",
-      "origin": "我想保存的不是某个人常说什么，而是他在具体任务里会怎么选。",
+      "origin": "我想保存的不是某个人常说什么，而是他在具体任务里会怎么选。2026 年 8 月 2 日把这套方法写成带脚本、证据账本和评测协议的正式 Skill。",
       "trigger": "从会议、修改记录、初稿终稿和操作日志里提炼个人或团队判断时。",
-      "judgment": "一次修改不能变成人格规律；语言像不等于判断像；推断要继续标成推断。",
-      "realResult": "来源清单、证据账本、判断模型、情境路由、目标 Skill 和留出评测。",
-      "limitations": "公开人物材料只能证明公开样本；对私人材料必须另行授权。",
+      "judgment": "一次修改不能变成人格规律；语言像不等于判断像；推断要继续标成推断。分析单位是人×任务×目标×受众×角色×阶段×环境，看似冲突的规则先查情境再判对错。",
+      "realResult": "来源清单、四色证据账本（STATED/OBSERVED/INFERRED/UNKNOWN）、判断模型、情境路由、修改差异对比脚本，以及五种留出盲测（决策一致性、修改预测、情境切换、反表面模仿、未知处理）。",
+      "limitations": "公开人物材料只能证明公开样本；对私人材料必须另行授权；无法独立盲测时只能做人工审计，验证强度要明说。",
       "evidenceStatus": "刘恋公开节目时间帧证据表已就绪；判断账本只展示脱敏摘要。",
       "visual": {
         "image": "assets/perspective-liulian-evidence-sheet-01.png",
@@ -764,18 +849,18 @@ window.bookData = {
     },
     "codex-theme": {
       "showcase": true,
-      "maturity": "本地草稿 · 尚未发布",
+      "maturity": "Codex 主题为本地工程 · 主题套组已开源（loki-theme-kit v1.1.0）",
       "ownership": "Loki 制作",
       "origin": "我想改的不是颜色，而是让背景、人物、卡片、菜单、输入区、弹窗和宠物层真正成为同一套界面。",
       "trigger": "为现有产品建立或整理可切换的主题系统时。",
-      "judgment": "强视觉不能遮挡真实操作；静态人物和动画宠物必须分层；更新后不能在旧补丁上继续叠加。",
-      "realResult": "已核对四个产品的本地代码，整理了按宿主分支的 Skill 草稿。",
-      "limitations": "四个产品实现不同；本轮只读源码，未安装主题、未做真实产品回归。",
-      "evidenceStatus": "真实桌面、首页、文件模式与移动端预览已找到，当前正在做公开裁切。",
+      "judgment": "强视觉不能遮挡真实操作；静态人物和动画宠物必须分层；更新后不能在旧补丁上继续叠加，改版一律从原始 ASAR 备份重放。",
+      "realResult": "Codex 桌面端主题工程（注入脚本与三个构建的 ASAR 备份）、事件驱动的更新恢复，以及开源的 loki-theme-kit v1.1.0（35 套成套主题，质检 35/35 通过）。",
+      "limitations": "Codex 真机截图含账号界面未收录；已收录的是同一套方法在 Cola 宿主的真机截图与逐像素差异图（整屏差 0.81%，侧栏差 4.63%）。",
+      "evidenceStatus": "宿主截图与差异图来自 loki-theme-kit 公开仓库预览目录，会话列表已做遮挡处理。",
       "visual": {
         "kind": "process",
         "motif": "building",
-        "caption": "真实主题预览正在脱敏；不再以人物剪影代替主题界面"
+        "caption": "真实宿主截图与逐像素差异图已入库；不再以人物剪影代替主题界面"
       }
     }
   },
@@ -873,10 +958,10 @@ window.bookData = {
     },
     "slides": {
       "href": "https://github.com/loki2046-mao/cola-skills/tree/main/loki-deck",
-      "kind": "related",
-      "label": "查看 Loki Deck",
-      "note": "公开个人风格 HTML PPT 方法；现有“前端幻灯片”亦可能指 README 中注明改造的 frontend-slides，暂不合并两者。",
-      "checkedAt": "2026-09-08"
+      "kind": "source",
+      "label": "查看 Loki Deck 源码",
+      "note": "公开自建的 HTML PPT Skill；《奥德赛时期》等成品即由 loki-deck 生成。本机另装的 frontend-slides 是第三方工具，仅轻改自用，不计入本条目。",
+      "checkedAt": "2026-09-14"
     },
     "debate": {
       "href": "https://github.com/loki2046-mao/debate-thinking-distiller",
@@ -885,13 +970,7 @@ window.bookData = {
       "note": "独立公开仓库含拆解与陪练两种模式。",
       "checkedAt": "2026-09-08"
     },
-    "self-mirror": {
-      "href": "https://github.com/loki2046-mao/self-mirror-skill",
-      "kind": "source",
-      "label": "查看自我镜像 Skill",
-      "note": "独立公开仓库，与文本证据、画像和复盘方法对应；不代表从零原创。",
-      "checkedAt": "2026-09-08"
-    },
+
     "ebook-workflow": {
       "href": "https://github.com/loki2046-mao/loki-ebook-converter",
       "kind": "related",
@@ -920,13 +999,7 @@ window.bookData = {
       "note": "公开目录包含 SKILL.md、视觉样式库与交互模板。",
       "checkedAt": "2026-09-08"
     },
-    "ai-radar": {
-      "href": "https://github.com/LearnPrompt/ai-news-radar",
-      "kind": "related",
-      "label": "查看上游 AI 新闻雷达",
-      "note": "个人公开合集明确注明基于 LearnPrompt 改造；这里是上游，不是 Loki 修改版源码。",
-      "checkedAt": "2026-09-08"
-    },
+
     "book": {
       "href": "https://github.com/loki2046-mao",
       "kind": "profile",
@@ -937,7 +1010,7 @@ window.bookData = {
       "href": "https://github.com/loki2046-mao",
       "kind": "profile",
       "label": "打开 Loki 的 GitHub",
-      "note": "已找到能力匹配的本地工作判断蒸馏器；具体身份待确认，尚无确认的公开源码入口。"
+      "note": "本体为自建的工作判断蒸馏 Skill（distill-working-judgment）；本机另一个同名 skill-builder 目录是第三方工具，与本条目无关。"
     }
   },
   "flows": {
@@ -1026,35 +1099,15 @@ window.bookData = {
       "前提拆解",
       "真正分歧"
     ],
-    "self-mirror": [
-      "日记与对话",
-      "模式识别",
-      "事实与推断分层"
-    ],
-    "ai-radar": [
-      "信息流",
-      "影响筛选",
-      "下一步行动"
-    ],
     "codex-theme": [
       "人物与视觉资产",
       "组件级改造",
       "可恢复主题"
     ],
-    "hatch-pet": [
-      "角色图",
-      "动画图集",
-      "v2 宠物包"
-    ],
     "skill-builder": [
       "一次做成的经验",
       "规则与边界",
       "可调用 Skill"
-    ],
-    "prompt-spec": [
-      "模糊需求",
-      "条件与验收",
-      "可执行说明"
     ],
     "ebook-workflow": [
       "输入文件",
@@ -1107,8 +1160,8 @@ window.bookData = {
       "caption": "真实成品 / 公众号推文封面"
     },
     "loki-writing": {
-      "image": "assets/skills/loki-writing.png",
-      "caption": "真实成品 / AI Career Compass 求职报告卡"
+      "image": "assets/process/loki-writing-compare.png",
+      "caption": "真实材料 / 新旧写作 Skill 测试段落对比记录"
     },
     "weixin-outline": {
       "image": "assets/skills/weixin-outline.png",
@@ -1118,10 +1171,7 @@ window.bookData = {
       "image": "assets/skills/headline.png",
       "caption": "真实产品 / 内容工作站 标题生成·历史标题方案"
     },
-    "ai-radar": {
-      "image": "assets/skills/ai-radar.png",
-      "caption": "相关产品 / AI 新闻雷达本地实例"
-    },
+
     "book": {
       "image": "assets/skills/book.png",
       "caption": "真实文稿 / 每日拆书 Day 23"
@@ -1134,10 +1184,7 @@ window.bookData = {
       "image": "assets/skills/collage-poem.png",
       "caption": "真实成品 / 每日拼贴诗 2026-07-12"
     },
-    "hatch-pet": {
-      "image": "assets/skills/hatch-pet.webp",
-      "caption": "真实素材 / Coconut 宠物图集"
-    },
+
     "film-poster": {
       "image": "assets/skills/film-poster.jpg",
       "caption": "真实成品 / 假期结束 V1 保存图"
@@ -1155,8 +1202,8 @@ window.bookData = {
       "caption": "真实成品 / Cola 外观套组截图"
     },
     "skill-builder": {
-      "image": "assets/skills/skill-builder.png",
-      "caption": "公开仓库 / cola-skills"
+      "image": "assets/skills/skill-builder-real-doc.png",
+      "caption": "真实文稿 / 工作判断蒸馏器 SKILL.md（节选渲染）"
     },
     "deep-night": {
       "image": "assets/skills/deep-night.jpg",

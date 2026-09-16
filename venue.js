@@ -2,7 +2,7 @@
 (()=>{
 const reading=!!document.querySelector('#app'),root=reading?'../':'',detail=reading?'index.html':'detail-study/index.html',home=root+'index.html',d=window.bookData;
 const e=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const rooms=[['about','01','认识 Loki','主舞台',home+'#about'],['works','02','作品节目单','七件作品',detail+'#catalogue/works'],['visual','03','制作手册','五册方法',detail+'#catalogue/visual'],['break','04','中场休息','续杯与票夹',home+'#break'],['personal','05','私人收藏','喜欢的事',detail+'#catalogue/personal']];
+const rooms=[['about','01','认识 Loki','主舞台',home+'#about'],['works','02','作品节目单','十一件作品',detail+'#catalogue/works'],['visual','03','制作手册','五册方法',detail+'#catalogue/visual'],['break','04','中场休息','续杯与票夹',home+'#break'],['personal','05','私人收藏','喜欢的事',detail+'#catalogue/personal']];
 // Paths follow the printed top faces in the original 1448 × 1086 artwork.
 const outlines={
 about:'M 558 451 C 558 423 608 407 666 407 C 728 407 779 425 779 452 C 779 481 728 501 668 501 C 608 501 558 481 558 451 Z',

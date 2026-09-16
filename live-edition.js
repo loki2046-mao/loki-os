@@ -7,7 +7,7 @@ $('#open-book').innerHTML='入场，翻开场刊 <b aria-hidden="true">↗</b>';
 $('.contents h2').innerHTML='本场<span>目 录</span>';
 $('.contents>.label').textContent='LOKI / SETLIST';
 $('.contents>p').hidden=true;
-const chapters=[['about','认识 Loki','关于我'],['works','作品节目单','产品 / 工具'],['skills','制作手册','26 个 Skill'],['daily','中场休息','咖啡 / 茶']];
+const chapters=[['about','认识 Loki','关于我'],['works','作品节目单','产品 / 工具'],['skills','制作手册','22 个 Skill'],['daily','中场休息','咖啡 / 茶']];
 chapters.forEach(([id,title,note],i)=>{$('#'+id+'-chapter').innerHTML=`<span>${String(i+1).padStart(2,'0')}</span><b>${title}</b><small>${note} ↗</small>`});
 $('.directory-note').textContent='';
 $('.folio>span').textContent='散场不散好奇心';

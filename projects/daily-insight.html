@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="730 天每日洞见：每天从一本书里留下一个能带回生活的问题。">
-  <title>730 天每日洞见｜把阅读变成可回看的个人 AI 工作流｜Loki</title>
+  <meta name="description" content="每日洞见系统（进行中）：每天从一本书里留下一个能带回生活的问题。">
+  <title>每日洞见系统｜把阅读变成可回看的个人 AI 工作流（进行中）｜Loki</title>
   <link rel="canonical" href="https://loki-os.hiloki.ai/projects/daily-insight.html">
-  <meta property="og:type" content="article"><meta property="og:title" content="730 天每日洞见｜个人 AI 阅读工作流"><meta property="og:description" content="每天从一本书里留下一次冲突、一个边界和一个以后还想回答的问题。"><meta property="og:image" content="https://loki-os.hiloki.ai/projects/assets/exhibition/reading-desk-v1.webp"><meta property="og:url" content="https://loki-os.hiloki.ai/projects/daily-insight.html">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"730 天每日洞见系统","url":"https://loki-os.hiloki.ai/projects/daily-insight.html","inLanguage":"zh-CN","creator":{"@type":"Person","name":"Loki"},"description":"把阅读、材料核验、洞见卡与回看组织成持续运行的个人 AI 工作流。"}</script>
+  <meta property="og:type" content="article"><meta property="og:title" content="每日洞见系统（进行中）｜个人 AI 阅读工作流"><meta property="og:description" content="每天从一本书里留下一次冲突、一个边界和一个以后还想回答的问题。"><meta property="og:image" content="https://loki-os.hiloki.ai/projects/assets/exhibition/reading-desk-v1.webp"><meta property="og:url" content="https://loki-os.hiloki.ai/projects/daily-insight.html">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"每日洞见系统（进行中）","url":"https://loki-os.hiloki.ai/projects/daily-insight.html","inLanguage":"zh-CN","creator":{"@type":"Person","name":"Loki"},"description":"把阅读、材料核验、洞见卡与回看组织成持续运行的个人 AI 工作流。"}</script>
   <link rel="icon" href="../loki-ip-live.jpg">
   <link rel="stylesheet" href="./artifact-case.css">
   <link rel="stylesheet" href="./mobile-polish.css">
@@ -15,7 +15,7 @@
 <body class="daily-experience" style="--accent:var(--cyan)">
   <header class="artifact-top">
     <a href="../index.html#works">← 回到返场作品单</a>
-    <small>CASE 02 / 730-DAY READING PASS</small>
+    <small>CASE 02 / DAILY READING PASS · IN PROGRESS</small>
   </header>
   <main class="daily-shell">
     <section class="daily-opening">
@@ -24,13 +24,13 @@
         <h1>每天读完以后，<br><em>留下一个会回来找你的问题。</em></h1>
         <p>我读完书常常记得情节，却说不清当时为什么被击中。于是我每天只留下一次冲突、一个边界、一个能带回生活的小工具，再加一个晚上还想回答的问题。</p>
       </div>
-      <div class="daily-pass" aria-label="730 天阅读通行证"><span>DAILY READING PASS</span><strong>730</strong><b>两年书单 · 每天一张洞见卡</b><i>DAY 004 / 730</i></div>
+      <div class="daily-pass" aria-label="730 天阅读通行证（目标）"><span>DAILY READING PASS</span><strong>730</strong><b>两年书单 · 每天一张洞见卡</b><i>DAY 004 / 目标 730</i></div>
     </section>
     <section class="daily-stage" data-daily-stage style="--daily-tone:#d8f044">
       <nav class="daily-days" aria-label="已完成的四天洞见">
-        <small>已经留下的 4 个问题</small>
-        <button data-day="04" class="is-active"><b>04</b><span>长安的荔枝<i>今天</i></span></button>
-        <button data-day="03"><b>03</b><span>82年生的金智英<i>昨天</i></span></button>
+        <small>先看最早 4 天的样子</small>
+        <button data-day="04" class="is-active"><b>04</b><span>长安的荔枝<i>08.26</i></span></button>
+        <button data-day="03"><b>03</b><span>82年生的金智英<i>08.25</i></span></button>
         <button data-day="02"><b>02</b><span>乡土中国<i>08.24</i></span></button>
         <button data-day="01"><b>01</b><span>人类群星闪耀时<i>08.23</i></span></button>
       </nav>
@@ -43,6 +43,10 @@
         </section>
         <footer class="daily-question"><small>今晚带走这一句</small><p data-daily-question>你最近拼下来的那件事，是在运荔枝，还是在决定你成为谁？</p></footer>
       </article>
+    </section>
+    <section class="daily-why">
+      <header><small>HOW IT RUNS / 系统怎么跑起来</small><h2>这套系统不是设计出来的，<br>是 8 月 22 日夜里<em>一边跑一边改出来的。</em></h2><p>整个工具叫 unbook：cron 每天早上拉起一个 Cola 会话，那个会话本身就是蒸馏器；脚本只管排期、组装和落盘。</p></header>
+      <div class="daily-why-grid"><article><b>01</b><h3>第一晚就推翻了第一版</h3><p>v1 是排期驱动加日型轮换；v2 当晚就去掉了对命令行工具的依赖，改成 brief / write 两段式：先给出今日书的元信息，会话按规则蒸馏，写卡脚本幂等落盘。</p></article><article><b>02</b><h3>每天只花几分钟值守</h3><p>脚本先报今天是第几天、哪本书、哪位作者、什么日型（金句日、反常识日、行动挑战日、彩蛋日）；书单是提前排好的 730 天排期表，彩蛋日会把书连到我自己的项目上。</p></article><article><b>03</b><h3>头三天改了四次卡片形态</h3><p>Day 1–3 先重做成八段完整拆解版；随后升级成洞见型卡片、砍掉套娃引号；再加单一洞见收口和今晚回收；最后把收口改成已生成的复习卡。此后二十天形态稳定，只剩微调。</p></article></div>
     </section>
     <section class="daily-why">
       <header><small>WHY 730 DAYS</small><h2>书已经够多了。<br>我缺的是一条<em>看过以后还找得回来</em>的阅读路径。</h2></header>

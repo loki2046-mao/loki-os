@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="栖迟人生系统：cron 驱动的日/周自动复盘，四维模式识别与归因对策，写入 Obsidian——本站站名的同名本体。">
+  <title>栖迟人生系统｜cron 驱动的自动复盘与模式识别｜Loki</title>
+  <link rel="canonical" href="https://loki-os.hiloki.ai/projects/qichi-life-os.html">
+  <meta property="og:type" content="article"><meta property="og:title" content="栖迟人生系统｜cron 驱动的自动复盘与模式识别"><meta property="og:description" content="每天凌晨自动复盘，从日记与任务记录里识别情绪、行为、思维、人格四层模式，写入 Obsidian。"><meta property="og:image" content="https://loki-os.hiloki.ai/projects/assets/real/qichi-life-os/cron-config.png"><meta property="og:url" content="https://loki-os.hiloki.ai/projects/qichi-life-os.html">
+  <link rel="icon" href="../loki-ip-live.jpg"><link rel="stylesheet" href="../brand-system.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"栖迟人生系统：cron 驱动的自动复盘与模式识别","url":"https://loki-os.hiloki.ai/projects/qichi-life-os.html","inLanguage":"zh-CN","dateModified":"2026-09-14","creator":{"@type":"Person","name":"Loki","url":"https://loki-os.hiloki.ai/about.html"},"description":"用 cron 每天自动复盘，识别情绪、行为、思维、人格四层模式并给出归因对策，输出到 Obsidian。","keywords":["个人系统","自动复盘","cron","Obsidian","模式识别"]}</script>
+  <style>
+  /* ===== CASE 栖迟人生系统 · 站内纸面档案页：brand-system 家组件（dossier-heading / judgment-turn /
+     cue-timeline / evidence-wall / status-board / dossier-footer）搭骨架，页面只做纸色化与布局微调。
+     正文文字全部原样；青瓷绿 #7fd6c2 只做顶线、kicker、边线、chip 等小面积 accent；无整幕反色、无色带斜切、无旋转拼贴。 ===== */
+  html{background:#f8f1e2}
+  body.qichi-page{
+    margin:0;overflow-x:clip;
+    background:
+      radial-gradient(circle at 88% 2%,rgba(127,214,194,.08),transparent 30rem),
+      #f8f1e2;
+    color:#241d13;
+    font-family:"PingFang SC","Noto Sans CJK SC",system-ui,sans-serif;
+    line-height:1.7;
+  }
+  .qichi-page{
+    --qa-ink:#241d13;
+    --qa-body:#574d3f;
+    --qa-muted:#7b7263;
+    --qa-line:rgba(36,29,19,.18);
+    --qa-panel:#fff9ed;
+    --qa:#7fd6c2;
+    --qa-deep:#0e5b47;
+    --case-accent:var(--qa);
+  }
+  .qichi-page h2,.qichi-page h3{font-family:"Songti SC","STSong",serif}
+  .qichi-page .artifact-shell{width:auto;margin:0;padding:0}
+  .qichi-page .case-dossier{width:min(1240px,calc(100% - 48px));margin:0 auto;color:var(--qa-ink)}
+
+  /* ---------- 页首条 ---------- */
+  .qichi-page .artifact-top{
+    position:static;height:auto;min-height:56px;padding:12px clamp(16px,4vw,40px);
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+    border-bottom:1px solid var(--qa-line);background:#fbf5e8;
+  }
+  .qichi-page .artifact-top a{color:var(--qa-ink);text-decoration:none;font-size:13px;font-weight:800}
+  .qichi-page .artifact-top a:hover{color:#ff6508}
+  .qichi-page .artifact-top small{color:var(--qa-muted);font:800 9px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.18em}
+
+  /* ---------- 幕脚手架：纸面连续文档流，只留分隔线与留白 ---------- */
+  .qa-act{position:static;margin:0;padding:0}
+  .qa-act--i{padding-bottom:clamp(44px,7vh,72px)}
+  .qa-act--ii{position:relative;padding:clamp(48px,8vh,84px) 0}
+  .qa-act--paper{position:relative;border-top:1px solid var(--qa-line);padding:clamp(52px,8vh,88px) 0 clamp(56px,9vh,96px)}
+  .qa-act--iv{position:relative;border-top:1px solid var(--qa-line);padding:clamp(52px,8vh,88px) 0 0}
+  .qa-wrap{width:auto;padding:0}
+  .qa-actnum{position:absolute;z-index:1;top:22px;right:0;margin:0;font:900 10px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.24em;color:var(--qa-muted)}
+
+  /* ---------- 档案头：样板 hero 双栏语言 ---------- */
+  .qichi-page .dossier-heading{display:block;padding:clamp(36px,6vh,64px) 0 clamp(44px,7vh,76px);border-top:8px solid var(--qa);border-bottom:1px solid var(--qa-line)}
+  .qichi-page .dossier-heading small{color:var(--qa-deep)}
+  .qa-ticketbar{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px;border:0;background:none;font:900 10px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.18em}
+  .qa-ticketbar span{display:flex;align-items:center;padding:6px 10px;border:1px dashed var(--qa-line);color:var(--qa-muted);background:none;white-space:nowrap}
+  .qa-ticketbar span:first-child{background:var(--qa-ink);border:1px solid var(--qa-ink);color:var(--qa)}
+  .qa-ticketbar span:last-child{margin-left:auto;color:var(--qa-deep)}
+  .qa-vertical{position:absolute;top:150px;right:0;writing-mode:vertical-rl;color:rgba(14,91,71,.55);font:800 11px/2 ui-monospace,SFMono-Regular,monospace;letter-spacing:.55em}
+  .qa-hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(380px,1.08fr);gap:clamp(32px,4.5vw,72px);align-items:center;padding:0}
+  .qa-hero-copy{min-width:0}
+  .qa-hero-copy>small{display:inline-flex;align-items:center;gap:10px;color:var(--qa-deep);font:900 10px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.18em}
+  .qa-hero-copy>small::before{content:"";flex:0 0 auto;width:12px;height:12px;background:var(--qa)}
+  .qa-hero-copy h2{max-width:14em;margin:18px 0 30px;font-size:clamp(34px,3.9vw,58px);font-weight:700;line-height:1.18;letter-spacing:-.02em;color:var(--qa-ink)}
+  .qa-hero-copy h2 em{font-style:normal;color:#0d1a12;background:var(--qa);padding:0 .12em}
+  .qichi-page .dossier-heading p{max-width:34em;margin:0;padding:14px 0 14px 20px;border-left:4px solid var(--qa);color:var(--qa-body);font-size:15px;line-height:1.95}
+  .qichi-page .dossier-heading p strong{color:var(--qa-ink)}
+
+  /* ---------- 证据窗框：样板的深框 + 硬偏移阴影 ---------- */
+  .qa-hero-shot{margin:0;position:relative;border:1px solid #2a2620;background:#0d120f;padding:0;box-shadow:10px 12px 0 rgba(36,29,19,.12);transform:none}
+  .qa-hero-shot img{display:block;width:100%;height:auto;background:#10130f}
+  .qa-hero-shot figcaption{padding:13px 15px;display:flex;justify-content:space-between;gap:10px;color:#7d8a83;font:800 9px/1.5 ui-monospace,SFMono-Regular,monospace;letter-spacing:.14em}
+  .qa-lights{position:static;display:flex;align-items:center;gap:6px;height:auto;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,.09);background:#0f1512}
+  .qa-lights i{width:8px;height:8px;border-radius:50%;background:#ff705b}
+  .qa-lights i:nth-child(2){background:#ffd36b}
+  .qa-lights i:nth-child(3){background:var(--qa)}
+  .qa-lights b{margin-left:8px;color:#7d8a83;font:800 9px/1 ui-monospace,SFMono-Regular,monospace;letter-spacing:.1em}
+  .qa-stamp{position:absolute;z-index:2;top:-12px;right:16px;width:auto;height:auto;border:0;border-radius:0;display:block;padding:6px 10px;background:var(--qa-ink);color:var(--qa);font:900 11px/1.6 ui-monospace,SFMono-Regular,monospace;letter-spacing:.12em;transform:none;text-align:left}
+
+  /* ---------- 判断双栏（judgment-turn 家组件，去旋转） ---------- */
+  .qichi-page .judgment-turn{margin:clamp(44px,7vh,72px) 0 0;grid-template-columns:1fr 76px 1fr;gap:16px}
+  .qichi-page .judgment-turn article{transform:none;min-height:0;padding:26px;background:#14110e;color:#f3eadf;border-color:#2a241e}
+  .qichi-page .judgment-turn article:last-child{transform:none;border-color:var(--qa);box-shadow:8px 9px 0 rgba(127,214,194,.22)}
+  .qichi-page .judgment-turn small{color:var(--qa)}
+  .qichi-page .judgment-turn h3{margin:14px 0 0;font-size:clamp(19px,1.9vw,25px);line-height:1.55;font-weight:700}
+  .qichi-page .judgment-turn i{background:var(--qa);color:#080604;box-shadow:none}
+
+  /* ---------- 幕间过场：纸面窄条 + Georgia 数字，不再是整宽色带 ---------- */
+  .qa-band{position:static;margin:0;overflow:visible;background:var(--qa-panel);color:var(--qa-ink);padding:26px 0;border-top:1px solid var(--qa-line);border-bottom:1px solid var(--qa-line)}
+  .qa-band .qa-wrap{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px 36px}
+  .qa-band b{font:900 clamp(34px,3.4vw,52px)/1 Georgia,serif;letter-spacing:-.01em}
+  .qa-band span{font:900 10px/1.9 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.2em;color:var(--qa-muted)}
+  .qa-band::after{content:none}
+
+  /* ---------- 关键转向引文：样板 manifesto 的左线语言，去斜排 ---------- */
+  .qa-pullquote{position:static;z-index:auto;width:auto;max-width:1000px;margin:0 0 clamp(40px,6vh,64px);padding:0 0 0 24px;background:none;border:0;border-left:5px solid var(--qa);box-shadow:none;transform:none}
+  .qa-pullquote p{margin:0;font-family:"Songti SC","STSong",serif;font-size:clamp(22px,2.6vw,36px);line-height:1.6;font-weight:700;color:var(--qa-ink)}
+  .qa-pullquote p::before,.qa-pullquote p::after{content:none}
+  .qa-pullquote cite{display:block;margin-top:14px;color:var(--qa-deep);font:900 10px/1 ui-monospace,SFMono-Regular,monospace;letter-spacing:.22em;font-style:normal}
+
+  /* ---------- 大号眉题 ---------- */
+  .qa-eyebrow{display:flex;align-items:center;gap:18px;margin:0 0 clamp(30px,5vh,48px);color:var(--qa-deep);font:900 11px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.24em}
+  .qa-eyebrow::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(127,214,194,.6),transparent 72%)}
+
+  /* ---------- 研发过程（cue-timeline 家组件，纸面化） ---------- */
+  .qichi-page .cue-timeline{margin:0;border:0;background:none}
+  .qichi-page .cue-timeline>header{padding:0 2px 18px;border-bottom:1px solid var(--qa-line);color:var(--qa-muted);font:900 9px/1.5 ui-monospace,SFMono-Regular,monospace;letter-spacing:.15em}
+  .qichi-page .cue-line{
+    grid-template-columns:120px minmax(0,1fr) minmax(200px,.42fr);gap:clamp(18px,3vw,44px);
+    margin:0;padding:clamp(24px,3.6vh,38px) 0;border-bottom:1px solid var(--qa-line);
+    background:none;transform:none;align-items:start;
+  }
+  .qichi-page .cue-line:last-child{border-bottom:0}
+  .qichi-page .cue-line>small{position:static;transform:none;padding:0;background:none;box-shadow:none;color:var(--qa-deep);font:900 10px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.06em;white-space:nowrap}
+  .qichi-page .cue-line h3{margin:0 0 9px;font-size:clamp(19px,1.9vw,25px);font-weight:700;color:var(--qa-ink)}
+  .qichi-page .cue-line p{color:var(--qa-body);font-size:14px;line-height:1.9}
+  .qichi-page .cue-line>span{display:block;margin:0;padding:12px 0 0 14px;border-top:0;border-left:3px solid var(--qa);color:var(--qa-muted);font-size:11px;line-height:1.75;letter-spacing:0}
+
+  /* ---------- 证据幕：纸面 + Georgia 数字 + 深框证据窗 ---------- */
+  .qa-bignum{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px 28px;margin:0 0 clamp(30px,5vh,48px)}
+  .qa-bignum b{font:900 clamp(40px,4.5vw,64px)/1 Georgia,serif;letter-spacing:-.01em;color:var(--qa-ink)}
+  .qa-bignum span{font:900 10px/1.9 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.2em;color:var(--qa-muted)}
+  .qa-act--paper .evidence-wall{margin:0}
+  .qa-act--paper .evidence-wall>header{grid-template-columns:minmax(0,1.3fr) minmax(280px,1fr);gap:clamp(18px,3vw,48px);margin-bottom:clamp(30px,5vh,48px)}
+  .qa-act--paper .dossier-kicker{color:var(--qa-deep)}
+  .qa-act--paper .evidence-wall h2{margin:12px 0 0;font-size:clamp(26px,2.8vw,40px);font-weight:700;line-height:1.3;color:var(--qa-ink)}
+  .qa-act--paper .evidence-wall>header p{color:var(--qa-body);font-size:14px;line-height:1.9}
+  .qa-act--paper .evidence-grid{gap:22px}
+  .qichi-page .evidence-card{border:1px solid #2a2620;outline:0;background:#0d120f;box-shadow:10px 12px 0 rgba(36,29,19,.12);transform:none}
+  .qichi-page .evidence-card img{height:clamp(280px,32vw,520px);object-fit:cover;object-position:top}
+  .qichi-page .evidence-card figcaption{position:static;border-top:1px solid rgba(255,255,255,.09);padding:13px 15px}
+  .qa-evno{display:block;margin-bottom:7px;color:var(--qa);font:800 8px/1 ui-monospace,SFMono-Regular,monospace;letter-spacing:.24em;font-style:normal}
+  .qichi-page .evidence-card figcaption b{color:var(--qa);font-size:13px}
+  .qichi-page .evidence-card figcaption span{color:#b6ada0;font-size:11px;line-height:1.75}
+  .qichi-page .evidence-card figcaption small{color:#6d655b;font:800 8px/1.3 ui-monospace,SFMono-Regular,monospace;letter-spacing:.1em}
+  .qa-evnote{grid-column:9/13;align-self:end;margin:0;padding:16px 18px;border:1px dashed var(--qa-line);color:var(--qa-muted);font:900 9px/1.9 ui-monospace,SFMono-Regular,monospace;letter-spacing:.18em;transform:none}
+
+  /* ---------- 状态与边界（status-board 家组件，纸面化） ---------- */
+  .qa-act--iv .status-board{grid-template-columns:repeat(3,1fr);gap:1px;margin:0;border:1px solid var(--qa-line);background:var(--qa-line);box-shadow:8px 9px 0 rgba(36,29,19,.07)}
+  .qa-act--iv .status-board article{transform:none;min-height:0;padding:26px;background:var(--qa-panel);color:var(--qa-ink);border:0;border-top:6px solid var(--qa)}
+  .qa-act--iv .status-board article:nth-child(2){border-top:6px solid #d7a34c}
+  .qa-act--iv .status-board article:nth-child(3){border-top:6px solid #e2708f}
+  .qa-act--iv .status-board small{color:var(--qa-deep)}
+  .qa-act--iv .status-board article:nth-child(2) small{color:#8a6420}
+  .qa-act--iv .status-board article:nth-child(3) small{color:#a83410}
+  .qa-act--iv .status-board h3{margin:20px 0 12px;font-size:21px;font-weight:700}
+  .qa-act--iv .status-board ul{margin:0;padding-left:18px;color:var(--qa-body);font-size:13px;line-height:1.9}
+
+  /* ---------- 收尾（dossier-footer 家组件，保留站内深色收束块） ---------- */
+  .qichi-page .dossier-footer{margin:clamp(52px,9vh,96px) 0 clamp(40px,6vh,64px);box-shadow:none}
+  .qichi-page .dossier-footer h2{font-size:clamp(21px,2.2vw,29px);line-height:1.5;font-weight:700}
+
+  /* ---------- 响应式 ---------- */
+  @media(max-width:1050px){
+    .qa-hero-grid{grid-template-columns:1fr;gap:28px}
+    .qa-vertical{display:none}
+  }
+  @media(max-width:820px){
+    .qichi-page .case-dossier{width:calc(100% - 32px)}
+    .qa-act--i{padding-bottom:36px}
+    .qa-act--ii,.qa-act--paper{padding:44px 0}
+    .qa-pullquote{margin-bottom:36px}
+    .qichi-page .judgment-turn{grid-template-columns:1fr;gap:12px;margin-top:36px}
+    .qichi-page .judgment-turn i{justify-self:center;transform:none}
+    .qichi-page .cue-line{grid-template-columns:minmax(0,1fr);gap:12px}
+    .qichi-page .cue-line>small{white-space:normal}
+    .qichi-page .cue-line>span{grid-column:auto}
+    .qa-act--paper .evidence-card.is-wide,.qa-act--paper .evidence-card.is-narrow,.qa-act--paper .evidence-card:not(.is-wide):not(.is-narrow){grid-column:1/-1;transform:none}
+    .qichi-page .evidence-card img{height:auto;max-height:520px}
+    .qa-evnote{grid-column:1/-1}
+    .qa-act--iv .status-board{grid-template-columns:1fr;gap:16px}
+  }
+  @media(max-width:600px){
+    .qichi-page .artifact-top{flex-wrap:wrap;gap:8px}
+    .qa-ticketbar{letter-spacing:.1em}
+    .qa-ticketbar span{padding:9px 10px;font-size:9px}
+    .qichi-page .dossier-footer{grid-template-columns:1fr}
+    .qichi-page .dossier-links a{flex:1;text-align:center}
+  }
+  </style>
+</head>
+<body class="qichi-page">
+<header class="artifact-top"><a href="../index.html#works">← 回到返场作品单</a><small>CASE 08 / LIFE OS · RUNNING</small></header>
+<main class="artifact-shell">
+
+  <section class="case-dossier" style="--case-accent:#7fd6c2" aria-label="栖迟人生系统完整证据档案">
+
+    <!-- ACT I · 开演：起因 -->
+    <div class="qa-act qa-act--i"><div class="qa-wrap">
+    <header class="dossier-heading"><div class="qa-ticketbar" aria-hidden="true"><span>QICHI LIFE OS</span><span>CRON × OBSIDIAN</span><span>SINCE 2026-07</span><span>更新于 2026-09-14</span></div><span class="qa-vertical" aria-hidden="true">栖迟 · 隐居停驻</span><div class="qa-hero-grid"><div class="qa-hero-copy"><small>公开案例 / 个人系统 / 更新于 2026-09-14</small><h2>这个站叫 Loki OS，<br>站名里的「栖迟」来自<em>一个真的在跑的系统。</em></h2><p><strong>如果只用一句话说：</strong>我不想靠意志力坚持复盘，就让 cron 每天凌晨替我坐下来——从日记和任务记录里找出反复出现的模式，归因，给对策，写进 Obsidian。复盘正文是我的私人记录，公开的只有结构和机制。</p></div><figure class="qa-hero-shot"><span class="qa-lights" aria-hidden="true"><i></i><i></i><i></i><b>LIVE · qichi-cron</b></span><span class="qa-stamp" aria-hidden="true">CASE<br>LIFE OS<br>RUNNING</span><img src="./assets/real/qichi-life-os/cron-config-hero.png" alt="栖迟人生系统本机 cron 任务配置特写：每日与每周两个自动复盘任务"><figcaption><span>REAL CRON CONFIG / 特写</span><span>EVIDENCE 00 · HERO</span></figcaption></figure></div></header>
+
+    <div class="judgment-turn"><article><small>I FIRST THOUGHT / 最初判断</small><h3>复盘就是找个时间坐下来，想想最近发生了什么。</h3></article><i>→</i><article><small>I LATER FOUND / 关键转向</small><h3>真坐下来的时候，情绪已经过去了。得让系统在事件发生的当天夜里就把信号捡走。</h3></article></div>
+    </div></div>
+
+    <!-- 幕间色带 1 -->
+    <div class="qa-band" aria-hidden="true"><div class="qa-wrap"><b>50+7</b><span>CRON RUNS ON RECORD<br>DAILY ×50 / WEEKLY ×7<br>SINCE 2026-07</span></div></div>
+
+    <!-- ACT II · 夜巡：研发时间线 -->
+    <div class="qa-act qa-act--ii"><div class="qa-wrap">
+    <b class="qa-actnum" aria-hidden="true">01</b>
+    <blockquote class="qa-pullquote"><p>一个复盘系统有了自己的问题清单，这件事我没提前设计。</p><cite>— CUE 03 / 系统开始审计自己 · 研发时间线</cite></blockquote>
+
+    <div class="qa-eyebrow" aria-hidden="true">CHAPTER 01 / NIGHT ROUTINE</div>
+    <section class="cue-timeline" aria-label="研发过程时间线"><header><span>CALL SHEET / FROM TEMPLATE TO CRON</span><span>时间与证据分开记录</span></header>
+      <article class="cue-line"><small>01 / 2026-07-05</small><div><h3>先把方法写成 Skill，而不是写成对话模板</h3><p>qichi-life-os 的 SKILL.md 定下三条硬规则：数据来源按优先级排（日记、任务记录、书签、用户画像）；输出统一落进 Obsidian 的栖迟系统目录；分析走情绪、行为、思维、人格底层四个维度，每次运行都做模式识别和归因对策，不是自由发挥的聊天。</p></div><span>证据：SKILL.md 本体，2026-07-05 起持续使用</span></article>
+      <article class="cue-line"><small>02 / 2026-07-30</small><div><h3>接上 cron，让它不再需要我记得</h3><p>qichi-daily-retro 每天凌晨 2:00 自动跑日复盘，读取前一天的日记和会话摘要，写入对应年/月/周目录，文件开头标注【草稿·待确认】，不主动打扰；qichi-weekly-retro 每周日 21:00 汇总本周七天，做四维模式分析，摘要通过 announce 发回来等我确认。到 2026-09-14，本机运行记录里日复盘 50 次、周复盘 7 次。</p></div><span>证据：cron 任务配置与 57 条运行记录（本机实测）</span></article>
+      <article class="cue-line"><small>03 / 2026-08 起</small><div><h3>系统开始审计自己</h3><p>跑了几周之后，库里面长出了机制审计标准、结构风险日志和标签索引这类自我审查文件。周复盘的「待确认」里会自己提出管道问题，比如日记目录持续缺位，是要修管道还是认可「会话即源」。一个复盘系统有了自己的问题清单，这件事我没提前设计。</p></div><span>证据：Obsidian 库内的机制审计标准、结构风险日志</span></article>
+      <article class="cue-line"><small>04 / 2026-09</small><div><h3>积累到 173 篇，才知道模式识别在识别什么</h3><p>按年/月/周归档的日复盘和周复盘，加上每日寓言、模式库、案例库和标签索引，共 173 篇 Markdown。单看一天的复盘只是记录；连着看一个季度，反复出现的触发点和归因方式才会浮出来——这正是当初把它做成 cron 而不是模板的原因。</p></div><span>证据：目录树实测 173 篇（结构公开，正文不公开）</span></article>
+    </section>
+    </div></div>
+
+    <!-- ACT III · 证据：整幕换纸色 -->
+    <div class="qa-act qa-act--paper"><div class="qa-wrap">
+    <b class="qa-actnum" aria-hidden="true">02</b>
+    <div class="qa-bignum" aria-hidden="true"><b>173</b><span>MD FILES IN THE VAULT<br>STRUCTURE PUBLIC / CONTENT PRIVATE</span></div>
+    <div class="qa-eyebrow" aria-hidden="true">CHAPTER 02 / REAL ARTIFACTS</div>
+    <section class="evidence-wall"><header><div><span class="dossier-kicker">REAL ARTIFACTS / 每张图只说明一件事</span><h2>它真的每天在跑，<br>也真的写进了我的库。</h2></div><p>复盘正文属于私人记录，全部不公开。下面三张图分别来自真实的 cron 配置、真实的 Obsidian 目录结构和真实生成的库内文稿，都只展示结构和公开安全的内容。</p></header><div class="evidence-grid">
+      <figure class="evidence-card is-wide"><img src="./assets/real/qichi-life-os/cron-config.png" alt="栖迟人生系统本机 cron 任务配置与运行记录的渲染图，显示每日与每周两个任务及运行次数"><figcaption><i class="qa-evno">EVIDENCE 01</i><b>cron 运行配置 · 真实配置渲染</b><span>每日 02:00 日复盘、周日 21:00 周复盘，两个任务都处于启用状态；运行记录数来自本机 runs 目录实测（50 + 7 次），标注了最近一次成功输出。</span><small>REAL CONFIG / RENDERED 2026-09-14</small></figcaption></figure>
+      <figure class="evidence-card is-narrow"><img src="./assets/real/qichi-life-os/vault-tree.png" alt="Obsidian 栖迟系统目录树渲染图，展示年月周归档、模式库、案例库等结构"><figcaption><i class="qa-evno">EVIDENCE 02</i><b>Obsidian 输出结构 · 真实目录树</b><span>按年/月/周归档，旁边是模式库、案例库、标签索引和每日寓言；共 173 篇，正文不公开。</span><small>STRUCTURE ONLY / 173 MD FILES</small></figcaption></figure>
+      <figure class="evidence-card"><img src="./assets/real/qichi-life-os/fable.png" alt="栖迟系统库内每日寓言文稿渲染：一篇讲语义饱和概念的小故事"><figcaption><i class="qa-evno">EVIDENCE 03</i><b>每日寓言 · 库内真实文稿</b><span>栖迟系统库里每天生成一篇用故事讲一个概念的小文，这篇讲语义饱和。内容本身公开安全，选它代表库内文稿的形态。</span><small>REAL VAULT DOC / 2026-09-09</small></figcaption></figure>
+      <aside class="qa-evnote" aria-hidden="true">STRUCTURE ONLY<br>——<br>STRUCTURE PUBLIC<br>CONTENT PRIVATE<br>VAULT / OBSIDIAN</aside>
+    </div></section>
+    </div></div>
+
+    <!-- ACT IV · 尾声：证明与边界 -->
+    <div class="qa-act qa-act--iv"><div class="qa-wrap">
+    <b class="qa-actnum" aria-hidden="true">03</b>
+    <div class="qa-eyebrow" aria-hidden="true">CHAPTER 03 / PROOF &amp; LIMITS</div>
+    <section class="status-board" aria-label="项目结果与边界"><article><small>ALREADY PROVED</small><h3>已经做到</h3><ul><li>日复盘、周复盘两条 cron 链路自动运行（50 + 7 次运行记录）</li><li>复盘统一写入 Obsidian，累计 173 篇并按年月周归档</li><li>四维模式识别与归因对策框架在 SKILL.md 落地</li><li>库内长出机制审计标准与结构风险日志，系统会审计自己</li></ul></article><article><small>WORKING, NOT FINISHED</small><h3>能用但仍需维护</h3><ul><li>复盘输出仍带【草稿·待确认】，需要人工确认后才算定稿</li><li>日记管道缺位时要靠会话记录补源，数据来源的优先级会漂移</li><li>模式库和案例库还很薄，价值依赖长期积累</li></ul></article><article><small>NOT CLAIMED</small><h3>没有证明</h3><ul><li>复盘正文是私人记录，不在站上展示，也无法被第三方核验内容</li><li>不宣称系统能预测行为或改变人格，它只做识别和归因</li><li>没有公开产品入口，「在跑」指本机 cron，不指对外服务</li></ul></article></section>
+
+    <footer class="dossier-footer"><h2>复盘最难的不是想清楚，是每天还记得做。这件事我交给了 cron。</h2><div class="dossier-links"><a href="../works.html">返回作品索引 →</a><a href="./edu-content-line.html">下一案：教育内容生产线</a><a href="../about.html">认识 Loki</a></div></footer>
+    </div></div>
+  </section>
+</main>
+</body>
+</html>

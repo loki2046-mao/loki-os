@@ -34,6 +34,18 @@
 | self-mirror | 自我画像类产物来自聊天记录，公开风险过高，默认不收录 |
 | prompt-spec | 没有找到已保存、可公开的真实需求文档前后对比产物 |
 
+## 2026-09-14 写作/知识类补全追加
+
+| skill id | 产出文件 | 原始来源 | 产出方式 |
+| --- | --- | --- | --- |
+| loki-writing | assets/process/loki-writing-compare.png | `/Users/kude/cola/outputs/04-自动化/cron/skill-upgrade-830/测试段落_对比说明.md` | 文稿无头渲染（中性文档视图） |
+| book | assets/process/book-report.png | `/Users/kude/code/book-daily/reports/2026-08-23-人类群星闪耀时-深度拆解.md` | 文稿无头渲染（中性文档视图） |
+| collage-poem | assets/process/collage-poem-0705.jpg | `/Users/kude/cola/outputs/03-资源/代码/每日拼贴诗/拼贴诗-2026-07-05-截图.jpg` | 原样复制 |
+| weixin-layout | assets/process/weixin-layout-gold.png | `/Users/kude/cola/outputs/03-资源/代码/排版Skill第四期：嫁接摸鱼小李设计语言到Loki配色/article-jolin-midnight-gold-embedded.html` | 无头渲染 |
+
+- 候选 `feishu-weixin` 补图（`…/恋之上上签公众号文章-→-飞书文档排版+截图/screenshot-card.png`）经核验为恋之上上签首页截图，与飞书转公众号管线无关，为避免拿别的作品顶替，未收录。
+- 候选 `debate` 补图：公开仓库 README/设计文档渲染未采用，维持「无真实拆解产物不硬凑」的原判。
+
 ## 被剔除的候选
 
 - `debate.png`：渲染出来的是网页源码文本，不是拆解结果，已删除。
