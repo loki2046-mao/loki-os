@@ -10,7 +10,7 @@ $('.contents>p').hidden=true;
 const chapters=[['about','认识 Loki','关于我'],['works','作品节目单','产品 / 工具'],['skills','制作手册','22 个 Skill'],['daily','中场休息','咖啡 / 茶']];
 chapters.forEach(([id,title,note],i)=>{$('#'+id+'-chapter').innerHTML=`<span>${String(i+1).padStart(2,'0')}</span><b>${title}</b><small>${note} ↗</small>`});
 $('.directory-note').textContent='';
-$('.folio>span').textContent='散场不散好奇心';
+$('.folio>span').textContent='这一册随时可以翻回来';
 const portrait=$('.cover .portrait');
 const face=document.createElement('button');face.className='portrait-flip';face.setAttribute('aria-label','翻看 Loki 公众号二维码');face.setAttribute('aria-pressed','false');
 face.innerHTML='<span class="portrait-front"><img src="assets/lettering/loki.jpg" alt="赛博小熊猫 Loki"></span><span class="portrait-back"><img src="assets/loki-wechat-official.jpg" alt="赛博小熊猫 Loki 公众号二维码"><b>在公众号接着聊</b></span>';

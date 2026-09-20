@@ -1,85 +1,85 @@
-// Public presentation snapshot; local classification review 2026-09-08. No runtime verification upgraded.
+// Public presentation data; editorial review 2026-09-20. Verification scopes unchanged.
 window.bookData = {
   "projects": [
     {
       "id": "interface-system",
       "date": "08-24",
       "title": "个人化界面系统",
-      "summary": "我每天都要面对这些 AI 工具。前段时间从换颜色开始，后来一路改到菜单、弹窗、输入区和更新后的恢复。",
+      "summary": "我天天都要打开 Cola、Codex 这些工具，就想把它们改成自己喜欢的样子。颜色换完才发现，菜单、弹窗、输入区也得跟着改，关掉重开还不能给我变回去。",
       "tag": "COLA × HUB × CODEX",
       "href": "./projects/interface-system.html",
-      "action": "看我怎么把它改到真机上",
+      "action": "看我怎么一套一套改到真机上",
       "linkStatus": "internal",
       "visibility": "public",
       "group": "flagship",
       "order": 1,
       "accent": "#ff6508",
-      "eyebrow": "COLA × LOKI HUB × CODEX / 通用工具如何变成个人空间",
+      "eyebrow": "COLA × LOKI HUB × CODEX / 我每天在用的这三个工具",
       "anchor": "case-interface-system",
       "image": "assets/cola-inject-shot-1.png",
       "imageAlt": "Cola 个性化界面真机运行截图",
       "imageWidth": 2560,
       "imageHeight": 1600,
       "imageFit": "cover",
-      "proof": "九套皮肤进入真实工具并记住选择。",
-      "status": "公开案例 · 真机界面已验证",
+      "proof": "九套皮肤真的装进了工具里；关掉再打开，它还记着我上次选的那套。",
+      "status": "九套都在真机上跑过，每一套我自己点过一遍",
       "verification": {
         "status": "verified",
         "checkedAt": "2026-08-28",
         "scope": "local-browser",
-        "note": "真机界面与本地案例页已核验"
+        "note": "页面里的图都是真机上截的，不是设计稿。"
       }
     },
     {
       "id": "perspective-distillation",
       "date": "08-25",
       "title": "人物视角蒸馏",
-      "summary": "我喜欢看一个人遇到麻烦时先看什么、最后留下什么。公开材料被拆成证据，再拿没见过的新题检查判断会不会走样。",
+      "summary": "有些人的访谈和作品，我会反复看。看多了就想知道，遇到一个新问题，她会先想什么？于是我把公开材料整理成方法，再让模型换道题试试，目前已经攒了 13 个人物档案。",
       "tag": "NUWA 改造",
       "href": "./projects/perspective-distillation.html",
-      "action": "看我如何蒸馏隐性判断",
+      "action": "浏览人物研究与四人实验",
       "linkStatus": "internal",
       "visibility": "public",
       "group": "flagship",
       "order": 2,
       "accent": "#d7f43c",
-      "eyebrow": "公开证据 × 隔离评测 / 看判断动作能不能迁移",
+      "eyebrow": "公开材料 × 隔离出题 / 看判断能不能搬到新问题上",
       "image": "assets/perspective-liulian-evidence-sheet-01.png",
       "imageAlt": "刘恋公开节目材料的时间帧采样",
       "imageWidth": 1940,
       "imageHeight": 1186,
       "imageFit": "contain",
-      "proof": "公开节目时间帧采样；完整来源、四人档案与隔离评测请进入案例页查看。",
-      "status": "研究型工作模型 · 内部评测",
+      "proof": "这里先选六个人给你看，完整案例还留着四人实验。刘恋、鲁豫和 Papi 酱的后续测试也补进来了，每一轮的题和分数分开说。",
+      "status": "只在我自己机器上跑，还没给别人用过",
       "verification": {
         "status": "verified",
         "checkedAt": "2026-08-28",
         "scope": "local-browser",
-        "note": "公开材料证据表与内部评测页面已核验"
+        "note": "材料表对应的都是公开节目，我用的时候没改动原话。"
       }
     },
     {
       "id": "inkpanda",
       "date": "06-28",
       "title": "InkPanda · AI 长篇写作",
-      "summary": "写到后面，AI 会忘记人物受过的伤，也会漏掉早先的伏笔。作者继续写，系统负责把相关记忆找回来。",
+      "summary": "我用 AI 写长篇，最烦写到后面把前面忘了，人物受过的伤、埋过的伏笔又得我提醒。所以我把正文、人物和前情放在一起，接着写之前，先把该记得的找回来。",
       "tag": "写作平台",
       "href": "./projects/inkpanda.html",
-      "action": "看真实产品与长篇判断",
+      "action": "看真的产品界面",
       "linkStatus": "internal",
       "visibility": "public",
       "group": "flagship",
       "order": 3,
       "accent": "#d69a55",
-      "eyebrow": "上下文 × 记忆 × 一致性 / 让 AI 记住同一部长篇",
+      "eyebrow": "上下文 × 记忆 × 一致性 / 写第八十章的时候，别忘了第八章",
       "anchor": "case-inkpanda",
       "image": "assets/inkpanda-editor.png",
       "imageAlt": "InkPanda 真实编辑器界面",
       "imageWidth": 2000,
       "imageHeight": 1114,
       "imageFit": "cover",
-      "proof": "真实编辑器把正文、人物、前情和写作工具放在同一个长期空间里；完整体验需要登录。",
-      "status": "产品已经开放 · 完整体验需要登录",
+      "proof": "图是真编辑器的截图，正文、人物、前情和写作工具在同一块工作区里；要看全部功能得登录。",
+      "status": "已经开放，看完整功能要登录",
       "publicLink": {
         "href": "https://inkxiaoxiongmao.hiloki.ai/",
         "label": "打开 InkPanda",
@@ -90,12 +90,12 @@ window.bookData = {
         "status": "pending",
         "checkedAt": "2026-08-29",
         "scope": "local-browser",
-        "note": "站内案例与真实界面已核验，公开入口 HTML 与核心资源已复核，登录后交互待复核"
+        "note": "界面截图来自本机，公开入口能打开；登录之后的交互待逐页试用。"
       },
       "systemEvidence": [
         {
           "label": "继续写之前",
-          "value": "找回人物、世界观、伏笔和时间线；长篇记忆检查属于这个作品，不单独列为 Skill。"
+          "value": "动笔之前先把人物、世界观、伏笔和时间线找回来。这套记忆检查是产品里的一部分，我把它算进这件作品，没单列成一个 Skill。"
         }
       ]
     },
@@ -103,23 +103,23 @@ window.bookData = {
       "id": "daily-insight",
       "date": "08-25",
       "title": "每日洞见系统",
-      "summary": "我读完书常常记不住当时为什么被击中，于是每天留下一次冲突、一个边界和一个以后还想回答的问题。",
+      "summary": "我让 Cola 每天拆一本书，但光给我几句金句肯定不够。我想先知道它讲了什么，再看看跟我有什么关系。现在已经存了 28 篇，最新的是《禅与摩托车维修艺术》。",
       "tag": "阅读系统",
       "href": "./projects/daily-insight.html",
-      "action": "看我如何让长期目标运行",
+      "action": "翻看拆书文稿与早期样例",
       "linkStatus": "internal",
       "visibility": "public",
       "group": "workflow",
       "order": 4,
       "accent": "#eee5d5",
-      "eyebrow": "阅读 × 回看 × 长期记忆 / 每天留下一张未来会回来找我的卡",
+      "eyebrow": "阅读 × 回看 / 每天留一张卡，过几个月回来找自己",
       "image": "assets/exhibition-reading-desk-v1.webp",
       "imageAlt": "每日洞见系统公开展台的视觉导览图",
       "imageWidth": 1915,
       "imageHeight": 821,
       "imageFit": "cover",
-      "proof": "视觉导览：730 天阅读系统的公开展台；四天洞见样例请进入案例页查看。",
-      "status": "公开案例 · 真实样例持续补充",
+      "proof": "28 篇文稿都能在这里翻，最新到 2026 年 9 月 19 日。案例里还留着最早四天的互动卡片，方便看看当初做成了什么样。",
+      "status": "文稿更新到 Day 28 · 2026-09-19",
       "systemKind": "AI 阅读工作流",
       "systemEvidence": [
         {
@@ -128,41 +128,41 @@ window.bookData = {
         },
         {
           "label": "留下记录",
-          "value": "公开案例页已有四天洞见卡结构"
+          "value": "28 篇文稿保存在 Obsidian，最早四天另有互动样例"
         },
         {
           "label": "未来调用",
-          "value": "按日期回看，生成完以后还会再回来"
+          "value": "按日期回看，过一阵子它会回来找我"
         }
       ],
       "verification": {
         "status": "pending",
         "checkedAt": "2026-08-29",
         "scope": "local-browser",
-        "note": "案例页结构已核验，长期连续运行证据仍在补充"
+        "note": "我核对了本地 28 篇文稿；导读内容还待逐页对照原书，文稿日期也不代替自动任务的运行日志。"
       }
     },
     {
       "id": "loki-health",
       "date": "08-22",
       "title": "Loki's Health",
-      "summary": "围绕真实身体记录生长的本地优先健康 App；公开页只展示脱敏界面、产品判断与隐私边界。",
+      "summary": "睡眠、运动在 Apple 健康里，吃了什么、喝了多少水、药有没有忘，又得去别处找。我想把这些放到一起，记录先存在自己的设备上，哪天想回头看也能找得到。",
       "tag": "我的身体节律",
       "href": "./projects/loki-health.html",
-      "action": "进入健康系统展台",
+      "action": "看脱敏后的界面",
       "linkStatus": "internal",
       "visibility": "public",
       "group": "workflow",
       "order": 5,
       "accent": "#94d668",
-      "eyebrow": "本地优先 × 脱敏公开 / 让身体记录能够被照顾和回看",
+      "eyebrow": "本地优先 × 脱敏 / 身体的事，数据不出我这台电脑",
       "image": "assets/health-today-desktop-redacted.png",
       "imageAlt": "Loki's Health 本地真实产品的脱敏桌面截图",
       "imageWidth": 1440,
       "imageHeight": 1172,
       "imageFit": "contain",
-      "proof": "这些是脱敏后的真实产品画面；完整功能仍以实际产品体验为准。",
-      "status": "真实产品 · 展示内容已经脱敏",
+      "proof": "界面是真的，图上的数字都改过；功能就照实际打开的样子算。",
+      "status": "真实产品，截图里的数值都脱敏了",
       "publicLink": {
         "href": "https://lokihealthy.hiloki.ai/",
         "label": "打开 Loki's Health",
@@ -173,45 +173,45 @@ window.bookData = {
       "systemEvidence": [
         {
           "label": "持续入口",
-          "value": "饮水、饮食、活动与身体目标集中记录"
+          "value": "喝没喝水、吃了什么、动没动，都记在一处"
         },
         {
           "label": "留下记录",
-          "value": "只读同步与手动记录分开保存和回看"
+          "value": "同步来的数据和我自己手填的分开存，也分开看"
         },
         {
           "label": "公开边界",
-          "value": "仅展示脱敏截图，不公开真实健康数值"
+          "value": "只放脱敏截图，真实数值不公开"
         }
       ],
       "verification": {
         "status": "pending",
         "checkedAt": "2026-08-29",
         "scope": "local-browser",
-        "note": "本地产品与脱敏素材已核验，公开入口 HTML 与核心资源已复核，具体交互待复核"
+        "note": "截的是本机真实界面，数值做过处理；交互细节待逐项试用。"
       }
     },
     {
       "id": "loki-ebook-converter",
       "date": "08-11",
       "title": "Loki 电子书转换器",
-      "summary": "把 Calibre 强大但复杂的转换能力做成普通人可拖拽、批量处理、看见进度的桌面工具。",
+      "summary": "我就想给电子书换个格式，每次还得重新熟悉 Calibre 那个界面。干脆给它做个壳，拖进去、选格式、等它转完，常用的几步放在面前就够了。",
       "tag": "MACOS 1.1.2 · WIN 1.1.1",
       "href": "./projects/ebook-converter.html",
-      "action": "看我如何把复杂能力做简单",
+      "action": "看它长什么样",
       "linkStatus": "internal",
       "visibility": "public",
       "group": "productization",
       "order": 6,
       "accent": "#ff397f",
-      "eyebrow": "MACOS 1.1.2 × WINDOWS 1.1.1 / 把 Calibre 藏进拖拽入口",
+      "eyebrow": "MACOS 1.1.2 × WINDOWS 1.1.1 / 把 Calibre 的命令行藏起来",
       "image": "assets/ebook-app-home.png",
       "imageAlt": "Loki 电子书转换器真实桌面界面",
       "imageWidth": 1280,
       "imageHeight": 900,
       "imageFit": "cover",
-      "proof": "真实桌面应用界面；macOS 与 Windows 版本都已经做成可以安装的桌面工具。",
-      "status": "桌面工具已发布 · 可以下载",
+      "proof": "这是真桌面应用。macOS 和 Windows 两个版本都能下载安装。",
+      "status": "已经发版，能下载",
       "publicLink": {
         "href": "https://github.com/loki2046-mao/loki-ebook-converter/releases/tag/v1.1.2",
         "label": "前往下载页",
@@ -222,30 +222,30 @@ window.bookData = {
         "status": "verified",
         "checkedAt": "2026-08-29",
         "scope": "release-page",
-        "note": "站内案例、Release 页面与 universal DMG 资产记录已复核；本轮未下载或安装 DMG"
+        "note": "Release 页面和 DMG 我核对过；那两个安装包我这次没有下载下来实际装一遍。"
       }
     },
     {
       "id": "lian",
       "date": "06-17",
       "title": "恋之上上签",
-      "summary": "把对刘恋的喜欢做成一件有版权边界、视觉判断和真实交互的歌词答案书。",
+      "summary": "我喜欢刘恋，也喜欢她的词，就想让更多人看到。答案之书大家都知道嘛，我做了个歌词版，从 44 首歌里挑了 147 条短句，写下心情就能抽一张。",
       "tag": "歌词答案书",
       "href": "./projects/lian.html",
-      "action": "看喜欢如何变成作品",
+      "action": "看它怎么抽",
       "linkStatus": "internal",
       "visibility": "public",
       "group": "personal-practice",
       "order": 7,
       "accent": "#ffb53e",
-      "eyebrow": "私人喜欢 × 产品边界 / 44 首歌与 147 条精选短句",
+      "eyebrow": "私人喜欢 × 版权边界 / 44 首歌、147 条我自己挑的短句",
       "image": "assets/lian-draw-result.jpg",
       "imageAlt": "恋之上上签真实抽签结果页",
       "imageWidth": 2000,
       "imageHeight": 1407,
       "imageFit": "cover",
-      "proof": "历史抽签结果和 16 套卡片，留下了这件作品真实做出来时的样子。",
-      "status": "公开作品 · 入口可访问，抽签交互待复核",
+      "proof": "抽签结果和 16 套卡片都是当时真的用出来的样子，不是做出来的示意图。",
+      "status": "入口能打开，抽签那一步我还没逐个验过",
       "publicLink": {
         "href": "https://lian.hiloki.ai/",
         "label": "打开恋之上上签",
@@ -256,58 +256,73 @@ window.bookData = {
         "status": "pending",
         "checkedAt": "2026-08-29",
         "scope": "local-browser",
-        "note": "站内案例与历史截图已核验，公开入口 HTML 与核心资源已复核，抽签交互待复核"
+        "note": "截图是当时留下来的，公开入口能打开；抽签交互待逐项试用。"
       }
     },
     {
       "id": "qichi-life-os",
       "date": "07-05",
       "title": "栖迟人生系统",
-      "summary": "这个站的站名来自它。cron 每天凌晨自动复盘，从日记和任务记录里识别情绪、行为、思维、人格四层反复出现的模式，写入我的 Obsidian 库。",
+      "summary": "我跟 AI 聊得挺多，但它要是一直顺着我、一直哄，我聊完也没解决什么。后来就把情绪、行为、思维、人格分开，让它每天回头看我的记录，把反复出现的问题写进 Obsidian。",
       "tag": "个人复盘系统",
       "href": "./projects/qichi-life-os.html",
-      "action": "看系统怎么自动跑起来",
+      "action": "看它怎么自动跑",
       "linkStatus": "internal",
       "visibility": "public",
       "group": "workflow",
       "order": 8,
       "accent": "#9bdde9",
-      "eyebrow": "CRON 复盘 × 模式识别 / 站名「栖迟」的同名本体",
+      "eyebrow": "CRON 复盘 × 模式识别 / 这个站的站名就是从它来的",
       "image": "projects/assets/real/qichi-life-os/cron-config.png",
       "imageAlt": "栖迟人生系统本机 cron 任务配置与运行记录渲染图",
       "imageWidth": 1200,
       "imageHeight": 1308,
       "imageFit": "cover",
-      "proof": "本机 cron 已留有日复盘 50 次、周复盘 7 次运行记录，复盘写入 Obsidian 栖迟系统库（173 篇文档，结构公开、正文不公开）。",
-      "status": "长期自动运行中 · 复盘正文属私人记录",
+      "proof": "我本机的 cron 跑过 50 次日复盘、7 次周复盘，结果写进 Obsidian 栖迟系统库（173 篇文档）。结构可以公开，正文是我的私人记录。",
+      "status": "一直在跑，复盘正文不公开",
       "verification": {
         "status": "verified",
         "checkedAt": "2026-09-14",
         "scope": "local-cron",
-        "note": "cron 任务配置、运行记录目录与 Obsidian 输出结构已核验；复盘正文内容不做公开核验"
-      }
+        "note": "cron 配置、运行记录和输出目录都对过；复盘正文是私人内容，我不做公开的核对。"
+      },
+      "systemKind": "个人复盘工作流",
+      "systemEvidence": [
+        {
+          "label": "输入",
+          "value": "从日记和任务记录里回看一天"
+        },
+        {
+          "label": "处理",
+          "value": "按情绪、行为、思维、人格四层整理"
+        },
+        {
+          "label": "输出",
+          "value": "复盘保存到 Obsidian，正文不公开"
+        }
+      ]
     },
     {
       "id": "edu-content-line",
       "date": "04-13",
       "title": "教育内容生产线",
-      "summary": "数学课件里冒出【作者生平】那天我才知道，骨架不能跨学科硬套。后来把课件提示词拆成七套学科骨架，再延伸出古诗词教研母稿和 15 秒视频分镜。",
+      "summary": "我做教育内容，经常要出课件。结果语文那套一换到数学，居然冒出【作者生平】……那肯定不行啊。后来我把学科分开做，又接着做古诗词母稿和视频分镜。",
       "tag": "教研提示词系统",
       "href": "./projects/edu-content-line.html",
-      "action": "看一条生产线怎么长出来",
+      "action": "看这条线怎么长出来",
       "linkStatus": "internal",
       "visibility": "public",
       "group": "workflow",
       "order": 9,
       "accent": "#d7f43c",
-      "eyebrow": "PPT DNA 迁移 × 教研母稿 / 拆一次骨架，多学科复用",
+      "eyebrow": "PPT DNA 迁移 × 教研母稿 / 骨架拆一次，别的学科接上去",
       "image": "projects/assets/real/edu-content-line/yongge.png",
       "imageAlt": "《咏鹅》教研完整母稿 V4 真实文稿渲染",
       "imageWidth": 1100,
       "imageHeight": 1500,
       "imageFit": "cover",
-      "proof": "公开仓库 edu-ppt-prompt-migrator（MIT）与本机真实生成的课件提示词包、教研母稿；含 English courseware generator 27 种教学组件。",
-      "status": "公开仓库 · 教研线持续推进",
+      "proof": "公开仓库 edu-ppt-prompt-migrator（MIT），加上我本机真的生成出来的课件包和教研母稿；里面的 English courseware generator 有 27 种教学组件。",
+      "status": "仓库公开，教研这条线还在继续做",
       "publicLink": {
         "href": "https://github.com/loki2046-mao/edu-ppt-prompt-migrator",
         "label": "查看公开仓库",
@@ -318,30 +333,45 @@ window.bookData = {
         "status": "verified",
         "checkedAt": "2026-09-14",
         "scope": "local-repo",
-        "note": "公开仓库署名与 MIT 许可、本机生成课件包与教研母稿文稿已核验；未宣称有成片动画"
-      }
+        "note": "仓库署名、MIT 许可、本机生成的课件包和母稿都对过；成片动画我没做，这里也没写有。"
+      },
+      "systemKind": "教育内容制作工作流",
+      "systemEvidence": [
+        {
+          "label": "课件",
+          "value": "提示词拆成七套学科骨架"
+        },
+        {
+          "label": "教研",
+          "value": "古诗词教学先形成教研母稿"
+        },
+        {
+          "label": "分镜",
+          "value": "从母稿继续拆成 15 秒视频分镜，尚无成片"
+        }
+      ]
     },
     {
       "id": "ai-career-compass",
       "date": "07-02",
-      "title": "AI 求职行动教练",
-      "summary": "在岗的人盘上周实际做了什么，做可替代性、人类必要性、资产性三维评分；求职的人拆 JD 拿简历改写和 7 天行动计划。",
+      "title": "AI 求职教练",
+      "summary": "我招人的时候看简历，很多人写得都差不多，套个模板也看不出他做过什么。我就想做个工具，把岗位要求和手上的经历拆开看，最后落到简历怎么改、接下来七天能做什么。",
       "tag": "CAREER COMPASS",
       "href": "./projects/ai-career-compass.html",
-      "action": "看真实报告怎么给下一步",
+      "action": "看报告给了什么下一步",
       "linkStatus": "internal",
       "visibility": "public",
       "group": "workflow",
       "order": 10,
       "accent": "#7f9df7",
-      "eyebrow": "三维评分 × 四类判决 / 不贩卖焦虑，只回答下一步",
+      "eyebrow": "三维评分 × 四类判决 / 回答下一步，不贩卖焦虑",
       "image": "projects/assets/real/ai-career-compass/eval-scoring-table.png",
-      "imageAlt": "AI 求职行动教练真实报告的岗位任务评分表节选",
+      "imageAlt": "AI 求职教练真实报告的岗位任务评分表节选",
       "imageWidth": 1600,
       "imageHeight": 1125,
       "imageFit": "cover",
-      "proof": "公开仓库 v1→v2 完整迭代（2026-07-02 至 09-10），两份真实完整报告（广告学、社会学）与三张真实输出截图。",
-      "status": "开源 Skill · 真实报告已收录",
+      "proof": "公开仓库里躺着 v1 到 v2 的全过程（2026-07-02 到 09-10）；两份报告（广告学、社会学）是真的跑完的，截图也是从这两份里截的。",
+      "status": "代码开源，两份真报告就放在站上",
       "publicLink": {
         "href": "https://github.com/loki2046-mao/ai-career-compass",
         "label": "查看公开仓库",
@@ -352,49 +382,64 @@ window.bookData = {
         "status": "verified",
         "checkedAt": "2026-09-14",
         "scope": "local-repo",
-        "note": "公开仓库时间线、两份真实报告文稿与三张输出截图已核验；报告为真实样本，不构成统计结论"
-      }
+        "note": "仓库时间线和报告原文都对过；这两份是个案样本，不能当统计结论看。"
+      },
+      "systemKind": "求职与职业分析工作流",
+      "systemEvidence": [
+        {
+          "label": "输入",
+          "value": "在岗工作记录或求职 JD"
+        },
+        {
+          "label": "分析",
+          "value": "可替代性、人类必要性、资产性三维评分"
+        },
+        {
+          "label": "输出",
+          "value": "简历修改与七天行动计划，案例页展示报告样本"
+        }
+      ]
     },
     {
       "id": "loki-assistant",
       "date": "06-17",
-      "title": "Loki Assistant",
-      "summary": "一个真正属于自己的 AI 助手：四类记忆自动提炼与检索、Obsidian 2237 篇本地笔记索引、可解释的工具调用循环、多模型可插拔。",
+      "title": "雾尼 Munin",
+      "summary": "Cola 记得我，Codex 也记得我，可它们怎么记、记了什么，我不一定看得清。所以我给自己做了雾尼，接上 Obsidian，能找笔记、能看记忆，也能看它到底调了哪些工具。",
       "tag": "个人 AI 助手",
       "href": "./projects/loki-assistant.html",
-      "action": "看私有产品的脱敏界面",
+      "action": "看脱敏后的界面",
       "linkStatus": "internal",
       "visibility": "public",
       "group": "productization",
       "order": 11,
       "accent": "#8fd0c9",
-      "eyebrow": "本地优先 × 记忆库 / 透明、可控、记住你、能干活",
+      "eyebrow": "本地优先 × 记忆库 / 记住我，也让我看得见它干了什么",
       "image": "projects/assets/real/loki-assistant/workspace-welcome.png",
-      "imageAlt": "Loki Assistant 本地运行的对话工作台空状态截图",
+      "imageAlt": "雾尼 Munin（Loki Assistant）本地运行的对话工作台空状态截图",
       "imageWidth": 1600,
       "imageHeight": 1000,
       "imageFit": "cover",
-      "proof": "本机真实运行：2026-05-23 至 09-13 共 273 条 commit，99 条记忆、318 个会话、2237 篇 Obsidian 笔记索引；公开页只展示脱敏界面。",
-      "status": "私有产品 · 公开页只展示脱敏界面",
+      "proof": "在我本机上真跑：2026-05-23 到 09-13 一共 273 条 commit，99 条记忆、318 个会话、2237 篇笔记索引都在本地。这个页面只放脱敏界面。",
+      "status": "我自己的产品，页面只放脱敏后的界面",
       "systemEvidence": [
         {
           "label": "记住你",
-          "value": "事实、模式、历史、碎片四类记忆自动提炼，对话前按相关性检索"
+          "value": "事实、模式、历史、碎片四类记忆它自己提炼，对话前把相关的捞出来"
         },
         {
           "label": "能干活",
-          "value": "工具调用循环留痕可回看，产物先到磁盘验证过才算完成"
+          "value": "它调了哪些工具都留痕，能回头翻；产物落到磁盘上验过才算完成"
         },
         {
           "label": "公开边界",
-          "value": "代码不开源，记忆与笔记正文属私人数据，公开页只展示脱敏界面"
+          "value": "代码不开源，记忆和笔记都是私人的，页面上只放脱敏界面"
         }
       ],
       "verification": {
         "status": "verified",
         "checkedAt": "2026-09-14",
         "scope": "local-run",
-        "note": "本地运行界面与 commit 时间线已核验，截图为无私人内容页面；记忆与笔记正文不做公开核验"
+        "note": "截图来自本机运行，页面里没有私人内容；记忆和笔记正文我不公开。"
       }
     }
   ],
@@ -404,13 +449,13 @@ window.bookData = {
       "category": "writing",
       "order": 1,
       "title": "Loki 写作助手",
-      "summary": "从真实材料和已有文章里学习语气，把杂乱想法整理成仍然像我会说的话。",
+      "summary": "它先读我发过的文章和手头的真实材料，学我说话的语气，再把我脑子里那堆碎想法整理成还像我说的话。",
       "tags": [
         "公众号",
         "风格",
         "长文"
       ],
-      "form": "正式 Skill",
+      "form": "已经做成正式 Skill",
       "visibility": "public"
     },
     {
@@ -418,13 +463,13 @@ window.bookData = {
       "category": "writing",
       "order": 2,
       "title": "公众号选题与大纲",
-      "summary": "先把一个模糊主题拆成可写的选题，再留下清楚但不公文化的文章骨架。",
+      "summary": "脑子里有个想法，但还没想清楚从哪儿讲，我就先让它列几个选题。挑中一个，再往下写大纲。",
       "tags": [
         "选题",
         "大纲",
         "口语化"
       ],
-      "form": "正式 Skill",
+      "form": "已经做成正式 Skill",
       "visibility": "public"
     },
     {
@@ -432,13 +477,13 @@ window.bookData = {
       "category": "writing",
       "order": 3,
       "title": "深夜清醒 Writer",
-      "summary": "让同一份稿在 Obsidian 和公众号里都保留原来的气息、颜色和层级。",
+      "summary": "我在 Obsidian 里写稿，也要发公众号，就想让同一份稿子搬过去以后，颜色和段落还能留住。",
       "tags": [
         "情感写作",
         "双平台",
         "排版"
       ],
-      "form": "正式 Skill",
+      "form": "已经做成正式 Skill",
       "visibility": "public"
     },
     {
@@ -446,13 +491,13 @@ window.bookData = {
       "category": "writing",
       "order": 4,
       "title": "公众号排版",
-      "summary": "把已经写好的正文整理成可复制发布的节奏、层级与重点，而不是重新写一遍。",
+      "summary": "正文写好了，我只把它理出能直接复制发布的节奏、层级和重点，不重写一遍。",
       "tags": [
         "发布",
         "层级",
         "复用"
       ],
-      "form": "长期使用",
+      "form": "一直在用",
       "visibility": "public"
     },
     {
@@ -460,13 +505,13 @@ window.bookData = {
       "category": "writing",
       "order": 5,
       "title": "微信标题生成",
-      "summary": "从文章真正的冲突和信息差里找标题，不靠夸张词制造虚假的点击。",
+      "summary": "标题我只从文章里真正的冲突和信息差里找，不靠夸张词骗一个点击。",
       "tags": [
         "标题",
         "信息差",
         "分发"
       ],
-      "form": "长期使用",
+      "form": "一直在用",
       "visibility": "public"
     },
     {
@@ -474,13 +519,13 @@ window.bookData = {
       "category": "writing",
       "order": 6,
       "title": "飞书转公众号",
-      "summary": "把飞书里的成稿带着结构搬进公众号，减少重复清格式和重新排版。",
+      "summary": "飞书里写好的成稿，我让它带着结构直接搬进公众号，省掉一遍遍清格式、重排。",
       "tags": [
         "飞书",
         "公众号",
         "发布"
       ],
-      "form": "长期使用",
+      "form": "一直在用",
       "visibility": "public"
     },
     {
@@ -488,13 +533,13 @@ window.bookData = {
       "category": "visual",
       "order": 1,
       "title": "电影字报生成器",
-      "summary": "把一个主题翻译成摄影质感、强字体排版和明确视觉焦点的电影字报。",
+      "summary": "给我一个主题，我照它做一张电影字报：要摄影质感，字体排版要重，视觉焦点只留一个。",
       "tags": [
         "图像生成",
         "字报",
         "视觉设计"
       ],
-      "form": "长期使用",
+      "form": "一直在用",
       "visibility": "public"
     },
     {
@@ -502,13 +547,13 @@ window.bookData = {
       "category": "visual",
       "order": 2,
       "title": "Loki 社交卡片",
-      "summary": "把文章重新组织成小红书图文、公众号封面对和有证据的知识卡片。",
+      "summary": "同一篇文章，我重新排成小红书图文、公众号封面对，还有那种带证据的知识卡片。",
       "tags": [
         "小红书",
         "公众号封面",
         "知识卡片"
       ],
-      "form": "正式 Skill",
+      "form": "已经做成正式 Skill",
       "visibility": "public"
     },
     {
@@ -516,13 +561,13 @@ window.bookData = {
       "category": "visual",
       "order": 3,
       "title": "多形态视觉系统",
-      "summary": "从参考里提取可以迁移的设计语言，再做成真正不同的网页、海报、卡片或演示方向。",
+      "summary": "参考图我都给了，只换个颜色当然不够。我想看它怎么用那些图里的构图、字体和材质，做出几个真不一样的方向。",
       "tags": [
         "视觉分析",
         "多方向",
         "跨媒介"
       ],
-      "form": "正式 Skill",
+      "form": "已经做成正式 Skill",
       "visibility": "public"
     },
     {
@@ -530,13 +575,13 @@ window.bookData = {
       "category": "visual",
       "order": 4,
       "title": "封面设计系统",
-      "summary": "让封面承担文章入口，而不是只在正文前面放一张漂亮但没有信息的图。",
+      "summary": "我做封面时，会先想这篇到底有什么值得点开，再让标题、小熊猫的动作和画面一起把这件事讲清楚。",
       "tags": [
         "21:9",
         "1:1",
         "封面对"
       ],
-      "form": "长期使用",
+      "form": "一直在用",
       "visibility": "public"
     },
     {
@@ -544,13 +589,13 @@ window.bookData = {
       "category": "visual",
       "order": 5,
       "title": "生图套件",
-      "summary": "把比例、清晰度、构图、风格和用途写进同一套可直接生成的中文提示词。",
+      "summary": "只说【有电影感】太模糊了。我会把画面里有什么、字放哪儿、用什么比例写清楚，再拿去生图。",
       "tags": [
         "中文提示词",
         "多比例",
         "生成"
       ],
-      "form": "长期使用",
+      "form": "一直在用",
       "visibility": "public"
     },
     {
@@ -558,13 +603,13 @@ window.bookData = {
       "category": "visual",
       "order": 6,
       "title": "前端幻灯片",
-      "summary": "用网页做可以直接演示的页面，让排版、动效和内容在同一个文件里继续修改。",
+      "summary": "幻灯片我直接用网页做，页面打开就能演示，排版、动效、内容都在同一个文件里，边讲边改。",
       "tags": [
         "演示",
         "网页",
         "动效"
       ],
-      "form": "长期使用",
+      "form": "一直在用",
       "visibility": "public"
     },
     {
@@ -572,15 +617,15 @@ window.bookData = {
       "category": "knowledge",
       "order": 1,
       "title": "洞见型拆书",
-      "summary": "先检查手里的材料，再从一本书里拆出书核、认知冲突、解释机制和失效边界，最后留下一个可验证的思想实验。",
+      "summary": "我让 Cola 拆书，想先看懂这本书在讲什么，再挑出值得多想的地方。材料没读全就说清楚，不能只给我一串金句。",
       "tags": [
         "书核",
         "认知冲突",
         "思想实验"
       ],
-      "form": "本地 Skill · v2",
+      "form": "本地 Skill，v2",
       "href": "./projects/daily-insight.html",
-      "action": "看它怎样进入每日洞见",
+      "action": "看它怎么进每日洞见",
       "visibility": "public"
     },
     {
@@ -594,9 +639,9 @@ window.bookData = {
         "批注",
         "复习"
       ],
-      "form": "正式 Skill",
+      "form": "已经做成正式 Skill",
       "href": "./projects/daily-insight.html",
-      "action": "看公开样例",
+      "action": "看相关拆书文稿",
       "visibility": "public"
     },
     {
@@ -604,15 +649,15 @@ window.bookData = {
       "category": "knowledge",
       "order": 3,
       "title": "工作判断蒸馏",
-      "summary": "从反复修改、拒绝和选择里找到稳定判断，再用没见过的新问题检查它会不会走样。",
+      "summary": "我从一个人反复修改、拒绝和选择里，找他的稳定判断，再拿没见过的新问题去试，看它会不会走样。",
       "tags": [
         "证据账本",
         "情境路由",
         "盲测"
       ],
-      "form": "正式 Skill",
+      "form": "已经做成正式 Skill",
       "href": "./projects/perspective-distillation.html",
-      "action": "看四个人物的公开证据",
+      "action": "看人物材料与四人实验记录",
       "visibility": "public"
     },
     {
@@ -620,62 +665,59 @@ window.bookData = {
       "category": "knowledge",
       "order": 4,
       "title": "辩论思维提取",
-      "summary": "从一段争论里拆出双方前提、真正分歧和还没有被回答的问题。",
+      "summary": "一段争论里，我把双方各自的前提、真正的分歧，还有还没人回答的问题拆出来。",
       "tags": [
         "论点",
         "前提",
         "分歧"
       ],
-      "form": "长期使用",
+      "form": "一直在用",
       "visibility": "public"
     },
-
     {
       "id": "codex-theme",
       "category": "building",
       "order": 1,
       "title": "个人主题系统",
-      "summary": "从 Codex 的主题恢复，到 Loki Hub、Loki Assistant 和 Cola 的换肤实现，分别整理组件、偏好记忆与恢复方式。",
+      "summary": "从 Codex 的主题恢复，到 Loki Hub、Loki Assistant 和 Cola 上的换肤，我把组件、偏好记忆和恢复方式分别理了一遍。",
       "tags": [
         "桌面 App",
         "组件",
         "恢复"
       ],
-      "form": "本地 Skill 草稿",
+      "form": "本地主题方法 / 另有开源主题包",
       "href": "./projects/interface-system.html?room=codex",
       "action": "看真实界面",
       "visibility": "public"
     },
-
     {
       "id": "skill-builder",
       "category": "building",
       "order": 3,
       "title": "工作经验蒸馏成 Skill",
-      "summary": "从真实修改、选择和工作记录里提炼判断，带着证据、适用情境和评测编译成可复用 Skill。",
+      "summary": "每次改稿、改方案，我都说了不少为什么。下次还得从头教太麻烦了，我就把这些修改和理由整理成 Skill，再拿新任务试。",
       "tags": [
         "封装",
         "审阅",
         "复用"
       ],
-      "form": "长期使用",
+      "form": "一直在用",
       "visibility": "public"
     },
-
     {
       "id": "ebook-workflow",
       "category": "building",
       "order": 5,
       "title": "电子书转换工作流",
-      "summary": "把格式识别、批量转换、进度和失败反馈收进普通人能直接使用的入口。",
+      "summary": "一批电子书拖进去，选好格式，转完能找到文件；哪本失败了也告诉我，别只留一个转圈。",
       "tags": [
         "批量",
         "格式转换",
         "桌面工具"
       ],
-      "form": "作品中沉淀",
+      "form": "跟着作品一起",
       "href": "./projects/ebook-converter.html",
-      "action": "看它怎样变成桌面工具",
+      "action": "看它怎么变成桌面工具",
       "visibility": "public"
     },
     {
@@ -683,13 +725,13 @@ window.bookData = {
       "category": "personal",
       "order": 1,
       "title": "赛博小熊猫 Loki",
-      "summary": "让长期写作、视觉和对外表达保持为同一个能被认出来、也能继续生长的人格。",
+      "summary": "卡片、演示、工具里都有我的小熊猫。讲的内容不一样，它也得换动作，但看起来还得是同一只。",
       "tags": [
         "角色",
         "公众号",
         "视觉人格"
       ],
-      "form": "长期使用",
+      "form": "一直在用",
       "href": "./about.html",
       "action": "认识 Loki",
       "visibility": "public"
@@ -699,13 +741,13 @@ window.bookData = {
       "category": "personal",
       "order": 2,
       "title": "歌词答案书构建",
-      "summary": "从喜欢出发，自己筛选材料、划定版权边界，再把短句做成抽签与卡片。",
+      "summary": "从喜欢出发，材料我自己筛，版权边界我先划好，再把挑出来的短句做成抽签和卡片。",
       "tags": [
         "策展",
         "版权边界",
         "卡片"
       ],
-      "form": "作品中沉淀",
+      "form": "跟着作品一起",
       "href": "./projects/lian.html",
       "action": "看恋之上上签",
       "visibility": "public"
@@ -715,79 +757,79 @@ window.bookData = {
       "category": "personal",
       "order": 3,
       "title": "每日拼贴诗",
-      "summary": "把当天留下来的词句和情绪重新拼接成一小块只属于那一天的文本。",
+      "summary": "当天留下来的词句和情绪，我重新拼一拼，留成一小块只属于那天的文本。",
       "tags": [
         "拼贴",
         "日常",
         "创作"
       ],
-      "form": "长期使用",
+      "form": "一直在用",
       "visibility": "public"
     }
   ],
   "profiles": {
     "loki-writing": {
       "showcase": true,
-      "maturity": "早期原型 → 7 月底升级版",
+      "maturity": "2 月的第一版，7 月底整体换过一轮",
       "ownership": "Loki 制作",
-      "origin": "我最初想让它先读我过去的文章，再把一堆聊天式的碎想法整理成稿。2026 年 2 月的第一版靠 pdftotext 读 ./pdfs 里的历史文章 PDF，做短语统计和段落模板；7 月底那轮升级把规则清单换成了从已发文章提取的范例包。",
-      "trigger": "脑子里有很多材料，但还没有文章结构时；或者一篇写完但读起来“不是我”的稿子需要重写时。",
-      "judgment": "高频词不是风格，固定开头和固定结尾也不是我。黑名单禁“愣”不禁“懵”的判断标准只有一个：这个词我自己用过没有。“没有违反规则”和“像我”是两回事。",
-      "realResult": "PDF 文本提取、短语统计、段落长度、标题与段落模板、Markdown 输出；7 月底新版换成范例包加 AI 情绪词黑名单的组合，并用新旧两版各写同一道题做过对比测试。",
-      "limitations": "写作部分仍大量依赖固定模板；我不说它已经“学会了我的语气”。2026-07-16 的改稿记录还证明 AI 会把风格理解成口头禅加括号的集合，这类偏差要靠持续喂真实改稿来纠。",
-      "evidenceStatus": "新旧测试段落的对比记录已作为真实材料收录；不借用已发布文章冒充输出。",
+      "origin": "我最初的想法很简单：让它先读我过去的文章，再把我那一堆聊天式的碎想法整理成稿。2026 年 2 月的第一版是拿 pdftotext 读 ./pdfs 里的历史文章 PDF，做短语统计和段落模板；7 月底那轮升级把规则清单换成了从已发文章里挑出来的范例包。",
+      "trigger": "脑子里有很多材料但还没有结构的时候用；或者一篇写完了、读起来不像我的稿子要重写的时候用。",
+      "judgment": "高频词统计出来的东西当不了风格，固定的开头和结尾也代表不了我。黑名单禁【愣】不禁【懵】，判断标准只有一个：这个词我自己用过没有。没有违反规则，跟像我，是两回事。",
+      "realResult": "它能做 PDF 文本提取、短语统计、段落长度、标题和段落模板，输出 Markdown；7 月底的新版换成范例包加 AI 情绪词黑名单，我拿同一道题让新旧两版各写了一遍做过对比。",
+      "limitations": "写作这块还是很依赖固定模板，我不敢说它已经学会我的语气。2026-07-16 那次改稿还暴露出一个问题：AI 会把风格理解成口头禅加括号的集合，这类偏差只能靠持续喂真实改稿慢慢纠。",
+      "evidenceStatus": "收录的是新旧两版的对比段落；我没有拿已经发出去的文章冒充它的输出。",
       "visual": {
         "kind": "process",
         "motif": "writing",
-        "caption": "真实材料、规则与输出仍需要分开核对"
+        "caption": "材料、规则和输出还是得分开对，别混着看"
       }
     },
     "weixin-outline": {
       "showcase": true,
-      "maturity": "轻量 Skill + 产品化尝试",
+      "maturity": "一个轻量 Skill，后来试着做成了产品",
       "ownership": "Loki 制作",
-      "origin": "我不想一有主题就硬写正文，先把它展开成真正不同的可能。2026 年 2 月它是一个纯文本 Skill，5 月长成内容工作站里的选题池和切口分析器，同月底的审计又把膨胀出来的问题一条条记了下来。",
-      "trigger": "只有主题、素材或一团想法，还不知道真正要写哪一篇时。",
-      "judgment": "不能为了点击率堆夸张词，也不能让十个选题只是同一句话换词；功能多到溢出时，优先级是把选题→切口→标题→骨架这条主链路真的串起来，不是再加模块。",
-      "realResult": "10 个选题（每个 18—28 字）、三段式或五段式口语化大纲；产品化后有一次 6 个方向的切口分析和四级标题输出（主标题、副标题、封面大字、朋友圈导语）。",
-      "limitations": "规则清楚，但还没有长成独立工具；工作站版本按 2026-05-05 的审计仍有状态不流转、三套素材体系重复等断点，本轮未重新验证修复状态。",
-      "evidenceStatus": "公开样例按“主题 → 十个选题 → 选中一题 → 大纲”呈现；设计文档与审计报告已保存，素材重组建议属于写了没做的功能，不宣称已实现。",
+      "origin": "我不想一有主题就硬写正文，先把它摊开成几个真不一样的方向。2026 年 2 月它是纯文本 Skill，5 月长成了内容工作站里的选题池和切口分析器，月底那次审计又把它膨胀出来的问题一条条记了下来。",
+      "trigger": "手里只有主题或者素材，还不知道到底要写哪一篇的时候用。",
+      "judgment": "不能为了点击率堆夸张词，十个选题也不能只是同一句话换词。功能多到溢出的时候，优先级是把选题、切口、标题、骨架这条主线真的串起来，加模块排在后面。",
+      "realResult": "一次出 10 个选题（每个 18—28 字），加三段式或五段式口语化大纲；产品化之后做过一次 6 个方向的切口分析，输出四级标题（主标题、副标题、封面大字、朋友圈导语）。",
+      "limitations": "规则是清楚的，但还没长成独立工具。工作站那版按 2026-05-05 的审计还留着状态不流转、三套素材体系重复这些断点，这次我没有重新验过修没修。",
+      "evidenceStatus": "公开样例是按主题、十个选题、选中一题、大纲这条线放的；设计文档和审计报告都存着。素材重组只是写进建议、没做出来的功能，我不说它已经实现。",
       "visual": {
         "kind": "process",
         "motif": "writing",
-        "caption": "先展开选择，再落到真正能写的结构"
+        "caption": "先把选择摊开，再落到真能写的结构上"
       }
     },
     "deep-night": {
       "showcase": true,
-      "maturity": "Beta / 长期使用",
+      "maturity": "还是 Beta，我自己一直在用",
       "ownership": "Loki 制作",
-      "origin": "我不想每写完一篇情感文章，就再从 Obsidian 搬到公众号重新排一遍。2026 年 2 月 24 日用 HTML 内联颜色标签做出双平台方案，后来 V2 又把版式里的英文残留字样全部清掉。",
-      "trigger": "从一个深夜情绪选题写成完整文章，并准备进入公众号时。",
-      "judgment": "颜色标签不等于情绪；所谓去 AI 味也不能只剩短段落与金句。V2 版式最重要的改动不是加样式，是让页面上不再出现“quote”“highlight”这类说明字样，只留内容。",
+      "origin": "每写完一篇情感文章，我都得从 Obsidian 搬到公众号再排一遍，这件事我烦。2026 年 2 月 24 日用 HTML 内联颜色标签做出了双平台方案，后来 V2 又把版式里残留的英文字样清干净了。",
+      "trigger": "深夜情绪类的选题写成完整一篇、准备发公众号的时候用。",
+      "judgment": "颜色标签不等于情绪，去 AI 味也不能只剩短段落和几句金句。V2 版式最重要的改动是让页面上不再出现 quote、highlight 这类说明字样，只留内容，加样式反而排在后面。",
       "realResult": "1200—1500 字文章、四色标签体系（橙重点、紫金句、深蓝小标题、灰图片位）、全角标点硬规则、五个栏目标签、图片位置标记、配图提示词和双平台格式。",
-      "limitations": "仍是 Beta；配图生成、广告位置和发布没有完全自动化。Callout 版式是 Obsidian 侧的 V2 方案，公众号侧的粘贴兼容性本轮未重新核验。",
-      "evidenceStatus": "正文和笔记默认不公开；经同意后才展示脱敏的双平台对照。",
+      "limitations": "还是 Beta。配图生成、广告位和发布都没完全自动化。Callout 版式是 Obsidian 那侧的 V2 方案，粘到公众号里兼不兼容，这次我没有重新验。",
+      "evidenceStatus": "正文和笔记默认不公开，要我先同意，才放脱敏后的双平台对照。",
       "visual": {
         "kind": "process",
         "motif": "writing",
-        "caption": "双平台格式是真实能力，正文仍保留私密边界"
+        "caption": "双平台格式是真的，正文还是私人的"
       }
     },
     "loki-social": {
       "showcase": true,
-      "maturity": "完整生产方法",
+      "maturity": "已经成型的一套方法",
       "ownership": "Loki 改造",
-      "origin": "不是把长文章塞进漂亮框里，而是先决定每张图让人一眼看懂什么。",
-      "trigger": "公众号封面对、小红书图文、产品解释卡和知识卡。",
-      "judgment": "证据图必须可看，中文信息层级先于配色和装饰。",
-      "realResult": "21:9、1:1、3:4 输出，12 类布局、HTML 模板、渲染与 QA。",
-      "limitations": "早期受归藏与张咋啦两位的社交卡片 Skill 影响，后来按 Loki Design System 整体重写，版式 X01—X07 为自有命名；不把它写成凭空原创。",
-      "evidenceStatus": "展示真实 21:9、1:1 与小红书输出。",
+      "origin": "把长文章塞进漂亮框里这件事我不干。先定的是每张图要让人一眼看懂什么，好看不好看排在后面。",
+      "trigger": "做公众号封面对、小红书图文、产品解释卡和知识卡的时候用。",
+      "judgment": "证据图得能看清，中文的层级排在配色和装饰前面。",
+      "realResult": "能出 21:9、1:1、3:4 三种尺寸，12 类布局，带 HTML 模板、渲染和质检。",
+      "limitations": "早期受归藏和张咋啦两位的社交卡片 Skill 影响，后来按 Loki Design System 整体重写过一遍，X01—X07 这套版式命名是我自己的。这不是凭空原创的东西，我不那样写。",
+      "evidenceStatus": "放出来的是真的 21:9、1:1 和小红书输出。",
       "visual": {
         "image": "assets/skills-social-card-pair.png",
         "imageAlt": "同一主题的 Loki 社交卡片 21:9 与 1:1 真实成品",
-        "caption": "同一内容 / 两种平台比例 / 真实输出",
+        "caption": "同一篇内容，两个平台比例，真实输出",
         "imageWidth": 2400,
         "imageHeight": 1260,
         "imageFit": "contain"
@@ -795,18 +837,18 @@ window.bookData = {
     },
     "visual-directions": {
       "showcase": true,
-      "maturity": "完整生产方法",
+      "maturity": "已经成型的一套方法",
       "ownership": "Loki 制作",
-      "origin": "同一份内容换颜色不算新风格；我想让不同方向真的改变阅读与使用方式。",
-      "trigger": "网站、卡片、海报或演示需要多个真正不同的视觉方向时。",
-      "judgment": "不能复制参考图的标志性资产，也不能拿同一模板换色凑数量。",
-      "realResult": "设计语言八轴分析、3—9 个方向（至少改四个结构维度）、跨媒介适配、选择板和桌面 / 移动端验收。",
-      "limitations": "新方向必须改动六个结构维度中至少四个，只换颜色不算；每次选择仍需要人工判断，不能用“方向数量”冒充有效设计。目前还没有一组成组交付的多方向成品档案。",
-      "evidenceStatus": "方法成型于 2026-08-01 的本机 Codex 会话，未发现第三方上游；此处收录一张 Loki Hub 视觉设计稿，不是多方向真机对照。",
+      "origin": "同一份内容换个颜色，那不算新方向。我想让不同方向真的改掉阅读和使用的方式。",
+      "trigger": "网站、卡片、海报或演示需要几个真的不一样的方向时用。",
+      "judgment": "参考图里标志性的东西不能抄，也不能拿同一个模板换色凑出几个方向。",
+      "realResult": "八个轴拆设计语言，一次出 3—9 个方向（结构维度至少改掉四个），再做跨媒介适配、选择板，以及桌面和移动端的验收。",
+      "limitations": "六个结构维度里至少要改掉四个，只换颜色不算。每次选方向还是得人工判断，方向多不等于有效。我目前还没有一组成套交付的多方向成品档案。",
+      "evidenceStatus": "这套方法是 2026-08-01 在我本机的 Codex 会话里成型的，没找到第三方的上游。这里放的是一张 Loki Hub 视觉设计稿，不是多方向真机对照。",
       "visual": {
         "image": "assets/exhibition-hub-ui-collage.webp",
         "imageAlt": "Loki Hub 城市编辑台视觉设计稿",
-        "caption": "视觉设计稿 / 城市编辑台方向，非真机运行截图",
+        "caption": "城市编辑台方向的设计稿，不是真机运行截图",
         "imageWidth": 1440,
         "imageHeight": 1100,
         "imageFit": "contain"
@@ -816,32 +858,32 @@ window.bookData = {
       "showcase": true,
       "maturity": "长期使用",
       "ownership": "Loki 制作",
-      "origin": "我不想再得到一份“这本书讲了什么”的漂亮总结。2026 年 4 月把它写成 Skill 时，第一条规则就是优先处理带批注的划线。",
-      "trigger": "Apple Books 或 Obsidian 已积累大量划线，想整理成以后会再次调用的笔记时。",
-      "judgment": "不能用流畅总结覆盖原始批注；材料少时必须承认范围，区分证据和推断；重新整理时绝不允许覆盖 MANUAL SECTION 里已经写下的手写内容。",
-      "realResult": "Apple Books 划线结构化提取脚本、3—5 个主题聚类、旧看法修正、行动项、复习点、未想透的问题，以及《书名 - 整理》伴侣笔记约定。",
-      "limitations": "实际笔记默认属于私人材料，不以公开页面换取展示。",
-      "evidenceStatus": "没有公开授权时只展示规则与脱敏示意，不展示私人书摘和批注。",
+      "origin": "我不想再拿到一份这本书讲了什么的漂亮总结。2026 年 4 月把它写成 Skill 的时候，第一条规则就是先处理带批注的划线。",
+      "trigger": "Apple Books 或 Obsidian 里攒了一堆划线，想整理成以后还会回来翻的笔记时用。",
+      "judgment": "流畅的总结不能盖掉原始批注；材料少就得承认范围，证据和推断分开写；重新整理的时候，MANUAL SECTION 里我自己写下的字不许覆盖。",
+      "realResult": "一个把 Apple Books 划线抽成条目的小脚本，3—5 个主题聚类，然后是我原来的看法哪里要改、要做什么、要复习什么、还有什么没想透，再加一份《书名 - 整理》的伴侣笔记。",
+      "limitations": "笔记默认是私人材料，我不拿它换页面上的展示。",
+      "evidenceStatus": "没有公开授权的时候只放规则和脱敏示意图，私人书摘和批注不展示。",
       "visual": {
         "kind": "process",
         "motif": "research",
-        "caption": "先留下划线、反对和疑问，再整理为可复习笔记"
+        "caption": "先留下我的划线、反对和疑问，再整理成会复习的笔记"
       }
     },
     "judgment": {
       "showcase": true,
-      "maturity": "完整生产方法",
+      "maturity": "已经成型的一套方法",
       "ownership": "Loki 制作",
-      "origin": "我想保存的不是某个人常说什么，而是他在具体任务里会怎么选。2026 年 8 月 2 日把这套方法写成带脚本、证据账本和评测协议的正式 Skill。",
-      "trigger": "从会议、修改记录、初稿终稿和操作日志里提炼个人或团队判断时。",
-      "judgment": "一次修改不能变成人格规律；语言像不等于判断像；推断要继续标成推断。分析单位是人×任务×目标×受众×角色×阶段×环境，看似冲突的规则先查情境再判对错。",
-      "realResult": "来源清单、四色证据账本（STATED/OBSERVED/INFERRED/UNKNOWN）、判断模型、情境路由、修改差异对比脚本，以及五种留出盲测（决策一致性、修改预测、情境切换、反表面模仿、未知处理）。",
-      "limitations": "公开人物材料只能证明公开样本；对私人材料必须另行授权；无法独立盲测时只能做人工审计，验证强度要明说。",
-      "evidenceStatus": "刘恋公开节目时间帧证据表已就绪；判断账本只展示脱敏摘要。",
+      "origin": "一个人常说的那几句话我不想留，我想留的是他在具体任务里会怎么选。2026 年 8 月 2 日把它写成正式 Skill，带脚本、证据账本和评测协议。",
+      "trigger": "手里有会议记录、修改痕迹、初稿终稿和操作日志，想从里面提炼出个人或团队的判断时用。",
+      "judgment": "一次修改不能当成性格规律；话说得像不代表判断像；推断就得一直标着是推断。拆的时候按人、任务、目标、受众、角色、阶段、环境一起看，两条看着打架的规则，先查情境再判对错。",
+      "realResult": "一份来源清单、一本四色证据账本（STATED / OBSERVED / INFERRED / UNKNOWN）、判断模型、情境路由、改稿差异对比脚本，还有五种留出来盲测的题：决策一致性、修改预测、情境切换、反表面模仿、未知处理。",
+      "limitations": "公开人物的材料只能证明公开样本那部分；私人材料要另外授权；做不了独立盲测的时候就只能人工审计，这一点我得明说。",
+      "evidenceStatus": "刘恋那套公开节目的时间帧证据表已经做出来了；判断账本只放脱敏摘要。",
       "visual": {
         "image": "assets/perspective-liulian-evidence-sheet-01.png",
         "imageAlt": "刘恋公开节目材料的时间帧采样证据表",
-        "caption": "公开材料先回到具体时间帧，再讨论判断",
+        "caption": "先回到具体的时间帧，再谈判断",
         "imageWidth": 1940,
         "imageHeight": 1186,
         "imageFit": "contain"
@@ -849,18 +891,18 @@ window.bookData = {
     },
     "codex-theme": {
       "showcase": true,
-      "maturity": "Codex 主题为本地工程 · 主题套组已开源（loki-theme-kit v1.1.0）",
+      "maturity": "Codex 那套是我本机的工程，成套主题已经开源（loki-theme-kit v1.1.0）",
       "ownership": "Loki 制作",
-      "origin": "我想改的不是颜色，而是让背景、人物、卡片、菜单、输入区、弹窗和宠物层真正成为同一套界面。",
-      "trigger": "为现有产品建立或整理可切换的主题系统时。",
-      "judgment": "强视觉不能遮挡真实操作；静态人物和动画宠物必须分层；更新后不能在旧补丁上继续叠加，改版一律从原始 ASAR 备份重放。",
-      "realResult": "Codex 桌面端主题工程（注入脚本与三个构建的 ASAR 备份）、事件驱动的更新恢复，以及开源的 loki-theme-kit v1.1.0（35 套成套主题，质检 35/35 通过）。",
-      "limitations": "Codex 真机截图含账号界面未收录；已收录的是同一套方法在 Cola 宿主的真机截图与逐像素差异图（整屏差 0.81%，侧栏差 4.63%）。",
-      "evidenceStatus": "宿主截图与差异图来自 loki-theme-kit 公开仓库预览目录，会话列表已做遮挡处理。",
+      "origin": "光换颜色我不满足，我想让背景、人物、卡片、菜单、输入区、弹窗、宠物层是同一套界面。",
+      "trigger": "给现有的产品做一套能切换的主题，或者整理手里已有的主题时用。",
+      "judgment": "再好看的视觉也不能挡住操作；静态人物和会动的宠物得分成两层；产品更新之后不能直接在旧补丁上叠，改版一律从原始 ASAR 备份重放一遍。",
+      "realResult": "Codex 桌面端的主题工程，带注入脚本和三个构建的 ASAR 备份；更新之后靠事件触发恢复；开源的 loki-theme-kit v1.1.0 里有 35 套成套主题，质检 35 套全过。",
+      "limitations": "Codex 真机截图里有账号界面，我没放上来。放的是同一套方法在 Cola 上的真机截图和逐像素对比图（整屏差 0.81%，侧栏差 4.63%）。",
+      "evidenceStatus": "宿主截图和差异图来自 loki-theme-kit 公开仓库的预览目录，会话列表做过遮挡。",
       "visual": {
         "kind": "process",
         "motif": "building",
-        "caption": "真实宿主截图与逐像素差异图已入库；不再以人物剪影代替主题界面"
+        "caption": "放上来的宿主截图和逐像素差异图都是真的；这里不再拿人物剪影顶替界面"
       }
     }
   },
@@ -869,20 +911,20 @@ window.bookData = {
       "href": "https://github.com/loki2046-mao/cola-skills/tree/main/loki-wechat-pipeline/references/writing",
       "kind": "related",
       "label": "查看公开写作方法",
-      "note": "找到公开公众号写作层；并非旧写作助手原型的独立源码。",
+      "note": "这里能看到公开的公众号写作层；旧写作助手那个原型没有单独开源。",
       "checkedAt": "2026-09-08"
     },
     "weixin-outline": {
       "href": "https://github.com/loki2046-mao/content-station",
       "label": "查看相关公开项目",
       "kind": "related",
-      "note": "选题与大纲 Skill 尚未单独公开；这里展示公开的内容工作站。"
+      "note": "选题与大纲 Skill 还没单独公开，这里给的是公开的内容工作站。"
     },
     "deep-night": {
       "href": "https://github.com/loki2046-mao/cola-skills/tree/main/loki-wechat-pipeline",
       "label": "查看相关公开工作流",
       "kind": "related",
-      "note": "深夜正文保留私密边界；这里展示公开的公众号写作与发布工作流。"
+      "note": "深夜写的正文不公开，这里给的是公开的公众号写作与发布工作流。"
     },
     "loki-social": {
       "href": "https://github.com/loki2046-mao/cola-skills/tree/main/loki-social",
@@ -894,25 +936,25 @@ window.bookData = {
       "href": "https://github.com/loki2046-mao/cola-skills/tree/main/loki-design-system",
       "label": "查看相关视觉系统",
       "kind": "related",
-      "note": "多方向方法尚未单独公开；这里展示公开的 Loki Design System。"
+      "note": "多方向那套方法还没单独公开，这里给的是公开的 Loki Design System。"
     },
     "notes": {
       "href": "https://github.com/loki2046-mao",
       "label": "打开 Loki 的 GitHub",
       "kind": "profile",
-      "note": "阅读笔记涉及私人材料，当前没有独立公开仓库。"
+      "note": "阅读笔记里有私人材料，暂时没有单独的公开仓库。"
     },
     "judgment": {
       "href": "https://github.com/loki2046-mao",
       "label": "打开 Loki 的 GitHub",
       "kind": "profile",
-      "note": "判断蒸馏方法当前只公开展示脱敏证据，尚未单独发布源码。"
+      "note": "判断蒸馏这套方法目前只公开脱敏后的证据，源码还没单独发。"
     },
     "codex-theme": {
       "href": "https://github.com/loki2046-mao",
       "label": "打开 Loki 的 GitHub",
       "kind": "profile",
-      "note": "Skill 正在本地整理，尚未发布 GitHub。这里是个人主页，不是源码入口。"
+      "note": "这个 Skill 还在本地整理，没发 GitHub。这里是个人主页，不是源码入口。"
     },
     "weixin-layout": {
       "href": "https://github.com/loki2046-mao/wechat-layout-editor",
@@ -925,7 +967,7 @@ window.bookData = {
       "href": "https://github.com/loki2046-mao/cola-skills/blob/main/loki-wechat-pipeline/references/cover/cover-design-rules.md",
       "kind": "source",
       "label": "查看标题与封面规则",
-      "note": "标题规则位于公众号全链路的封面模块，非独立仓库。",
+      "note": "标题规则不是单独的仓库，它就挂在公众号那条流水线的封面环节里。",
       "checkedAt": "2026-09-08"
     },
     "feishu-weixin": {
@@ -953,7 +995,7 @@ window.bookData = {
       "href": "https://github.com/loki2046-mao/cola-skills/tree/main/nb-image-prompt",
       "kind": "related",
       "label": "查看图像提示词方法",
-      "note": "找到多模型图像提示词管理方法；生图套件的完整一对一名称映射仍待确认。",
+      "note": "这里能看到多模型图像提示词的管理方法；生图套件完整的一对一名称映射我还没确认完。",
       "checkedAt": "2026-09-08"
     },
     "slides": {
@@ -970,26 +1012,25 @@ window.bookData = {
       "note": "独立公开仓库含拆解与陪练两种模式。",
       "checkedAt": "2026-09-08"
     },
-
     "ebook-workflow": {
       "href": "https://github.com/loki2046-mao/loki-ebook-converter",
       "kind": "related",
       "label": "查看电子书工具源码",
-      "note": "对应公开产品源码，工作流沉淀于产品，并非独立 Skill 包。",
+      "note": "这里对应的是公开的产品源码，工作流就长在产品里，没有单独的 Skill 包。",
       "checkedAt": "2026-09-08"
     },
     "cyber-red-panda": {
       "href": "https://github.com/loki2046-mao/cola-skills/tree/main/loki-design-system",
       "kind": "related",
       "label": "查看公开品牌与 IP 系统",
-      "note": "公开品牌、IP 及场景规则；不把整个人格条目称为单个可安装 Skill。",
+      "note": "公开的是品牌、IP 和场景规则。整个人格这条，我不把它算成一个能安装的 Skill。",
       "checkedAt": "2026-09-08"
     },
     "lian-curation": {
       "href": "https://github.com/loki2046-mao/lian-shang-shang-qian",
       "kind": "related",
       "label": "查看上上签项目源码",
-      "note": "对应歌词答案书公开产品仓库；抽签交互核验状态保持待复核。",
+      "note": "这里对应歌词答案书的公开产品仓库；抽签的交互我还没验完，状态就留着。",
       "checkedAt": "2026-09-08"
     },
     "collage-poem": {
@@ -999,18 +1040,17 @@ window.bookData = {
       "note": "公开目录包含 SKILL.md、视觉样式库与交互模板。",
       "checkedAt": "2026-09-08"
     },
-
     "book": {
       "href": "https://github.com/loki2046-mao",
       "kind": "profile",
       "label": "打开 Loki 的 GitHub",
-      "note": "洞见型拆书 v2 已在 Cola 本地找到；尚未确认公开源码地址。"
+      "note": "洞见型拆书 v2 在我本机找到了，公开的源码地址还没确认。"
     },
     "skill-builder": {
       "href": "https://github.com/loki2046-mao",
       "kind": "profile",
       "label": "打开 Loki 的 GitHub",
-      "note": "本体为自建的工作判断蒸馏 Skill（distill-working-judgment）；本机另一个同名 skill-builder 目录是第三方工具，与本条目无关。"
+      "note": "本机还有一个同名的 skill-builder 目录，那个是第三方工具，跟这条没关系。"
     }
   },
   "flows": {
@@ -1133,15 +1173,15 @@ window.bookData = {
   "skillImages": {
     "long-writing-memory": {
       "image": "assets/inkpanda-editor.png",
-      "caption": "相关产品 / InkPanda 真实编辑器"
+      "caption": "InkPanda 的编辑器，真机截图"
     },
     "ebook-workflow": {
       "image": "assets/ebook-app-home.png",
-      "caption": "相关产品 / 电子书转换器"
+      "caption": "电子书转换器，真机截图"
     },
     "lian-curation": {
       "image": "assets/lian-draw-result.jpg",
-      "caption": "历史成品 / 恋之上上签"
+      "caption": "恋之上上签，当时抽出来的结果"
     },
     "cyber-red-panda": {
       "image": "assets/lettering/loki.jpg",
@@ -1149,65 +1189,63 @@ window.bookData = {
     },
     "weixin-layout": {
       "image": "assets/skills/weixin-layout.png",
-      "caption": "真实成品 / 公众号文章排版预览"
+      "caption": "排完版的样子，图上是我自己发过的一篇"
     },
     "feishu-weixin": {
       "image": "assets/skills/feishu-weixin.png",
-      "caption": "真实成品 / 飞书文档转公众号排版"
+      "caption": "飞书文档搬进公众号之后的样子"
     },
     "cover-system": {
       "image": "assets/skills/cover-system.jpg",
-      "caption": "真实成品 / 公众号推文封面"
+      "caption": "我发过的一篇推文的封面"
     },
     "loki-writing": {
       "image": "assets/process/loki-writing-compare.png",
-      "caption": "真实材料 / 新旧写作 Skill 测试段落对比记录"
+      "caption": "新旧两版各写同一道题，这是当时的对比记录"
     },
     "weixin-outline": {
       "image": "assets/skills/weixin-outline.png",
-      "caption": "真实产品 / 内容工作站 选题池"
+      "caption": "内容工作站里的选题池"
     },
     "headline": {
       "image": "assets/skills/headline.png",
-      "caption": "真实产品 / 内容工作站 标题生成·历史标题方案"
+      "caption": "内容工作站里的标题生成，翻出来的历史方案"
     },
-
     "book": {
       "image": "assets/skills/book.png",
-      "caption": "真实文稿 / 每日拆书 Day 23"
+      "caption": "每日拆书第 23 天那一篇"
     },
     "notes": {
       "image": "assets/skills/notes.png",
-      "caption": "真实文稿 / 阅读笔记整理"
+      "caption": "整理完的一篇阅读笔记"
     },
     "collage-poem": {
       "image": "assets/skills/collage-poem.png",
-      "caption": "真实成品 / 每日拼贴诗 2026-07-12"
+      "caption": "2026-07-12 那天的拼贴诗"
     },
-
     "film-poster": {
       "image": "assets/skills/film-poster.jpg",
-      "caption": "真实成品 / 假期结束 V1 保存图"
+      "caption": "假期结束 V1，当时保存下来的那一张"
     },
     "image-kit": {
       "image": "assets/skills/image-kit.jpg",
-      "caption": "真实成品 / 本机生成并保存的插画"
+      "caption": "在本机生成、直接保存下来的插画"
     },
     "slides": {
       "image": "assets/skills/slides.jpg",
-      "caption": "真实成品 / 前端幻灯片《奥德赛时期》"
+      "caption": "《奥德赛时期》那一份幻灯片"
     },
     "codex-theme": {
       "image": "assets/skills/codex-theme.png",
-      "caption": "真实成品 / Cola 外观套组截图"
+      "caption": "Cola 外观套组，真机截图"
     },
     "skill-builder": {
       "image": "assets/skills/skill-builder-real-doc.png",
-      "caption": "真实文稿 / 工作判断蒸馏器 SKILL.md（节选渲染）"
+      "caption": "工作判断蒸馏器的 SKILL.md，节选"
     },
     "deep-night": {
       "image": "assets/skills/deep-night.jpg",
-      "caption": "真实成品 / 深夜清醒系列手绘插图"
+      "caption": "深夜清醒系列用过的插图"
     }
   }
 };

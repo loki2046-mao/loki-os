@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="栖迟人生系统：cron 驱动的日/周自动复盘，四维模式识别与归因对策，写入 Obsidian——本站站名的同名本体。">
+  <meta name="description" content="栖迟人生系统：cron 驱动的日/周自动复盘，四维模式识别与归因对策，写入 Obsidian。本站站名就来自这个系统。">
   <title>栖迟人生系统｜cron 驱动的自动复盘与模式识别｜Loki</title>
   <link rel="canonical" href="https://loki-os.hiloki.ai/projects/qichi-life-os.html">
   <meta property="og:type" content="article"><meta property="og:title" content="栖迟人生系统｜cron 驱动的自动复盘与模式识别"><meta property="og:description" content="每天凌晨自动复盘，从日记与任务记录里识别情绪、行为、思维、人格四层模式，写入 Obsidian。"><meta property="og:image" content="https://loki-os.hiloki.ai/projects/assets/real/qichi-life-os/cron-config.png"><meta property="og:url" content="https://loki-os.hiloki.ai/projects/qichi-life-os.html">
@@ -193,9 +193,9 @@
 
     <!-- ACT I · 开演：起因 -->
     <div class="qa-act qa-act--i"><div class="qa-wrap">
-    <header class="dossier-heading"><div class="qa-ticketbar" aria-hidden="true"><span>QICHI LIFE OS</span><span>CRON × OBSIDIAN</span><span>SINCE 2026-07</span><span>更新于 2026-09-14</span></div><span class="qa-vertical" aria-hidden="true">栖迟 · 隐居停驻</span><div class="qa-hero-grid"><div class="qa-hero-copy"><small>公开案例 / 个人系统 / 更新于 2026-09-14</small><h2>这个站叫 Loki OS，<br>站名里的「栖迟」来自<em>一个真的在跑的系统。</em></h2><p><strong>如果只用一句话说：</strong>我不想靠意志力坚持复盘，就让 cron 每天凌晨替我坐下来——从日记和任务记录里找出反复出现的模式，归因，给对策，写进 Obsidian。复盘正文是我的私人记录，公开的只有结构和机制。</p></div><figure class="qa-hero-shot"><span class="qa-lights" aria-hidden="true"><i></i><i></i><i></i><b>LIVE · qichi-cron</b></span><span class="qa-stamp" aria-hidden="true">CASE<br>LIFE OS<br>RUNNING</span><img src="./assets/real/qichi-life-os/cron-config-hero.png" alt="栖迟人生系统本机 cron 任务配置特写：每日与每周两个自动复盘任务"><figcaption><span>REAL CRON CONFIG / 特写</span><span>EVIDENCE 00 · HERO</span></figcaption></figure></div></header>
+    <header class="dossier-heading"><div class="qa-ticketbar" aria-hidden="true"><span>QICHI LIFE OS</span><span>CRON × OBSIDIAN</span><span>SINCE 2026-07</span><span>更新于 2026-09-14</span></div><span class="qa-vertical" aria-hidden="true">栖迟 · 隐居停驻</span><div class="qa-hero-grid"><div class="qa-hero-copy"><small>公开案例 / 个人系统 / 更新于 2026-09-14</small><h2>我不太想被一个只会哄我的 AI 安慰，<br>就自己写了个<em>每天凌晨替我复盘的系统。</em></h2><p>有段时间我跟 AI 聊得比跟朋友还多，但它一直顺着我说，我第二天该焦虑还是焦虑。后来就把情绪、行为、思维、人格分开，让它每天回头看日记和任务记录，把反复出现的问题、可能的原因和办法写进 Obsidian。【栖迟】这个名字取自诗经，跟栖息、停留有关。复盘正文是我自己的，网站只放结构。</p></div><figure class="qa-hero-shot"><span class="qa-lights" aria-hidden="true"><i></i><i></i><i></i><b>LIVE · qichi-cron</b></span><span class="qa-stamp" aria-hidden="true">CASE<br>LIFE OS<br>RUNNING</span><img src="./assets/real/qichi-life-os/cron-config-hero.png" alt="栖迟人生系统本机 cron 任务配置特写：每日与每周两个自动复盘任务"><figcaption><span>REAL CRON CONFIG / 特写</span><span>EVIDENCE 00 · HERO</span></figcaption></figure></div></header>
 
-    <div class="judgment-turn"><article><small>I FIRST THOUGHT / 最初判断</small><h3>复盘就是找个时间坐下来，想想最近发生了什么。</h3></article><i>→</i><article><small>I LATER FOUND / 关键转向</small><h3>真坐下来的时候，情绪已经过去了。得让系统在事件发生的当天夜里就把信号捡走。</h3></article></div>
+    <div class="judgment-turn"><article><small>I FIRST THOUGHT / 最初判断</small><h3>我以为找个 AI 聊聊就能好受点。</h3></article><i>→</i><article><small>I LATER FOUND / 关键转向</small><h3>它只是在哄我，第二天该焦虑还是焦虑。得让系统在事情发生的当天夜里就把信号捡走。</h3></article></div>
     </div></div>
 
     <!-- 幕间色带 1 -->
@@ -208,10 +208,10 @@
 
     <div class="qa-eyebrow" aria-hidden="true">CHAPTER 01 / NIGHT ROUTINE</div>
     <section class="cue-timeline" aria-label="研发过程时间线"><header><span>CALL SHEET / FROM TEMPLATE TO CRON</span><span>时间与证据分开记录</span></header>
-      <article class="cue-line"><small>01 / 2026-07-05</small><div><h3>先把方法写成 Skill，而不是写成对话模板</h3><p>qichi-life-os 的 SKILL.md 定下三条硬规则：数据来源按优先级排（日记、任务记录、书签、用户画像）；输出统一落进 Obsidian 的栖迟系统目录；分析走情绪、行为、思维、人格底层四个维度，每次运行都做模式识别和归因对策，不是自由发挥的聊天。</p></div><span>证据：SKILL.md 本体，2026-07-05 起持续使用</span></article>
-      <article class="cue-line"><small>02 / 2026-07-30</small><div><h3>接上 cron，让它不再需要我记得</h3><p>qichi-daily-retro 每天凌晨 2:00 自动跑日复盘，读取前一天的日记和会话摘要，写入对应年/月/周目录，文件开头标注【草稿·待确认】，不主动打扰；qichi-weekly-retro 每周日 21:00 汇总本周七天，做四维模式分析，摘要通过 announce 发回来等我确认。到 2026-09-14，本机运行记录里日复盘 50 次、周复盘 7 次。</p></div><span>证据：cron 任务配置与 57 条运行记录（本机实测）</span></article>
-      <article class="cue-line"><small>03 / 2026-08 起</small><div><h3>系统开始审计自己</h3><p>跑了几周之后，库里面长出了机制审计标准、结构风险日志和标签索引这类自我审查文件。周复盘的「待确认」里会自己提出管道问题，比如日记目录持续缺位，是要修管道还是认可「会话即源」。一个复盘系统有了自己的问题清单，这件事我没提前设计。</p></div><span>证据：Obsidian 库内的机制审计标准、结构风险日志</span></article>
-      <article class="cue-line"><small>04 / 2026-09</small><div><h3>积累到 173 篇，才知道模式识别在识别什么</h3><p>按年/月/周归档的日复盘和周复盘，加上每日寓言、模式库、案例库和标签索引，共 173 篇 Markdown。单看一天的复盘只是记录；连着看一个季度，反复出现的触发点和归因方式才会浮出来——这正是当初把它做成 cron 而不是模板的原因。</p></div><span>证据：目录树实测 173 篇（结构公开，正文不公开）</span></article>
+      <article class="cue-line"><small>01 / 2026-07-05</small><div><h3>先把方法写成 Skill，没写成对话模板</h3><p>我给它定了几件事：先看哪些记录，写完存到哪里，按情绪、行为、思维、人格怎么往下看，都得说清楚。要是放开让它随便聊，很容易又变回一篇哄我开心的话。</p></div><span>证据：SKILL.md 本体，2026-07-05 起持续使用</span></article>
+      <article class="cue-line"><small>02 / 2026-07-30</small><div><h3>接上 cron，让它不再需要我记得</h3><p>qichi-daily-retro 每天凌晨 2:00 自己跑日复盘，读前一天的日记和会话摘要，写进对应年/月/周的目录，文件开头标上【草稿·待确认】，不主动打扰我；qichi-weekly-retro 每周日 21:00 把这一周七天汇成一个总，做四维模式分析，摘要通过 announce 发回来等我确认。到 2026-09-14，本机运行记录里日复盘跑了 50 次、周复盘 7 次。</p></div><span>证据：cron 任务配置与 57 条运行记录（本机实测）</span></article>
+      <article class="cue-line"><small>03 / 2026-08 起</small><div><h3>系统开始审计自己</h3><p>跑了几周之后，库里面自己长出了机制审计标准、结构风险日志和标签索引这类自我审查的文件。周复盘的【待确认】里，它会自己把管道问题提出来，比如日记目录一直缺位，到底是修管道，还是干脆认下【会话即源】。一个复盘系统有了自己的问题清单，这件事我没提前设计。</p></div><span>证据：Obsidian 库内的机制审计标准、结构风险日志</span></article>
+      <article class="cue-line"><small>04 / 2026-09</small><div><h3>积累到 173 篇，才知道模式识别在识别什么</h3><p>按年/月/周归档的日复盘和周复盘，加上每日寓言、模式库、案例库和标签索引，一共 173 篇 Markdown。单看一天的复盘，它只是当天的记录；连着看一个季度，反复冒出来的触发点和归因方式才看得见。当初我选 cron 不选模板，就是因为模板给不了我这一点。</p></div><span>证据：目录树实测 173 篇（结构公开，正文不公开）</span></article>
     </section>
     </div></div>
 
@@ -220,11 +220,11 @@
     <b class="qa-actnum" aria-hidden="true">02</b>
     <div class="qa-bignum" aria-hidden="true"><b>173</b><span>MD FILES IN THE VAULT<br>STRUCTURE PUBLIC / CONTENT PRIVATE</span></div>
     <div class="qa-eyebrow" aria-hidden="true">CHAPTER 02 / REAL ARTIFACTS</div>
-    <section class="evidence-wall"><header><div><span class="dossier-kicker">REAL ARTIFACTS / 每张图只说明一件事</span><h2>它真的每天在跑，<br>也真的写进了我的库。</h2></div><p>复盘正文属于私人记录，全部不公开。下面三张图分别来自真实的 cron 配置、真实的 Obsidian 目录结构和真实生成的库内文稿，都只展示结构和公开安全的内容。</p></header><div class="evidence-grid">
+    <section class="evidence-wall"><header><div><span class="dossier-kicker">REAL ARTIFACTS / 每张图只说明一件事</span><h2>它每天都在跑，<br>写进来的东西也真的落在我的库里。</h2></div><p>复盘正文我就不公开了。这里三张图分别给你看定时任务怎么设、Obsidian 里怎么存，还有文稿的结构，私人内容已经处理过。</p></header><div class="evidence-grid">
       <figure class="evidence-card is-wide"><img src="./assets/real/qichi-life-os/cron-config.png" alt="栖迟人生系统本机 cron 任务配置与运行记录的渲染图，显示每日与每周两个任务及运行次数"><figcaption><i class="qa-evno">EVIDENCE 01</i><b>cron 运行配置 · 真实配置渲染</b><span>每日 02:00 日复盘、周日 21:00 周复盘，两个任务都处于启用状态；运行记录数来自本机 runs 目录实测（50 + 7 次），标注了最近一次成功输出。</span><small>REAL CONFIG / RENDERED 2026-09-14</small></figcaption></figure>
       <figure class="evidence-card is-narrow"><img src="./assets/real/qichi-life-os/vault-tree.png" alt="Obsidian 栖迟系统目录树渲染图，展示年月周归档、模式库、案例库等结构"><figcaption><i class="qa-evno">EVIDENCE 02</i><b>Obsidian 输出结构 · 真实目录树</b><span>按年/月/周归档，旁边是模式库、案例库、标签索引和每日寓言；共 173 篇，正文不公开。</span><small>STRUCTURE ONLY / 173 MD FILES</small></figcaption></figure>
       <figure class="evidence-card"><img src="./assets/real/qichi-life-os/fable.png" alt="栖迟系统库内每日寓言文稿渲染：一篇讲语义饱和概念的小故事"><figcaption><i class="qa-evno">EVIDENCE 03</i><b>每日寓言 · 库内真实文稿</b><span>栖迟系统库里每天生成一篇用故事讲一个概念的小文，这篇讲语义饱和。内容本身公开安全，选它代表库内文稿的形态。</span><small>REAL VAULT DOC / 2026-09-09</small></figcaption></figure>
-      <aside class="qa-evnote" aria-hidden="true">STRUCTURE ONLY<br>——<br>STRUCTURE PUBLIC<br>CONTENT PRIVATE<br>VAULT / OBSIDIAN</aside>
+      <aside class="qa-evnote" aria-hidden="true">STRUCTURE ONLY<br>·<br>STRUCTURE PUBLIC<br>CONTENT PRIVATE<br>VAULT / OBSIDIAN</aside>
     </div></section>
     </div></div>
 
@@ -232,9 +232,9 @@
     <div class="qa-act qa-act--iv"><div class="qa-wrap">
     <b class="qa-actnum" aria-hidden="true">03</b>
     <div class="qa-eyebrow" aria-hidden="true">CHAPTER 03 / PROOF &amp; LIMITS</div>
-    <section class="status-board" aria-label="项目结果与边界"><article><small>ALREADY PROVED</small><h3>已经做到</h3><ul><li>日复盘、周复盘两条 cron 链路自动运行（50 + 7 次运行记录）</li><li>复盘统一写入 Obsidian，累计 173 篇并按年月周归档</li><li>四维模式识别与归因对策框架在 SKILL.md 落地</li><li>库内长出机制审计标准与结构风险日志，系统会审计自己</li></ul></article><article><small>WORKING, NOT FINISHED</small><h3>能用但仍需维护</h3><ul><li>复盘输出仍带【草稿·待确认】，需要人工确认后才算定稿</li><li>日记管道缺位时要靠会话记录补源，数据来源的优先级会漂移</li><li>模式库和案例库还很薄，价值依赖长期积累</li></ul></article><article><small>NOT CLAIMED</small><h3>没有证明</h3><ul><li>复盘正文是私人记录，不在站上展示，也无法被第三方核验内容</li><li>不宣称系统能预测行为或改变人格，它只做识别和归因</li><li>没有公开产品入口，「在跑」指本机 cron，不指对外服务</li></ul></article></section>
+    <section class="status-board" aria-label="项目结果与边界"><article><small>ALREADY PROVED</small><h3>已经做到</h3><ul><li>日复盘、周复盘两条 cron 链路自己在跑（50 + 7 次运行记录）</li><li>复盘统一写进 Obsidian，累计 173 篇，按年月周归档</li><li>情绪、行为、思维、人格四层怎么认、怎么归因，都写在 SKILL.md 里</li><li>库里自己长出了机制审计标准和结构风险日志，它会审自己</li></ul></article><article><small>WORKING, NOT FINISHED</small><h3>能用但仍需维护</h3><ul><li>复盘输出还带着【草稿·待确认】，得我确认过才算数</li><li>日记管道缺位的时候要用会话记录来补，数据来源的优先级会跟着漂</li><li>模式库和案例库还很薄，得靠时间慢慢攒，急不来</li></ul></article><article><small>NOT CLAIMED</small><h3>没有证明</h3><ul><li>复盘正文是我的私人记录，不放在站上，别人也没法核里面的内容</li><li>我不说它能预测行为、能改人格，它只做识别和归因</li><li>没有公开的产品入口，【在跑】说的是本机 cron，不是对外服务</li></ul></article></section>
 
-    <footer class="dossier-footer"><h2>复盘最难的不是想清楚，是每天还记得做。这件事我交给了 cron。</h2><div class="dossier-links"><a href="../works.html">返回作品索引 →</a><a href="./edu-content-line.html">下一案：教育内容生产线</a><a href="../about.html">认识 Loki</a></div></footer>
+    <footer class="dossier-footer"><h2>复盘最难的是每天都还记得做，想清楚倒在其次；这件事我交给了 cron。</h2><div class="dossier-links"><a href="../works.html">返回作品索引 →</a><a href="./edu-content-line.html">下一案：教育内容生产线</a><a href="../about.html">认识 Loki</a></div></footer>
     </div></div>
   </section>
 </main>

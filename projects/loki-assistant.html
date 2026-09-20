@@ -2,12 +2,12 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Loki Assistant：一个真正属于自己的 AI 助手——记忆库、Obsidian 本地笔记索引、工具调用循环与多模型可插拔。私有产品，公开页只展示脱敏界面。">
-  <title>Loki Assistant｜属于自己的 AI 助手（私有产品）｜Loki</title>
+  <meta name="description" content="雾尼 Munin（项目里一直叫它 Loki Assistant）：东西散在飞书、WPS、各种地方太乱，AI 又一直是黑箱，所以我给自己写了一个助手。2237 篇 Obsidian 笔记在本地直接搜，记忆怎么存、调了哪些工具都由我说了算。私有产品，公开页只展示脱敏界面。">
+  <title>雾尼 Munin（Loki Assistant）｜属于自己的 AI 助手（私有产品）｜Loki</title>
   <link rel="canonical" href="https://loki-os.hiloki.ai/projects/loki-assistant.html">
-  <meta property="og:type" content="article"><meta property="og:title" content="Loki Assistant｜属于自己的 AI 助手（私有产品）"><meta property="og:description" content="Next.js + SQLite + MCP 的个人 AI 助手：四类记忆自动提炼与检索、Obsidian 本地索引、工具调用循环、多模型 Provider 可插拔。公开页只展示脱敏界面。"><meta property="og:image" content="https://loki-os.hiloki.ai/projects/assets/real/loki-assistant/workspace-welcome.png"><meta property="og:url" content="https://loki-os.hiloki.ai/projects/loki-assistant.html">
+  <meta property="og:type" content="article"><meta property="og:title" content="雾尼 Munin（Loki Assistant）｜属于自己的 AI 助手（私有产品）"><meta property="og:description" content="Next.js + SQLite + MCP 的个人 AI 助手：四类记忆自动提炼与检索、Obsidian 本地索引、工具调用循环、多模型 Provider 可插拔。公开页只展示脱敏界面。"><meta property="og:image" content="https://loki-os.hiloki.ai/projects/assets/real/loki-assistant/workspace-welcome.png"><meta property="og:url" content="https://loki-os.hiloki.ai/projects/loki-assistant.html">
   <link rel="icon" href="../loki-ip-live.jpg"><link rel="stylesheet" href="../brand-system.css">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Loki Assistant","applicationCategory":"PersonalAssistantApplication","operatingSystem":"macOS, Web","url":"https://loki-os.hiloki.ai/projects/loki-assistant.html","creator":{"@type":"Person","name":"Loki"},"description":"一个真正属于自己的个人 AI 助手：记忆库、Obsidian 本地笔记索引、工具调用循环与多模型可插拔。私有产品，公开页只展示脱敏界面。"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"雾尼 Munin","alternateName":"Loki Assistant","applicationCategory":"PersonalAssistantApplication","operatingSystem":"macOS, Web","url":"https://loki-os.hiloki.ai/projects/loki-assistant.html","creator":{"@type":"Person","name":"Loki"},"description":"一个真正属于自己的个人 AI 助手：记忆库、Obsidian 本地笔记索引、工具调用循环与多模型可插拔。私有产品，公开页只展示脱敏界面。"}</script>
   <style>
   /* ===== CASE 11 · 站内纸面档案页：brand-system 家组件（dossier-heading / judgment-turn /
      cue-timeline / status-board / dossier-footer）搭骨架，页面只做纸色化与布局微调。
@@ -201,45 +201,45 @@
   </style>
 </head>
 <body class="la-page">
-<header class="la-top"><a href="../index.html#works">← 回到返场作品单</a><small>CASE 11 / PERSONAL ASSISTANT · PRIVATE</small></header>
+<header class="la-top"><a href="../index.html#works">← 回到返场作品单</a><small>CASE 11 / LOKI ASSISTANT · PRIVATE</small></header>
 <main class="la-main">
   <div class="la-shell">
 
     <!-- 档案头 -->
-    <section aria-label="Loki Assistant 完整证据档案">
+    <section aria-label="雾尼 Munin 完整证据档案">
       <header class="la-hero">
         <div class="la-hero-copy">
-          <small class="la-kicker">私有产品 / 本地优先 / 更新于 2026-09-14</small>
+          <small class="la-kicker">雾尼 Munin / 私有产品 / 本地优先 / 更新于 2026-09-14</small>
           <h2>Cola 记得我，Codex 也记得我，<br>可记忆怎么存、存成什么样，都归它们管。<br><em>我想要一份自己说了算的。</em></h2>
-          <p><strong>如果只用一句话说：</strong>Loki Assistant 是一个真正属于自己的 AI 助手——透明、可控、记住你、能干活。记忆分四类自动维护，Obsidian 几千篇本地笔记直接检索，工具调用留下可解释的痕迹，模型随时可换。它是私有产品：代码不开源，公开页只展示脱敏界面。</p>
+          <p>我给这个助手起名叫雾尼，项目里还是叫 Loki Assistant。我想看清它记了什么，让它直接找 Obsidian 里的笔记，也能知道它刚才到底调了哪个工具。模型可以换，代码暂时不开源，这里先给你看处理过私人内容的界面。</p>
         </div>
         <div class="la-hero-side">
           <div class="la-ticket-tags"><b>CASE 11</b><small>PRIVATE</small></div>
-          <figure class="la-browser"><header><div class="browser-lights"><i></i><i></i><i></i></div><span>真实产品画面 / 私人内容已脱敏 · 本机 localhost</span></header><img src="./assets/real/loki-assistant/workspace-welcome.png" alt="Loki Assistant 本地运行的对话工作台空状态截图：欢迎语、长文自动归档、项目化产物库、可解释工具流三个标签与输入框"><figcaption><b>对话工作台 · 本机真实运行</b><span>未开始会话的空状态：长文自动归档进 Markdown、产物进文件库、工具调用和任务处理留痕，这三件事写在欢迎语里，也是 Agent Core 的日常。界面主题为「纸墨·日」。</span><small>EVIDENCE 01 · REAL CAPTURE / LOCAL RUN 2026-09-14</small></figcaption></figure>
+          <figure class="la-browser"><header><div class="browser-lights"><i></i><i></i><i></i></div><span>产品本身的样子，私人内容已删 · 本机 localhost</span></header><img src="./assets/real/loki-assistant/workspace-welcome.png" alt="Loki Assistant 本地运行的对话工作台空状态截图：欢迎语、长文自动归档、项目化产物库、可解释工具流三个标签与输入框"><figcaption><b>对话工作台 · 本机真实运行</b><span>未开始会话的空状态：长文自动归档进 Markdown、产物进文件库、工具调用和任务处理留痕，这三件事写在欢迎语里，也是 Agent Core 的日常。界面用的是【纸墨·日】这套主题。</span><small>EVIDENCE 01 · REAL CAPTURE / LOCAL RUN 2026-09-14</small></figcaption></figure>
         </div>
       </header>
     </section>
 
     <!-- 判断与转向 -->
     <section class="la-act" aria-label="关键转向" style="border-top:0;padding-bottom:0">
-      <div class="judgment-turn"><article><small>I FIRST THOUGHT / 最初判断</small><h3>换个更强的模型，助手就好用了。</h3></article><i>→</i><article><small>I LATER FOUND / 关键转向</small><h3>模型不是瓶颈，记忆和边界才是。助手得知道我上周在纠结什么，还得让这些内容留在我自己的机器上——所以记忆库做成可视化可编辑的，不做黑箱。</h3></article></div>
-      <aside class="la-quote" aria-label="关键判断"><small>THE TURN / 关键转向</small><blockquote>模型不是瓶颈，记忆和边界才是。助手得知道我上周在纠结什么，还得让这些内容留在我自己的机器上——所以记忆库做成可视化可编辑的，不做黑箱。</blockquote></aside>
+      <div class="judgment-turn"><article><small>I FIRST THOUGHT / 最初判断</small><h3>换个更强的模型，助手就好用了。</h3></article><i>→</i><article><small>I LATER FOUND / 关键转向</small><h3>换成更强的模型也没用。真正卡住的是记忆和边界：助手得知道我上周在纠结什么，还得让这些内容留在我自己的机器上，所以记忆库我做成了可视化、可编辑的，不当黑箱。</h3></article></div>
+      <aside class="la-quote" aria-label="关键判断"><small>THE TURN / 关键转向</small><blockquote>换成更强的模型也没用。真正卡住的是记忆和边界：助手得知道我上周在纠结什么，还得让这些内容留在我自己的机器上，所以记忆库我做成了可视化、可编辑的，不当黑箱。</blockquote></aside>
     </section>
 
     <!-- 研发过程 -->
     <section class="la-act" aria-label="研发过程">
       <div class="la-act-head"><small>CALL SHEET / 研发过程</small><i></i></div>
       <section class="cue-timeline" aria-label="研发过程时间线"><header><span>CALL SHEET / THREE PHASES AND BEYOND</span><span>时间与证据分开记录</span></header>
-        <article class="cue-line"><small>01 / 2026-05-23 起</small><div><h3>先有桌面端骨架，再立 PRD</h3><p>本地仓库首条 commit 是 2026-05-23 的「全面优化：单实例 Tauri、MD 渲染、记忆反馈、搜索、时间戳等 10 项」——先跑通桌面壳，再想清楚产品。PRD 第一行写的就是定位：「一个真正属于 Loki 的 AI 助手。透明、可控、记住你、能干活」，并明确「不是套壳工具，不是聊天机器人」。私有仓库 2026-06-17 建立。</p></div><span>证据：本地仓库首条 commit 与 PRD.md</span></article>
-        <article class="cue-line"><small>02 / 2026-06-21 — 07-03</small><div><h3>阶段一到阶段三：能跑、有记忆、接 Obsidian</h3><p>按 PRD 的三个阶段推进：Next.js 框架加对话界面先跑起来；SQLite 记忆库按事实、模式、历史、碎片四类建表，对话结束后异步提炼写入，开始前按相关性检索进 context；然后接 Obsidian——扫描本地 vault 全部 Markdown 建全文索引，搜索时能从笔记里捞相关内容。这三步的 commit 密集落在 6 月下旬到 7 月初。</p></div><span>证据：仓库 commit 时间线（阶段一~三），2026-06-21 至 07-03 密集提交</span></article>
-        <article class="cue-line"><small>03 / 2026-07-04 — 08-06</small><div><h3>从单模型走向多模型，弱模型也要兜得住</h3><p>模型不能绑死一家：provider 限流不再判死刑，重试打满自动降级备用渠道，报错要说人话；加上 provider 体检和 MCP 双向接入。渠道配置保存在本地，页面上 Key 不回显。到 8 月，模型目录、默认渠道、健康检查都成了界面里能操作的东西。</p></div><span>证据：commit「限流不再判死刑」「MCP 双向接入」等，2026-07-04 / 08-05</span></article>
-        <article class="cue-line"><small>04 / 2026-08 起</small><div><h3>Agent Core v1：会干活，还要干得可解释</h3><p>工具调用循环落成 Agent Core v1：工具 trace 留痕可回看；防幽灵写入的不变量锚定本地目录；检测到相同调用反复卡死就主动熔断，不再烧预算；宣称完成的产物路径先到磁盘上验证过才算数。早报、晚报、周回顾和文件库、项目容器也在这段时间长出来，桌面端和网页端同步演进。</p></div><span>证据：Agent Core v1 相关 commit 与 docs/core/agent-architecture-v2.md</span></article>
+        <article class="cue-line"><small>01 / 2026-05-23 起</small><div><h3>先有桌面端骨架，再立 PRD</h3><p>本地仓库第一条 commit 是 2026-05-23 的【全面优化：单实例 Tauri、MD 渲染、记忆反馈、搜索、时间戳等 10 项】。我当时的顺序是先跑通桌面壳，再想清楚这东西到底是什么：它是我给自己做的，以后成熟了也不排除给朋友用，但会是小规模。PRD 第一行写的就是定位：【一个真正属于 Loki 的 AI 助手。透明、可控、记住你、能干活】，里面还写明它不当套壳工具，也不做聊天机器人。私有仓库 2026-06-17 建立。</p></div><span>证据：本地仓库首条 commit 与 PRD.md</span></article>
+        <article class="cue-line"><small>02 / 2026-06-21 — 07-03</small><div><h3>阶段一到阶段三：能跑、有记忆、接 Obsidian</h3><p>按 PRD 的三个阶段往下推：先把 Next.js 框架和对话界面跑起来；再建 SQLite 记忆库，按事实、模式、历史、碎片四类分开存，对话结束以后异步提炼写入，下一次开口之前按相关性把相关的挑进 context；最后接 Obsidian，把本地 vault 里的 Markdown 整个扫一遍建索引，搜的时候能直接从笔记里捞内容。这三步的 commit 都挤在 6 月下旬到 7 月初。</p></div><span>证据：仓库 commit 时间线（阶段一~三），2026-06-21 至 07-03 密集提交</span></article>
+        <article class="cue-line"><small>03 / 2026-07-04 — 08-06</small><div><h3>从单模型走向多模型，弱模型也要兜得住</h3><p>模型我不想绑死在一家，一家限流了就换备用的，别只丢给我一个报错。后来把测试渠道、拉模型列表、选默认模型也放进界面，能点就点，密钥留在本地，页面上不直接显示。</p></div><span>证据：commit【限流不再判死刑】【MCP 双向接入】等，2026-07-04 / 08-05</span></article>
+        <article class="cue-line"><small>04 / 2026-08 起</small><div><h3>Agent Core v1：会干活，还要干得可解释</h3><p>工具调用这一圈做成了 Agent Core v1：它调了哪些工具都留痕、能回看；写东西之前先把要落的目录定死，免得文件被写到我看不见的地方；同一个调用反复卡死，它就自己熔断，不再接着烧钱；嘴上说做好了不算，产物路径得先在磁盘上验过才行。之前它还干过把不知道的内容硬写进 HTML、然后大言不惭告诉我做好了这种事，这段我记着。早报、晚报、周回顾和文件库、项目容器也是这段时间长出来的，桌面端和网页端一起往前推。</p></div><span>证据：Agent Core v1 相关 commit 与 docs/core/agent-architecture-v2.md</span></article>
       </section>
     </section>
 
     <!-- 规格与用量 -->
     <section class="la-act" aria-label="产品规格与真实使用量">
-      <section class="evidence-wall"><header><div><span class="dossier-kicker">REAL ARTIFACTS / 每张图只说明一件事</span><h2>本机真实运行，<br>私人内容一律不上站。</h2></div><p>下面两张图来自本机真实运行中的产品。记忆库（99 条记忆）和 Obsidian 索引（2237 篇笔记）的正文属于私人数据，公开页不展示；对话列表里也只保留无内容的测试会话。</p></header>
+      <section class="evidence-wall"><header><div><span class="dossier-kicker">REAL ARTIFACTS / 每张图只说明一件事</span><h2>本机真实运行，<br>私人内容一律不上站。</h2></div><p>下面两张图都是本机真实运行里截的。记忆库（99 条记忆）和 Obsidian 索引（2237 篇笔记）的正文是我自己的东西，公开页不展示；对话列表里也只留没有内容的测试会话。</p></header>
         <div class="la-spec-grid">
           <aside class="la-spec" aria-label="产品规格">
             <small class="la-kicker">PRODUCT SPEC / PRD 定位四词</small>
@@ -258,7 +258,7 @@
     <!-- 状态与边界 -->
     <section class="la-act" aria-label="项目结果与边界">
       <div class="la-act-head"><small>STATUS BOARD / 项目结果与边界</small><i></i></div>
-      <section class="status-board" aria-label="项目结果与边界"><article><small>ALREADY PROVED</small><h3>已经做到</h3><ul><li>阶段一~三加 Agent Core v1 全部落地：2026-05-23 至 2026-09-13 共 273 条 commit，持续活跃</li><li>四类记忆自动提炼与检索真实在用：库里 99 条记忆、318 个会话、676 条消息</li><li>Obsidian 本地 vault 完成 2237 篇笔记的全文索引，搜索直接从笔记里捞内容</li><li>多模型 Provider 可插拔：限流降级、渠道测活、MCP 双向接入、密钥本地保存不回显</li></ul></article><article><small>WORKING, NOT FINISHED</small><h3>能用但仍需维护</h3><ul><li>私有仓库、代码不开源，第三方无法审计实现，只能看本页脱敏界面和机制描述</li><li>对话质量依赖所配模型：弱模型偶发空产出、限流，需要重试与降级兜底，兜底逻辑本身还在修</li><li>早报、晚报、周回顾和定时任务依赖本机调度常开，机器不开就没有主动汇报</li><li>Tauri 桌面端与网页端双轨演进，两边体验要同步验证，成本比单端高</li></ul></article><article><small>NOT CLAIMED</small><h3>没有证明</h3><ul><li>记忆库和 Obsidian 索引的正文是私人数据，公开页不展示，也无法被第三方核验内容</li><li>不宣称「比你更懂你」这类效果，本页只说明机制和真实使用量</li><li>没有公开下载或在线入口：「在跑」指本机日常使用，不指对外服务</li></ul></article></section>
+      <section class="status-board" aria-label="项目结果与边界"><article><small>ALREADY PROVED</small><h3>已经做到</h3><ul><li>阶段一到三加 Agent Core v1 都做完了：2026-05-23 到 2026-09-13 一共 273 条 commit，一直在动</li><li>四类记忆的自动提炼和检索我在天天用：库里 99 条记忆、318 个会话、676 条消息</li><li>Obsidian 本地 vault 里的 2237 篇笔记做了全文索引，搜的时候直接从笔记里捞内容</li><li>多模型可以随时换：限流自动降级、渠道能测活、MCP 双向接入，密钥存在本地、页面不回显</li></ul></article><article><small>WORKING, NOT FINISHED</small><h3>能用但仍需维护</h3><ul><li>私有仓库、代码不开源，别人看不到实现，只能看这一页脱敏后的界面和我写的机制说明</li><li>对话好不好用取决于配的模型：弱模型偶尔会空产出、被限流，要靠重试和降级兜住，这套兜底我自己都还在修</li><li>早报、晚报、周回顾和定时任务都靠本机调度常开，机器不开，它就不会主动来找我</li><li>Tauri 桌面端和网页端两条线一起走，两边的体验都要单独验一遍，比只做一端费事</li></ul></article><article><small>NOT CLAIMED</small><h3>没有证明</h3><ul><li>记忆库和 Obsidian 索引里是我自己的东西，公开页不放，别人也没法核里面的内容</li><li>我不说它【比你更懂你】这种话，这一页只说它怎么跑、我到底用了多少</li><li>没有公开下载，也没有在线入口，【在跑】说的是我自己每天在本机用，不是对外服务</li></ul></article></section>
 
       <footer class="dossier-footer"><h2>最强的模型在别人服务器上，最懂我的数据在我自己机器上。这个助手把后者留在了家里。</h2><div class="dossier-links"><a href="../works.html">返回作品索引 →</a><a href="./ai-career-compass.html">上一案：AI 求职教练</a><a href="../about.html">认识 Loki</a></div></footer>
     </section>

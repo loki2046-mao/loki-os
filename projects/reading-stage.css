@@ -1,0 +1,8 @@
+.daily-stage{align-items:stretch}
+.daily-stage .daily-days{contain:size;min-height:0;max-height:none;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:auto;scrollbar-color:#b9afa5 #17130f}
+.daily-manuscript .daily-tool li{display:block;font-size:14px;line-height:1.7}
+.daily-manuscript .book-excerpt{margin-top:24px;line-height:1.85}
+.daily-manuscript .book-excerpt summary{cursor:pointer;color:var(--daily-tone)}
+.daily-card[hidden]{display:none}
+.book-list button small{white-space:nowrap}
+@media(max-width:650px){.daily-stage .daily-days{contain:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));max-height:260px;overflow-y:auto;overflow-x:hidden}.daily-stage .daily-days button{width:auto;min-width:0;margin:0}.daily-manuscript .daily-tool{padding:18px 14px}}

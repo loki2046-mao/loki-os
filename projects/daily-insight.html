@@ -4,31 +4,34 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="每日洞见系统（进行中）：每天从一本书里留下一个能带回生活的问题。">
-  <title>每日洞见系统｜把阅读变成可回看的个人 AI 工作流（进行中）｜Loki</title>
+  <title>每日洞见系统｜每天从一本书里留一个还能带走的问题（进行中）｜Loki</title>
   <link rel="canonical" href="https://loki-os.hiloki.ai/projects/daily-insight.html">
   <meta property="og:type" content="article"><meta property="og:title" content="每日洞见系统（进行中）｜个人 AI 阅读工作流"><meta property="og:description" content="每天从一本书里留下一次冲突、一个边界和一个以后还想回答的问题。"><meta property="og:image" content="https://loki-os.hiloki.ai/projects/assets/exhibition/reading-desk-v1.webp"><meta property="og:url" content="https://loki-os.hiloki.ai/projects/daily-insight.html">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"每日洞见系统（进行中）","url":"https://loki-os.hiloki.ai/projects/daily-insight.html","inLanguage":"zh-CN","creator":{"@type":"Person","name":"Loki"},"description":"把阅读、材料核验、洞见卡与回看组织成持续运行的个人 AI 工作流。"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"每日洞见系统（进行中）","url":"https://loki-os.hiloki.ai/projects/daily-insight.html","inLanguage":"zh-CN","creator":{"@type":"Person","name":"Loki"},"description":"每天从一本书里留下一次冲突、一个边界、一个能带回生活的工具，隔一阵子回来看。"}</script>
   <link rel="icon" href="../loki-ip-live.jpg">
   <link rel="stylesheet" href="./artifact-case.css">
   <link rel="stylesheet" href="./mobile-polish.css">
+  <link rel="stylesheet" href="../corpus.css?v=20260920-linked">
+  <link rel="stylesheet" href="./reading-stage.css?v=20260920-aligned">
 </head>
 <body class="daily-experience" style="--accent:var(--cyan)">
   <header class="artifact-top">
-    <a href="../index.html#works">← 回到返场作品单</a>
+    <a href="../detail-study/index.html#catalogue/works/daily-insight">← 回到作品节目单</a>
     <small>CASE 02 / DAILY READING PASS · IN PROGRESS</small>
   </header>
   <main class="daily-shell">
     <section class="daily-opening">
       <div class="daily-opening-copy">
-        <div class="artifact-kicker">每天一本书，先留下真正卡住我的地方</div>
-        <h1>每天读完以后，<br><em>留下一个会回来找你的问题。</em></h1>
-        <p>我读完书常常记得情节，却说不清当时为什么被击中。于是我每天只留下一次冲突、一个边界、一个能带回生活的小工具，再加一个晚上还想回答的问题。</p>
+        <div class="artifact-kicker">每日洞见系统 / 按天翻阅拆书文稿</div>
+        <h1>先读懂一本书，<br><em>再留下自己的判断。</em></h1>
+        <p>我让 Cola 每天拆一本书，先讲它到底在讲什么、为什么会写成这样，再看看里面哪些东西跟我有关。要是只给我一串漂亮句子，我第二天就忘了，那我做这个干嘛。现在已经存到 Day 28，9 月 19 日这篇也放进来了。</p>
       </div>
-      <div class="daily-pass" aria-label="730 天阅读通行证（目标）"><span>DAILY READING PASS</span><strong>730</strong><b>两年书单 · 每天一张洞见卡</b><i>DAY 004 / 目标 730</i></div>
+      <div class="daily-pass" aria-label="阅读档案"><span>DAILY READING ARCHIVE</span><strong>READ</strong><b>每日洞见 · 拆书与阅读</b><i>Day 01—28 · 按拆书顺序翻阅</i></div>
     </section>
+    <section class="directory-insert" data-reading-archive><h2>每日洞见 · 拆书与阅读</h2><p class="detail-summary"></p></section>
     <section class="daily-stage" data-daily-stage style="--daily-tone:#d8f044">
-      <nav class="daily-days" aria-label="已完成的四天洞见">
-        <small>先看最早 4 天的样子</small>
+      <nav class="daily-days" aria-label="按天选择阅读卡片">
+        <small>阅读卡片 / DAY 01—28</small>
         <button data-day="04" class="is-active"><b>04</b><span>长安的荔枝<i>08.26</i></span></button>
         <button data-day="03"><b>03</b><span>82年生的金智英<i>08.25</i></span></button>
         <button data-day="02"><b>02</b><span>乡土中国<i>08.24</i></span></button>
@@ -45,15 +48,18 @@
       </article>
     </section>
     <section class="daily-why">
-      <header><small>HOW IT RUNS / 系统怎么跑起来</small><h2>这套系统不是设计出来的，<br>是 8 月 22 日夜里<em>一边跑一边改出来的。</em></h2><p>整个工具叫 unbook：cron 每天早上拉起一个 Cola 会话，那个会话本身就是蒸馏器；脚本只管排期、组装和落盘。</p></header>
-      <div class="daily-why-grid"><article><b>01</b><h3>第一晚就推翻了第一版</h3><p>v1 是排期驱动加日型轮换；v2 当晚就去掉了对命令行工具的依赖，改成 brief / write 两段式：先给出今日书的元信息，会话按规则蒸馏，写卡脚本幂等落盘。</p></article><article><b>02</b><h3>每天只花几分钟值守</h3><p>脚本先报今天是第几天、哪本书、哪位作者、什么日型（金句日、反常识日、行动挑战日、彩蛋日）；书单是提前排好的 730 天排期表，彩蛋日会把书连到我自己的项目上。</p></article><article><b>03</b><h3>头三天改了四次卡片形态</h3><p>Day 1–3 先重做成八段完整拆解版；随后升级成洞见型卡片、砍掉套娃引号；再加单一洞见收口和今晚回收；最后把收口改成已生成的复习卡。此后二十天形态稳定，只剩微调。</p></article></div>
+      <header><small>HOW IT RUNS / 系统怎么跑起来</small><h2>这套系统是 8 月 22 日夜里，<br><em>一边跑一边改出来的。</em></h2><p>这套工具叫 unbook，每天早上定时叫起 Cola 来做拆书。读材料、写文稿交给她，排哪本书、存到哪儿、会不会重复写，就让脚本管着。</p></header>
+      <div class="daily-why-grid"><article><b>01</b><h3>第一晚就推翻了第一版</h3><p>第一版要靠命令行里的 Claude 跑，没登录时就只能留下个空架子，当晚就推翻了。后来分成 brief / write 两步，先把今天的书和材料准备好，再由 Cola 写，保存时也会检查，别重跑一次就多出一份。</p></article><article><b>02</b><h3>每天只花几分钟值守</h3><p>每天先看今天轮到哪本书、什么作者，是挑金句、看反常识，还是做个小实验。730 天是当初让 Cola 排出来的书单，当然还没做完，已经写下来的以这页文稿为准。</p></article><article><b>03</b><h3>头三天改了四次卡片形态</h3><p>头三天改得最多。先写成八段拆解，我又嫌重点太散，才改成围绕一两个洞见展开，最后把复习卡也一起做出来。到 9 月 19 日，已经有 Day 01 到 Day 28 的文稿，后面几篇都能在上面翻到。</p></article></div>
     </section>
     <section class="daily-why">
-      <header><small>WHY 730 DAYS</small><h2>书已经够多了。<br>我缺的是一条<em>看过以后还找得回来</em>的阅读路径。</h2></header>
-      <div class="daily-why-grid"><article><b>01</b><h3>每天不做同一种阅读</h3><p>文学、人类学、社会学、心理学、女性主义、传记与管理轮流出现；有时留下问题，有时给一个工具，有时只保留一个难以忘记的场景。</p></article><article><b>02</b><h3>先问它为什么和我有关</h3><p>我会找它和当下工作、关系、选择或创作接上的地方，作者观点的重新排列对我帮助不大。</p></article><article><b>03</b><h3>让一天和下一天发生关系</h3><p>四张卡放在一起，慢慢看出我反复注意的东西：看见窗口、理解距离、识别默认、计算代价。</p></article></div>
+      <header><small>原始书单排期 / 730 天</small><h2>书单排好了 730 天，<br>我要的是<em>真的读懂每一本。</em></h2></header>
+      <div class="daily-why-grid"><article><b>01</b><h3>每天不做同一种阅读</h3><p>我不想每天看同一种书，所以文学、人类学、社会学、心理学这些会换着来。有的留下一句问题，有的能拿去试一试，哪怕只是某个场景让我记住了，也行。</p></article><article><b>02</b><h3>先问它为什么和我有关</h3><p>我当时就问 Cola：能不能让我第二天早上真的想点开看？所以选什么、怎么讲，都得跟我的兴趣和手头的事有点关系，照着统一模板写完就交差，我肯定不满意。</p></article><article><b>03</b><h3>让一天和下一天发生关系</h3><p>我给文件起名会带上日期、书名和 Day，这样以后索引的时候，我能直接通过文件名认出来这是哪本书。</p></article></div>
     </section>
-    <section class="daily-trail" aria-label="四天洞见形成的注意力轨迹"><small>FOUR DAYS / ONE GROWING ATTENTION SYSTEM</small><div><span>01</span><b>看见窗口</b><i>准备如何遇见偶然</i></div><div><span>02</span><b>理解距离</b><i>关系如何分配信任</i></div><div><span>03</span><b>识别默认</b><i>“正常”如何制造代价</i></div><div><span>04</span><b>计算代价</b><i>完成以后还剩下谁</i></div></section>
+    <section class="daily-trail" aria-label="四天洞见形成的注意力轨迹"><small>FOUR DAYS / ONE GROWING ATTENTION SYSTEM</small><div><span>01</span><b>看见窗口</b><i>准备如何遇见偶然</i></div><div><span>02</span><b>理解距离</b><i>关系如何分配信任</i></div><div><span>03</span><b>识别默认</b><i>【正常】如何制造代价</i></div><div><span>04</span><b>计算代价</b><i>完成以后还剩下谁</i></div></section>
   </main>
   <script src="./artifact-case.js"></script>
+  <script src="../corpus-data.js?v=20260920-order"></script>
+  <script src="../corpus.js?v=20260920-linked"></script>
+  <script src="./reading-stage.js?v=20260920-linked"></script>
 </body>
 </html>
