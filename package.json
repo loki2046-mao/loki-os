@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "scan": "node scripts/scan-local-projects.mjs",
-    "render:works": "node scripts/render-works.mjs",
-    "check": "node scripts/render-works.mjs --check && node scripts/render-works.mjs --check-private-visibility && node scripts/validate-site-data.mjs"
+    "render:works": "node scripts/sync-reading.mjs && node scripts/render-works.mjs",
+    "check": "node scripts/sync-reading.mjs --check && node scripts/render-works.mjs --check && node scripts/render-works.mjs --check-private-visibility && node scripts/validate-site-data.mjs && node scripts/validate-public-content.mjs",
+    "test": "node --test tests/*.test.mjs"
   }
 }

@@ -37,5 +37,5 @@ if(kind==='visual'){sample.querySelector('.print-table').insertAdjacentHTML('bef
 if(kind==='build'){sample.querySelector('.build-heading').insertAdjacentHTML('beforeend','<div class="conversion-tag" aria-hidden="true">INPUT → PROCESS → OUTPUT<br><b>前面只有一个按钮，复杂的我放后台。</b></div>');sample.querySelector('.conversion-front').insertAdjacentHTML('beforeend','<div class="packing-slip"><span>装箱清单 / 制作路径</span><b>01 输入电子书</b><b>02 后台处理</b><b>03 带走文件</b></div>')}
 sample.insertAdjacentHTML('beforeend',`<div class="last-page-note"><span>↳ ${words[2]}</span><button>去下一间逛逛 ↗</button></div>`);sample.querySelector('.last-page-note button').onclick=openMap;
 }
-addEventListener('hashchange',dress);dress();
+if(window.lokiRoutes)window.lokiRoutes.register('venue',dress);else{addEventListener('hashchange',dress);dress();}
 })();

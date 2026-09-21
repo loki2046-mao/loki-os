@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="./artifact-case.css">
   <link rel="stylesheet" href="./mobile-polish.css">
   <link rel="stylesheet" href="../corpus.css?v=20260920-linked">
-  <link rel="stylesheet" href="./reading-stage.css?v=20260920-aligned">
+  <link rel="stylesheet" href="./reading-stage.css?v=20260920-system">
 </head>
 <body class="daily-experience" style="--accent:var(--cyan)">
   <header class="artifact-top">
@@ -24,14 +24,15 @@
       <div class="daily-opening-copy">
         <div class="artifact-kicker">每日洞见系统 / 按天翻阅拆书文稿</div>
         <h1>先读懂一本书，<br><em>再留下自己的判断。</em></h1>
-        <p>我让 Cola 每天拆一本书，先讲它到底在讲什么、为什么会写成这样，再看看里面哪些东西跟我有关。要是只给我一串漂亮句子，我第二天就忘了，那我做这个干嘛。现在已经存到 Day 28，9 月 19 日这篇也放进来了。</p>
+        <p data-reading-meta="intro">我让 Cola 每天拆一本书，先讲它到底在讲什么、为什么会写成这样，再看看里面哪些东西跟我有关。要是只给我一串漂亮句子，我第二天就忘了，那我做这个干嘛。现在已经存到 Day 28，9 月 19 日这篇也放进来了。</p>
       </div>
-      <div class="daily-pass" aria-label="阅读档案"><span>DAILY READING ARCHIVE</span><strong>READ</strong><b>每日洞见 · 拆书与阅读</b><i>Day 01—28 · 按拆书顺序翻阅</i></div>
+      <div class="daily-pass" aria-label="阅读档案"><span>DAILY READING ARCHIVE</span><strong>READ</strong><b>每日洞见 · 拆书与阅读</b><i data-reading-meta="range">Day 01—28 · 按拆书顺序翻阅</i></div>
     </section>
     <section class="directory-insert" data-reading-archive><h2>每日洞见 · 拆书与阅读</h2><p class="detail-summary"></p></section>
+    <details class="reading-history"><summary>翻看最初四天的卡片 · 当时做成的样子</summary><p>现在的文稿都在上面。这里留着头四天的卡片，看看这套拆书是怎么开始的。</p>
     <section class="daily-stage" data-daily-stage style="--daily-tone:#d8f044">
-      <nav class="daily-days" aria-label="按天选择阅读卡片">
-        <small>阅读卡片 / DAY 01—28</small>
+      <nav class="daily-days" aria-label="选择早期四天卡片">
+        <small>早期卡片 / DAY 01—04</small>
         <button data-day="04" class="is-active"><b>04</b><span>长安的荔枝<i>08.26</i></span></button>
         <button data-day="03"><b>03</b><span>82年生的金智英<i>08.25</i></span></button>
         <button data-day="02"><b>02</b><span>乡土中国<i>08.24</i></span></button>
@@ -47,9 +48,10 @@
         <footer class="daily-question"><small>今晚带走这一句</small><p data-daily-question>你最近拼下来的那件事，是在运荔枝，还是在决定你成为谁？</p></footer>
       </article>
     </section>
+    </details>
     <section class="daily-why">
       <header><small>HOW IT RUNS / 系统怎么跑起来</small><h2>这套系统是 8 月 22 日夜里，<br><em>一边跑一边改出来的。</em></h2><p>这套工具叫 unbook，每天早上定时叫起 Cola 来做拆书。读材料、写文稿交给她，排哪本书、存到哪儿、会不会重复写，就让脚本管着。</p></header>
-      <div class="daily-why-grid"><article><b>01</b><h3>第一晚就推翻了第一版</h3><p>第一版要靠命令行里的 Claude 跑，没登录时就只能留下个空架子，当晚就推翻了。后来分成 brief / write 两步，先把今天的书和材料准备好，再由 Cola 写，保存时也会检查，别重跑一次就多出一份。</p></article><article><b>02</b><h3>每天只花几分钟值守</h3><p>每天先看今天轮到哪本书、什么作者，是挑金句、看反常识，还是做个小实验。730 天是当初让 Cola 排出来的书单，当然还没做完，已经写下来的以这页文稿为准。</p></article><article><b>03</b><h3>头三天改了四次卡片形态</h3><p>头三天改得最多。先写成八段拆解，我又嫌重点太散，才改成围绕一两个洞见展开，最后把复习卡也一起做出来。到 9 月 19 日，已经有 Day 01 到 Day 28 的文稿，后面几篇都能在上面翻到。</p></article></div>
+      <div class="daily-why-grid"><article><b>01</b><h3>第一晚就推翻了第一版</h3><p>第一版要靠命令行里的 Claude 跑，没登录时就只能留下个空架子，当晚就推翻了。后来分成 brief / write 两步，先把今天的书和材料准备好，再由 Cola 写，保存时也会检查，别重跑一次就多出一份。</p></article><article><b>02</b><h3>每天只花几分钟值守</h3><p>每天先看今天轮到哪本书、什么作者，是挑金句、看反常识，还是做个小实验。730 天是当初让 Cola 排出来的书单，当然还没做完，已经写下来的以这页文稿为准。</p></article><article><b>03</b><h3>头三天改了四次卡片形态</h3><p data-reading-meta="history">头三天改得最多。先写成八段拆解，我又嫌重点太散，才改成围绕一两个洞见展开，最后把复习卡也一起做出来。到 9 月 19 日，已经有 Day 01 到 Day 28 的文稿，后面几篇都能在上面翻到。</p></article></div>
     </section>
     <section class="daily-why">
       <header><small>原始书单排期 / 730 天</small><h2>书单排好了 730 天，<br>我要的是<em>真的读懂每一本。</em></h2></header>
@@ -57,9 +59,9 @@
     </section>
     <section class="daily-trail" aria-label="四天洞见形成的注意力轨迹"><small>FOUR DAYS / ONE GROWING ATTENTION SYSTEM</small><div><span>01</span><b>看见窗口</b><i>准备如何遇见偶然</i></div><div><span>02</span><b>理解距离</b><i>关系如何分配信任</i></div><div><span>03</span><b>识别默认</b><i>【正常】如何制造代价</i></div><div><span>04</span><b>计算代价</b><i>完成以后还剩下谁</i></div></section>
   </main>
-  <script src="./artifact-case.js"></script>
-  <script src="../corpus-data.js?v=20260920-order"></script>
-  <script src="../corpus.js?v=20260920-linked"></script>
-  <script src="./reading-stage.js?v=20260920-linked"></script>
+  <script src="./artifact-case.js?v=20260920-system"></script>
+  <script src="../corpus-data.js?v=20260920-system"></script>
+  <script src="../corpus.js?v=20260920-system"></script>
+
 </body>
 </html>

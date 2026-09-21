@@ -55,5 +55,5 @@
    document.querySelector('#app').insertAdjacentHTML('beforeend',`<footer class="publication-footer"><span class="footer-signature">LOKI</span><div><b>散场了，我手头还有想做的。</b><p>作品和方法都摆在这儿，下次接着聊。</p></div><a href="../index.html#break">中场歇一会儿 ↗</a><a href="../index.html#about">认识 Loki ↗</a></footer>`);
   }
  }
- addEventListener('hashchange',dress);dress();
+ window.lokiRoutes.register('publication',dress);
 })();

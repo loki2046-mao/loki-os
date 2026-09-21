@@ -1,12 +1,10 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
-import vm from 'node:vm';
+import { loadSiteData } from './load-site-data.mjs';
 import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const context = { window: {} };
-vm.runInNewContext(readFileSync(path.join(root, 'site-data.js'), 'utf8'), context, { filename: 'site-data.js' });
-const data = context.window.LOKI_OS_SITE_DATA;
+const data = loadSiteData();
 const worksPath = path.join(root, 'works.html');
 if (!data || !Array.isArray(data.projects)) throw new Error('site-data.js 未提供 projects 数组');
 

@@ -1,4 +1,5 @@
 function material(){
+ if(location.hash.startsWith('#catalogue'))return;
  const route=location.hash.slice(1)||'index';document.body.dataset.material=route.startsWith('catalogue/works')?'programme':route;
  const selection=document.querySelector('.selection');if(selection){selection.insertAdjacentHTML('afterbegin','<div class="tour-strip"><b>LOKI / OPEN STUDIO</b><span>一件产品、一套方法、一份制作背页</span><i>VOL. 01</i></div>');selection.insertAdjacentHTML('beforeend','<div class="edition-edge"><b>看完散场，回去接着做。</b><span>三个样板 / 由你翻开</span></div>')}
  const inkDetails=document.querySelector('.ink .actions details');if(inkDetails){inkDetails.classList.add('pullout');const summary=inkDetails.querySelector('summary');summary.innerHTML='<span><small>INKPANDA / 制作背页</small><b>抽出制作背页</b></span><i>↓</i>';const inner=document.createElement('div');inner.className='pullout-leaf';while(summary.nextSibling)inner.append(summary.nextSibling);inkDetails.append(inner);const close=document.createElement('button');close.className='fold-back';close.textContent='收回背页 ↑';close.onclick=()=>{inkDetails.open=false;summary.focus()};inner.append(close);inkDetails.addEventListener('toggle',()=>{summary.querySelector('b').textContent=inkDetails.open?'制作背页已展开':'抽出制作背页';summary.querySelector('i').textContent=inkDetails.open?'↑':'↓'})}
@@ -6,4 +7,4 @@ function material(){
  const title=document.querySelector('.catalogue-heading h1');if(title)title.textContent=title.textContent.replace(/。$/,'');
  if(route.startsWith('catalogue/works')){document.querySelector('.catalogue-spread').classList.add('programme-spread');document.querySelectorAll('.catalogue-item').forEach((item,i)=>{item.dataset.number=String(i+1).padStart(2,'0')});}
 }
-addEventListener('hashchange',material);material();
+window.lokiRoutes.register('material',material);

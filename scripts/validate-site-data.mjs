@@ -1,17 +1,16 @@
+import { loadSiteData } from './load-site-data.mjs';
 import { existsSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const source = readFileSync(path.join(repoRoot, 'site-data.js'), 'utf8');
 const worksSource = readFileSync(path.join(repoRoot, 'works.html'), 'utf8');
 const context = { window: {} };
-vm.runInNewContext(source, context, { filename: 'site-data.js' });
 const caseSource = readFileSync(path.join(repoRoot, 'projects', 'case-data.js'), 'utf8');
 vm.runInNewContext(caseSource, context, { filename: 'projects/case-data.js' });
 
-const data = context.window.LOKI_OS_SITE_DATA;
+const data = loadSiteData();
 const errors = [];
 const htmlEscaped = (value) => String(value)
   .replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')

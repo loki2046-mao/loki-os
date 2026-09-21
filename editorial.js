@@ -24,5 +24,5 @@ function dress(){
  const wallet=document.querySelector('.wallet-items');if(wallet){const saved=readSaved();wallet.innerHTML=[...data.projects,...data.skills].filter(x=>saved.includes(x.id)).map(x=>`<a href="detail-study/index.html#catalogue/${x.category||'works'}/${x.id}">${x.title} ↗</a>`).join('')||'<span>票夹还是空的，翻到喜欢的那页夹一张回来。</span>'}
  }
 }
-addEventListener('hashchange',dress);dress();
+if(window.lokiRoutes)window.lokiRoutes.register('editorial',dress);else{addEventListener('hashchange',dress);dress();}
 })();

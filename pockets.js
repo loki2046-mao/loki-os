@@ -54,4 +54,4 @@ clue(document.querySelector('#about-page .cast-photo'),'live-seat','座位 01','
 clue(document.querySelector('#break-page'),'receipt','— THANK YOU —','翻开杯子旁的小票');
 if(!reading)clue(document.querySelector('.publication-footer')||document.querySelector('.cover-bottom'),'encore','…','读到散场字幕之后');
 }
-addEventListener('hashchange',plant);plant();})();
+if(window.lokiRoutes)window.lokiRoutes.register('pockets',plant);else{addEventListener('hashchange',plant);plant();}})();

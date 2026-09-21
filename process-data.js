@@ -436,20 +436,6 @@ window.lokiProcess = {
     ],
     "sourceLabel": "distill-working-judgment SKILL.md",
     "note": "依据 2026-08-02 的方法文件整理。边界同样成文：只提取职业判断，不推断人格、心理与健康状况，不公开原始会议或内部审稿材料，也不虚构盲测成绩。",
-    "related": [
-      [
-        "#catalogue/writing/loki-writing",
-        "看一份已有的写作修改对比"
-      ],
-      [
-        "#catalogue/building/skill-builder",
-        "看提取后怎么整理成 Skill"
-      ],
-      [
-        "#catalogue/works/perspective-distillation",
-        "看六位精选人物的研究进度"
-      ]
-    ],
     "secret": [
       "翻到证据账本背面",
       "账本里有一条容易被忽略的规则：不把相互冲突的材料强行平均。先找任务、受众、阶段上的差异，实在找不到，就老实标成未解决冲突。"
@@ -473,13 +459,7 @@ window.lokiProcess = {
       ]
     ],
     "sourceLabel": "SKILL.md（distill-working-judgment）",
-    "note": "条目能力对应本机的 distill-working-judgment；本机另一个同名 skill-builder 目录是第三方安装的教程型 Skill，与本条目无关，页面上已分开说明。左图是本机文件的真实文稿渲染（节选）。",
-    "related": [
-      [
-        "#catalogue/knowledge/judgment",
-        "看工作判断怎么从材料里提取"
-      ]
-    ]
+    "note": "条目能力对应本机的 distill-working-judgment；本机另一个同名 skill-builder 目录是第三方安装的教程型 Skill，与本条目无关，页面上已分开说明。左图是本机文件的真实文稿渲染（节选）。"
   },
   "notes": {
     "title": "划过线之后，还要回到自己的问题。",
@@ -503,13 +483,7 @@ window.lokiProcess = {
       ]
     ],
     "sourceLabel": "organizing-reading-notes SKILL.md",
-    "note": "依据 2026-04-10 的方法文件整理；下方链接是相关的拆书文稿库，不把两种方法混成同一份 Skill。",
-    "related": [
-      [
-        "#catalogue/knowledge/book",
-        "翻看本站收录的拆书文稿"
-      ]
-    ]
+    "note": "依据 2026-04-10 的方法文件整理；下方链接是相关的拆书文稿库，不把两种方法混成同一份 Skill。"
   },
   "book": {
     "title": "先声明读到哪，再决定怎么拆。",
@@ -581,12 +555,6 @@ window.lokiProcess = {
         "assets/process/image-kit-poster-07.jpg",
         "真实生成图 / 20 张海报实验 · 07 Risograph 孔版印刷"
       ]
-    ],
-    "related": [
-      [
-        "#catalogue/visual/film-poster",
-        "看电影字报的实际版本对照"
-      ]
     ]
   },
   "weixin-outline": {
@@ -611,13 +579,7 @@ window.lokiProcess = {
       ]
     ],
     "sourceLabel": "weixin-topic-outline SKILL.md + 内容工作站审计报告.md",
-    "note": "依据 2026-02 的 Skill 原文、工作站设计文档与 2026-05-05 审计报告整理；审计指出的断点本轮未重新验证修复状态。",
-    "related": [
-      [
-        "#catalogue/writing/headline",
-        "比较同一篇文章的标题试印"
-      ]
-    ]
+    "note": "依据 2026-02 的 Skill 原文、工作站设计文档与 2026-05-05 审计报告整理；审计指出的断点本轮未重新验证修复状态。"
   },
   "deep-night": {
     "title": "把一篇文章，留在写作和发布之间。",
@@ -669,13 +631,7 @@ window.lokiProcess = {
       ]
     ],
     "sourceLabel": "loki-wechat-pipeline/scripts + CHANGELOG",
-    "note": "依据脚本目录、管线说明与 2026-07-05 CHANGELOG 整理。接口、文档权限与平台粘贴结果需按实际任务核验，本轮没有发送或发布文档。",
-    "related": [
-      [
-        "#catalogue/writing/weixin-layout",
-        "看排版编辑器的重建记录"
-      ]
-    ]
+    "note": "依据脚本目录、管线说明与 2026-07-05 CHANGELOG 整理。接口、文档权限与平台粘贴结果需按实际任务核验，本轮没有发送或发布文档。"
   },
   "visual-directions": {
     "title": "换一个方向，要连观看方式一起换。",
@@ -699,17 +655,7 @@ window.lokiProcess = {
       ]
     ],
     "sourceLabel": "SKILL.md（craft-multiform-visual-systems，2026-08-01）",
-    "note": "本机 Codex 会话产物，全网未检索到同名上游；目前还没有一组成组交付的多方向成品档案，关联原型用于对比气质，不把旧品牌系统等同于这份方法的交付案例。",
-    "related": [
-      [
-        "#catalogue/works/interface-system",
-        "看两种界面气质的原型对照"
-      ],
-      [
-        "#catalogue/visual/film-poster",
-        "看电影字报的构图对照"
-      ]
-    ]
+    "note": "本机 Codex 会话产物，全网未检索到同名上游；目前还没有一组成组交付的多方向成品档案，关联原型用于对比气质，不把旧品牌系统等同于这份方法的交付案例。"
   },
   "codex-theme": {
     "title": "皮肤要进到组件里，也要能恢复。",
@@ -747,12 +693,6 @@ window.lokiProcess = {
         "assets/process/codex-theme-structure-diff.png",
         "逐像素差异图 / 白色即结构件带来的差别"
       ]
-    ],
-    "related": [
-      [
-        "#catalogue/works/interface-system",
-        "翻看另一套 Cola 皮肤实验"
-      ]
     ]
   },
   "cyber-red-panda": {
@@ -773,13 +713,7 @@ window.lokiProcess = {
       ]
     ],
     "sourceLabel": "SKILL.md（loki-design-system）",
-    "note": "依据本地品牌共享层整理；这是品牌与角色方法，不将整个人格条目描述成一个可安装的独立 Skill。",
-    "related": [
-      [
-        "#catalogue/personal/collage-poem",
-        "翻一翻日常拼贴成品"
-      ]
-    ]
+    "note": "依据本地品牌共享层整理；这是品牌与角色方法，不将整个人格条目描述成一个可安装的独立 Skill。"
   },
   "debate": {
     "title": "听完一场辩论，带走一套思考动作。",
@@ -804,12 +738,6 @@ window.lokiProcess = {
     ],
     "sourceLabel": "debate-thinking-distiller README + 设计文档.md",
     "note": "依据公开仓库的 README 与设计文档整理；没有虚构个人练习成绩，也没有收录含私人议题与第三方言论的拆解产物。",
-    "related": [
-      [
-        "#catalogue/works/perspective-distillation",
-        "看看相关的人物研究框架"
-      ]
-    ],
     "secret": [
       "翻到设计文档背面",
       "素材价值表的最低档写着：只有结论、没有推导轨迹的汇总，价值一星。这个判断后来长进了别的 Skill：拆结果不如拆取舍。"

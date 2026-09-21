@@ -14,4 +14,4 @@ function dressPerspective(){
  art.innerHTML='<img src="../assets/panda-backstage-reader-v1.png" width="1536" height="1024" alt="Loki 小熊猫戴着耳机，在演出后台用放大镜查看卡片的概念插画"><figcaption>喜欢归喜欢，材料还得仔细看。</figcaption>';
  intro.append(copy,art);
 }
-addEventListener('hashchange',()=>{perspectiveCase();dressPerspective()});perspectiveCase();dressPerspective();
+window.lokiRoutes.register('perspective',()=>{perspectiveCase();dressPerspective()});

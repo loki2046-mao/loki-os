@@ -14,18 +14,31 @@ function mount(){const anchor=document.querySelector('#cover .cover-exits');if(!
  anchor.before(node);if(latest)paint(latest);
 }
 function paint(data){latest=data;document.querySelectorAll('[data-visit]').forEach(x=>x.textContent=new Intl.NumberFormat('zh-CN').format(data[x.dataset.visit]));const scope=document.querySelector('.visit-scope');if(scope)scope.textContent=data.scope==='local'?'本地预览统计':'访问统计';}
-function send(count){const headers=count?{'X-Loki-Visit':'1'}:{};if(!LOCAL){const id=visitor();if(id)headers['X-Loki-Visitor']=id}
- return fetch(endpoint,{method:count?'POST':'GET',credentials:'include',cache:'no-store',headers});}
-/* 网络层失败（DNS/离线）与 HTTP 失败都要能触发退回，所以统一在这里兜住。 */
+async function send(count){
+ const headers=count?{'X-Loki-Visit':'1'}:{};
+ if(!LOCAL){const id=visitor();if(id)headers['X-Loki-Visitor']=id}
+ const controller=new AbortController();
+ const timeout=setTimeout(()=>controller.abort(),8000);
+ try{
+  const response=await fetch(endpoint,{method:count?'POST':'GET',credentials:'include',cache:'no-store',headers,signal:controller.signal});
+  if(!response.ok)throw new Error('Statistics request failed');
+  const data=await response.json();
+  if(!['todayUV','todayPV','totalUV','totalPV'].every(k=>Number.isSafeInteger(data[k])&&data[k]>=0))throw new Error('Invalid statistics');
+  return data;
+ }finally{clearTimeout(timeout)}
+}
 async function attempt(count){try{return await send(count)}catch{return null}}
-async function request(count){try{
- let r=await attempt(count);
- if((!r||!r.ok)&&!LOCAL&&!degraded&&endpoint===PRIMARY){degraded=true;endpoint=FALLBACK;r=await attempt(count)}
- if(!r||!r.ok)throw Error();
- const d=await r.json();
- if(!['todayUV','todayPV','totalUV','totalPV'].every(k=>Number.isSafeInteger(d[k])&&d[k]>=0))throw Error();
- paint(d);
-}catch{const scope=document.querySelector('.visit-scope');if(scope&&!latest)scope.textContent='统计暂不可用';}}
+async function request(count){
+ let data=await attempt(count);
+ if(!data&&!LOCAL&&!degraded&&endpoint===PRIMARY){
+  degraded=true;endpoint=FALLBACK;
+  // A timed-out POST may already have counted. Read totals; never replay that write.
+  data=await attempt(false);
+ }
+ if(data){paint(data);return}
+ const scope=document.querySelector('.visit-scope');
+ if(scope)scope.textContent=latest?'统计暂不可用 · 显示上次记录':'统计暂不可用';
+}
 function navigate(){mount();const route=location.pathname+location.search+location.hash;if(route===last)return;last=route;pending=pending.then(()=>request(true));}
 addEventListener('hashchange',navigate);navigate();
 // Reading totals never generates another pageview; avoid counting tab switches.
