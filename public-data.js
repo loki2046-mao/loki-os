@@ -993,10 +993,10 @@ window.bookData = {
     },
     "image-kit": {
       "href": "https://github.com/loki2046-mao/cola-skills/tree/main/nb-image-prompt",
-      "kind": "related",
-      "label": "查看图像提示词方法",
-      "note": "这里能看到多模型图像提示词的管理方法；生图套件完整的一对一名称映射我还没确认完。",
-      "checkedAt": "2026-09-08"
+      "kind": "source",
+      "label": "查看 nb-image-prompt 源码",
+      "note": "生图套件说的就是它，站上用的是展示名；这里能看到多模型图像提示词的完整管理方法。",
+      "checkedAt": "2026-10-02"
     },
     "slides": {
       "href": "https://github.com/loki2046-mao/cola-skills/tree/main/loki-deck",
