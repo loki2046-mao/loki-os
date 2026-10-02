@@ -92,6 +92,7 @@ window.bookData = {
         "scope": "local-browser",
         "note": "界面截图来自本机，公开入口能打开；登录之后的交互待逐页试用。"
       },
+      "systemKind": "长篇写作工作台",
       "systemEvidence": [
         {
           "label": "继续写之前",
@@ -421,6 +422,7 @@ window.bookData = {
       "imageFit": "cover",
       "proof": "在我本机上真跑：2026-05-23 到 09-13 一共 273 条 commit，99 条记忆、318 个会话、2237 篇笔记索引都在本地。这个页面只放脱敏界面。",
       "status": "我自己的产品，页面只放脱敏后的界面",
+      "systemKind": "本地优先的个人助手",
       "systemEvidence": [
         {
           "label": "记住你",

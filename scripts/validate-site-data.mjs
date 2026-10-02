@@ -113,6 +113,9 @@ for (const [index, project] of (data?.projects || []).entries()) {
     if (!project.systemKind) errors.push(`${label}.systemKind 缺失，无法说明属于哪类系统`);
     if (!Array.isArray(project.systemEvidence) || project.systemEvidence.length < 3) errors.push(`${label}.systemEvidence 至少需要 3 条可见证据`);
   }
+  if (Array.isArray(project.systemEvidence) && project.systemEvidence.length && !project.systemKind) {
+    errors.push(`${label} 有 systemEvidence 但缺 systemKind，作品页会渲染出字面 undefined`);
+  }
 
   const marker = `data-project-id="${project.id}"`;
   const expectedMarkerCount = project.visibility === 'public' ? 1 : 0;

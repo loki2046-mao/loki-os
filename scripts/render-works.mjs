@@ -18,12 +18,28 @@ function systemEvidence(project) {
   return `<div class="system-evidence"><strong>${esc(project.systemKind)}</strong><ul>${items}</ul></div>`;
 }
 
-function card(project) {
+const GROUP_DISPLAY_ORDER = ['flagship', 'workflow', 'productization', 'personal-practice'];
+
+function displayNumbers(siteData) {
+  const nums = new Map();
+  for (const group of GROUP_DISPLAY_ORDER) {
+    siteData.projects
+      .filter((project) => project.visibility === 'public' && project.group === group)
+      .sort((a, b) => a.order - b.order)
+      .forEach((project) => nums.set(project.id, nums.size + 1));
+  }
+  for (const project of siteData.projects) {
+    if (project.visibility === 'public' && !nums.has(project.id)) nums.set(project.id, nums.size + 1);
+  }
+  return nums;
+}
+
+function card(project, nums) {
   const anchor = project.anchor ? ` id="${esc(project.anchor)}"` : '';
   const verification = project.verification || {};
   const pending = verification.status === 'pending' ? ' is-pending' : '';
   const imageClass = project.imageFit === 'contain' ? ' class="is-contain"' : '';
-  return `      <a class="work-ticket"${anchor} data-project-id="${esc(project.id)}" data-status="${esc(project.status)}" style="--ticket:${esc(project.accent)}" href="${esc(project.href)}"><i>${String(project.order).padStart(2, '0')}</i><div><h2>${esc(project.title)}</h2><small>${esc(project.eyebrow)}</small></div><figure class="work-thumb"><img${imageClass} src="${esc(project.image)}" alt="${esc(project.imageAlt)}" width="${project.imageWidth}" height="${project.imageHeight}" loading="lazy"><figcaption>${esc(project.proof)}</figcaption></figure><div class="work-copy"><p>${esc(project.summary)}</p>${systemEvidence(project)}</div><div class="work-status${pending}"><span>${esc(project.status)}</span><small>进入项目故事 →</small></div></a>`;
+  return `      <a class="work-ticket"${anchor} data-project-id="${esc(project.id)}" data-status="${esc(project.status)}" style="--ticket:${esc(project.accent)}" href="${esc(project.href)}"><i>${String(nums.get(project.id)).padStart(2, '0')}</i><div><h2>${esc(project.title)}</h2><small>${esc(project.eyebrow)}</small></div><figure class="work-thumb"><img${imageClass} src="${esc(project.image)}" alt="${esc(project.imageAlt)}" width="${project.imageWidth}" height="${project.imageHeight}" loading="lazy"><figcaption>${esc(project.proof)}</figcaption></figure><div class="work-copy"><p>${esc(project.summary)}</p>${systemEvidence(project)}</div><div class="work-status${pending}"><span>${esc(project.status)}</span><small>进入项目故事 →</small></div></a>`;
 }
 
 const publicProjectIds = (siteData) => new Set(siteData.projects
@@ -39,9 +55,9 @@ const pillarHasPublicAnchor = (siteData, pillar) => {
   return pillarAnchorProjects(siteData, pillar)
     .some((project) => project.visibility === 'public' && referencedIds.has(project.id));
 };
-const cards = (siteData, group) => siteData.projects
+const cards = (siteData, group, nums) => siteData.projects
   .filter((project) => project.visibility === 'public' && project.group === group)
-  .sort((a, b) => a.order - b.order).map(card).join('\n');
+  .sort((a, b) => a.order - b.order).map((project) => card(project, nums)).join('\n');
 const routes = (siteData) => {
   return siteData.pillars
   .filter((pillar) => pillarHasPublicAnchor(siteData, pillar))
@@ -73,15 +89,16 @@ function buildRegions(siteData) {
   const publicIds = publicProjectIds(siteData);
   const publicCount = publicIds.size;
   const publicFeaturedCount = siteData.featuredProjectIds.filter((projectId) => publicIds.has(projectId)).length;
+  const nums = displayNumbers(siteData);
   return {
     WORKS_JSON_LD: jsonLd(siteData),
     WORKS_SETLIST: `        <small>PUBLIC SETLIST / ${publicCount} PUBLIC CASES / ${publicFeaturedCount} FLAGSHIP PROJECTS / UPDATED ${esc(siteData.updatedAt)}</small>`,
     WORKS_ROUTES: routes(siteData),
     WORKS_PROOF_STRIP: proofStrip(siteData),
-    WORKS_FLAGSHIP: cards(siteData, 'flagship'),
-    WORKS_WORKFLOW: cards(siteData, 'workflow'),
-    WORKS_PRODUCTIZATION: cards(siteData, 'productization'),
-    WORKS_PERSONAL_PRACTICE: cards(siteData, 'personal-practice'),
+    WORKS_FLAGSHIP: cards(siteData, 'flagship', nums),
+    WORKS_WORKFLOW: cards(siteData, 'workflow', nums),
+    WORKS_PRODUCTIZATION: cards(siteData, 'productization', nums),
+    WORKS_PERSONAL_PRACTICE: cards(siteData, 'personal-practice', nums),
   };
 }
 
