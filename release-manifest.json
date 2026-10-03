@@ -1,0 +1,1507 @@
+[
+  {
+    "path": ".nojekyll",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "CNAME",
+    "bytes": 18,
+    "sha256": "3fa1279f11252b639ed5f6a38e505f3be6f58f8c54fa63095277dd11f4d44358"
+  },
+  {
+    "path": "about.html",
+    "bytes": 9589,
+    "sha256": "88a44362fdb2d9f566747fa33c7ae3c471a6640e5d6a5d486307e06e6056d024"
+  },
+  {
+    "path": "assets/bibi-2005.jpg",
+    "bytes": 37496,
+    "sha256": "d42f0d645466664ec514390026eaefc9fe30edc6fe036dc128235555bdf84eab"
+  },
+  {
+    "path": "assets/chenhaoyu-stage.jpg",
+    "bytes": 150115,
+    "sha256": "af0ab3d2992244d47055ac1677bfcf7cd033f303950d3bf34e8529c22a1ceae6"
+  },
+  {
+    "path": "assets/chris-2005.jpg",
+    "bytes": 44344,
+    "sha256": "b1c4533e06c395e88459c9f2e101a03148f19cf546b9cf9b30d3069a2fe49fa4"
+  },
+  {
+    "path": "assets/coconut-pet.js",
+    "bytes": 13447,
+    "sha256": "349db8b136f281cb0bbeece98f93398e9cd2a6acffdc69f7e985464762a52f15"
+  },
+  {
+    "path": "assets/cola-inject-shot-1.png",
+    "bytes": 848699,
+    "sha256": "d771e9988f4d12133754fd8baa666bf342e461b7a073461220264da97cef22d9"
+  },
+  {
+    "path": "assets/collages/2026-04-19.png",
+    "bytes": 4206122,
+    "sha256": "d662a70a725da451ac1567092650d2f93b6d43e12de3d6d4c63c21b1044d68c7"
+  },
+  {
+    "path": "assets/collages/2026-04-30.png",
+    "bytes": 3992661,
+    "sha256": "2ab471142098a77bd13874ebee15a595d702e7bd52d0aeaefafd70cd4df8a70d"
+  },
+  {
+    "path": "assets/collages/2026-05-28.png",
+    "bytes": 1697352,
+    "sha256": "d45a30209f4773f041ea671bd393f0b742fa8eb49b292db64ef2b4343139faf7"
+  },
+  {
+    "path": "assets/collages/2026-06-08.png",
+    "bytes": 1827036,
+    "sha256": "d5d42e018c947b1c73f26939761655ce6903a406ebba50f49937b827297308f7"
+  },
+  {
+    "path": "assets/collages/2026-07-12.png",
+    "bytes": 1163883,
+    "sha256": "2f3cc6927b894260fb0ab73e352cc9a28f9acf34d818aef401cd433b2c9c1767"
+  },
+  {
+    "path": "assets/collages/2026-09-12.png",
+    "bytes": 1906561,
+    "sha256": "1a476dc7d03c9d727ba9743624aa083ccfad087af960097be4a2e65e9d1194a8"
+  },
+  {
+    "path": "assets/contact/qr-personal-wechat.webp",
+    "bytes": 61680,
+    "sha256": "91829141e9a750102ca7be133900e45deda2533fe8acf4bef221a8976b3fa09a"
+  },
+  {
+    "path": "assets/contact/qr-xiaohongshu.webp",
+    "bytes": 44224,
+    "sha256": "370d084c1865e1a1f91267b67dc7f59a0c9429b91435e46312093d20c392e9de"
+  },
+  {
+    "path": "assets/ebook-app-home.png",
+    "bytes": 28730,
+    "sha256": "d641a845693e71d91dfed0739a0ab8a92f22ea748a0e83bb66fea941ba0cb035"
+  },
+  {
+    "path": "assets/exhibition-hub-ui-collage.webp",
+    "bytes": 40610,
+    "sha256": "f0f52588df56ae35b9667370e07a89028874cd1cec201b3e36e45c1e57994e9a"
+  },
+  {
+    "path": "assets/exhibition-reading-desk-v1.webp",
+    "bytes": 147362,
+    "sha256": "2e402cb4ba084d8c5d21ea972220045688d63f254b25ab28c179441e8c1bbae2"
+  },
+  {
+    "path": "assets/fonts/BarlowCondensed-SemiBold.ttf",
+    "bytes": 109428,
+    "sha256": "7b619d14bc2327509a9ef32b0890f709626f7ecc9ff61191c2a4314c5499d2d9"
+  },
+  {
+    "path": "assets/fonts/NotoSansSC.subset.woff2",
+    "bytes": 449552,
+    "sha256": "b1871ef6c9418daa206b2f3bd128e8949516f383d74f45971ff1b3534edfb402"
+  },
+  {
+    "path": "assets/fonts/SmileySans-Oblique.ttf.woff2",
+    "bytes": 1150924,
+    "sha256": "731f22973349404b15a88a99ef3b5dd4104c0965c23b7e485c1f11e84fea99e2"
+  },
+  {
+    "path": "assets/gusheng-poster.jpg",
+    "bytes": 383756,
+    "sha256": "244a5c620455d805e584fbb27decf5b9cacd64a31549d199e6d7a95afb57a7fa"
+  },
+  {
+    "path": "assets/health-today-desktop-redacted.png",
+    "bytes": 193402,
+    "sha256": "4a286b8b75e97560a07ffa78b58ad05d02e5184633e1416247599065b8cdb139"
+  },
+  {
+    "path": "assets/heyan-poster.jpg",
+    "bytes": 249105,
+    "sha256": "dc4196785aabd1f12de570b380b69068e739ee8dfce2ce482b8b1f3f6755a311"
+  },
+  {
+    "path": "assets/inkpanda-editor.png",
+    "bytes": 241964,
+    "sha256": "3bc9b7f45118e25ed3077f30bb9ad9794bb54615e41fb6c4985cdced6af96147"
+  },
+  {
+    "path": "assets/lettering/loki.jpg",
+    "bytes": 79898,
+    "sha256": "5569f092e25af3fa6f9d6b0b00024b25d8fc710cd326b6c7102d0c952babf24d"
+  },
+  {
+    "path": "assets/lettering/social-card-pair.png",
+    "bytes": 74400,
+    "sha256": "a18ff8e14814e3f2d70f24b1f3c9fe75b32502dd70b3dd782e93139bf682f1a6"
+  },
+  {
+    "path": "assets/lian-draw-result.jpg",
+    "bytes": 73859,
+    "sha256": "facd1947a04ffb74fa992bb35136e61e88da7ad13435438ddb4ec2bad9b29967"
+  },
+  {
+    "path": "assets/liulian-stage.jpg",
+    "bytes": 116494,
+    "sha256": "c538d52386d8ae1fe56207a9c449317339c75b8ebd491490c1b74cde118f3e58"
+  },
+  {
+    "path": "assets/liulian-white-glasses.jpg",
+    "bytes": 154530,
+    "sha256": "172238f973ae263562d1613e3e45c4ee2675b77d59a486ee16a95c9fc6a77a06"
+  },
+  {
+    "path": "assets/loki-method-volumes.webp",
+    "bytes": 126318,
+    "sha256": "6cd864a452366f6b17562c9e0c26e47a636fd20c271dc210d2066b04795e4b40"
+  },
+  {
+    "path": "assets/loki-ticket-welcome.webp",
+    "bytes": 129542,
+    "sha256": "b63fbba797e2569ccc9d7d4ba16ac73795e763a8ee1df18c6f716df332ce80bd"
+  },
+  {
+    "path": "assets/loki-wechat-official.jpg",
+    "bytes": 71076,
+    "sha256": "53a314c8a8665a9910e06ff48e3098b07ff8b2dd50d46752a67dc24513048866"
+  },
+  {
+    "path": "assets/panda-audience-card-v2.png",
+    "bytes": 2025553,
+    "sha256": "84486d0a17609ea97b9c96522bb33a5afa51ea39182c8dc1591e80db92333097"
+  },
+  {
+    "path": "assets/panda-audience-v1.png",
+    "bytes": 2490381,
+    "sha256": "a0a17fe1372ee0a40ac3abf8535eca919f4bac09da044dfff3e469d9b5285e61"
+  },
+  {
+    "path": "assets/panda-backstage-reader-v1.png",
+    "bytes": 2134350,
+    "sha256": "c22434eadbcbe63b86c1ffe06eafb8b560fc5b43e79db62bf0232ac87322f073"
+  },
+  {
+    "path": "assets/panda-squash-frames.png",
+    "bytes": 1696996,
+    "sha256": "2c07c1fedbecdc4933b5d1cb94ebd69dae759ac9d0d507c5427aae537d7e80d8"
+  },
+  {
+    "path": "assets/perspective-liulian-evidence-sheet-01.png",
+    "bytes": 2614793,
+    "sha256": "98eb6dcbd4cbf40d1bd0442b752894cb104a0c8e3961b753f13e78b839cd88ac"
+  },
+  {
+    "path": "assets/previews/cola-inject-shot-1.webp",
+    "bytes": 72392,
+    "sha256": "81cdd4b085d02786e9a89d2e095e1aa8bcd1a20af57e5def743cd178ca8649ae"
+  },
+  {
+    "path": "assets/previews/inkpanda-editor.webp",
+    "bytes": 50704,
+    "sha256": "217315857cf3986d6191597e73a3893af5b32778d34b2060bc83a1cc59c2c21a"
+  },
+  {
+    "path": "assets/previews/perspective-liulian-evidence-sheet-01.webp",
+    "bytes": 114734,
+    "sha256": "d3c99b5afd8b3216bb2c69bc75b007560f13a4da459f0ca14f45c8239668f7b7"
+  },
+  {
+    "path": "assets/process/book-report.png",
+    "bytes": 206929,
+    "sha256": "2988d0b25530967931da509667c222201cd7333bcb148c49df8b0bf31cbc5857"
+  },
+  {
+    "path": "assets/process/coconut.webp",
+    "bytes": 2292020,
+    "sha256": "4e533b0d37b2fbe880d94cc15f7098c6a948d0fa48381a82c97fe8e471c82373"
+  },
+  {
+    "path": "assets/process/codex-theme-color-only.png",
+    "bytes": 205751,
+    "sha256": "7ba28d055b03547f65ed967a57df4dacf4543e66a469df060cdb00969da70493"
+  },
+  {
+    "path": "assets/process/codex-theme-structure-diff.png",
+    "bytes": 25031,
+    "sha256": "18683c1a103c95b1dc14e857a44d8d02b4961921cefdbf804bd5303fcc28f11c"
+  },
+  {
+    "path": "assets/process/codex-theme-structure.png",
+    "bytes": 207564,
+    "sha256": "56b0e39a7e4d3d9819cfb7df86b3d9dbc1756bb0303f75ccf1f8d60df56314d1"
+  },
+  {
+    "path": "assets/process/cola-pixel.png",
+    "bytes": 159273,
+    "sha256": "39c770ddf293d832b65a9e81e89d3391f2ce962997eeedf5192ee688118b0f89"
+  },
+  {
+    "path": "assets/process/cola-story.png",
+    "bytes": 178534,
+    "sha256": "5156a13e148fd8dec88df384761a982f8591206418608f3e73aa3f218b8bf55e"
+  },
+  {
+    "path": "assets/process/collage-poem-0705.jpg",
+    "bytes": 190740,
+    "sha256": "5a91aac845bff7cf862510250deefb951adbf1677af761b35a8956c3e81a8319"
+  },
+  {
+    "path": "assets/process/cover-factory-mvp-01.jpg",
+    "bytes": 281964,
+    "sha256": "031357435351c74df76316376cb48979460750b3829af2a46360fe6531cbe68b"
+  },
+  {
+    "path": "assets/process/holiday-v1.png",
+    "bytes": 2308746,
+    "sha256": "1543f08981b1bc1e758062f2683400f01030540ee5d3bc371bb3129eaeff9dc9"
+  },
+  {
+    "path": "assets/process/holiday-v4.png",
+    "bytes": 2034732,
+    "sha256": "c17c137e1c4994c9e46c0a716715218823c5a8abf31f229e8fa5d9b7ba90b7bd"
+  },
+  {
+    "path": "assets/process/image-kit-poster-01.jpg",
+    "bytes": 295381,
+    "sha256": "52bd7a329f6db8be67902bbc344b386acf0285ea9bd1513bf6d2b68d0f4363fe"
+  },
+  {
+    "path": "assets/process/image-kit-poster-07.jpg",
+    "bytes": 906691,
+    "sha256": "c2a5319d093a09c07113364424ccab9211a141582fb733957f278b82f3a11925"
+  },
+  {
+    "path": "assets/process/loki-social-odyssey.png",
+    "bytes": 378054,
+    "sha256": "0d7120f3e02ac35d4170789dd2e87dbafa837fa0ceb0e322cbffd407b9f68cf7"
+  },
+  {
+    "path": "assets/process/loki-writing-compare.png",
+    "bytes": 207771,
+    "sha256": "495ca0df1c45d028c55cc681eae4c129a6cfda0c9abb970be366411a5764eb9c"
+  },
+  {
+    "path": "assets/process/weixin-layout-gold.png",
+    "bytes": 544613,
+    "sha256": "dd411583cd62dcf65d0eec820c6fdf3258296b9e96429b0861bdd1ce6880c28e"
+  },
+  {
+    "path": "assets/reference/loki-festival-map-original.png",
+    "bytes": 2298857,
+    "sha256": "17d4403e3e2cd208c326edb67091bda37525104f341d3687581bea3d6b407e03"
+  },
+  {
+    "path": "assets/reference/loki-stickers.png",
+    "bytes": 2335493,
+    "sha256": "fe1c415f4398e402b737baa492589ce054dfc349ca79e970861b1c48ff313ff9"
+  },
+  {
+    "path": "assets/scenes/concert.png",
+    "bytes": 2498006,
+    "sha256": "072edace67ad13d02b386f30d229b9d9684e2aca44d6e98495fc156eb2558a58"
+  },
+  {
+    "path": "assets/scenes/dance.png",
+    "bytes": 2033991,
+    "sha256": "7197ecad811bbfed4da9bd486c7b173a4931b52817209a79180645a7db705cb7"
+  },
+  {
+    "path": "assets/scenes/livehouse.png",
+    "bytes": 2196584,
+    "sha256": "f7fc7929a94a70c409242f32d1142db648401b25679ca54b8a66095ba69a4924"
+  },
+  {
+    "path": "assets/scenes/musical.png",
+    "bytes": 2230086,
+    "sha256": "abe958105371d97f3f1fde114a8e882da2655a2fe2390ad7c848bb0d84cf787c"
+  },
+  {
+    "path": "assets/scenes/theatre.png",
+    "bytes": 1866497,
+    "sha256": "eb88fc0a212387a9f7fadd72b9f0e3386e4e7ba4b413c212e2cac0be8aaaaf76"
+  },
+  {
+    "path": "assets/skills/book.png",
+    "bytes": 121500,
+    "sha256": "7f9280be91eae1535f2271c18c43e1208fdaf3ad97b9441667a6ce5249118955"
+  },
+  {
+    "path": "assets/skills/coconut/fidget.png",
+    "bytes": 194073,
+    "sha256": "9cddda27167049e18fbff6e477e21f8ffd8235edac78069cbfb00d2c8b3cef81"
+  },
+  {
+    "path": "assets/skills/coconut/idle.png",
+    "bytes": 235521,
+    "sha256": "d00739980856736f2ee832dd6d3ce0488386666369bc17e7e5c59aff744a7fd0"
+  },
+  {
+    "path": "assets/skills/coconut/jump.png",
+    "bytes": 88052,
+    "sha256": "63eb8b85cc4e8c9d0ec5c390c3db1a0f14a5b423a9bbba9729b741b10d65d642"
+  },
+  {
+    "path": "assets/skills/coconut/left.png",
+    "bytes": 229983,
+    "sha256": "8c37dbba4b13a749c72ac15a4730deefca540599d420ea556eb1cd17638362c9"
+  },
+  {
+    "path": "assets/skills/coconut/right.png",
+    "bytes": 235919,
+    "sha256": "e719d50b312603971c580c89c6cc9f82b869a7b811c1f1cb5f5a3005e640d19f"
+  },
+  {
+    "path": "assets/skills/coconut/sleep.png",
+    "bytes": 201197,
+    "sha256": "ddc1b7ea915b294be5c51e4900e3e70780369844371885a12dcc6666c75c4e38"
+  },
+  {
+    "path": "assets/skills/coconut/wave.png",
+    "bytes": 142759,
+    "sha256": "2b17f86294026c4c5dd59a3ed98963d0b8b69fc825eec3e7999147263293992c"
+  },
+  {
+    "path": "assets/skills/codex-theme.png",
+    "bytes": 186864,
+    "sha256": "7765ff3799352d3875b39a022f8bf4d09f9045d303702a909fbbea0ac6a5aa27"
+  },
+  {
+    "path": "assets/skills/collage-poem.png",
+    "bytes": 1163883,
+    "sha256": "2f3cc6927b894260fb0ab73e352cc9a28f9acf34d818aef401cd433b2c9c1767"
+  },
+  {
+    "path": "assets/skills/cover-system.jpg",
+    "bytes": 133220,
+    "sha256": "f60943f226d4a1dddcbac312a60e6b08f47c9b61d155cdd22d4fbb89fb37f335"
+  },
+  {
+    "path": "assets/skills/deep-night.jpg",
+    "bytes": 208660,
+    "sha256": "4864ee14ce4b8ae0460a3a7ef8f4c1846c9f9bfc54ce9b123966ac4fd1eed117"
+  },
+  {
+    "path": "assets/skills/feishu-weixin.png",
+    "bytes": 187554,
+    "sha256": "7605ee15f53f574be77d1f8637409996498003d0196e599a7a4361b850ba2ed5"
+  },
+  {
+    "path": "assets/skills/film-poster.jpg",
+    "bytes": 427443,
+    "sha256": "622647d21f77fa925ae658849a118d89ce25afe198db9d06a6eeb4f1d3a2ac8d"
+  },
+  {
+    "path": "assets/skills/hatch-pet.webp",
+    "bytes": 931008,
+    "sha256": "69633d4de4c144bb8344de435ac762cde0bf878f21b9f245dba9cb63c8537c93"
+  },
+  {
+    "path": "assets/skills/headline.png",
+    "bytes": 193916,
+    "sha256": "f54e8e06c1509c9806742aadc53ce620f7a8744e72129fdf3ef4cd2fcd89a756"
+  },
+  {
+    "path": "assets/skills/image-kit.jpg",
+    "bytes": 350577,
+    "sha256": "4c6a00b7944d7863880e0c733aa8d29ad1bfbc54caa252b7f50ffd8236e5153a"
+  },
+  {
+    "path": "assets/skills/loki-writing.png",
+    "bytes": 454369,
+    "sha256": "4c7cccb0280dc802bd7a6ee65341aa1d3b866b08a034019c0a99656209570e07"
+  },
+  {
+    "path": "assets/skills/notes.png",
+    "bytes": 76326,
+    "sha256": "fb6096c99270fb3c12cb95f3267648de423a9f20918d042ec581b71f429cb419"
+  },
+  {
+    "path": "assets/skills/skill-builder-real-doc.png",
+    "bytes": 329762,
+    "sha256": "bd48a57ddca5d381f9f25c282357ac8a7b9c32b7a786cd5129bcd2e871bb380e"
+  },
+  {
+    "path": "assets/skills/skill-builder.png",
+    "bytes": 239245,
+    "sha256": "48f2e473f630882cae175a3822198397e9633b4d571d61d0410770a996f9a83c"
+  },
+  {
+    "path": "assets/skills/slides.jpg",
+    "bytes": 134770,
+    "sha256": "b22a1936713b233d739237d7982826c8712aea2823eb3d61e45f3974600cc4f7"
+  },
+  {
+    "path": "assets/skills/weixin-layout.png",
+    "bytes": 783926,
+    "sha256": "7f57389481e018ecb4d7dbe972a05cd23f0d54afb0966299cff2661c24054dc5"
+  },
+  {
+    "path": "assets/skills/weixin-outline.png",
+    "bytes": 167202,
+    "sha256": "b7e8234047c94dcbd0c1011e465c0c583289c35bf54b0b5b9bec3ab41be4782c"
+  },
+  {
+    "path": "assets/skills-social-card-pair.png",
+    "bytes": 74400,
+    "sha256": "a18ff8e14814e3f2d70f24b1f3c9fe75b32502dd70b3dd782e93139bf682f1a6"
+  },
+  {
+    "path": "assets/supergirl-duet-2025.jpg",
+    "bytes": 535155,
+    "sha256": "a004891cf4dd7020fd7e56222a8599058358caedf8b6e231c737f8fb293c500c"
+  },
+  {
+    "path": "assets/wanqian-stage.jpg",
+    "bytes": 181830,
+    "sha256": "a6aa82f90ef48e5a1431909539b271d068ef0e4e0974e398553888e7df7a2f0b"
+  },
+  {
+    "path": "assets/yanhui-still.jpg",
+    "bytes": 1565759,
+    "sha256": "4d3e10f9027821cacc42f041da08630a2975486198a787a700eb6a72919ef5b0"
+  },
+  {
+    "path": "assets/yueqianling-poster.jpg",
+    "bytes": 178425,
+    "sha256": "4c812ff9ef0c95d2d6734de279e48fde283f0dddd7b05c1ab0b172877cefefbe"
+  },
+  {
+    "path": "book.js",
+    "bytes": 4837,
+    "sha256": "c04b818d4eb46574154b29850c5f96a351b95ab4acf84bbcf8f098186abe0c88"
+  },
+  {
+    "path": "brand-system.css",
+    "bytes": 17416,
+    "sha256": "f72d09f23118a9db2539b0c1373301af83f9a821b91d877f90aa621a6601899a"
+  },
+  {
+    "path": "bright.css",
+    "bytes": 4379,
+    "sha256": "9ac845225c6a6e62920ca68a0c30af6830787d1fa18afba36f95e50e92feb74d"
+  },
+  {
+    "path": "catalogue.js",
+    "bytes": 4452,
+    "sha256": "fab30e78412f7cad82e563be2ac4a05f675d31f95d65d8f28acc22a7b8c869de"
+  },
+  {
+    "path": "contact/index.html",
+    "bytes": 4855,
+    "sha256": "5b4aeb1fd2e8878ffa8db8f4933c14c415b534c9407949cb06e9f80881843dcb"
+  },
+  {
+    "path": "contact.js",
+    "bytes": 2837,
+    "sha256": "c68ead3f328ec62e3f18d17f753b16971fa0dc6ca9e01c0b8b9a194903e202cc"
+  },
+  {
+    "path": "corpus-data.js",
+    "bytes": 77239,
+    "sha256": "5ba664f09cedaf26329fd4d9cf7edc4a42995c907d2599a9c3a7d2edadf16d70"
+  },
+  {
+    "path": "corpus.css",
+    "bytes": 5907,
+    "sha256": "24cdbe653bddda92a1aa5848e972cdc678c554e7603a3cb827c88ebe0080d2b5"
+  },
+  {
+    "path": "corpus.js",
+    "bytes": 6947,
+    "sha256": "eefb6cefa3528530674a022783ebe66b26bf461dc5c3e342ac86400eb3c4600a"
+  },
+  {
+    "path": "detail-study/catalogue.js",
+    "bytes": 5312,
+    "sha256": "ef0ae7c1327083414a9b4146e4834410bfd71ddafef645d9936b13779a456406"
+  },
+  {
+    "path": "detail-study/directory.js",
+    "bytes": 5651,
+    "sha256": "de36642e2c45467b0f40ec096afab09e94b6c1e8e369c7824dee292ff7d22290"
+  },
+  {
+    "path": "detail-study/index.html",
+    "bytes": 6907,
+    "sha256": "9d4e76b5bd800f0f89ae43598d2e500c1c0f57b38b9aba24985c7e37b05c41d4"
+  },
+  {
+    "path": "detail-study/live-material.css",
+    "bytes": 5535,
+    "sha256": "36601dbd679abecd21e710f68491f2e03b84f09920b19dff9150509e1a875a4a"
+  },
+  {
+    "path": "detail-study/material.js",
+    "bytes": 3131,
+    "sha256": "c76d2753441ce1e1ddd886370ab7e575c87a20c5e75aab36fc4d289af57b6264"
+  },
+  {
+    "path": "detail-study/perspective.js",
+    "bytes": 6417,
+    "sha256": "5a36b951692eca8994b4ffd6fb3ebd6a5006101d5c4f77df85f7e9754074f9ee"
+  },
+  {
+    "path": "detail-study/publication.js",
+    "bytes": 5933,
+    "sha256": "9f96834eb15ff7bd44418d6c9d4155f7d6b4414c3bbb3edb1993f0ec7ce688fb"
+  },
+  {
+    "path": "detail-study/router.js",
+    "bytes": 1201,
+    "sha256": "6e1c521ba9debbcb7cee6c21f48345538d2faaad45755a2f114a44924ebad1c3"
+  },
+  {
+    "path": "detail-study/study.css",
+    "bytes": 33353,
+    "sha256": "ca6919417fe56d960ec0cfbdb16ff4e85fbf3d4759119bca1e4bbba9eb3d6b8e"
+  },
+  {
+    "path": "detail-study/study.js",
+    "bytes": 8405,
+    "sha256": "11933eae74a0f79347004add1dc3ac0a0a80c5730b0e1cef1ac82b01b7e4c3ad"
+  },
+  {
+    "path": "details.js",
+    "bytes": 3440,
+    "sha256": "eadb77ed1c823580886b5718acea2ff4aeebc5902b7802603ea4c4c44b5b2111"
+  },
+  {
+    "path": "discovery.css",
+    "bytes": 12489,
+    "sha256": "d6362a0a862914335941f511abfd24a33d1265e3b8dd7b0ebd410a250544c825"
+  },
+  {
+    "path": "edition.css",
+    "bytes": 5988,
+    "sha256": "f8a4d35c2e393186de493d6c76e0c3b4b92bf98c1d8e06c24ceb74b791b5a981"
+  },
+  {
+    "path": "edition.js",
+    "bytes": 10324,
+    "sha256": "8e18b63956cfb0fd6c252286da41f0235446e2f0e9af9078a2bfd07541c93e3b"
+  },
+  {
+    "path": "editorial.css",
+    "bytes": 8648,
+    "sha256": "dfaa2b97320739a34ed4693923a89e5262bf940de723814c2e9aefeb09956fdb"
+  },
+  {
+    "path": "editorial.js",
+    "bytes": 6412,
+    "sha256": "3caaaf106a79721b1d33ebd1db9e8f68afff0628ca5cb96e1013b40a1dadf081"
+  },
+  {
+    "path": "fan-letters.js",
+    "bytes": 7198,
+    "sha256": "9de307c61df812ac1c4c0981455449629df3129a56d96eee48348e72c1a8ba6e"
+  },
+  {
+    "path": "finishing.css",
+    "bytes": 6080,
+    "sha256": "c39126fa1e43e6a2f44ba2a33fb85ba4f395138afa6e0ede900678707f98a034"
+  },
+  {
+    "path": "finishing.js",
+    "bytes": 6946,
+    "sha256": "7c4f0d791cca3105143430a1df6d7549e3e3c8108c5927bad75d9996d7c000e3"
+  },
+  {
+    "path": "index.html",
+    "bytes": 17541,
+    "sha256": "db62fc948f33b58957e1c1095f05eb3c3b0b52cba133727e72943bdc07583f4d"
+  },
+  {
+    "path": "live-edition.css",
+    "bytes": 5479,
+    "sha256": "0de26ce76009547870eeb231e523c8ea2cba47fc985f99125cd87481062768d6"
+  },
+  {
+    "path": "live-edition.js",
+    "bytes": 2815,
+    "sha256": "52f4e8cfa8a7772abcd40c3e74380249fbdc075565f8177df802336a8ea867bc"
+  },
+  {
+    "path": "loki-ip-live.jpg",
+    "bytes": 79898,
+    "sha256": "5569f092e25af3fa6f9d6b0b00024b25d8fc710cd326b6c7102d0c952babf24d"
+  },
+  {
+    "path": "loki-wechat-official.jpg",
+    "bytes": 71076,
+    "sha256": "53a314c8a8665a9910e06ff48e3098b07ff8b2dd50d46752a67dc24513048866"
+  },
+  {
+    "path": "merch.css",
+    "bytes": 31140,
+    "sha256": "366c6c16959e0f121ab937939e9f87e7c898a34b421747d93b847f1c85cfe37c"
+  },
+  {
+    "path": "merch.js",
+    "bytes": 19533,
+    "sha256": "51c1ac1a34a48280265f08b97cdbc936126d7cf6de070a10cbdbe7c84e53f22c"
+  },
+  {
+    "path": "methods/book/index.html",
+    "bytes": 8328,
+    "sha256": "2ade1d314d8f3fba40671e3e3da84fa87524c4aee54fc27968a3168b535fc9bc"
+  },
+  {
+    "path": "methods/codex-theme/index.html",
+    "bytes": 8757,
+    "sha256": "0ab42216dc18074173924e932ae19ae15061d43974f79c6ea0517808fb120294"
+  },
+  {
+    "path": "methods/collage-poem/index.html",
+    "bytes": 7328,
+    "sha256": "48085bb750252b172fb02c1ce91fe88c1dca7378f5e01e3d4ece151225096278"
+  },
+  {
+    "path": "methods/cover-system/index.html",
+    "bytes": 7609,
+    "sha256": "c27361cdfd2acaeea808d3b57a7ccb59a61457c174e51bb6f2f2f747567dca46"
+  },
+  {
+    "path": "methods/cyber-red-panda/index.html",
+    "bytes": 7203,
+    "sha256": "3ca92a241f6cd78147469d5bfaa0e7e5199d2c01c555d7e57e3cf591e31fce0d"
+  },
+  {
+    "path": "methods/debate/index.html",
+    "bytes": 7206,
+    "sha256": "d8327fdd90bd92a294291fe89495ae1380e2b030507b4aba3128ad3561453ac2"
+  },
+  {
+    "path": "methods/deep-night/index.html",
+    "bytes": 7506,
+    "sha256": "1fd343c1d3bed0b7343cf66d11b330ee887704559725ff53f381034b28671299"
+  },
+  {
+    "path": "methods/ebook-workflow/index.html",
+    "bytes": 7625,
+    "sha256": "979537bcfdc6e80808c9235cb4a51c5728835a44b3adf60fd6f4891763d619b0"
+  },
+  {
+    "path": "methods/feishu-weixin/index.html",
+    "bytes": 7610,
+    "sha256": "b1196e619ec0a7e6d579a9bdf3f64dcb60444bed1d26d1dadae5f10eedf2ad1c"
+  },
+  {
+    "path": "methods/film-poster/index.html",
+    "bytes": 7512,
+    "sha256": "1d12d5c4dc8061c0e6446d714bf43095f776eadec6d8e8b2e187d0a8a18e988e"
+  },
+  {
+    "path": "methods/headline/index.html",
+    "bytes": 7081,
+    "sha256": "076c1018bd73cbe5c086dd8cbb04a36e2cfd1812dff6ba54b028a771ccb4bd47"
+  },
+  {
+    "path": "methods/image-kit/index.html",
+    "bytes": 8206,
+    "sha256": "a9e0d72946e90fb9f3da7e7fcd58ef5911f258acccaeeecdb5cbd9b72c1b6f6a"
+  },
+  {
+    "path": "methods/index.html",
+    "bytes": 9575,
+    "sha256": "6e6057e059c6b02119ad6c2264f3b2a0ac07e5d036985b4b23e26e2188eba4af"
+  },
+  {
+    "path": "methods/judgment/index.html",
+    "bytes": 8572,
+    "sha256": "69e9a47ed09962b14debb19e7a4e4879958df54df189656fc604f35d7234c976"
+  },
+  {
+    "path": "methods/lian-curation/index.html",
+    "bytes": 7843,
+    "sha256": "37317a9c0a19904b04b314e04862c9a850fee2fafc3504179e7dd1a958c9c399"
+  },
+  {
+    "path": "methods/loki-social/index.html",
+    "bytes": 7628,
+    "sha256": "1f2adac2a839e4229f302ed3f40b1b33fa7abad7195684f20bfd6875a0b005bd"
+  },
+  {
+    "path": "methods/loki-writing/index.html",
+    "bytes": 8638,
+    "sha256": "675c53051f4b48376237839ad8958bd3be83772be22e079d788a5c51411b4d82"
+  },
+  {
+    "path": "methods/notes/index.html",
+    "bytes": 7395,
+    "sha256": "3d27203c2ed9639d6b7d29226c8a908230480a8642851429dd498150ffbbfe17"
+  },
+  {
+    "path": "methods/skill-builder/index.html",
+    "bytes": 7513,
+    "sha256": "204790cbc0599b87c49357be803749944a07aa3684c9979349d76a5704b74a31"
+  },
+  {
+    "path": "methods/slides/index.html",
+    "bytes": 7231,
+    "sha256": "4a014fd1db6281c94bfd8485105066837db22621671f5de59e53dfc7f3a6db01"
+  },
+  {
+    "path": "methods/visual-directions/index.html",
+    "bytes": 8453,
+    "sha256": "bd2746772398a343fe95d51a1de144f9e5d989c0edb7d93fe36f7dd478782f75"
+  },
+  {
+    "path": "methods/weixin-layout/index.html",
+    "bytes": 7573,
+    "sha256": "fdda2b84f137955ee32ac005ce84fc815d6d0bee6efdb41dd1e993a14e7bc206"
+  },
+  {
+    "path": "methods/weixin-outline/index.html",
+    "bytes": 8105,
+    "sha256": "69424be185bc42248ee061d1171436ef704fe4b06233aba934fe9d7c95634e31"
+  },
+  {
+    "path": "notes/day-01/index.html",
+    "bytes": 6378,
+    "sha256": "6a5ba420107aa91c094ca415eab01ddcb6380f14ab673d9a5581077423d07ec2"
+  },
+  {
+    "path": "notes/day-02/index.html",
+    "bytes": 6964,
+    "sha256": "24340d9d8c8525041dfff93b27faa0f21734d5ad67230a82034af29c4249f2de"
+  },
+  {
+    "path": "notes/day-03/index.html",
+    "bytes": 6930,
+    "sha256": "8888c2530df223fe60baca596fa54be0f8fd1811417ca9e629a339bdefd051bf"
+  },
+  {
+    "path": "notes/day-04/index.html",
+    "bytes": 6962,
+    "sha256": "90a46ded020925fac4a22f9c9faecf473299beb8e194bfb2d6880685b9e30e0e"
+  },
+  {
+    "path": "notes/day-05/index.html",
+    "bytes": 6784,
+    "sha256": "d585053bd1f39f46eeb23830f9758f2e4a7fcada9b469dd86a8aeed0d37da89e"
+  },
+  {
+    "path": "notes/day-06/index.html",
+    "bytes": 6853,
+    "sha256": "07e00a8d6a98f8eb282dd0a836174f413d0c7ca5b39c0e568f8086715d230eab"
+  },
+  {
+    "path": "notes/day-07/index.html",
+    "bytes": 7409,
+    "sha256": "a49932985355d16959c0e4ee944c7908a6dcebe3f3ebcd5db5bba2ac9cce4823"
+  },
+  {
+    "path": "notes/day-08/index.html",
+    "bytes": 7201,
+    "sha256": "6d5f5be74c18b206d4f619c8b48eb40259287b2598a10bad8c0e94b6f366d0e4"
+  },
+  {
+    "path": "notes/day-09/index.html",
+    "bytes": 7224,
+    "sha256": "09997b5c9c7b6a4ebe7c7b9f0bf754ff65b1a0d4d4c9b3a45f40c7dfa222eb5c"
+  },
+  {
+    "path": "notes/day-10/index.html",
+    "bytes": 6557,
+    "sha256": "fdd71736118e33bc63092c1b59bab002a57226a46fc995684ecf773e6896c72d"
+  },
+  {
+    "path": "notes/day-11/index.html",
+    "bytes": 6947,
+    "sha256": "5fd6e25663d82e084462f3a7290c5ce632bb816172fd244bfcecdd336c5ca4ae"
+  },
+  {
+    "path": "notes/day-12/index.html",
+    "bytes": 6997,
+    "sha256": "dbacb67ecd5ddcb591481fde4fb3d763f49698cdfbc13f9947dc7339c1c4d264"
+  },
+  {
+    "path": "notes/day-13/index.html",
+    "bytes": 7238,
+    "sha256": "ff5c0e3e0be08321e89bd67151528629bcec52a420267a412ae41662dc356704"
+  },
+  {
+    "path": "notes/day-14/index.html",
+    "bytes": 7613,
+    "sha256": "c2d7bc9e04b151c6e2745476025127d7ad0a4a045d26f865116ac2bf6ec7f499"
+  },
+  {
+    "path": "notes/day-15/index.html",
+    "bytes": 7397,
+    "sha256": "c76cb88bd8a2eabfd98aa8816ddc429b25e3e2079d9fe204250061fdb73b29b4"
+  },
+  {
+    "path": "notes/day-16/index.html",
+    "bytes": 7520,
+    "sha256": "ada303298fd7153c16a3458d866ae93d77a8e4551080e988d063b6b469365bae"
+  },
+  {
+    "path": "notes/day-17/index.html",
+    "bytes": 7663,
+    "sha256": "540f07bbdc83a1a179cc20e2cebc25817e7beb8229365be2d3dd610abbc5bdcb"
+  },
+  {
+    "path": "notes/day-18/index.html",
+    "bytes": 6848,
+    "sha256": "b4b8f5f847f098155619473d64d15d6ff125045096070c4e31ce49c9eff4793b"
+  },
+  {
+    "path": "notes/day-19/index.html",
+    "bytes": 6815,
+    "sha256": "8968fe43b9eac40b642a7f2ab9f3b93303c46350589e97c789a087c9b1084465"
+  },
+  {
+    "path": "notes/day-20/index.html",
+    "bytes": 7029,
+    "sha256": "3d802b7544a00398f53dab187cfbeb9189cb2a35470c15af81a1ce3f027ba675"
+  },
+  {
+    "path": "notes/day-21/index.html",
+    "bytes": 6958,
+    "sha256": "52f222b3057e77bf0510639295e336550d6cb206e971debb8ae25c5b4f9277f9"
+  },
+  {
+    "path": "notes/day-22/index.html",
+    "bytes": 6635,
+    "sha256": "2487125b2a0af06e4b3b94684802d334b6f3c67e7fcb489911e487119f18d0d4"
+  },
+  {
+    "path": "notes/day-23/index.html",
+    "bytes": 7300,
+    "sha256": "302966d6c5c9697d35c43a79f4b269c2c104a8e139919f4e8174141200a852a8"
+  },
+  {
+    "path": "notes/day-24/index.html",
+    "bytes": 6494,
+    "sha256": "537094332a69c90e206dd3d711fa436aa30411731b4a7b091b9403731fbfe5a4"
+  },
+  {
+    "path": "notes/day-25/index.html",
+    "bytes": 7089,
+    "sha256": "2ab1de573edc2943cfd8e3c376c209f8a1905fce1bd864ed902c8fc7e81a517e"
+  },
+  {
+    "path": "notes/day-26/index.html",
+    "bytes": 7113,
+    "sha256": "1f06ef33283008284f5493c63b81d1ae11a7fd1dab237d3ea6f1d5b9eaac5fbc"
+  },
+  {
+    "path": "notes/day-27/index.html",
+    "bytes": 7165,
+    "sha256": "725bb665bd6648587fab4a9c4571a706150b287f65bf0fc9c427b6ead3cbdb1d"
+  },
+  {
+    "path": "notes/day-28/index.html",
+    "bytes": 7732,
+    "sha256": "ab5464c83d1479e31ad57cc9ae9152f4bb6c4aa231c0c4b86bd0dacd2fbcb74b"
+  },
+  {
+    "path": "notes/index.html",
+    "bytes": 12009,
+    "sha256": "d412c1f01af7ecb8966c50390bf61930eca1662da3f6b7a80ad532c207e611fd"
+  },
+  {
+    "path": "pockets.css",
+    "bytes": 18929,
+    "sha256": "2f48d8469802ca96cd47b2ac69b0df0d95a0863a99026a760c5b937472be7265"
+  },
+  {
+    "path": "pockets.js",
+    "bytes": 13588,
+    "sha256": "8c7ce0d049fe6327a901ba23a0cc730a6b0f4d30ff46a83c8ffdc22b5242cfcd"
+  },
+  {
+    "path": "process-data.js",
+    "bytes": 53977,
+    "sha256": "4aa7293f12afa04b48914f97df23fb3ba6ab98ed24c5f1e2a74b8ae2425230b1"
+  },
+  {
+    "path": "process.css",
+    "bytes": 5090,
+    "sha256": "283fb074fad45aedcdfd3f26db7a4ec5ede9cd0fb773028d07c0599f1132f133"
+  },
+  {
+    "path": "process.js",
+    "bytes": 4898,
+    "sha256": "ffe41c64cd7a57654b17ac0831a5bf48c9d9501359d40dc07f3dc0ba030f2bed"
+  },
+  {
+    "path": "projects/ai-career-compass.html",
+    "bytes": 30647,
+    "sha256": "d4d3df56b97c1c3406b646009088f8b599cea262499490142ec20f64dd0a7e26"
+  },
+  {
+    "path": "projects/artifact-case.css",
+    "bytes": 25938,
+    "sha256": "bf477cfad4190170aeaa3b9037c855a93893366474f3ddc13dbe5399fb80617a"
+  },
+  {
+    "path": "projects/artifact-case.js",
+    "bytes": 18941,
+    "sha256": "4e061c46ebdda62f912d43037010aca20ed17e30286b94010b1d8ad320242d6f"
+  },
+  {
+    "path": "projects/assets/codex-liulian-collage.png",
+    "bytes": 1231393,
+    "sha256": "399ba430b8bb7229bff0e0e114c922e8451e8f5a3ac1ed3d9af6f54d4f5e18d3"
+  },
+  {
+    "path": "projects/assets/exhibition/codex-liulian-cutout.png",
+    "bytes": 1231393,
+    "sha256": "399ba430b8bb7229bff0e0e114c922e8451e8f5a3ac1ed3d9af6f54d4f5e18d3"
+  },
+  {
+    "path": "projects/assets/exhibition/codex-liulian-cutout.webp",
+    "bytes": 789118,
+    "sha256": "3daa00b6946a71c2dd6eb693d97959ab7d94c80636932b4a33e758a6d2505304"
+  },
+  {
+    "path": "projects/assets/exhibition/hub-article-ai.png",
+    "bytes": 2255294,
+    "sha256": "779fb350a1969364cc5bb3cd79f751e6cb3ffe3a22fd3c87f5e653970d321365"
+  },
+  {
+    "path": "projects/assets/exhibition/hub-article-ai.webp",
+    "bytes": 137572,
+    "sha256": "6ef3b0731643d8f05d03fb446898e2f5314f4df57f5f55ce2a02e34b0f9bb845"
+  },
+  {
+    "path": "projects/assets/exhibition/hub-article-room.png",
+    "bytes": 2272138,
+    "sha256": "817b825e6487c927fbc76b9563534fff3cd33e08b0f7022e06529871e867f466"
+  },
+  {
+    "path": "projects/assets/exhibition/hub-article-room.webp",
+    "bytes": 128602,
+    "sha256": "b5d0a077fb8389ee59dc7dc9e82827f40ff62f5171036e64a3df99c12283a5d9"
+  },
+  {
+    "path": "projects/assets/exhibition/hub-article-thirty.png",
+    "bytes": 2291079,
+    "sha256": "7c0814192422ae5225c68ea61801ad99c49416f1285688b38fdd0dbb0c899024"
+  },
+  {
+    "path": "projects/assets/exhibition/hub-article-thirty.webp",
+    "bytes": 100436,
+    "sha256": "bec5c707290cd5fdb212c105ec4310b3839b29189aa0a4cfe1123d5981cc4651"
+  },
+  {
+    "path": "projects/assets/exhibition/hub-real-ai-friends-body.png",
+    "bytes": 176128,
+    "sha256": "718f41ca1b96cd0333e24d3470016e7181dff2481861ac1857ed89fd754603c5"
+  },
+  {
+    "path": "projects/assets/exhibition/hub-real-ai-friends-body.webp",
+    "bytes": 58710,
+    "sha256": "6c1881950a004091bda01bb726a9cced71c9cf0ca82f852246543e7416c09c92"
+  },
+  {
+    "path": "projects/assets/exhibition/hub-real-ai-space-body.png",
+    "bytes": 209856,
+    "sha256": "cd8a7353217a763461185c4fb3cadb3febbec97803fe44b3dff0e4f0b73e54ac"
+  },
+  {
+    "path": "projects/assets/exhibition/hub-real-ai-space-body.webp",
+    "bytes": 70578,
+    "sha256": "503156adf98894cc20b0783d6a3fefafd25feff5b0e74b2662355d16fac4144c"
+  },
+  {
+    "path": "projects/assets/exhibition/hub-real-dark-mode-body.png",
+    "bytes": 214243,
+    "sha256": "71fb6e9be0941ecd5f012472dd3e6b40f662cdefda2ee3ed9bb270bcf3c9fb70"
+  },
+  {
+    "path": "projects/assets/exhibition/hub-real-dark-mode-body.webp",
+    "bytes": 82264,
+    "sha256": "564f5eda51347f984dbb5173ac2dc96be5a027236563777578d53a834d09fee5"
+  },
+  {
+    "path": "projects/assets/exhibition/hub-real-verify-ui-body.png",
+    "bytes": 159914,
+    "sha256": "f2672d5edfdc83ede6ec4ae56776c59d7b582c8e955a2001d0d5ad540aa4dcf9"
+  },
+  {
+    "path": "projects/assets/exhibition/hub-real-verify-ui-body.webp",
+    "bytes": 60504,
+    "sha256": "ece10a2c2f6cfa6e672d8d6b97793330342b55c4c4ecd5d4bcca0a5aa00ffb42"
+  },
+  {
+    "path": "projects/assets/exhibition/hub-ui-collage.png",
+    "bytes": 227889,
+    "sha256": "728088476e1029a0761c78599e8ec185553edca77b93b8499a481350c51fdc90"
+  },
+  {
+    "path": "projects/assets/exhibition/hub-ui-collage.webp",
+    "bytes": 40610,
+    "sha256": "f0f52588df56ae35b9667370e07a89028874cd1cec201b3e36e45c1e57994e9a"
+  },
+  {
+    "path": "projects/assets/exhibition/hub-ui-doodle-mobile.png",
+    "bytes": 64790,
+    "sha256": "e85b17b2e3ecb25cbf50f647a0c0d8a82295261a163ead3be834c7b31dc51ad8"
+  },
+  {
+    "path": "projects/assets/exhibition/hub-ui-doodle-mobile.webp",
+    "bytes": 25700,
+    "sha256": "2d28be6ffec0681c8c1bbf1041d8729436db95e678804b4f7ef5b55e9ae75df5"
+  },
+  {
+    "path": "projects/assets/exhibition/hub-ui-lightbox.png",
+    "bytes": 498339,
+    "sha256": "eaee707e3b3c55c93a96b75b6dac10e5421c3abf6f20b55ddf5f5e75dae517f1"
+  },
+  {
+    "path": "projects/assets/exhibition/hub-ui-lightbox.webp",
+    "bytes": 50900,
+    "sha256": "e9a77df97e115bcb0bb9bf01aed9c620079618dcdb9f6887aa4c321540836427"
+  },
+  {
+    "path": "projects/assets/exhibition/hub-ui-poster.png",
+    "bytes": 76447,
+    "sha256": "d0e72f16a8a3fa39d13e1b7cb39de070272aa94ef9b5aed2303e61756d2de979"
+  },
+  {
+    "path": "projects/assets/exhibition/hub-ui-poster.webp",
+    "bytes": 24046,
+    "sha256": "193f0e8a345db69a8f6255a6f64670b98e07ce9c9c4aa96c4ac91bcae62ac619"
+  },
+  {
+    "path": "projects/assets/exhibition/perspective-stage-v1.png",
+    "bytes": 1735240,
+    "sha256": "0529e70ded5df8a4c1b3867d1ef4c5bfe51eab49b055d669f789c0ba003fb783"
+  },
+  {
+    "path": "projects/assets/exhibition/perspective-stage-v1.webp",
+    "bytes": 114664,
+    "sha256": "899accb0493ef5e117854e945a7894f421f72a300b82ecb14daf8522303982bb"
+  },
+  {
+    "path": "projects/assets/exhibition/reading-desk-v1.png",
+    "bytes": 2354030,
+    "sha256": "c3c41786883d97c96c222a074c33271ac5d042f174183ace7718543a694714e7"
+  },
+  {
+    "path": "projects/assets/exhibition/reading-desk-v1.webp",
+    "bytes": 147362,
+    "sha256": "2e402cb4ba084d8c5d21ea972220045688d63f254b25ab28c179441e8c1bbae2"
+  },
+  {
+    "path": "projects/assets/loki-hub-style-board.png",
+    "bytes": 1693011,
+    "sha256": "32b2b4466a8d2a1870bf0a97b88491ed153f078d829a9bf7fb15e49fec798536"
+  },
+  {
+    "path": "projects/assets/real/ai-career-compass/eval-scoring-hero.png",
+    "bytes": 200693,
+    "sha256": "cc40de850c98c630143bd19150e5c47b6fb881bf60b364ee58eb217a9473b35b"
+  },
+  {
+    "path": "projects/assets/real/ai-career-compass/eval-scoring-table.png",
+    "bytes": 241758,
+    "sha256": "6cef2b0e69de0355b95268418cacc0230976c5797ca8b4c9604321601472f371"
+  },
+  {
+    "path": "projects/assets/real/ai-career-compass/recruiter-lens.png",
+    "bytes": 148456,
+    "sha256": "612f15eb07a3244bc59ae4e6c6966ed55fdadc76f9aeada5425a40908fb8b0ed"
+  },
+  {
+    "path": "projects/assets/real/ai-career-compass/seven-day-action-plan.png",
+    "bytes": 341613,
+    "sha256": "3022e53dff8fa26c86e0751cd35deacf17689f52473edcc46b6db02316f133ba"
+  },
+  {
+    "path": "projects/assets/real/cola/cola-9skins-v5-overview.png",
+    "bytes": 1076843,
+    "sha256": "4439b57568be568bd2f24ee66008d905db4c0830cc725ee6fcbc3fe7bc3711d4"
+  },
+  {
+    "path": "projects/assets/real/cola/inject-shot-1.png",
+    "bytes": 848699,
+    "sha256": "d771e9988f4d12133754fd8baa666bf342e461b7a073461220264da97cef22d9"
+  },
+  {
+    "path": "projects/assets/real/cola/inject-shot-sky.png",
+    "bytes": 761613,
+    "sha256": "08cc96b933cba7db71e8ad5ecbe60da88f8dd951497846f10a67edc2da5558af"
+  },
+  {
+    "path": "projects/assets/real/cola/skin-doodle.png",
+    "bytes": 157749,
+    "sha256": "81dbbff4c40622409d1ea2969111554d3d0bf5abe3ee24246dda534b7ae2c867"
+  },
+  {
+    "path": "projects/assets/real/cola/skin-lightbox.png",
+    "bytes": 193022,
+    "sha256": "185259c14c12f02fd76fb8aff946309c6fa7969d3f0bd294362931fc004d3b2b"
+  },
+  {
+    "path": "projects/assets/real/cola/skin-pixel.png",
+    "bytes": 159273,
+    "sha256": "39c770ddf293d832b65a9e81e89d3391f2ce962997eeedf5192ee688118b0f89"
+  },
+  {
+    "path": "projects/assets/real/cola/skin-sky.png",
+    "bytes": 173754,
+    "sha256": "9f7637d7e47358bdfb779f0149f340476948dc15febbc1f9d39e18197fdddf42"
+  },
+  {
+    "path": "projects/assets/real/cola/skin-urban.png",
+    "bytes": 164715,
+    "sha256": "57932ee890073f6dbe621e543dff64c0838d1cb102b1d641fb4038dcec7c8856"
+  },
+  {
+    "path": "projects/assets/real/ebook/app-home.png",
+    "bytes": 28730,
+    "sha256": "d641a845693e71d91dfed0739a0ab8a92f22ea748a0e83bb66fea941ba0cb035"
+  },
+  {
+    "path": "projects/assets/real/edu-content-line/jingsi.png",
+    "bytes": 164114,
+    "sha256": "8f6e0c72c97e87a7c7eef1587e6463bc371ece6fd5ebe9c3cd5ada94c3411087"
+  },
+  {
+    "path": "projects/assets/real/edu-content-line/math.png",
+    "bytes": 176822,
+    "sha256": "3a6ceed9061f47d44aa0651ae8d5464dc7776bf2ff7d7f0ef984a0d168460d87"
+  },
+  {
+    "path": "projects/assets/real/edu-content-line/yongge-hero.png",
+    "bytes": 63071,
+    "sha256": "463134eb5c354fa859b335019da56cce727bc681eddc545392f3d24738ced65b"
+  },
+  {
+    "path": "projects/assets/real/edu-content-line/yongge.png",
+    "bytes": 196869,
+    "sha256": "b22814cccc96843c12e6be766ab0b14cee3fb0b6c4766fc1f667daaaace7fcee"
+  },
+  {
+    "path": "projects/assets/real/health/today-desktop-redacted.png",
+    "bytes": 193402,
+    "sha256": "4a286b8b75e97560a07ffa78b58ad05d02e5184633e1416247599065b8cdb139"
+  },
+  {
+    "path": "projects/assets/real/health/today-mobile-redacted.png",
+    "bytes": 103349,
+    "sha256": "919358a1ec0ea16015001f893717922bf907a57ba1d089b8176eaff441c3d397"
+  },
+  {
+    "path": "projects/assets/real/health/water-desktop-redacted.png",
+    "bytes": 239017,
+    "sha256": "c8d8db83539f662398457fad0e3fcc857633cfa8b0301648fbc620d30b609a13"
+  },
+  {
+    "path": "projects/assets/real/hub/doodle-mobile.png",
+    "bytes": 64790,
+    "sha256": "e85b17b2e3ecb25cbf50f647a0c0d8a82295261a163ead3be834c7b31dc51ad8"
+  },
+  {
+    "path": "projects/assets/real/hub/pixel-arcade-desktop.png",
+    "bytes": 159286,
+    "sha256": "b16e72f5c8b06a511756528967d5d914ce4f92fce3d10351d4b2021364d5f2c1"
+  },
+  {
+    "path": "projects/assets/real/hub/story-scroll-desktop.png",
+    "bytes": 370492,
+    "sha256": "95a8993ff881436d913bd51d13a221d308cb95d52485597c58526ca96b6b8277"
+  },
+  {
+    "path": "projects/assets/real/hub/ui-selection-board.png",
+    "bytes": 835925,
+    "sha256": "4cbd961fa2757fb1bf23c609d78f95082631dc49e981e357e34a4d53793d665c"
+  },
+  {
+    "path": "projects/assets/real/inkpanda/discover.png",
+    "bytes": 27946,
+    "sha256": "82fb00a6c1028b80caeb3624103eb990ec8762fddfe466985d516a1e51e878d9"
+  },
+  {
+    "path": "projects/assets/real/inkpanda/editor.png",
+    "bytes": 241964,
+    "sha256": "3bc9b7f45118e25ed3077f30bb9ad9794bb54615e41fb6c4985cdced6af96147"
+  },
+  {
+    "path": "projects/assets/real/inkpanda/home.png",
+    "bytes": 144377,
+    "sha256": "6bb4c3bbbe7a081527fff911eae520e040142bc50ea16099f2e18dadce985989"
+  },
+  {
+    "path": "projects/assets/real/inkpanda/outline.png",
+    "bytes": 241718,
+    "sha256": "200ae026471d5d3404356152e34ea14b98977fd19cdfe7cbfda1a6e2c046e65a"
+  },
+  {
+    "path": "projects/assets/real/lian/about.jpg",
+    "bytes": 65837,
+    "sha256": "8a4484833ae87c11870dcff1517d28dd544d287bd5dd327d7920a9583d358dd9"
+  },
+  {
+    "path": "projects/assets/real/lian/card-style-2.jpg",
+    "bytes": 69120,
+    "sha256": "ea2426029809ca54bf9ea37611783e6ae58bf8258333433fa2e00a9a746ca1e4"
+  },
+  {
+    "path": "projects/assets/real/lian/card-style-3.jpg",
+    "bytes": 75716,
+    "sha256": "ecb76f80747a5917ea6957b572f26313280c50cd5ed1559041583bb1e011b4c8"
+  },
+  {
+    "path": "projects/assets/real/lian/draw-result.jpg",
+    "bytes": 73859,
+    "sha256": "facd1947a04ffb74fa992bb35136e61e88da7ad13435438ddb4ec2bad9b29967"
+  },
+  {
+    "path": "projects/assets/real/lian/home.jpg",
+    "bytes": 43604,
+    "sha256": "1ed23f8b5b38b9b8550733b52dcc5aa03535b5058d1a3bd6e168a4b20ab94a7b"
+  },
+  {
+    "path": "projects/assets/real/loki-assistant/model-providers.png",
+    "bytes": 229369,
+    "sha256": "bc14bbeb26731db9b834fc6e8e57c3c710bd0bca97b2e748a78e74f3f9893db5"
+  },
+  {
+    "path": "projects/assets/real/loki-assistant/workspace-welcome.png",
+    "bytes": 191810,
+    "sha256": "3462facc911c521b41870caadd4c6c120d4f0c1dfe948be45fb3dd81f5e10aa6"
+  },
+  {
+    "path": "projects/assets/real/memories/pleasure-goddess.jpg",
+    "bytes": 927818,
+    "sha256": "f4f75b4ac442af8c66807dc7e43604127d003d03b454af3c5f470c65cae08c6b"
+  },
+  {
+    "path": "projects/assets/real/perspective/liulian-evidence-sheet-01.png",
+    "bytes": 2614793,
+    "sha256": "98eb6dcbd4cbf40d1bd0442b752894cb104a0c8e3961b753f13e78b839cd88ac"
+  },
+  {
+    "path": "projects/assets/real/perspective/liuyang-stage.jpg",
+    "bytes": 90606,
+    "sha256": "7469b8e6e86bd80e1b106e8daf0b86acee86b3c565a26591d1ec81af938e4686"
+  },
+  {
+    "path": "projects/assets/real/perspective/luyu-slow-conversation.jpg",
+    "bytes": 216279,
+    "sha256": "82b53cc6d0abb4261c98bde9a0350d467683ee10d56895b8d2fd27ab74a73937"
+  },
+  {
+    "path": "projects/assets/real/perspective/papi-welcome.png",
+    "bytes": 1517785,
+    "sha256": "dddd364a7e794efd43ca2fe7ac1fac9648d4c8330b96b820d5ece94fe873e729"
+  },
+  {
+    "path": "projects/assets/real/qichi-life-os/cron-config-hero.png",
+    "bytes": 74585,
+    "sha256": "484152f4b687c6be7d8caf1bec6fc250380d894ad95d05fa05218a1dfdd401d5"
+  },
+  {
+    "path": "projects/assets/real/qichi-life-os/cron-config.png",
+    "bytes": 128302,
+    "sha256": "98e7513b87b3aae2706a641388b7d6128403522225dfa57192ee36c07cecb0b4"
+  },
+  {
+    "path": "projects/assets/real/qichi-life-os/fable.png",
+    "bytes": 186176,
+    "sha256": "dadb0080c10cb132a201708969e21194d6fc5d30230cd907e130874e7a51d2d3"
+  },
+  {
+    "path": "projects/assets/real/qichi-life-os/vault-tree.png",
+    "bytes": 95921,
+    "sha256": "6d3ef291ee2bd106f479dc8b74213221ab3a255105196ae77a57e2212189dd81"
+  },
+  {
+    "path": "projects/case-data.js",
+    "bytes": 3114,
+    "sha256": "e59ab314d0453cf3875a0ae5fc32884bf981a87add4d66ba5b27fcb06e157a0e"
+  },
+  {
+    "path": "projects/daily-insight.html",
+    "bytes": 11466,
+    "sha256": "85bf3277ebcff3b962d2ec9cfc2cded401e7a32b39e374172a92c3ff1a781e37"
+  },
+  {
+    "path": "projects/ebook-converter.html",
+    "bytes": 11197,
+    "sha256": "3e1798b7ea3b1834e28531fb30399b7156f63c8e9b1cf6d7706a4b6daa4ab20a"
+  },
+  {
+    "path": "projects/edu-content-line.html",
+    "bytes": 28834,
+    "sha256": "c94459c3134733571a8e1e70a33df9e13c565f0503e150c1cfc8412f15b6c202"
+  },
+  {
+    "path": "projects/exhibition.css",
+    "bytes": 31818,
+    "sha256": "4a0c70f5f350248f884511bd414bb9a8aa966cba7bbd03bbc2e11cd0a01415ec"
+  },
+  {
+    "path": "projects/exhibition.js",
+    "bytes": 6450,
+    "sha256": "09b909f1c58e8dc5f60d32bfae34b77ab09f91b0cd10795f8a8b1807e77fec36"
+  },
+  {
+    "path": "projects/inkpanda.html",
+    "bytes": 17333,
+    "sha256": "f583c5d482fd2b82b6db9fdbe85f4244d43588ca3d9ab48c2a211b971462b9fa"
+  },
+  {
+    "path": "projects/interface-system.html",
+    "bytes": 31004,
+    "sha256": "58189dd084c231bf26c282ec545c5a78b70725c10fd979ee4dda7423232e9875"
+  },
+  {
+    "path": "projects/lian.html",
+    "bytes": 12878,
+    "sha256": "ea8ecb204d7e432ba9496aff060ed52aa828455f4cba99119e2c14fef9d42396"
+  },
+  {
+    "path": "projects/loki-assistant.html",
+    "bytes": 26746,
+    "sha256": "b76a9d405d6a5a6be78c27e6f6671ef02dd2f96efa992d47b269058b62b1bc1d"
+  },
+  {
+    "path": "projects/loki-health.html",
+    "bytes": 10679,
+    "sha256": "5dfeb770cc03182b344b2b3122493719c2435f7ce18dc969d513bf222b7a82c7"
+  },
+  {
+    "path": "projects/mobile-polish.css",
+    "bytes": 12494,
+    "sha256": "59cb372ce82a520042beffd4307d8ce4564109bd8bcfdeab25dad5f79c752519"
+  },
+  {
+    "path": "projects/perspective-distillation.html",
+    "bytes": 20733,
+    "sha256": "4033a9863e7c18ec4f41e75e4cfbc29ae88d712a26426f6e442abf596c28ccbe"
+  },
+  {
+    "path": "projects/project-story.css",
+    "bytes": 13107,
+    "sha256": "376f3aa6cac549aa4f2b802206c23bba5e3f170509f0b93b523fdffce4f29d1f"
+  },
+  {
+    "path": "projects/project-story.js",
+    "bytes": 1879,
+    "sha256": "ce29d7b43ae4ce355e509618a9bb799a386ca8e27a735a7030f1aae99af9465e"
+  },
+  {
+    "path": "projects/project.css",
+    "bytes": 28418,
+    "sha256": "b5aede2bc018e96725f3aee6bc23af43765c34820641cb582889a04714613683"
+  },
+  {
+    "path": "projects/project.js",
+    "bytes": 3299,
+    "sha256": "e614d802df2a1a03ce8ba33697a124536749cae756439957cc5d97a8e8cc0626"
+  },
+  {
+    "path": "projects/qichi-life-os.html",
+    "bytes": 27732,
+    "sha256": "1e9de528cc4e0939d2ce6272b4c3dd9181042e58d01e2ae9f6231bd2d7654106"
+  },
+  {
+    "path": "projects/reading-stage.css",
+    "bytes": 767,
+    "sha256": "d5652b5343a8545181e5f2c461571234f26e3c6ebb8a99be987f43e6e1b0c14a"
+  },
+  {
+    "path": "projects/venue.css",
+    "bytes": 41773,
+    "sha256": "49f5bc10ac2ea8b8fcdc87cac498094621864f09efb0decc809c7f041890656f"
+  },
+  {
+    "path": "public-data.js",
+    "bytes": 55174,
+    "sha256": "0d2ba69e09f3c5900c17de6890b90112d979d4232538f08f8bd2cb5b24f2f201"
+  },
+  {
+    "path": "publication-actions.js",
+    "bytes": 670,
+    "sha256": "cb484810c67aa274c85de45d24de7d6895527dffb6a047cb8e671be2db8c477b"
+  },
+  {
+    "path": "publication.css",
+    "bytes": 26358,
+    "sha256": "3d31d74573782aab35c38c51735c2f31116feeb531e0245b1a5e381293d3f5e3"
+  },
+  {
+    "path": "relations.js",
+    "bytes": 956,
+    "sha256": "802f28105c5bee3d385b4f10459cb1cc3b10951849c8c68b774d7911cca242b3"
+  },
+  {
+    "path": "robots.txt",
+    "bytes": 71,
+    "sha256": "64f5503912e6e529b6f24ecf0fd4a7aa181576dc4d948d749f341278f24f2040"
+  },
+  {
+    "path": "scene-details.css",
+    "bytes": 16015,
+    "sha256": "df870b52c3ef7bb78b425b94f32d788f4d8fa4cb11ab2bc188abc64e397d2600"
+  },
+  {
+    "path": "scene-details.js",
+    "bytes": 3003,
+    "sha256": "afc1bfc440b6b124e97f80b694e8101d30e7bbd633e651bf90c54af9400520c0"
+  },
+  {
+    "path": "site-data.js",
+    "bytes": 8407,
+    "sha256": "a285c9f336f352ecef072f78d6bfe4637c37324beb8c94909ca1b2218f6996b9"
+  },
+  {
+    "path": "sitemap.xml",
+    "bytes": 6616,
+    "sha256": "00e53853d168aff6f24967b06216c11c90c6705c26a49ce8f1146b9221c2552f"
+  },
+  {
+    "path": "spread-design.css",
+    "bytes": 5277,
+    "sha256": "5efa42187d16416ddf9871626e1b210c9868dd2a7cd237f558e8e7926f7aee49"
+  },
+  {
+    "path": "spread-design.js",
+    "bytes": 2966,
+    "sha256": "e1a1cc399e85266e2f6d402142a2f13c32987939946032303fccb7f1d735c233"
+  },
+  {
+    "path": "style.css",
+    "bytes": 7675,
+    "sha256": "e420195190fa80d55b7750d2051618b3bed4bc8a4bc7878016e938735b74c2c0"
+  },
+  {
+    "path": "venue.css",
+    "bytes": 10977,
+    "sha256": "5c8048afdb6b40eb8e754a60ead755683a26f36e1cf6a3b78b0f1de874b27848"
+  },
+  {
+    "path": "venue.js",
+    "bytes": 8967,
+    "sha256": "c8bea2c1a04fd78ba225cc74a39b3f249352daf3733bc1c7eafa0df4c552fdca"
+  },
+  {
+    "path": "visits.css",
+    "bytes": 1489,
+    "sha256": "991ec571e2f8dc34eb5e8ebeaddde05431a8bc858d737446efe829fb817095df"
+  },
+  {
+    "path": "visits.js",
+    "bytes": 3665,
+    "sha256": "34ac9afbba0ae97016afffc60f21c8c81007a577547c233cf7eec4ab75ad74b4"
+  },
+  {
+    "path": "visual-system.js",
+    "bytes": 2190,
+    "sha256": "46a8f2ec311bbce2e88bc871789051592906f963ea033d9a79fb23c49a13a38d"
+  },
+  {
+    "path": "works.html",
+    "bytes": 28240,
+    "sha256": "efe9604df650a3a02343d014a28ce75d3f4307699d1782e5168d9a0ea5c4f4ce"
+  }
+]

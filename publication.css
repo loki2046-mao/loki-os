@@ -19,7 +19,7 @@
 .loki-publication .cover-copy>p:first-of-type{font:32px/1.15 PublicationDisplay;margin:30px 0 6px;letter-spacing:0}
 .loki-publication .cover h1{font:clamp(34px,4.1vw,58px)/1.13 PublicationDisplay;letter-spacing:-.035em;white-space:nowrap}
 .loki-publication .cover-copy>strong{font:italic 900 clamp(130px,15.4vw,218px)/.87 PublicationCondensed;letter-spacing:-.035em;transform:none;margin:17px 0 22px;text-shadow:2px 2px var(--orange),4px 4px var(--ink);-webkit-text-stroke:1px var(--ink)}
-.loki-publication .cover-copy .cover-intro{font:13px/1.9 Noto;max-width:420px;margin:0 0 23px;letter-spacing:.02em}
+.loki-publication .cover-copy .cover-intro{font:16px/1.9 Noto;max-width:420px;margin:0 0 23px;letter-spacing:.02em}
 .loki-publication .cover-copy #open-book{width:min(370px,100%);margin:0;padding:17px 22px;background:var(--acid);color:var(--ink);border:2px solid;box-shadow:5px 5px var(--ink);font:22px PublicationDisplay;display:flex;justify-content:space-between;align-items:center;transition:transform .18s,box-shadow .18s}
 .loki-publication .cover-copy #open-book:hover{transform:translate(3px,3px);box-shadow:2px 2px var(--ink);filter:none}
 .cover-role{display:block!important;margin-top:20px;font:10px Noto!important;letter-spacing:.02em}
@@ -147,13 +147,13 @@ body[data-material=volume-directory] .masthead-object img{width:125%;height:290p
  .cover-edition{order:0;width:100%}
  .loki-publication .cover-copy>p:first-of-type{order:1;width:100%;margin-top:22px}
  .loki-publication .cover h1{order:2;width:100%}
- .loki-publication .cover-copy>strong{order:3;width:100%;font-size:106px;margin:12px 0 0}
- .cover-character{order:4;margin:18px 0 10px;min-height:290px;padding-bottom:28px}
- .cover-character img{height:300px;width:100%;max-width:100%}
+ .loki-publication .cover-copy>strong{order:4;width:100%;font-size:82px;margin:12px 0 0}
+ .cover-character{order:5;margin:18px 0 10px;min-height:230px;padding-bottom:28px}
+ .cover-character img{height:240px;width:100%;max-width:100%}
  .character-caption{font-size:15px;padding:10px;right:0}
  .cover-character figcaption{bottom:10px;right:0}
  .cover-character figcaption b{font-size:20px}
- .loki-publication .cover-copy .cover-intro{order:5;width:100%;margin:12px 0 18px}
+ .loki-publication .cover-copy .cover-intro{order:3;width:100%;margin:18px 0 8px}
  .loki-publication .cover-copy #open-book{order:6}
  .cover-role{order:7;width:100%;margin-bottom:20px}
  .cover-bottom{order:8;width:100%}

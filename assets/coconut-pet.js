@@ -2,7 +2,7 @@
    图集按实测行位裁成六条动作条（assets/skills/coconut/*.png，1200×154，每帧 150）。
    idle 7 帧 / left 8 / right 8 / wave 4 / jump 5 / sleep 8（后 4 帧是睡着循环）。
    位移与换帧全走 transform 合成层；换状态才换一次 background-image（已预加载）。 */
-(() => {
+function mountCoconut() {
  const PAGE = document.querySelector('#break-page');
  if (!PAGE) return;
 
@@ -39,7 +39,7 @@
 
  const desk = document.createElement('div');
  desk.className = 'coconut-desk';
- desk.setAttribute('role', 'img');
+ desk.setAttribute('role', 'button');desk.tabIndex=0;
  desk.setAttribute('aria-label', '桌宠椰子：会在桌上走来走去的像素小熊猫，点它会挥手打招呼');
  desk.innerHTML = '<div id="coconut-pet" aria-hidden="true"><div id="coconut-frames"></div></div><div id="coconut-bubble" aria-live="polite"></div>';
  const egg = PAGE.querySelector('.easter-egg');
@@ -254,6 +254,7 @@
  requestAnimationFrame(tick);
 
  desk.addEventListener('click', greet);
+ desk.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();greet();}});
  if (reduced) {
   fit(); framesEl.style.backgroundImage = `url('assets/skills/coconut/idle.png${VER}')`;
   framesEl.style.transform = 'translate3d(0,0,0)';
@@ -266,4 +267,10 @@
  };
  if (!PAGE.hidden) start();
  new MutationObserver(() => { if (!PAGE.hidden) start(); }).observe(PAGE, { attributes: true, attributeFilter: ['hidden'] });
+ }
+(() => {
+ const page=document.querySelector('#break-page');if(!page)return;
+ let mounted=false;
+ const mount=()=>{if(mounted||page.hidden)return;mounted=true;mountCoconut();observer.disconnect();};
+ const observer=new MutationObserver(mount);observer.observe(page,{attributes:true,attributeFilter:['hidden']});mount();
 })();
