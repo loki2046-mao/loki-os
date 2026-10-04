@@ -1,0 +1,30 @@
+export async function interactions(browser,base='http://127.0.0.1:54911'){
+ const context=await browser.newContext({viewport:{width:390,height:844}}),page=await context.newPage(),errors=[];
+ page.on('pageerror',e=>errors.push(e.message));
+ await page.goto(base+'/');
+ await page.getByRole('button',{name:'从三件作品认识我'}).click();
+ await page.waitForFunction(()=>Math.abs(document.querySelector('#home-discovery').getBoundingClientRect().top)<200,{},{timeout:5000});
+ await page.getByRole('button',{name:'找到我 ↗',exact:true}).click();
+ if(await page.locator('dialog[open]').count()!==1)throw new Error('Contact dialog missing or duplicated');
+ for(const text of ['个人微信','小红书','lokimao2046@gmail.com'])if(!(await page.locator('.pub-contact-dialog').innerText()).includes(text))throw new Error('Missing contact '+text);
+ await page.getByRole('button',{name:'关闭联系卡'}).click();
+ await page.goto(base+'/index.html#skills-visual');await page.waitForURL(url=>url.pathname.endsWith('/detail-study/index.html')&&url.hash==='#catalogue/visual');
+ await page.getByRole('button',{name:'找到我 ↗',exact:true}).click();
+ if(!(await page.locator('.pub-contact-dialog').innerText()).includes('个人微信'))throw new Error('Reading contact inconsistent');
+ await page.keyboard.press('Escape');
+ await page.goto(base+'/detail-study/index.html#catalogue/works/perspective-distillation');
+ if(await page.locator('.pub-canonical-link').getAttribute('href')!=='/projects/perspective-distillation.html')throw new Error('Perspective case missing permanent URL');
+ await page.goto(base+'/detail-study/index.html#catalogue/knowledge/book');
+ await page.locator('[data-book="1"]').click();
+ const bookLinks=await page.locator('.book-reading .pub-canonical-link').getAttribute('href');if(bookLinks!=='/notes/day-02/')throw new Error('Book selection link mismatch');
+ await page.goto(base+'/contact/');
+ await page.evaluate(()=>Object.defineProperty(navigator,'clipboard',{value:{writeText:()=>Promise.reject(new Error('blocked'))},configurable:true}));
+ await page.getByRole('button',{name:'复制邮箱'}).click();await page.waitForFunction(()=>document.querySelector('[data-copy-status]').textContent.includes('暂不可用'));
+ await page.goto(base+'/methods/loki-writing/');
+ await page.evaluate(()=>{Object.defineProperty(navigator,'share',{value:undefined,configurable:true});Object.defineProperty(navigator,'clipboard',{value:{writeText:()=>Promise.reject(new Error('blocked'))},configurable:true});});
+ await page.getByRole('button',{name:'分享这项方法'}).click();await page.waitForFunction(()=>document.querySelector('[data-share-status]').textContent.includes('地址栏'));
+ await page.goto(base+'/');await page.locator('.discovery-heading').scrollIntoViewIfNeeded();await page.screenshot({path:'/Users/kude/Projects/loki-os/output/playwright/featured-mobile-final.png',animations:'disabled'});
+ const color=await page.locator('.discovery-heading h2').evaluate(x=>getComputedStyle(x).color);if(color!=='rgb(36, 53, 45)')throw new Error('Featured heading contrast regressed');
+ await page.goto(base+'/');await page.screenshot({path:'/Users/kude/Projects/loki-os/output/playwright/home-mobile-final.png',animations:'disabled'});
+ await context.close();if(errors.length)throw new Error(errors.join('\n'));return 'contact, legacy routing, permanent links, reading selection, copy/share fallback, and heading contrast passed';
+}

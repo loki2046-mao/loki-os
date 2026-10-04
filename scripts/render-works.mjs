@@ -73,7 +73,7 @@ const proofStrip = (siteData) => {
 const jsonLdObject = (siteData) => {
   const hasPart = siteData.projects.filter((project) => project.visibility === 'public').sort((a, b) => a.order - b.order)
     .map((project) => ({ '@type': 'CreativeWork', name: project.title, url: new URL(project.href, 'https://loki-os.hiloki.ai/').href, description: project.summary }));
-  return { '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Loki 的代表项目', url: 'https://loki-os.hiloki.ai/works.html', inLanguage: 'zh-CN', dateModified: siteData.updatedAt, about: { '@type': 'Person', name: 'Loki' }, hasPart };
+  return { '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Loki 的代表项目', url: 'https://loki-os.hiloki.ai/works.html', inLanguage: 'zh-CN', dateModified: siteData.updatedAt, about: { '@id': 'https://loki-os.hiloki.ai/about.html#loki' }, hasPart };
 };
 const jsonLd = (siteData) => `  <script type="application/ld+json">${JSON.stringify(jsonLdObject(siteData))}</script>`;
 

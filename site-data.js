@@ -1,7 +1,7 @@
 window.LOKI_OS_SITE_DATA = Object.freeze({
   publicationStatus: 'verified',
   edition: 'seo-geo-local-review-v2',
-  updatedAt: '2026-08-29',
+  updatedAt: '2026-10-02',
   featuredProjectIds: Object.freeze(['interface-system', 'perspective-distillation', 'inkpanda']),
   pillars: Object.freeze([
     Object.freeze({ id: 'ai-writing', projectIds: Object.freeze(['inkpanda']), href: '#case-inkpanda', title: 'AI 写小说', summary: '我怎么让 AI 记住一部长篇' }),

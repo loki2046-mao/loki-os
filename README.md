@@ -45,3 +45,7 @@ git push origin +ia-guided-stage-v1:main        # 切到未发布的 IA guided �
 ```
 
 打包前的完整备份见标签 `loki-os-live-2026-08-29`（= 当时的线上内容）和分支 `ia-guided-stage-v1` 上的提交 `f9feabd`（未发布的后续改动）。
+
+## 独立阅读与搜索入口（2026-10-02）
+
+完整构建：`npm run build`。作品保留 `/projects/*.html`，方法在 `/methods/`，AI 辅助阅读档案在 `/notes/`，统一联系页在 `/contact/`。上述正文无需 JavaScript 即可阅读。首页、分享信息、人物实体和 sitemap 由同一生成流程维护；日常更新方式见 `MAINTENANCE.md`。
