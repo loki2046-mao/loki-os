@@ -455,6 +455,71 @@
     "sha256": "a004891cf4dd7020fd7e56222a8599058358caedf8b6e231c737f8fb293c500c"
   },
   {
+    "path": "assets/updates-2026-10/gifts-demo.png",
+    "bytes": 696535,
+    "sha256": "1d76da0984937f443656966e8638d84c9d78976613bcff292900e0c54f8b5453"
+  },
+  {
+    "path": "assets/updates-2026-10/growth-empty.png",
+    "bytes": 204767,
+    "sha256": "4f28abaa3c25a123c67f7be28657784923af176652cecc7aa9d1ad46bda9a9da"
+  },
+  {
+    "path": "assets/updates-2026-10/kaigong-local.png",
+    "bytes": 41826,
+    "sha256": "8b202a62a112caf44714eb2cfa219c7db883714e3b766114c4251113f3835eb9"
+  },
+  {
+    "path": "assets/updates-2026-10/movie-method.svg",
+    "bytes": 2867,
+    "sha256": "7be8430a1744fac85767eea27748da68479efa67c25848cedc91c014e640fab2"
+  },
+  {
+    "path": "assets/updates-2026-10/travel-focus-silent.mp4",
+    "bytes": 2226704,
+    "sha256": "b2c5e530401f64e0069b9bdb5a9b56f96c09485e19d9cc7dbbae068e7be84a62"
+  },
+  {
+    "path": "assets/updates-2026-10/travel-jiuxi.jpg",
+    "bytes": 445715,
+    "sha256": "3ea39eeefacac71f8d2aefd2765736a482fad0727df927d41d39a71d869a099e"
+  },
+  {
+    "path": "assets/updates-2026-10/travel-tianchi.jpg",
+    "bytes": 261126,
+    "sha256": "cb3c25a85522b681c278d6c9850ef47f63a767cd72964e09648ecc4809ad0378"
+  },
+  {
+    "path": "assets/updates-2026-10/yuguang-demo.png",
+    "bytes": 126267,
+    "sha256": "fa2306ec5804285437e225c8e7abc46ad065b0c2de3042c2869c01ba19420588"
+  },
+  {
+    "path": "assets/videos/travel-memory/changbai-five-days-v20.mp4",
+    "bytes": 70162305,
+    "sha256": "9c22fbafcd696862e0a8cfc96e21d2384878ae0afeb5fde59363f968c315b5f0"
+  },
+  {
+    "path": "assets/videos/travel-memory/full-poster.jpg",
+    "bytes": 259989,
+    "sha256": "36bd6c7b2f8a7f1e30e04cdf6b8c8417e8d0bf0970495cabed6f29f3e445150b"
+  },
+  {
+    "path": "assets/videos/travel-memory/jiuxi-v21.mp4",
+    "bytes": 2424710,
+    "sha256": "148d761dc54c3e0664478be19629e374c38f5d9c0e5da7fe728ded385ef1a36d"
+  },
+  {
+    "path": "assets/videos/travel-memory/stars-poster.jpg",
+    "bytes": 236458,
+    "sha256": "dda0caa75c0631b91f652229331b6d1550c79b1916fa33c3f0242b36a343a528"
+  },
+  {
+    "path": "assets/videos/travel-memory/stars-v21.mp4",
+    "bytes": 1458119,
+    "sha256": "32809c6a357fcd8e613a966f4483c60ebe24b700005f733e5a5ccc871b067130"
+  },
+  {
     "path": "assets/wanqian-stage.jpg",
     "bytes": 181830,
     "sha256": "a6aa82f90ef48e5a1431909539b271d068ef0e4e0974e398553888e7df7a2f0b"
@@ -526,8 +591,8 @@
   },
   {
     "path": "detail-study/index.html",
-    "bytes": 6907,
-    "sha256": "9d4e76b5bd800f0f89ae43598d2e500c1c0f57b38b9aba24985c7e37b05c41d4"
+    "bytes": 7311,
+    "sha256": "2b60f4cd10dba5dc04af961b8ea55c11451d178576b65097442f1277c358ef78"
   },
   {
     "path": "detail-study/live-material.css",
@@ -571,8 +636,8 @@
   },
   {
     "path": "discovery.css",
-    "bytes": 12489,
-    "sha256": "d6362a0a862914335941f511abfd24a33d1265e3b8dd7b0ebd410a250544c825"
+    "bytes": 16642,
+    "sha256": "12509d22313f4fdb7bd9c2b29af2cacf063c32e088942150acff0f4bf64058d2"
   },
   {
     "path": "edition.css",
@@ -581,8 +646,8 @@
   },
   {
     "path": "edition.js",
-    "bytes": 10324,
-    "sha256": "8e18b63956cfb0fd6c252286da41f0235446e2f0e9af9078a2bfd07541c93e3b"
+    "bytes": 10484,
+    "sha256": "2ca89e3167a4ffbc3f345f18a310936342160128be28c1c1c5987682fb16d8e0"
   },
   {
     "path": "editorial.css",
@@ -611,8 +676,8 @@
   },
   {
     "path": "index.html",
-    "bytes": 17541,
-    "sha256": "db62fc948f33b58957e1c1095f05eb3c3b0b52cba133727e72943bdc07583f4d"
+    "bytes": 19896,
+    "sha256": "84d839ddbeb484e084afe984b5f10fadb5ec2a0cde0024559b23b5e2851764c6"
   },
   {
     "path": "live-edition.css",
@@ -641,8 +706,8 @@
   },
   {
     "path": "merch.js",
-    "bytes": 19533,
-    "sha256": "51c1ac1a34a48280265f08b97cdbc936126d7cf6de070a10cbdbe7c84e53f22c"
+    "bytes": 19651,
+    "sha256": "918b50599e163c2ddf128a5c82ed3ce24058f9063c629f82d8fb6d48e7bcc0df"
   },
   {
     "path": "methods/book/index.html",
@@ -706,8 +771,8 @@
   },
   {
     "path": "methods/index.html",
-    "bytes": 9575,
-    "sha256": "6e6057e059c6b02119ad6c2264f3b2a0ac07e5d036985b4b23e26e2188eba4af"
+    "bytes": 10251,
+    "sha256": "c631a3e600f0f099de56df1623b9c465eef9ff369b351ef0633bb76533e856d0"
   },
   {
     "path": "methods/judgment/index.html",
@@ -730,6 +795,11 @@
     "sha256": "675c53051f4b48376237839ad8958bd3be83772be22e079d788a5c51411b4d82"
   },
   {
+    "path": "methods/movie-daily/index.html",
+    "bytes": 7985,
+    "sha256": "3914bff3fada00bba756edf8c0579d44d1c270a04093d5313d156caa0b876696"
+  },
+  {
     "path": "methods/notes/index.html",
     "bytes": 7395,
     "sha256": "3d27203c2ed9639d6b7d29226c8a908230480a8642851429dd498150ffbbfe17"
@@ -743,6 +813,11 @@
     "path": "methods/slides/index.html",
     "bytes": 7231,
     "sha256": "4a014fd1db6281c94bfd8485105066837db22621671f5de59e53dfc7f3a6db01"
+  },
+  {
+    "path": "methods/travel-memory/index.html",
+    "bytes": 11742,
+    "sha256": "af8d315de5f4fb4f25829f124183367c9213c55e782ad0d3776a9a4d17a788e5"
   },
   {
     "path": "methods/visual-directions/index.html",
@@ -916,18 +991,18 @@
   },
   {
     "path": "process-data.js",
-    "bytes": 53977,
-    "sha256": "4aa7293f12afa04b48914f97df23fb3ba6ab98ed24c5f1e2a74b8ae2425230b1"
+    "bytes": 69984,
+    "sha256": "53b5dc61f7a186fae37ccbc171a2f2faa2b929a6651936ff3f04ec80a209417a"
   },
   {
     "path": "process.css",
-    "bytes": 5090,
-    "sha256": "283fb074fad45aedcdfd3f26db7a4ec5ede9cd0fb773028d07c0599f1132f133"
+    "bytes": 5726,
+    "sha256": "5c2979c889bf7eb988813818c5020e3b44b2650afce54a795dd1804cafec452b"
   },
   {
     "path": "process.js",
-    "bytes": 4898,
-    "sha256": "ffe41c64cd7a57654b17ac0831a5bf48c9d9501359d40dc07f3dc0ba030f2bed"
+    "bytes": 5753,
+    "sha256": "61eb3de4a4700c7a5401f9ffbe8e7d47b2bfd718eaede35e953e061af8f395dd"
   },
   {
     "path": "projects/ai-career-compass.html",
@@ -1321,8 +1396,8 @@
   },
   {
     "path": "projects/daily-insight.html",
-    "bytes": 11466,
-    "sha256": "85bf3277ebcff3b962d2ec9cfc2cded401e7a32b39e374172a92c3ff1a781e37"
+    "bytes": 11815,
+    "sha256": "f9596c5cf3289b31ab52a9564d2ce1d6f02907649780c96b808462eb6549f1ab"
   },
   {
     "path": "projects/ebook-converter.html",
@@ -1345,14 +1420,24 @@
     "sha256": "09b909f1c58e8dc5f60d32bfae34b77ab09f91b0cd10795f8a8b1807e77fec36"
   },
   {
+    "path": "projects/growth-dashboard.html",
+    "bytes": 7781,
+    "sha256": "e08072522252456352b81741492bb97d45f2521d05436e041b2a2799e17f93dc"
+  },
+  {
     "path": "projects/inkpanda.html",
-    "bytes": 17333,
-    "sha256": "f583c5d482fd2b82b6db9fdbe85f4244d43588ca3d9ab48c2a211b971462b9fa"
+    "bytes": 18393,
+    "sha256": "7cd125c0633c3024308db2c5064b1f6883a2560e760ae0daddf1e1c6e505bb33"
   },
   {
     "path": "projects/interface-system.html",
     "bytes": 31004,
     "sha256": "58189dd084c231bf26c282ec545c5a78b70725c10fd979ee4dda7423232e9875"
+  },
+  {
+    "path": "projects/kaigong.html",
+    "bytes": 6962,
+    "sha256": "7b17e199e73b33c3503227c9323f48ec934d3bbbd3eff59ad390c7f9bf308994"
   },
   {
     "path": "projects/lian.html",
@@ -1361,8 +1446,8 @@
   },
   {
     "path": "projects/loki-assistant.html",
-    "bytes": 26746,
-    "sha256": "b76a9d405d6a5a6be78c27e6f6671ef02dd2f96efa992d47b269058b62b1bc1d"
+    "bytes": 28150,
+    "sha256": "1a42d07d99f24fddc3e761e96355367b0758c253c51cbf83ba3e1dc0cf858caa"
   },
   {
     "path": "projects/loki-health.html",
@@ -1401,8 +1486,8 @@
   },
   {
     "path": "projects/qichi-life-os.html",
-    "bytes": 27732,
-    "sha256": "1e9de528cc4e0939d2ce6272b4c3dd9181042e58d01e2ae9f6231bd2d7654106"
+    "bytes": 28236,
+    "sha256": "71d547f7decad910c5177437658d68b0271c72822cf41e615ed7fdde651451a1"
   },
   {
     "path": "projects/reading-stage.css",
@@ -1410,19 +1495,29 @@
     "sha256": "d5652b5343a8545181e5f2c461571234f26e3c6ebb8a99be987f43e6e1b0c14a"
   },
   {
+    "path": "projects/souvenir-table.html",
+    "bytes": 7772,
+    "sha256": "b1eadf3e2565d58996bb225f27c4ba3fde1ea3cf79bd2206ce2127ac23ad0416"
+  },
+  {
     "path": "projects/venue.css",
     "bytes": 41773,
     "sha256": "49f5bc10ac2ea8b8fcdc87cac498094621864f09efb0decc809c7f041890656f"
   },
   {
+    "path": "projects/yuguang.html",
+    "bytes": 6874,
+    "sha256": "9b8fe945795206054c8cf454d48a23b905ff7098fe25809e8d06f5b4a35722cc"
+  },
+  {
     "path": "public-data.js",
-    "bytes": 55174,
-    "sha256": "0d2ba69e09f3c5900c17de6890b90112d979d4232538f08f8bd2cb5b24f2f201"
+    "bytes": 66307,
+    "sha256": "18b42c39f1ba9f0ac0430e8f7b000a2366348476101eef9d7094f4a3684552dd"
   },
   {
     "path": "publication-actions.js",
-    "bytes": 670,
-    "sha256": "cb484810c67aa274c85de45d24de7d6895527dffb6a047cb8e671be2db8c477b"
+    "bytes": 1204,
+    "sha256": "cf74e870b5aff37819b7c8c91d5e9a1caa6f963de07fc9e58e6fd9914636156f"
   },
   {
     "path": "publication.css",
@@ -1446,18 +1541,18 @@
   },
   {
     "path": "scene-details.js",
-    "bytes": 3003,
-    "sha256": "afc1bfc440b6b124e97f80b694e8101d30e7bbd633e651bf90c54af9400520c0"
+    "bytes": 3085,
+    "sha256": "0062456e897e54124a6616feb0d77a71a8132793bf12fda891774655e98c3ed2"
   },
   {
     "path": "site-data.js",
     "bytes": 8407,
-    "sha256": "a285c9f336f352ecef072f78d6bfe4637c37324beb8c94909ca1b2218f6996b9"
+    "sha256": "297df53553ff2dbbeee1317e88a5344e0034ecca0d43cbb341f00c656c9d0a29"
   },
   {
     "path": "sitemap.xml",
-    "bytes": 6616,
-    "sha256": "00e53853d168aff6f24967b06216c11c90c6705c26a49ce8f1146b9221c2552f"
+    "bytes": 7238,
+    "sha256": "a367e35cf0c30d10f7328591c02b5d915298c8fa5e5da7b151b0c16d3960cb88"
   },
   {
     "path": "spread-design.css",
@@ -1496,12 +1591,12 @@
   },
   {
     "path": "visual-system.js",
-    "bytes": 2190,
-    "sha256": "46a8f2ec311bbce2e88bc871789051592906f963ea033d9a79fb23c49a13a38d"
+    "bytes": 2383,
+    "sha256": "0050941ae1c1229826992278b0cb947cfc7a2b35e8aa74215004115b46ecedb5"
   },
   {
     "path": "works.html",
-    "bytes": 28240,
-    "sha256": "efe9604df650a3a02343d014a28ce75d3f4307699d1782e5168d9a0ea5c4f4ce"
+    "bytes": 33988,
+    "sha256": "2f714260f4eb1aea3ba37b967e1d811f45f1a093125169c91b5f128055c2d4cd"
   }
 ]

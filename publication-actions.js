@@ -1,2 +1,5 @@
 /* Sharing stays optional; the canonical HTML link works without JavaScript. */
 (()=>{document.querySelectorAll('[data-share-page]').forEach(button=>button.addEventListener('click',async()=>{const url=document.querySelector('link[rel="canonical"]')?.href||location.href;const status=button.parentElement.querySelector('[data-share-status]');try{if(navigator.share){await navigator.share({title:document.title,url});if(status)status.textContent='';}else{await navigator.clipboard.writeText(url);if(status)status.textContent='链接已复制';}}catch(error){if(status)status.textContent=error.name==='AbortError'?'':'可复制浏览器地址栏中的链接。';}}));})();
+/* Keep simultaneous previews from overlapping their sound. */
+document.querySelectorAll('.pub-screening video').forEach(video=>video.addEventListener('play',()=>{document.querySelectorAll('.pub-screening video').forEach(other=>{if(other!==video)other.pause();});}));
+document.querySelectorAll('[data-video-seek]').forEach(button=>button.addEventListener('click',async()=>{const video=button.closest('figure').querySelector('video');video.currentTime=Number(button.dataset.videoSeek);try{await video.play();}catch{video.focus();}}));
