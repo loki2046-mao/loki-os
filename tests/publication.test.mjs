@@ -40,3 +40,21 @@ test('the checked-in publication is reproducible without touching its dates',()=
  for(const book of content.corpus.books)assert(sitemap.includes(bookUrl(book)));
  assert(!sitemap.includes('#catalogue/'));
 });
+
+test('recent entries respect visibility and generated case pages join the publication graph',()=>{
+ const copy=loadContent();
+ for(const id of ['souvenir-table','travel-memory']) [...copy.data.projects,...copy.data.skills].find(x=>x.id===id).visibility='private';
+ const output=buildPublication(copy);
+ const home=output.get('index.html');
+ assert(!home.includes('href="/projects/souvenir-table.html"'));
+ assert(!home.includes('href="/methods/travel-memory/"'));
+ assert(!output.has('projects/souvenir-table.html'));
+ for(const id of ['yuguang','kaigong','growth-dashboard']){
+  const html=output.get(`projects/${id}.html`);
+  assert(html.includes('id="main-content"'));
+  assert(html.includes('src="/publication-actions.js"'));
+  assert(html.includes('src="/contact.js"'));
+  assert(html.includes(personId));
+  assert(html.includes(`rel="canonical" href="https://loki-os.hiloki.ai/projects/${id}.html"`));
+ }
+});

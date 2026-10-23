@@ -87,6 +87,14 @@
     "hash": "48085bb750252b172fb02c1ce91fe88c1dca7378f5e01e3d4ece151225096278",
     "modified": "2026-10-03"
   },
+  "methods/travel-memory/index.html": {
+    "hash": "af8d315de5f4fb4f25829f124183367c9213c55e782ad0d3776a9a4d17a788e5",
+    "modified": "2026-10-24"
+  },
+  "methods/movie-daily/index.html": {
+    "hash": "3914bff3fada00bba756edf8c0579d44d1c270a04093d5313d156caa0b876696",
+    "modified": "2026-10-23"
+  },
   "notes/day-01/index.html": {
     "hash": "6a5ba420107aa91c094ca415eab01ddcb6380f14ab673d9a5581077423d07ec2",
     "modified": "2026-10-03"
@@ -200,8 +208,8 @@
     "modified": "2026-10-03"
   },
   "methods/index.html": {
-    "hash": "6e6057e059c6b02119ad6c2264f3b2a0ac07e5d036985b4b23e26e2188eba4af",
-    "modified": "2026-10-03"
+    "hash": "c631a3e600f0f099de56df1623b9c465eef9ff369b351ef0633bb76533e856d0",
+    "modified": "2026-10-23"
   },
   "notes/index.html": {
     "hash": "d412c1f01af7ecb8966c50390bf61930eca1662da3f6b7a80ad532c207e611fd",
@@ -212,16 +220,16 @@
     "modified": "2026-10-03"
   },
   "index.html": {
-    "hash": "db62fc948f33b58957e1c1095f05eb3c3b0b52cba133727e72943bdc07583f4d",
-    "modified": "2026-10-03"
+    "hash": "84d839ddbeb484e084afe984b5f10fadb5ec2a0cde0024559b23b5e2851764c6",
+    "modified": "2026-10-24"
   },
   "about.html": {
     "hash": "88a44362fdb2d9f566747fa33c7ae3c471a6640e5d6a5d486307e06e6056d024",
     "modified": "2026-10-03"
   },
   "works.html": {
-    "hash": "efe9604df650a3a02343d014a28ce75d3f4307699d1782e5168d9a0ea5c4f4ce",
-    "modified": "2026-10-03"
+    "hash": "2f714260f4eb1aea3ba37b967e1d811f45f1a093125169c91b5f128055c2d4cd",
+    "modified": "2026-10-24"
   },
   "projects/interface-system.html": {
     "hash": "58189dd084c231bf26c282ec545c5a78b70725c10fd979ee4dda7423232e9875",
@@ -232,12 +240,12 @@
     "modified": "2026-10-03"
   },
   "projects/inkpanda.html": {
-    "hash": "f583c5d482fd2b82b6db9fdbe85f4244d43588ca3d9ab48c2a211b971462b9fa",
-    "modified": "2026-10-03"
+    "hash": "7cd125c0633c3024308db2c5064b1f6883a2560e760ae0daddf1e1c6e505bb33",
+    "modified": "2026-10-23"
   },
   "projects/daily-insight.html": {
-    "hash": "85bf3277ebcff3b962d2ec9cfc2cded401e7a32b39e374172a92c3ff1a781e37",
-    "modified": "2026-10-03"
+    "hash": "f9596c5cf3289b31ab52a9564d2ce1d6f02907649780c96b808462eb6549f1ab",
+    "modified": "2026-10-23"
   },
   "projects/loki-health.html": {
     "hash": "5dfeb770cc03182b344b2b3122493719c2435f7ce18dc969d513bf222b7a82c7",
@@ -252,8 +260,8 @@
     "modified": "2026-10-03"
   },
   "projects/qichi-life-os.html": {
-    "hash": "1e9de528cc4e0939d2ce6272b4c3dd9181042e58d01e2ae9f6231bd2d7654106",
-    "modified": "2026-10-03"
+    "hash": "71d547f7decad910c5177437658d68b0271c72822cf41e615ed7fdde651451a1",
+    "modified": "2026-10-23"
   },
   "projects/edu-content-line.html": {
     "hash": "c94459c3134733571a8e1e70a33df9e13c565f0503e150c1cfc8412f15b6c202",
@@ -264,11 +272,27 @@
     "modified": "2026-10-03"
   },
   "projects/loki-assistant.html": {
-    "hash": "b76a9d405d6a5a6be78c27e6f6671ef02dd2f96efa992d47b269058b62b1bc1d",
-    "modified": "2026-10-03"
+    "hash": "1a42d07d99f24fddc3e761e96355367b0758c253c51cbf83ba3e1dc0cf858caa",
+    "modified": "2026-10-23"
+  },
+  "projects/souvenir-table.html": {
+    "hash": "b1eadf3e2565d58996bb225f27c4ba3fde1ea3cf79bd2206ce2127ac23ad0416",
+    "modified": "2026-10-23"
+  },
+  "projects/yuguang.html": {
+    "hash": "9b8fe945795206054c8cf454d48a23b905ff7098fe25809e8d06f5b4a35722cc",
+    "modified": "2026-10-23"
+  },
+  "projects/kaigong.html": {
+    "hash": "7b17e199e73b33c3503227c9323f48ec934d3bbbd3eff59ad390c7f9bf308994",
+    "modified": "2026-10-23"
+  },
+  "projects/growth-dashboard.html": {
+    "hash": "e08072522252456352b81741492bb97d45f2521d05436e041b2a2799e17f93dc",
+    "modified": "2026-10-23"
   },
   "detail-study/index.html": {
-    "hash": "9d4e76b5bd800f0f89ae43598d2e500c1c0f57b38b9aba24985c7e37b05c41d4",
-    "modified": "2026-10-03"
+    "hash": "2b60f4cd10dba5dc04af961b8ea55c11451d178576b65097442f1277c358ef78",
+    "modified": "2026-10-23"
   }
 }

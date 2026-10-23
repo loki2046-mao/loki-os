@@ -2,7 +2,7 @@
 
 线上地址：https://loki-os.hiloki.ai/
 
-2026-09-14 起，站点根目录是「个人场刊」：封面 → 认识 Loki → 作品节目单（11 件）→ 制作手册（22 个方法）→ 中场休息。另有 `detail-study/` 是场刊的全量目录内页。
+2026-09-14 起，站点根目录是「个人场刊」：封面 → 认识 Loki → 作品节目单（15 件）→ 制作手册（24 个方法）→ 中场休息。另有 `detail-study/` 是场刊的全量目录内页。
 
 ## 目录结构
 
@@ -38,13 +38,9 @@ node dev/qa/qa-publication.cjs http://127.0.0.1:54911 # 需要先起预览服务
 
 ## 发布与回滚
 
-```bash
-git push origin main                    # 发布（GitHub Pages 自动构建）
-git push origin +loki-os-live-2026-08-29:main   # 回滚到 2026-08-29 的旧版站点
-git push origin +ia-guided-stage-v1:main        # 切到未发布的 IA guided 版本
-```
+源码维护在 `main`，正式网站由 `release/site` 分支发布。推送 `main` 不触发网站部署。发布前运行 `npm run build` 和 `npm run preflight`，并完成真实浏览器检查；`node scripts/package-release.mjs` 只生成静态包。
 
-打包前的完整备份见标签 `loki-os-live-2026-08-29`（= 当时的线上内容）和分支 `ia-guided-stage-v1` 上的提交 `f9feabd`（未发布的后续改动）。
+只有 Loki 明确确认发布后才推送发布内容。当前回退标签、分支与 Pages 切换操作以 `MAINTENANCE.md` 为准。
 
 ## 独立阅读与搜索入口（2026-10-02）
 

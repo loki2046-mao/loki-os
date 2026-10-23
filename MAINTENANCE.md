@@ -88,3 +88,18 @@ gh api --method POST repos/loki2046-mao/loki-os/pages/builds
 ```
 
 恢复新版则把上述 source[branch] 改为 `release/site`，再次请求构建。必须等 Pages build 返回 built 并核对 commit，再检查正式域名；设置成功不等于部署完成。旧版本回退沿用当时根目录发布形态。
+
+## 2026-10-23：近期项目与可复用案例页
+
+- 本轮新增捎一份、余光、开弓、成长观测台四件作品；旅行回忆、每日拆电影两项方法；雾尼与 InkPanda 原页追加近期进展。仍保留原封面、三件代表作及场刊结构。
+- 首页「最近，又做了这些」由 `public-data.js` 的 `recentActivity` 生成，引用公开条目 ID；前四项带图，其余为简短更新入口。改为 private 的项目不会出现在该区域。
+- 新案例使用 `process-data.js` 中 `caseStudy: true` 的通用页，`facts` / `gallery` / `steps` / `note` 集中维护；已有定制案例可用 `update` 添加近期进展，保留历史内容。
+- 方法页支持 `video` 无自动播放样片，默认不预加载视频。来源、是否无声及未完成验收的部分写在图注和正文里。
+- 公开图片集中在 `assets/updates-2026-10/`。礼物桌只用独立演示桌；余光的账单/模型数值用明确标注的演示数据；成长观测台用无个人记录的空白状态。不要将私有源目录、真实领取链接、财务或个人观察记录复制进站点。
+- 来源与本轮验证记录见 `dev/notes/site-update-2026-10-23.md`。开发记录不进入静态发布包。
+
+## 2026-10-24：视频直接预览
+
+- 方法和通用作品页支持 `process-data.js` 的 `videos` 数组（title、duration、src、poster、caption），兼容旧 `video` 单条数据；场刊制作档案同步展示。
+- 视频先于制作说明，保留原声，使用浏览器播放/音量/进度/全屏控件，不自动播放，点击前不下载视频。播放另一段时暂停前一段。
+- 旅行页展示已确认的九溪/星空 V21 设计样片，不把 V20 完整草稿当作 V21 最终成片。媒体放在 `assets/videos/travel-memory/`，由原文件无损重封装为 fast-start MP4；未重剪或修改声音。

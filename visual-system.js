@@ -16,7 +16,8 @@
  document.querySelectorAll('[data-story-target]').forEach(button=>button.onclick=()=>document.getElementById(button.dataset.storyTarget).scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'}));
  function connect(){
   const route=location.hash.slice(1),next=target(route);
-  const discovery=document.querySelector('#home-discovery');if(discovery)discovery.hidden=!!route&&route!=='cover';
+  const discovery=document.querySelector('#home-discovery');if(discovery)discovery.hidden=!!route&&!['cover','recent-work','home-discovery'].includes(route);
+  if(['recent-work','home-discovery'].includes(route))requestAnimationFrame(()=>document.getElementById(route)?.scrollIntoView({behavior:'instant'}));
   if(next){location.replace(detail+next);return;}
   document.querySelectorAll('a[href^="#"]').forEach(a=>{const next=target(a.hash.slice(1));if(next)a.href=detail+next;});
   document.querySelectorAll('.site-masthead nav a').forEach(a=>{if(a.hash==='#'+route)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});

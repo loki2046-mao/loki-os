@@ -31,6 +31,57 @@ class VisitStore:
                 date=day, timezone='Asia/Shanghai', scope='local')
 
 class Handler(SimpleHTTPRequestHandler):
+    def send_head(self):
+        # Native video seeking needs byte ranges, including in local previews.
+        self.media_remaining = None
+        file_path = Path(self.translate_path(self.path))
+        if file_path.suffix.lower() not in {'.mp4', '.webm', '.mp3', '.wav'} or not file_path.is_file():
+            return super().send_head()
+        stream = file_path.open('rb')
+        size = file_path.stat().st_size
+        start, end, status = 0, size - 1, 200
+        requested = self.headers.get('Range', '')
+        match = re.fullmatch(r'bytes=(\d*)-(\d*)', requested)
+        if match:
+            left, right = match.groups()
+            if left:
+                start = int(left)
+                end = min(int(right), size - 1) if right else size - 1
+            elif right:
+                start = max(0, size - int(right))
+            if not (left or right) or start > end or start >= size:
+                stream.close()
+                self.send_response(416)
+                self.send_header('Content-Range', f'bytes */{size}')
+                self.send_header('Content-Length', '0')
+                self.end_headers()
+                return None
+            status = 206
+        self.send_response(status)
+        self.send_header('Content-Type', self.guess_type(str(file_path)))
+        self.send_header('Accept-Ranges', 'bytes')
+        self.send_header('Content-Length', str(end - start + 1))
+        if status == 206:
+            self.send_header('Content-Range', f'bytes {start}-{end}/{size}')
+        self.end_headers()
+        stream.seek(start)
+        self.media_remaining = end - start + 1
+        return stream
+
+    def copyfile(self, source, outputfile):
+        if self.media_remaining is None:
+            return super().copyfile(source, outputfile)
+        remaining = self.media_remaining
+        try:
+            while remaining > 0:
+                chunk = source.read(min(64 * 1024, remaining))
+                if not chunk:
+                    break
+                outputfile.write(chunk)
+                remaining -= len(chunk)
+        except (BrokenPipeError, ConnectionResetError):
+            pass  # A viewer may stop or seek while a range is streaming.
+
     def json_response(self, status, data, cookie=None):
         payload=json.dumps(data).encode()
         self.send_response(status)

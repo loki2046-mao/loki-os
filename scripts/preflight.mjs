@@ -13,5 +13,5 @@ for(const f of files){const html=readFileSync(path.join(root,f),'utf8');
  if(!noindex&&!sitemap.includes('<loc>'+canonical+'</loc>'))issues.push(f+': sitemap missing');
  for(const m of html.matchAll(/(?:href|src)="([^"#]+)"/g)){let url;try{url=new URL(m[1],origin+'/'+f)}catch{continue}if(url.origin!==origin)continue;let target=decodeURIComponent(url.pathname);if(target.endsWith('/'))target+='index.html';const disk=path.join(root,target);if(!existsSync(disk))issues.push(f+': missing '+target);if(/\.(png|jpe?g|webp)$/i.test(target)&&existsSync(disk))images.set(target,statSync(disk).size);}
 }
-const result={date:'2026-10-03',pages:files.length,issues,largestImages:[...images].sort((a,b)=>b[1]-a[1]).slice(0,10)};
+const result={date:new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date()),pages:files.length,issues,largestImages:[...images].sort((a,b)=>b[1]-a[1]).slice(0,10)};
 mkdirSync(path.join(root,'output/preflight'),{recursive:true});writeFileSync(path.join(root,'output/preflight/static.json'),JSON.stringify(result,null,2));console.log(JSON.stringify(result,null,2));assert.equal(issues.length,0,'preflight failed');
