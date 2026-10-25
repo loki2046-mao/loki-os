@@ -31,12 +31,12 @@ window.bookData = {
     },
     {
       "id": "perspective-distillation",
-      "date": "08-25",
-      "title": "人物视角蒸馏",
-      "summary": "有些人的访谈和作品，我会反复看。看多了就想知道，遇到一个新问题，她会先想什么？于是我把公开材料整理成方法，再让模型换道题试试，目前已经攒了 13 个人物档案。",
+      "date": "10-24",
+      "title": "人物与角色视角蒸馏",
+      "summary": "从喜欢一个人的表达，到研究一个角色怎样做选择。我把公开材料与原作分开整理，保留 13 个人物档案，也继续做禾晏、雁回、顾声的角色视角研究；原著和剧版各有自己的证据与缺口。",
       "tag": "NUWA 改造",
       "href": "./projects/perspective-distillation.html",
-      "action": "浏览人物研究与四人实验",
+      "action": "浏览人物与角色研究",
       "linkStatus": "internal",
       "visibility": "public",
       "group": "flagship",
@@ -48,7 +48,7 @@ window.bookData = {
       "imageWidth": 1940,
       "imageHeight": 1186,
       "imageFit": "contain",
-      "proof": "这里先选六个人给你看，完整案例还留着四人实验。刘恋、鲁豫和 Papi 酱的后续测试也补进来了，每一轮的题和分数分开说。",
+      "proof": "已补齐 13 位人物的版本索引：刘旸 v0.5.1、陈昊宇 v0.5 等后续记录，与三位角色的原著／剧版候选分开呈现。",
       "status": "只在我自己机器上跑，还没给别人用过",
       "verification": {
         "status": "verified",
@@ -78,7 +78,7 @@ window.bookData = {
       "imageHeight": 1114,
       "imageFit": "cover",
       "proof": "正文、人物和前情仍在同一块工作区。最近加了连接同一在线服务的 Mac 客户端，已实际打开登录后的书库。",
-      "status": "在线写作服务 + 个人 Mac 客户端；完整功能需登录",
+      "status": "网页与个人 Mac 客户端 · 开放使用前的保护仍在验收",
       "publicLink": {
         "href": "https://inkxiaoxiongmao.hiloki.ai/",
         "label": "打开 InkPanda",
@@ -155,7 +155,7 @@ window.bookData = {
       "group": "workflow",
       "order": 5,
       "accent": "#94d668",
-      "eyebrow": "本地优先 × 脱敏 / 身体的事，数据不出我这台电脑",
+      "eyebrow": "个人健康记录 × 脱敏展示 / 浏览器记录与可选云同步",
       "image": "assets/health-today-desktop-redacted.png",
       "imageAlt": "Loki's Health 本地真实产品的脱敏桌面截图",
       "imageWidth": 1440,
@@ -278,8 +278,8 @@ window.bookData = {
       "imageWidth": 1200,
       "imageHeight": 1308,
       "imageFit": "cover",
-      "proof": "我本机的 cron 跑过 50 次日复盘、7 次周复盘，结果写进 Obsidian 栖迟系统库（173 篇文档）。结构可以公开，正文是我的私人记录。",
-      "status": "一直在跑，复盘正文不公开",
+      "proof": "截至 2026-09-14 的核对记录：50 次日复盘、7 次周复盘、173 篇库内文档。结构可以展示，正文保持私密。",
+      "status": "历史运行记录已核对 · 当前连续运行状态待复核",
       "verification": {
         "status": "verified",
         "checkedAt": "2026-09-14",
@@ -305,9 +305,9 @@ window.bookData = {
     {
       "id": "edu-content-line",
       "date": "04-13",
-      "title": "教育内容生产线",
-      "summary": "我做教育内容，经常要出课件。结果语文那套一换到数学，居然冒出【作者生平】……那肯定不行啊。后来我把学科分开做，又接着做古诗词母稿和视频分镜。",
-      "tag": "教研提示词系统",
+      "title": "跨学科课件提示词迁移",
+      "summary": "从语文换到数学，不能只换主题名。我把教学目标、页面骨架和视觉规则分开，用《分数的初步认识》的十页提示词说明怎么迁移。",
+      "tag": "教学设计 · 方法案例",
       "href": "./projects/edu-content-line.html",
       "action": "看这条线怎么长出来",
       "linkStatus": "internal",
@@ -316,7 +316,7 @@ window.bookData = {
       "order": 9,
       "accent": "#d7f43c",
       "eyebrow": "PPT DNA 迁移 × 教研母稿 / 骨架拆一次，别的学科接上去",
-      "image": "projects/assets/real/edu-content-line/yongge.png",
+      "image": "projects/assets/real/edu-content-line/math.png",
       "imageAlt": "《咏鹅》教研完整母稿 V4 真实文稿渲染",
       "imageWidth": 1100,
       "imageHeight": 1500,
@@ -349,7 +349,8 @@ window.bookData = {
           "label": "分镜",
           "value": "从母稿继续拆成 15 秒视频分镜，尚无成片"
         }
-      ]
+      ],
+      "exhibitTier": "archive"
     },
     {
       "id": "ai-career-compass",
@@ -398,7 +399,8 @@ window.bookData = {
           "label": "输出",
           "value": "简历修改与七天行动计划，案例页展示报告样本"
         }
-      ]
+      ],
+      "exhibitTier": "archive"
     },
     {
       "id": "loki-assistant",
@@ -455,7 +457,7 @@ window.bookData = {
       "imageWidth": 1280,
       "imageHeight": 702,
       "proof": "朋友已经用它选过礼物。认领、改选和主人代留都有了，这里展示独立演示桌。",
-      "status": "已用于朋友选礼物，手机微信访问仍在优化",
+      "status": "已有朋友使用记录 · 微信与直连访问仍需复核",
       "eyebrow": "从圈图，到在线挑一份",
       "action": "看看这张礼物桌",
       "date": "10-23",
@@ -477,16 +479,16 @@ window.bookData = {
       "group": "productization",
       "tag": "macOS 桌面工具",
       "accent": "#a6c9ae",
-      "summary": "用 Cola 的时候，我想知道这一轮实际用了哪个模型、跑得多快、花了多少。余光把这些放进一个常驻小窗，工作时瞟一眼，想细看再展开。",
+      "summary": "我想随时知道 Cola 这次用了什么模型、回复有多快，就把余光做成常驻桌面的小窗。Cola 开了它跟着出现，退出后收起；需要细看时，在同一个窗口展开完整记录。",
       "image": "assets/updates-2026-10/yuguang-demo.png",
       "imageAlt": "余光真实界面，模型、金额、积分与速度均为演示数据",
       "imageWidth": 460,
       "imageHeight": 720,
-      "proof": "本机 App 已完成安装、启动和小窗切换。截图用演示数据说明界面，不展示个人账单。",
-      "status": "个人本机工具，暂无公开安装包",
+      "proof": "已有常驻小窗、横竖布局与详情展开。模型和速度在回复完成、日志写入后更新，不把均速说成瞬时速度。",
+      "status": "macOS 常驻版 v0.4 · 个人本机使用，未提供公开安装包",
       "eyebrow": "让 AI 的使用情况，看得见",
       "action": "看一眼桌面小窗",
-      "date": "10-23",
+      "date": "10-25",
       "href": "./projects/yuguang.html",
       "linkStatus": "internal",
       "visibility": "public",
@@ -618,35 +620,8 @@ window.bookData = {
         "排版"
       ],
       "form": "已经做成正式 Skill",
-      "visibility": "public"
-    },
-    {
-      "id": "weixin-layout",
-      "category": "writing",
-      "order": 4,
-      "title": "公众号排版",
-      "summary": "正文写好了，我只把它理出能直接复制发布的节奏、层级和重点，不重写一遍。",
-      "tags": [
-        "发布",
-        "层级",
-        "复用"
-      ],
-      "form": "一直在用",
-      "visibility": "public"
-    },
-    {
-      "id": "headline",
-      "category": "writing",
-      "order": 5,
-      "title": "微信标题生成",
-      "summary": "标题我只从文章里真正的冲突和信息差里找，不靠夸张词骗一个点击。",
-      "tags": [
-        "标题",
-        "信息差",
-        "分发"
-      ],
-      "form": "一直在用",
-      "visibility": "public"
+      "visibility": "public",
+      "parentEntry": "loki-writing"
     },
     {
       "id": "feishu-weixin",
@@ -660,7 +635,8 @@ window.bookData = {
         "发布"
       ],
       "form": "一直在用",
-      "visibility": "public"
+      "visibility": "public",
+      "archiveEntry": true
     },
     {
       "id": "film-poster",
@@ -716,7 +692,8 @@ window.bookData = {
         "封面对"
       ],
       "form": "一直在用",
-      "visibility": "public"
+      "visibility": "public",
+      "parentEntry": "loki-social"
     },
     {
       "id": "image-kit",
@@ -730,7 +707,8 @@ window.bookData = {
         "生成"
       ],
       "form": "一直在用",
-      "visibility": "public"
+      "visibility": "public",
+      "parentEntry": "film-poster"
     },
     {
       "id": "slides",
@@ -806,7 +784,8 @@ window.bookData = {
         "分歧"
       ],
       "form": "一直在用",
-      "visibility": "public"
+      "visibility": "public",
+      "parentEntry": "judgment"
     },
     {
       "id": "codex-theme",
@@ -836,7 +815,8 @@ window.bookData = {
         "复用"
       ],
       "form": "一直在用",
-      "visibility": "public"
+      "visibility": "public",
+      "parentEntry": "judgment"
     },
     {
       "id": "ebook-workflow",
@@ -852,7 +832,8 @@ window.bookData = {
       "form": "跟着作品一起",
       "href": "./projects/ebook-converter.html",
       "action": "看它怎么变成桌面工具",
-      "visibility": "public"
+      "visibility": "public",
+      "parentEntry": "loki-ebook-converter"
     },
     {
       "id": "cyber-red-panda",
@@ -884,7 +865,8 @@ window.bookData = {
       "form": "跟着作品一起",
       "href": "./projects/lian.html",
       "action": "看恋之上上签",
-      "visibility": "public"
+      "visibility": "public",
+      "parentEntry": "lian"
     },
     {
       "id": "collage-poem",
@@ -931,6 +913,22 @@ window.bookData = {
       "href": "./methods/movie-daily/index.html",
       "action": "看一周怎样拆一部片",
       "visibility": "public"
+    },
+    {
+      "id": "novel-human-voice",
+      "category": "writing",
+      "order": 8,
+      "title": "中文小说自然叙述",
+      "summary": "句子都通顺，人物却像在轮流交代信息。我把修稿的关注点移回场景：人物带着什么来意，对方的回应怎样改变下一句话，旁白又知道多少。",
+      "tags": [
+        "场景修稿",
+        "叙述视角",
+        "长篇衔接"
+      ],
+      "form": "本地 Skill · 可移植提示文本",
+      "href": "./methods/novel-human-voice/index.html",
+      "action": "看场景怎样接着往前走",
+      "visibility": "public"
     }
   ],
   "profiles": {
@@ -951,19 +949,16 @@ window.bookData = {
       }
     },
     "weixin-outline": {
-      "showcase": true,
-      "maturity": "一个轻量 Skill，后来试着做成了产品",
-      "ownership": "Loki 制作",
-      "origin": "我不想一有主题就硬写正文，先把它摊开成几个真不一样的方向。2026 年 2 月它是纯文本 Skill，5 月长成了内容工作站里的选题池和切口分析器，月底那次审计又把它膨胀出来的问题一条条记了下来。",
-      "trigger": "手里只有主题或者素材，还不知道到底要写哪一篇的时候用。",
-      "judgment": "不能为了点击率堆夸张词，十个选题也不能只是同一句话换词。功能多到溢出的时候，优先级是把选题、切口、标题、骨架这条主线真的串起来，加模块排在后面。",
-      "realResult": "一次出 10 个选题（每个 18—28 字），加三段式或五段式口语化大纲；产品化之后做过一次 6 个方向的切口分析，输出四级标题（主标题、副标题、封面大字、朋友圈导语）。",
-      "limitations": "规则是清楚的，但还没长成独立工具。工作站那版按 2026-05-05 的审计还留着状态不流转、三套素材体系重复这些断点，这次我没有重新验过修没修。",
-      "evidenceStatus": "公开样例是按主题、十个选题、选中一题、大纲这条线放的；设计文档和审计报告都存着。素材重组只是写进建议、没做出来的功能，我不说它已经实现。",
+      "ownership": "Loki 使用并整理的选题与大纲方法",
+      "trigger": "有一段经历、素材或杂乱想法，需要明确写给谁、从哪里讲起。",
+      "judgment": "选题要落在真实经历与材料上；避免夸张营销，把场景、展开和收束接起来。",
+      "realResult": "方法文件规定先给 10 个选题，再形成一份三段式或五段式大纲。",
+      "limitations": "这是选题与结构方法，不是成稿质量或传播效果保证；本轮未以新稿验证效果。",
+      "evidenceStatus": "按 weixin-topic-outline 的输入、输出及结构规则重新核对，修正此前误混入的主题换肤文案。",
       "visual": {
         "kind": "process",
         "motif": "writing",
-        "caption": "先把选择摊开，再落到真能写的结构上"
+        "caption": "从素材与受众，到选题和文章结构"
       }
     },
     "deep-night": {
@@ -1092,6 +1087,32 @@ window.bookData = {
         "image": "assets/updates-2026-10/movie-method.svg",
         "caption": "每日拆电影的方法结构示意，不是观影完成量统计"
       }
+    },
+    "novel-human-voice": {
+      "ownership": "Loki 整理修稿判断，AI 辅助实现与开发自检",
+      "trigger": "新写、续写或修订小说时，人物的动作、心思和对白各说各话。",
+      "judgment": "守住剧情、人设、关系阶段和知情范围，再修改造成断裂的连续场景。",
+      "realResult": "已保存本机 Skill、通用粘贴版、技能包与 8 道开发题；其中 2 道有同会话试写记录。",
+      "limitations": "尚未进行跨模型实测、独立对照或用户盲读验收。开发样例不代表全本写作效果，也不证明对所有模型稳定有效。",
+      "evidenceStatus": "依据本地 Skill 与交付、评测状态记录整理；私人小说正文不公开。",
+      "visual": {
+        "kind": "process",
+        "motif": "writing",
+        "caption": "从人物来意，到回应与下一步行动"
+      }
+    },
+    "feishu-weixin": {
+      "ownership": "Loki 的内容管线工具",
+      "trigger": "将已确认的飞书文稿和图片转换为可继续编辑的公众号素材。",
+      "judgment": "保持正文与图片顺序；文档权限、转换结果和平台兼容分别验证。",
+      "realResult": "已有转换脚本与管线记录。",
+      "limitations": "本轮未运行文档转换或发布；工具不代表所有飞书文档均可无损迁移。",
+      "evidenceStatus": "依据站内已保存的脚本目录与 CHANGELOG 来源；展示降为后台方法。",
+      "visual": {
+        "kind": "process",
+        "motif": "writing",
+        "caption": "原稿、素材与编辑结果分别核对"
+      }
     }
   },
   "github": {
@@ -1143,20 +1164,6 @@ window.bookData = {
       "label": "打开 Loki 的 GitHub",
       "kind": "profile",
       "note": "这个 Skill 还在本地整理，没发 GitHub。这里是个人主页，不是源码入口。"
-    },
-    "weixin-layout": {
-      "href": "https://github.com/loki2046-mao/wechat-layout-editor",
-      "kind": "source",
-      "label": "查看排版 Skill 源码",
-      "note": "独立公开仓库包含 SKILL.md、排版引擎和编辑器。",
-      "checkedAt": "2026-09-08"
-    },
-    "headline": {
-      "href": "https://github.com/loki2046-mao/cola-skills/blob/main/loki-wechat-pipeline/references/cover/cover-design-rules.md",
-      "kind": "source",
-      "label": "查看标题与封面规则",
-      "note": "标题规则不是单独的仓库，它就挂在公众号那条流水线的封面环节里。",
-      "checkedAt": "2026-09-08"
     },
     "feishu-weixin": {
       "href": "https://github.com/loki2046-mao/cola-skills/tree/main/loki-wechat-pipeline/scripts",
@@ -1239,6 +1246,12 @@ window.bookData = {
       "kind": "profile",
       "label": "打开 Loki 的 GitHub",
       "note": "本机还有一个同名的 skill-builder 目录，那个是第三方工具，跟这条没关系。"
+    },
+    "travel-memory": {
+      "kind": "repo",
+      "href": "https://github.com/loki2046-mao/loki-travel-memory",
+      "label": "查看公开版旅行回忆 Skill",
+      "note": "公开版不含私人旅行素材或商业歌曲；安装与工具要求见仓库说明。"
     }
   },
   "flows": {
@@ -1256,16 +1269,6 @@ window.bookData = {
       "选题方向",
       "情感长文",
       "双平台 Markdown"
-    ],
-    "weixin-layout": [
-      "已经完成的正文",
-      "层级与重点",
-      "可复制发布稿"
-    ],
-    "headline": [
-      "文章里的冲突",
-      "信息差提炼",
-      "标题候选"
     ],
     "feishu-weixin": [
       "飞书成稿",
@@ -1385,10 +1388,6 @@ window.bookData = {
       "image": "assets/lettering/loki.jpg",
       "caption": "Loki 的公开角色形象"
     },
-    "weixin-layout": {
-      "image": "assets/skills/weixin-layout.png",
-      "caption": "排完版的样子，图上是我自己发过的一篇"
-    },
     "feishu-weixin": {
       "image": "assets/skills/feishu-weixin.png",
       "caption": "飞书文档搬进公众号之后的样子"
@@ -1404,10 +1403,6 @@ window.bookData = {
     "weixin-outline": {
       "image": "assets/skills/weixin-outline.png",
       "caption": "内容工作站里的选题池"
-    },
-    "headline": {
-      "image": "assets/skills/headline.png",
-      "caption": "内容工作站里的标题生成，翻出来的历史方案"
     },
     "book": {
       "image": "assets/skills/book.png",
@@ -1463,7 +1458,7 @@ window.bookData = {
       "from": "judgment",
       "to": "perspective-distillation",
       "kind": "related",
-      "label": "看六位精选人物的研究进度"
+      "label": "看完整人物索引与角色研究"
     },
     {
       "from": "skill-builder",
@@ -1482,18 +1477,6 @@ window.bookData = {
       "to": "film-poster",
       "kind": "related",
       "label": "看电影字报的实际版本对照"
-    },
-    {
-      "from": "weixin-outline",
-      "to": "headline",
-      "kind": "related",
-      "label": "比较同一篇文章的标题试印"
-    },
-    {
-      "from": "feishu-weixin",
-      "to": "weixin-layout",
-      "kind": "related",
-      "label": "看排版编辑器的重建记录"
     },
     {
       "from": "visual-directions",
@@ -1523,7 +1506,7 @@ window.bookData = {
       "from": "debate",
       "to": "perspective-distillation",
       "kind": "related",
-      "label": "看看相关的人物研究框架"
+      "label": "看完整人物索引与角色研究"
     },
     {
       "from": "daily-insight",
@@ -1579,9 +1562,44 @@ window.bookData = {
       "from": "travel-memory",
       "to": "movie-daily",
       "kind": "related"
+    },
+    {
+      "from": "inkpanda",
+      "to": "novel-human-voice",
+      "kind": "uses",
+      "label": "长篇创作中的场景修稿方法"
+    },
+    {
+      "from": "loki-writing",
+      "to": "deep-night",
+      "kind": "same-method",
+      "label": "幕后方法与附页"
+    },
+    {
+      "from": "loki-social",
+      "to": "cover-system",
+      "kind": "same-method",
+      "label": "幕后方法与附页"
+    },
+    {
+      "from": "film-poster",
+      "to": "image-kit",
+      "kind": "same-method",
+      "label": "幕后方法与附页"
+    },
+    {
+      "from": "judgment",
+      "to": "debate",
+      "kind": "same-method",
+      "label": "幕后方法与附页"
     }
   ],
   "recentActivity": [
+    {
+      "id": "novel-human-voice",
+      "label": "新收录 / 写作方法",
+      "change": "从人物的来意与回应出发，修复场景里的叙述断裂。"
+    },
     {
       "id": "souvenir-table",
       "label": "新作品",
@@ -1621,6 +1639,11 @@ window.bookData = {
       "id": "inkpanda",
       "label": "有更新",
       "change": "长篇写作多了一个 Mac 桌面入口。"
+    },
+    {
+      "id": "perspective-distillation",
+      "label": "补齐档案",
+      "change": "13 位人物逐项展开，补上后续版本与评测边界。"
     }
   ]
 };
