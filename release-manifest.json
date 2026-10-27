@@ -155,6 +155,11 @@
     "sha256": "172238f973ae263562d1613e3e45c4ee2675b77d59a486ee16a95c9fc6a77a06"
   },
   {
+    "path": "assets/loki-festival-share-20261028.png",
+    "bytes": 2071193,
+    "sha256": "176f2a4d828d95ae15e5efbf457da159ae2a229a0b993cf974b6b583492f5f51"
+  },
+  {
     "path": "assets/loki-method-volumes.webp",
     "bytes": 126318,
     "sha256": "6cd864a452366f6b17562c9e0c26e47a636fd20c271dc210d2066b04795e4b40"
@@ -676,8 +681,8 @@
   },
   {
     "path": "index.html",
-    "bytes": 16241,
-    "sha256": "30b1023a68534a04f0a7af363a7f6e9a8ac236ec43588ef4e5d9ba600b3586fd"
+    "bytes": 16588,
+    "sha256": "7bc8de7ff48e1b9fb1796ac95668e1e1169dc307480c52d8467f10d8cfa97b7d"
   },
   {
     "path": "intermission-route.js",
@@ -1592,7 +1597,7 @@
   {
     "path": "sitemap.xml",
     "bytes": 7234,
-    "sha256": "3aaa2899e74c0e86fd194ab211cfaed835d10f6bc36f7c7b3a4079595d2fb2e2"
+    "sha256": "c6d461a9d9f627798c78dcde4f6353baaed783970604f32ce58ce55dbc12552e"
   },
   {
     "path": "spread-design.css",
