@@ -39,3 +39,19 @@
 ## 验收提醒
 
 禁止把「本轮改了 meta」写成收录率或引用率提升；无 Search Console 数据不报排名。
+
+
+## 已推送
+
+| 仓 | 结果 |
+| --- | --- |
+| loki-os | 分支 `geo-seo-week-20261028` · PR https://github.com/loki2046-mao/loki-os/pull/1 |
+| homepage（新的hiloki.ai） | 分支 `geo-seo-week-20261028` · PR https://github.com/loki2046-mao/homepage/pull/1（base=`codex/live-house-site`） |
+| loki-travel-memory | README 已 push main；About homepage 已设为方法页 |
+
+## 部署观察（只读）
+
+- `loki-os.hiloki.ai` 响应头为 **GitHub.com**（GitHub Pages），合并 PR 到 Pages 源分支后才会上线；非 Cloudflare 自动。
+- `kaigong-loki.pages.dev` 为 Cloudflare Pages，规范试玩域可用。
+- `blog.hiloki.ai` 为 Cloudflare（Next 静态资源特征）。
+- hiloki.ai 正式切到 `homepage` 仓需 Loki 在 CF Pages 确认项目与生产分支；本轮不改 DNS。
