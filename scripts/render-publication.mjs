@@ -19,7 +19,7 @@ export function loadContent() {
 }
 export const itemUrl = item => item.category ? `/methods/${item.id}/` : '/' + item.href.replace(/^\.\//,'');
 export const bookUrl = book => `/notes/day-${String(book.day).padStart(2,'0')}/`;
-const person = {'@type':'Person','@id':personId,name:'Loki',alternateName:'赛博小熊猫 Loki',url:origin+'/about.html',image:origin+'/loki-ip-live.jpg',sameAs:['https://github.com/loki2046-mao','https://hiloki.ai'],description:identity};
+const person = {'@type':'Person','@id':personId,name:'Loki',alternateName:['赛博小熊猫 Loki','公众号：赛博小熊猫 Loki'],url:origin+'/about.html',image:origin+'/loki-ip-live.jpg',sameAs:['https://github.com/loki2046-mao','https://hiloki.ai','https://blog.hiloki.ai','https://kaigong-loki.pages.dev/','https://loki-os.hiloki.ai/methods/travel-memory/','https://loki-os.hiloki.ai/contact/'],description:identity};
 const previewImage = src => { const small='assets/previews/'+path.basename(src).replace(/\.[^.]+$/,'.webp');return existsSync(path.join(root,small))?small:src; };
 const imageUrl = src => new URL(src || '/assets/loki-ticket-welcome.webp', origin+'/').href;
 export function metadata({title,description,url,image,type='WebPage',extra={}}) {
@@ -29,7 +29,7 @@ export function metadata({title,description,url,image,type='WebPage',extra={}}) 
 }
 export const navigation = (active='') => `<a class="pub-skip" href="#main-content">跳到正文</a><header class="pub-nav"><a class="pub-brand" href="/">LOKI <span>个人场刊</span></a><nav aria-label="主导航">${[['/','首页'],['/works.html','作品'],['/methods/','制作手册'],['/intermission.html#break','中场休息'],['/about.html','关于']].map(([url,label])=>`<a href="${url}"${active===url?' aria-current="page"':''}>${label}</a>`).join('')}</nav></header>`;
 const footer = `<footer class="pub-footer"><b>散场以后，还有想做的事。</b><p>赛博小熊猫 Loki · AI 内容创作者 / Vibe coder / 现场爱好者</p><a href="/contact/">继续关注，或者写信聊聊 ↗</a><a href="/index.html#break">中场歇一会儿 ↗</a></footer>`;
-const contactContent = `<p class="pub-eyebrow">STAY IN TOUCH / 下一场见</p><h1>找到 Loki</h1><p class="pub-lead">想接着看我做什么，来公众号和小红书。想聊某件作品、交换想法，或者谈合作，可以直接写信。</p><div class="pub-contact-grid">${[['loki-wechat-official.jpg','公众号','赛博小熊猫 Loki'],['contact/qr-personal-wechat.webp','个人微信','加好友时说下怎么认识的'],['contact/qr-xiaohongshu.webp','小红书','赛博小熊猫 Loki']].map(([src,label,note])=>`<section><h2>${label}</h2><img src="/assets/${src}" alt="Loki ${label}二维码" width="300" height="300" loading="lazy"><p>${note}</p><a href="/assets/${src}" download>保存二维码 ↓</a></section>`).join('')}</div><div class="pub-contact-links"><p>邮箱 <a href="mailto:lokimao2046@gmail.com">lokimao2046@gmail.com</a> <button type="button" data-copy-mail>复制邮箱</button><span role="status" data-copy-status></span></p><p>GitHub <a href="https://github.com/loki2046-mao" target="_blank" rel="noopener noreferrer">loki2046-mao ↗</a></p><p>同一部手机上，可保存二维码后在微信或小红书中识别；也可以搜索「赛博小熊猫 Loki」。</p></div>`;
+const contactContent = `<p class="pub-eyebrow">STAY IN TOUCH / 下一场见</p><h1>找到 Loki</h1><p class="pub-lead">想接着看我做什么，来公众号和小红书。想聊某件作品、交换想法，或者谈合作，可以直接写信。</p><div class="pub-contact-grid">${[['loki-wechat-official.jpg','公众号','赛博小熊猫 Loki'],['contact/qr-personal-wechat.webp','个人微信','加好友时说下怎么认识的'],['contact/qr-xiaohongshu.webp','小红书','赛博小熊猫 Loki']].map(([src,label,note])=>`<section><h2>${label}</h2><img src="/assets/${src}" alt="Loki ${label}二维码" width="300" height="300" loading="lazy"><p>${note}</p><a href="/assets/${src}" download>保存二维码 ↓</a></section>`).join('')}</div><div class="pub-contact-links"><p>邮箱 <a href="mailto:lokimao2046@gmail.com">lokimao2046@gmail.com</a> <button type="button" data-copy-mail>复制邮箱</button><span role="status" data-copy-status></span></p><p>公众号文章归档 <a href="https://hiloki.ai/" target="_blank" rel="noopener noreferrer">HiLoki.ai：实测、教程与公开分享 ↗</a></p><p>GitHub <a href="https://github.com/loki2046-mao" target="_blank" rel="noopener noreferrer">loki2046-mao ↗</a></p><p>同一部手机上，可保存二维码后在微信或小红书中识别；也可以搜索「赛博小熊猫 Loki」。</p></div>`;
 export function relatedItems(item,data) {
   const entries=[...data.projects,...data.skills].filter(x=>x.visibility==='public');
   const ids=new Set();
@@ -92,7 +92,15 @@ function updateHead(source,meta) {
 }
 export function buildPublication(content=loadContent()) {
  const {data,corpus}=content,files=new Map(),skills=data.skills.filter(x=>x.visibility==='public');
- for(const skill of skills) files.set(`methods/${skill.id}/index.html`,methodPage(skill,content));
+ for(const skill of skills) {
+   const out=`methods/${skill.id}/index.html`;
+   if(skill.id==='travel-memory' && existsSync(path.join(root,out)) && readFileSync(path.join(root,out),'utf8').includes('id="takeaway"')) {
+     // 保留手写 VideoObject / HowTo / 可带走块，勿走 updateHead 冲掉 PUBLIC_META
+     files.set(out, readFileSync(path.join(root,out),'utf8'));
+   } else {
+     files.set(out, methodPage(skill,content));
+   }
+ }
  for(const book of corpus.books) files.set(bookUrl(book).slice(1)+'index.html',bookPage(book,corpus.books));
  files.set('methods/index.html',shell({title:'制作手册｜AI 创作与工作流方法｜赛博小熊猫 Loki',description:'Loki 实际制作与使用的视觉、写作、阅读、构建和个人创作方法，附真实材料、制作过程与使用边界。',url:'/methods/',type:'CollectionPage'},`<header class="pub-hero"><p class="pub-eyebrow">THE MAKING OF / ${skills.length} 项方法</p><h1>制作手册</h1><p class="pub-lead">反复做过的事，慢慢留下方法。先挑一个你现在用得上的。</p></header><nav class="pub-category-nav" aria-label="方法分类">${Object.entries(categories).map(([key,name])=>`<a href="#${key}">${name}</a>`).join('')}</nav>${Object.entries(categories).map(([key,name])=>`<section class="pub-section" id="${key}"><h2>${name}</h2><div class="pub-index">${skills.filter(x=>x.category===key).map(x=>`<a href="${itemUrl(x)}"><h3>${escape(x.title)} ↗</h3><p>${escape(x.summary)}</p><small>${escape(x.form)}</small></a>`).join('')}</div></section>`).join('')}`,'/methods/'));
  files.set('notes/index.html',shell({title:'阅读档案｜AI 辅助导读与阅读工作流｜Loki',description:corpus.reading.scope,url:'/notes/',type:'CollectionPage'},`<header class="pub-hero"><p class="pub-eyebrow">READING FILE / ${corpus.books.length} 篇记录</p><h1>书读过，<br>留下什么？</h1><p class="pub-lead">${escape(corpus.reading.summary)}</p></header><aside class="pub-callout"><b>AI 辅助阅读档案</b><p>${escape(corpus.reading.scope)}</p></aside><div class="pub-reading-index">${[...corpus.books].reverse().map(b=>`<a href="${bookUrl(b)}"><span>DAY ${String(b.day).padStart(2,'0')} / ${b.date}</span><h2>《${escape(b.title)}》 ↗</h2><p>${escape(b.insight)}</p></a>`).join('')}</div>`,'/notes/'));
@@ -109,11 +117,15 @@ export function buildPublication(content=loadContent()) {
  for(const file of ['about.html','works.html',...data.projects.filter(p=>p.visibility==='public').map(p=>p.href.replace(/^\.\//,''))]) {
    const p=data.projects.find(x=>x.href==='./'+file);
    const record=p?content.processes[p.id]:null;
-   let source=record?.caseStudy?projectPage(p,record):readFileSync(path.join(root,file),'utf8');
+   let source=(record?.caseStudy && p.id!=='kaigong')?projectPage(p,record):readFileSync(path.join(root,file),'utf8');
    const title=p?`${p.title}｜真实案例与制作记录｜赛博小熊猫 Loki`:file==='about.html'?'认识赛博小熊猫 Loki｜把喜欢、观察和判断做成作品':'作品节目单｜AI 产品、创作与个人工具｜赛博小熊猫 Loki';
    const description=p?p.summary:file==='about.html'?person.description:'Loki 的公开作品：个人化界面系统、人物视角蒸馏、InkPanda，以及阅读、教育与个人 AI 工具。';
    source=source.replace(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g,(block,raw)=>{const schema=JSON.parse(raw);if(schema.creator?.name==='Loki'){schema.creator={'@id':personId};return '<script type="application/ld+json">'+json(schema)+'</script>';}return block;});
-   source=updateHead(source,{title,description,url:'/'+file,image:p?.image,type:p?'Article':file==='about.html'?'ProfilePage':'CollectionPage',extra:p?{author:{'@id':personId},creator:{'@id':personId},mentions:relatedItems(p,data).map(x=>({'@id':origin+itemUrl(x)+'#page'}))}:file==='about.html'?{mainEntity:{'@id':personId}}:{}});
+   if(p?.id==='kaigong' && source.includes('FAQPage')) {
+     // 保留开弓页手写 WebApplication / FAQPage / 可带走与镜像说明
+   } else {
+     source=updateHead(source,{title,description,url:'/'+file,image:p?.image,type:p?'Article':file==='about.html'?'ProfilePage':'CollectionPage',extra:p?{author:{'@id':personId},creator:{'@id':personId},mentions:relatedItems(p,data).map(x=>({'@id':origin+itemUrl(x)+'#page'}))}:file==='about.html'?{mainEntity:{'@id':personId}}:{}});
+   }
    if(!source.includes('href="/discovery.css"'))source=source.replace('</head>','<link rel="stylesheet" href="/discovery.css"><script src="/contact.js" defer></script><script src="/publication-actions.js" defer></script></head>');
    source=source.replace(/<nav class="brand-nav"[\s\S]*?<\/nav>/,()=>navigation('/'+file));
    if(!source.includes('id="main-content"'))source=source.replace(/<main(\s[^>]*)?>/,m=>m.replace('<main','<main id="main-content"'));
@@ -138,7 +150,7 @@ export function buildPublication(content=loadContent()) {
  files.set('detail-study/index.html',detail);
  files.set('contact.js',`/* Generated by scripts/render-publication.mjs from the shared contact content. */\n(()=>{const wire=root=>{root.querySelectorAll('[data-copy-mail]').forEach(button=>button.onclick=async()=>{const status=root.querySelector('[data-copy-status]');try{await navigator.clipboard.writeText('lokimao2046@gmail.com');status.textContent=' 已复制';}catch{status.textContent=' 复制暂不可用，请长按或选中邮箱地址。';}});};let dialog;document.addEventListener('click',event=>{if(!event.target.closest('[data-wechat],#reading-contact'))return;if(!dialog){dialog=document.createElement('dialog');dialog.className='pub-contact-dialog';dialog.setAttribute('aria-label','找到 Loki');dialog.innerHTML='<button class="pub-dialog-close" aria-label="关闭联系卡">关闭 ×</button>'+${json(contactContent.replace('<h1>','<h2>').replace('</h1>','</h2>'))};document.body.append(dialog);dialog.querySelector('.pub-dialog-close').onclick=()=>dialog.close();dialog.onclick=e=>{if(e.target===dialog)dialog.close()};wire(dialog);}dialog.showModal();});wire(document);})();\n`);
  files.set('life.html',shell({title:'生活收藏｜Loki',description:'旅行、游戏和文字里的小小偏爱。',url:'/life.html'},`<header class="pub-hero"><p class="pub-eyebrow">LIFE / 生活收藏</p><h1>工作以外，也有喜欢的事。</h1><p class="pub-lead">旅行留下一段回忆，休息时玩一局，再带走一点文字。</p></header><nav class="pub-category-nav" aria-label="生活收藏分区"><a href="#play">中场休息</a><a href="#collection">私人收藏</a><a href="#surprise">更多彩蛋</a></nav><section class="pub-section" id="play"><h2>中场休息</h2><div class="pub-index"><a href="/projects/kaigong.html"><h3>《开弓》 ↗</h3><p>按住拉弓，松手出箭。看看这款小游戏怎样做出来，也可以进入试玩。</p></a></div></section><section class="pub-section" id="collection"><h2>私人收藏</h2><div class="pub-index"><a href="/methods/travel-memory/#watch"><h3>长白山旅行回忆 ↗</h3><p>照片、短视频和沿途的声音。观看完整制作样片。</p></a><a href="/projects/perspective-distillation.html"><h3>喜欢的人，继续往深处看 ↗</h3><p>从公开表达和作品出发的人物、角色研究。</p></a></div></section><section class="pub-section" id="surprise"><h2>更多彩蛋</h2><div class="pub-index"><a href="/methods/collage-poem/"><h3>拼贴诗 ↗</h3><p>看看文字怎样被重新排列，组成另一种心情。</p></a></div></section>`));
- files.set('methods/index.html',files.get('methods/index.html').replace('</head>','<script>location.replace("/detail-study/index.html#catalogue/visual");</script></head>'));
+
  for(const [file,source] of files){if(file.endsWith('.html')&&!file.startsWith('detail-study/')){let html=source.replace(/<header class="pub-nav">[\s\S]*?<\/header>/,()=>navigation('/'+file).replace(/^<a class="pub-skip"[^>]*>.*?<\/a>/,''));if(!html.includes('src="/site-navigation.js"'))html=html.replace('</head>','<link rel="stylesheet" href="/site-navigation.css"><script src="/site-navigation.js" defer></script></head>');files.set(file,html);}}
  for(const [file,source] of files)files.set(file,source.replace(/[ \t]+\n/g,'\n'));
  return files;

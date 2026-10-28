@@ -517,10 +517,10 @@ window.bookData = {
       "eyebrow": "按住，松手，再来一箭",
       "action": "看看校场里发生了什么",
       "publicLink": {
-        "href": "https://loki2046-mao.github.io/kaigong/",
+        "href": "https://kaigong-loki.pages.dev/",
         "label": "试玩公开版《开弓》",
         "status": "verified",
-        "checkedAt": "2026-10-23"
+        "checkedAt": "2026-10-28"
       },
       "date": "10-23",
       "href": "./projects/kaigong.html",
