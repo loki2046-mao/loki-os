@@ -103,3 +103,9 @@ gh api --method POST repos/loki2046-mao/loki-os/pages/builds
 - 方法和通用作品页支持 `process-data.js` 的 `videos` 数组（title、duration、src、poster、caption），兼容旧 `video` 单条数据；场刊制作档案同步展示。
 - 视频先于制作说明，保留原声，使用浏览器播放/音量/进度/全屏控件，不自动播放，点击前不下载视频。播放另一段时暂停前一段。
 - 旅行页展示已确认的九溪/星空 V21 设计样片，不把 V20 完整草稿当作 V21 最终成片。媒体放在 `assets/videos/travel-memory/`，由原文件无损重封装为 fast-start MP4；未重剪或修改声音。
+
+## 2026-10-28：旧站入口接入合并站
+
+- `loki-os.hiloki.ai` 的 `release/site` 从 `c4bde38` 起，将已确认有对应页面的 75 个 HTML 地址导向 `https://hiloki.ai` 的同路径；跳转保留查询参数与片段。旧站跳转前的完整发布版本保存在标签 `pre-unified-loki-os-20261028`。
+- `assets/`、视频和其他静态资源仍由旧站提供；合并站的长白山视频仍依赖旧站的原始视频地址。不要全站重定向资源或删除它们。
+- 现在个人网站内容与更新以合并站为准。以后不得直接用本仓库 `main` 打包覆盖 `release/site`，否则会恢复旧首页并破坏统一入口；如需维护旧资源，应保留现有页面跳转并重新验证目标页面、浏览统计和视频。
