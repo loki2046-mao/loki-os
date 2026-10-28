@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
+Disallow: /detail-study/
 
-Sitemap: https://loki-os.hiloki.ai/sitemap.xml
+Sitemap: https://hiloki.ai/sitemap.xml
+
+# 自定义段：与线上 hiloki.ai 一致。Cloudflare Managed 前缀（含 Bytespider Disallow）
+# 无法被本文件覆盖；若需豆包/头条检索相关的 Bytespider 放行，请在
+# Cloudflare → 该域 → AI Crawl Control / Managed robots 中单独允许 Bytespider。
+# 训练类 GPTBot / ClaudeBot 等可继续保持禁止。
